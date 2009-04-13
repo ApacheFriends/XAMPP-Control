@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		92178A610F5D787800425525 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92178A600F5D787800425525 /* About.xib */; };
+		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
+		92178A7B0F5D809F00425525 /* Team.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Team.html */; };
+		922D70C50F387EB600FDF9E2 /* XPModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70C40F387EB600FDF9E2 /* XPModule.m */; };
+		922D70E70F3882BC00FDF9E2 /* XPApache.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70E60F3882BC00FDF9E2 /* XPApache.m */; };
+		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
+		922D720B0F39C90400FDF9E2 /* XPMySQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D720A0F39C90400FDF9E2 /* XPMySQL.m */; };
+		922D72690F39CDE600FDF9E2 /* XPProFTPD.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72680F39CDE600FDF9E2 /* XPProFTPD.m */; };
+		922D726D0F39D1FA00FDF9E2 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 922D726C0F39D1FA00FDF9E2 /* ModuleView.xib */; };
+		922D72770F39D3CC00FDF9E2 /* ModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72760F39D3CC00FDF9E2 /* ModuleViewController.m */; };
+		922D727B0F39D57B00FDF9E2 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D727A0F39D57B00FDF9E2 /* StatusView.m */; };
+		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
+		922D72F20F39DEC100FDF9E2 /* XAMPPControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72F10F39DEC100FDF9E2 /* XAMPPControls.m */; };
+		924D9F3E0F447AAE00DC9E43 /* KQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D9F3D0F447AAE00DC9E43 /* KQueue.m */; };
+		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
+		927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */; };
+		927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */; };
+		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
+		929098120F50210300BBE38B /* GettingStarted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929098110F50210300BBE38B /* GettingStarted.xib */; };
+		9290982A0F50243900BBE38B /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 929098280F50243900BBE38B /* GettingStarted.html */; };
+		92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */; };
+		92EACD390F3EFCA00037FCC2 /* XPRootTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EACD380F3EFCA00037FCC2 /* XPRootTask.m */; };
+		92EACDA40F3F10B80037FCC2 /* xproottask-helper-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */; };
+		92EACDBA0F3F11940037FCC2 /* xproottask-helper-tool in Resources */ = {isa = PBXBuildFile; fileRef = 92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */; };
+		92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EACDE50F3F14030037FCC2 /* Security.framework */; };
+		92FA25870F4FF780005EEFB3 /* XPConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FA25860F4FF780005EEFB3 /* XPConfiguration.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92EACD980F3F0E930037FCC2;
+			remoteInfo = "xproottask-helper-tool";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* XAMPP Control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XAMPP Control_Prefix.pch"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* XAMPP Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XAMPP Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92178A600F5D787800425525 /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		92178A630F5D7AB800425525 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		92178A640F5D7AB800425525 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
+		92178A780F5D809400425525 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/Team.html; sourceTree = "<group>"; };
+		922D70C30F387EB600FDF9E2 /* XPModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModule.h; sourceTree = "<group>"; };
+		922D70C40F387EB600FDF9E2 /* XPModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModule.m; sourceTree = "<group>"; };
+		922D70C60F38802900FDF9E2 /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPStatus.h; sourceTree = "<group>"; };
+		922D70E50F3882BC00FDF9E2 /* XPApache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPApache.h; sourceTree = "<group>"; };
+		922D70E60F3882BC00FDF9E2 /* XPApache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPApache.m; sourceTree = "<group>"; };
+		922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace (Process).h"; sourceTree = "<group>"; };
+		922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace (Process).m"; sourceTree = "<group>"; };
+		922D71000F389DCF00FDF9E2 /* XPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPError.h; sourceTree = "<group>"; };
+		922D72090F39C90400FDF9E2 /* XPMySQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMySQL.h; sourceTree = "<group>"; };
+		922D720A0F39C90400FDF9E2 /* XPMySQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMySQL.m; sourceTree = "<group>"; };
+		922D72670F39CDE600FDF9E2 /* XPProFTPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPProFTPD.h; sourceTree = "<group>"; };
+		922D72680F39CDE600FDF9E2 /* XPProFTPD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPProFTPD.m; sourceTree = "<group>"; };
+		922D726C0F39D1FA00FDF9E2 /* ModuleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModuleView.xib; sourceTree = "<group>"; };
+		922D72750F39D3CC00FDF9E2 /* ModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleViewController.h; sourceTree = "<group>"; };
+		922D72760F39D3CC00FDF9E2 /* ModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleViewController.m; sourceTree = "<group>"; };
+		922D72790F39D57B00FDF9E2 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
+		922D727A0F39D57B00FDF9E2 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
+		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
+		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
+		922D72F00F39DEC100FDF9E2 /* XAMPPControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAMPPControls.h; sourceTree = "<group>"; };
+		922D72F10F39DEC100FDF9E2 /* XAMPPControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAMPPControls.m; sourceTree = "<group>"; };
+		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
+		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
+		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		927DFAA90F5192BE00EAD88B /* BetaFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaFeedbackController.h; sourceTree = "<group>"; };
+		927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaFeedbackController.m; sourceTree = "<group>"; };
+		927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
+		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		929098110F50210300BBE38B /* GettingStarted.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GettingStarted.xib; sourceTree = "<group>"; };
+		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
+		92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
+		92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
+		92EACD370F3EFCA00037FCC2 /* XPRootTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPRootTask.h; sourceTree = "<group>"; };
+		92EACD380F3EFCA00037FCC2 /* XPRootTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPRootTask.m; sourceTree = "<group>"; };
+		92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xproottask-helper-tool"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "xproottask-helper-tool.c"; sourceTree = "<group>"; };
+		92EACDE50F3F14030037FCC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		92FA25850F4FF780005EEFB3 /* XPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPConfiguration.h; sourceTree = "<group>"; };
+		92FA25860F4FF780005EEFB3 /* XPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPConfiguration.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */,
+				929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EACD970F3F0E930037FCC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				927DFAA80F51929400EAD88B /* XAMPPBeta */,
+				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
+				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
+				9276D9F60F3B2F2F00866FEB /* Module */,
+				922D72F00F39DEC100FDF9E2 /* XAMPPControls.h */,
+				922D72F10F39DEC100FDF9E2 /* XAMPPControls.m */,
+				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
+				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
+				922D70C60F38802900FDF9E2 /* XPStatus.h */,
+				922D71000F389DCF00FDF9E2 /* XPError.h */,
+				922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */,
+				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
+				922D72750F39D3CC00FDF9E2 /* ModuleViewController.h */,
+				922D72760F39D3CC00FDF9E2 /* ModuleViewController.m */,
+				922D72790F39D57B00FDF9E2 /* StatusView.h */,
+				922D727A0F39D57B00FDF9E2 /* StatusView.m */,
+				92EACD370F3EFCA00037FCC2 /* XPRootTask.h */,
+				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
+				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
+				924D9F3D0F447AAE00DC9E43 /* KQueue.m */,
+				92FA25850F4FF780005EEFB3 /* XPConfiguration.h */,
+				92FA25860F4FF780005EEFB3 /* XPConfiguration.m */,
+				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
+				92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				929097570F501EBC00BBE38B /* WebKit.framework */,
+				92EACDE50F3F14030037FCC2 /* Security.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* XAMPP Control.app */,
+				92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* XAMPP Control */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Sources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "XAMPP Control";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* XAMPP Control_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92592C410F55B09100039573 /* XAMPPBeta */,
+				929098280F50243900BBE38B /* GettingStarted.html */,
+				9276D9EE0F3B2ED900866FEB /* Icon.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				922D726C0F39D1FA00FDF9E2 /* ModuleView.xib */,
+				929098110F50210300BBE38B /* GettingStarted.xib */,
+				92178A600F5D787800425525 /* About.xib */,
+				92178A7A0F5D809F00425525 /* Team.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92592C410F55B09100039573 /* XAMPPBeta */ = {
+			isa = PBXGroup;
+			children = (
+				927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */,
+			);
+			name = XAMPPBeta;
+			path = ../XAMPPBeta/Resources;
+			sourceTree = "<group>";
+		};
+		9276D9F60F3B2F2F00866FEB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				922D70C30F387EB600FDF9E2 /* XPModule.h */,
+				922D70C40F387EB600FDF9E2 /* XPModule.m */,
+				922D70E50F3882BC00FDF9E2 /* XPApache.h */,
+				922D70E60F3882BC00FDF9E2 /* XPApache.m */,
+				922D72090F39C90400FDF9E2 /* XPMySQL.h */,
+				922D720A0F39C90400FDF9E2 /* XPMySQL.m */,
+				922D72670F39CDE600FDF9E2 /* XPProFTPD.h */,
+				922D72680F39CDE600FDF9E2 /* XPProFTPD.m */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		9276D9FE0F3B2F4E00866FEB /* AboutBox */ = {
+			isa = PBXGroup;
+			children = (
+				92178A630F5D7AB800425525 /* AboutController.h */,
+				92178A640F5D7AB800425525 /* AboutController.m */,
+			);
+			name = AboutBox;
+			sourceTree = "<group>";
+		};
+		927DFAA80F51929400EAD88B /* XAMPPBeta */ = {
+			isa = PBXGroup;
+			children = (
+				927DFAA90F5192BE00EAD88B /* BetaFeedbackController.h */,
+				927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */,
+			);
+			name = XAMPPBeta;
+			path = ../XAMPPBeta/Sources;
+			sourceTree = "<group>";
+		};
+		92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */ = {
+			isa = PBXGroup;
+			children = (
+				92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */,
+			);
+			name = "XPRootTask Helper Tool";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* XAMPP Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "XAMPP Control" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				922D71990F38EFDA00FDF9E2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92EACDB90F3F11890037FCC2 /* PBXTargetDependency */,
+			);
+			name = "XAMPP Control";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "XAMPP Control";
+			productReference = 8D1107320486CEB800E47090 /* XAMPP Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92EACD9E0F3F0E9C0037FCC2 /* Build configuration list for PBXNativeTarget "xproottask-helper-tool" */;
+			buildPhases = (
+				92EACD960F3F0E930037FCC2 /* Sources */,
+				92EACD970F3F0E930037FCC2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xproottask-helper-tool";
+			productName = "xproottask-helper-tool";
+			productReference = 92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XAMPP Control" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* XAMPP Control */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* XAMPP Control */,
+				92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EACDBA0F3F11940037FCC2 /* xproottask-helper-tool in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				922D726D0F39D1FA00FDF9E2 /* ModuleView.xib in Resources */,
+				9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */,
+				929098120F50210300BBE38B /* GettingStarted.xib in Resources */,
+				9290982A0F50243900BBE38B /* GettingStarted.html in Resources */,
+				927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */,
+				92178A610F5D787800425525 /* About.xib in Resources */,
+				92178A7B0F5D809F00425525 /* Team.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		922D71990F38EFDA00FDF9E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n\tbuildnummer -d \"$CONFIGURATION_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n\tbuildnummer \"$CONFIGURATION_BUILD_DIR/$INFOPLIST_PATH\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				922D70C50F387EB600FDF9E2 /* XPModule.m in Sources */,
+				922D70E70F3882BC00FDF9E2 /* XPApache.m in Sources */,
+				922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */,
+				922D720B0F39C90400FDF9E2 /* XPMySQL.m in Sources */,
+				922D72690F39CDE600FDF9E2 /* XPProFTPD.m in Sources */,
+				922D72770F39D3CC00FDF9E2 /* ModuleViewController.m in Sources */,
+				922D727B0F39D57B00FDF9E2 /* StatusView.m in Sources */,
+				922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */,
+				922D72F20F39DEC100FDF9E2 /* XAMPPControls.m in Sources */,
+				92EACD390F3EFCA00037FCC2 /* XPRootTask.m in Sources */,
+				924D9F3E0F447AAE00DC9E43 /* KQueue.m in Sources */,
+				92FA25870F4FF780005EEFB3 /* XPConfiguration.m in Sources */,
+				92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */,
+				927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */,
+				92178A650F5D7AB800425525 /* AboutController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EACD960F3F0E930037FCC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EACDA40F3F10B80037FCC2 /* xproottask-helper-tool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92EACDB90F3F11890037FCC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */;
+			targetProxy = 92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		92178A7A0F5D809F00425525 /* Team.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92178A780F5D809400425525 /* English */,
+			);
+			name = Team.html;
+			sourceTree = "<group>";
+		};
+		929098280F50243900BBE38B /* GettingStarted.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				929098290F50243900BBE38B /* GettingStarted.html */,
+			);
+			name = GettingStarted.html;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92EACD9B0F3F0E940037FCC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "xproottask-helper-tool";
+			};
+			name = Debug;
+		};
+		92EACD9C0F3F0E940037FCC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "xproottask-helper-tool";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XAMPP Control_Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "XAMPP Control";
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XAMPP Control_Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "XAMPP Control";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92EACD9E0F3F0E9C0037FCC2 /* Build configuration list for PBXNativeTarget "xproottask-helper-tool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92EACD9B0F3F0E940037FCC2 /* Debug */,
+				92EACD9C0F3F0E940037FCC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "XAMPP Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XAMPP Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
