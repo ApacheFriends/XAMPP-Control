@@ -8,17 +8,17 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #import "XAMPPControls.h"
-#import "XPApache.h"
-#import "XPMySQL.h"
-#import "XPProFTPD.h"
-#import "ModuleViewController.h"
-#import "XPConfiguration.h"
+
+#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import <PlugIn/PlugIn.h>
 
 @interface XAMPPControls (PRIVAT)
 
 - (void) setupModules;
 - (void) setupModuleViews;
 - (void) setupBeta;
+
+- (NSRect) calculateWindowFrame;
 
 - (NSButton *)addButtonToTitleBarWithSize:(NSSize)size;
 - (float)titleBarHeight;
@@ -61,25 +61,26 @@
 		[[menuBetaFeedback menu] removeItem:menuBetaFeedback];
 	
 	[[self window] makeKeyAndOrderFront:self];
+	
+	[[XPConfiguration sharedConfiguration] updatePHPVersions];
+	
+	PlugInManager *plugInManager = [PlugInManager new];
+	NSError *error = Nil;
+	
+	[plugInManager loadAllPluginsError:&error];
+	
+	NSLog(@"%@", error);
 }
 
 - (void) setupModules
 {
-	[modules addObject:[[[XPApache alloc] init] autorelease]];
-	[modules addObject:[[[XPMySQL alloc] init] autorelease]];
-	[modules addObject:[[[XPProFTPD alloc] init] autorelease]];
 }
 
 - (void) setupModuleViews
 {
 	// Calculate Window Height
-	NSRect frame = [[self window] frame];
-	int height = 0;
-	height += 2*MARGIN;
-	height += 25.f * [modules count];
-	height += SPACE * ([modules count] -1);
-	
-	frame.size.height = height;
+	NSRect frame = [self calculateWindowFrame];
+	int height = NSHeight(frame);
 	
 	[[self window] setFrame:[[self window] frameRectForContentRect:frame] display:NO animate:NO];
 	
@@ -107,6 +108,31 @@
 		[moduleControllers addObject:controller];
 		[controller release];
 	}
+	
+	if ([[[XPConfiguration sharedConfiguration] PHPVersions] count] > 1) {
+		PHPSwitchController *controller = [[PHPSwitchController alloc] init];
+		
+		height -= [[controller view] frame].size.height;
+		[[controller view] setFrameOrigin:NSMakePoint(17, height)];
+		[[[self window] contentView] addSubview:[controller view]];
+		height -= SPACE;
+	}
+}
+
+- (NSRect) calculateWindowFrame
+{
+	NSRect frame = [[self window] frame];
+	int height = 0;
+	
+	height += 2*MARGIN;
+	height += 25.f * [modules count];
+	height += SPACE * ([modules count] -1);
+	
+	if ([[[XPConfiguration sharedConfiguration] PHPVersions] count] > 1)
+		height += 25.f + SPACE;
+	
+	frame.size.height = height;
+	return frame;
 }
 
 - (void) setupBeta

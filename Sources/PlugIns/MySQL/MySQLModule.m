@@ -1,17 +1,18 @@
 //
-//  XPMySQL.m
+//  MySQLModule.m
 //  XAMPP Control
 //
-//  Created by Christian Speich on 04.02.09.
+//  Created by Christian Speich on 23.04.09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "XPMySQL.h"
-#import "XPRootTask.h"
-#import "XPError.h"
-#include <unistd.h>
+#import "MySQLModule.h"
 
-@implementation XPMySQL
+#import <SharedXAMPPSupport/XPError.h>
+#import <SharedXAMPPSupport/XPRootTask.h>
+#import <unistd.h>
+
+@implementation MySQLModule
 
 - (id) init
 {
@@ -55,7 +56,7 @@
 	
 	if ([mysqlServer terminationStatus] == 0) { // Great mysql is up and running :)
 		[mysqlServer release];
-
+		
 		working = NO;
 		return Nil;
 	}

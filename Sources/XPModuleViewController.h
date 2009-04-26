@@ -8,12 +8,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #import <Cocoa/Cocoa.h>
+#import <SharedXAMPPSupport/XPViewController.h>
 
 @class XPModule;
 @class StatusView;
 
-@interface ModuleViewController : NSObject {
-	IBOutlet NSView		*view;
+@interface XPModuleViewController : XPViewController {
 	IBOutlet NSButton	*actionButton;
 	IBOutlet StatusView	*statusView;
 	IBOutlet NSTextField*nameField;
@@ -26,8 +26,6 @@
 }
 
 - (id) initWithModule:(XPModule*) module;
-
-- (NSView*) view;
 
 - (IBAction) action:(id)sender;
 - (IBAction) stop:(id)sender;

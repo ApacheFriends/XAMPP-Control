@@ -12,6 +12,8 @@
 
 @interface XPConfiguration : NSObject {
 	NSString *version;
+	NSArray	*PHPVersions;
+	NSString *activePHP;
 }
 
 + (id) sharedConfiguration;
@@ -21,6 +23,12 @@
 
 + (NSString*) version;
 - (NSString*) version;
+
+- (NSArray*) PHPVersions;
+- (void) setPHPVersions:(NSArray*)anArray;
+- (NSString*) activePHP;
+- (void) setActivePHP:(NSString*)anString;
+- (void) updatePHPVersions;
 
 - (NSURL*) supportForumURL;
 - (NSURL*) bugtrackerURL;

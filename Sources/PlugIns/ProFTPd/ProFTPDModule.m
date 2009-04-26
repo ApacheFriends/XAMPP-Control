@@ -1,16 +1,18 @@
 //
-//  XPProFTPD.m
+//  ProFTPdModule.m
 //  XAMPP Control
 //
-//  Created by Christian Speich on 04.02.09.
+//  Created by Christian Speich on 23.04.09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "XPProFTPD.h"
-#import "XPRootTask.h"
-#import "XPError.h"
+#import "ProFTPDModule.h"
 
-@implementation XPProFTPD
+#import <SharedXAMPPSupport/XPError.h>
+#import <SharedXAMPPSupport/XPRootTask.h>
+#import <unistd.h>
+
+@implementation ProFTPDModule
 
 - (id) init
 {
@@ -49,7 +51,7 @@
 	
 	if ([proftpd terminationStatus] == 0) { // Great proftpd is up and running :)
 		[proftpd release];
-
+		
 		working = NO;
 		return Nil;
 	}

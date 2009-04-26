@@ -1,15 +1,15 @@
 //
-//  XPProFTPD.h
+//  TestPlugin.h
 //  XAMPP Control
 //
-//  Created by Christian Speich on 04.02.09.
+//  Created by Christian Speich on 22.04.09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
-#import "XPModule.h"
+#import "PlugIn.h"
 
-@interface XPProFTPD : XPModule {
+@interface TestPlugin : PlugIn {
 
 }
 

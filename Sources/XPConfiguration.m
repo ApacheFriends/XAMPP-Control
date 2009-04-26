@@ -8,6 +8,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #import "XPConfiguration.h"
+#include <unistd.h>
 
 static id sharedConfiguration = Nil;
 
@@ -92,6 +93,78 @@ static id sharedConfiguration = Nil;
 - (BOOL) hasFixRights
 {
 	return [[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/fix_rights"];
+}
+
+- (NSArray*) PHPVersions
+{
+	if (!PHPVersions)
+		[self updatePHPVersions];
+	
+	return PHPVersions;
+}
+
+- (NSString*) activePHP
+{
+	if (!activePHP)
+		[self updatePHPVersions];
+	
+	return activePHP;
+}
+
+- (void) updatePHPVersions
+{
+	NSArray *files;
+	NSMutableArray *tmp;
+	char buf[BUFSIZ];
+	int rc = 0;
+	
+	files = [[NSFileManager defaultManager] directoryContentsAtPath:@"/Applications/XAMPP/xamppfiles/bin"];
+	
+	files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF MATCHES 'php-[0-9].*'"]];
+	
+	tmp = [NSMutableArray array];
+	
+	int i, count = [files count];
+	for (i = 0; i < count; i++) {
+		NSString * obj = [files objectAtIndex:i];
+		
+		[tmp addObject:[obj substringFromIndex:4]];
+	}
+	
+	[self setPHPVersions:tmp];
+	
+	rc = readlink("/Applications/XAMPP/xamppfiles/bin/php", buf, BUFSIZ);
+	
+	if (rc > 0) {
+		buf[rc] = '\0';
+		[self setActivePHP:[[[NSString stringWithUTF8String:buf] substringFromIndex:4] retain]];
+	}
+}
+
+- (void) setActivePHP:(NSString*)anString
+{
+	if ([anString isEqualToString:activePHP])
+		return;
+	
+	[self willChangeValueForKey:@"activePHP"];
+	
+	[activePHP release];
+	activePHP = [anString retain];
+	
+	[self didChangeValueForKey:@"activePHP"];
+}
+
+- (void) setPHPVersions:(NSArray*)anArray
+{
+	if ([anArray isEqualToArray:PHPVersions])
+		return;
+	
+	[self willChangeValueForKey:@"PHPVersions"];
+	
+	[PHPVersions release];
+	PHPVersions = [anArray retain];
+	
+	[self didChangeValueForKey:@"PHPVersions"];
 }
 
 @end

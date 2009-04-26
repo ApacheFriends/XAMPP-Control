@@ -1,18 +1,18 @@
 //
-//  XPApache.m
+//  ApacheModule.m
 //  XAMPP Control
 //
-//  Created by Christian Speich on 03.02.09.
+//  Created by Christian Speich on 23.04.09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "XPApache.h"
-#import "XPError.h"
+#import "ApacheModule.h"
 
-#import "XPRootTask.h"
-#include <unistd.h>
+#import <SharedXAMPPSupport/XPError.h>
+#import <SharedXAMPPSupport/XPRootTask.h>
+#import <unistd.h>
 
-@implementation XPApache
+@implementation ApacheModule
 
 - (id) init
 {
@@ -61,7 +61,7 @@
 		// Ok, wait until a pid file is created, to prevent the status check to dedect a not running apache
 		// while he is in the starting phase ;) Not nice but works
 		while (![[NSFileManager defaultManager] fileExistsAtPath:pidFile isDirectory:NO]) usleep(5000);
-
+		
 		working = NO;
 		return Nil;
 	}

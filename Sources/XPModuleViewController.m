@@ -7,11 +7,11 @@
  * conditions; see COPYING for details.                              *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-#import "ModuleViewController.h"
+#import "XPModuleViewController.h"
 #import "StatusView.h"
 #import "XPModule.h"
 
-@implementation ModuleViewController
+@implementation XPModuleViewController
 
 - (id) initWithModule:(XPModule*) aModule
 {
@@ -51,11 +51,6 @@
 	[module release];
 	
 	[super dealloc];
-}
-
-- (NSView*) view
-{
-	return view;
 }
 
 - (NSArray*) menuItems
