@@ -17,18 +17,22 @@
 - (BOOL) setupError:(NSError**)anError
 {
 	NSMutableDictionary *dict;
+	NSDictionary* bundleInformations;
 	MySQLModule *module;
 	XPModuleViewController *controller;
 	MySQLSecurityCheck* securityCheck;
 	
+	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [MySQLModule new];
 	controller = [[XPModuleViewController alloc] initWithModule:module];
 	securityCheck = [MySQLSecurityCheck new];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
-	[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
-	[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
+	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
+		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
+	if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
+		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
 	
 	[module release];
 	[controller release];

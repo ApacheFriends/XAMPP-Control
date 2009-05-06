@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class PlugInManager;
 @class ModulesMenuController;
 @class ControlsWindowController;
 @class SecurityCheckController;

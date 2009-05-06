@@ -57,34 +57,43 @@ NSString* disabledStep = @"Disabeld";
 }
 
 - (void)drawRect:(NSRect)rect {
+	NSTextFieldCell* textCell;
+	NSImageCell* indicatorCell;
     uint i, count = [steps count];
+	NSImage* indicatorImage;
 	
 	int x = 5;
 	int y = 0;
-		
+	
+	textCell = [NSTextFieldCell new];
+	indicatorCell = [NSImageCell new];
+	
+	[indicatorCell setImageAlignment:NSImageAlignCenter];
+	
 	for (i = 0; i < count; i++) {
 		NSString* step = [steps objectAtIndex:i];
 		NSString* stepInformation = [stepInformations objectAtIndex:i];
-		NSImage* indicatorImage;
-		NSTextFieldCell *textCell = [[NSTextFieldCell alloc] initTextCell:step];
-		NSImageCell *indicatorCell;
 		NSRect indicatorRect;
 		NSRect textRect;
+		
+		[textCell setStringValue:step];
 		
 		// First draw the indicator image
 		if (i ==  currentStepIndex) {
 			indicatorImage = [NSImage imageNamed:@"AssistantStepActive.tiff"];
 			[textCell setFont:[NSFont boldSystemFontOfSize:12.f]];
+			[textCell setTextColor:[NSColor controlTextColor]];
 		} else if ([stepInformation isEqualToString:inactiveStep]) {
 			indicatorImage = [NSImage imageNamed:@"AssistantStepInactive.tiff"];
-			[textCell setFont:[NSFont boldSystemFontOfSize:12.f]];
+			[textCell setFont:[NSFont systemFontOfSize:12.f]];
+			[textCell setTextColor:[NSColor controlTextColor]];
 		} else {
 			indicatorImage = [NSImage imageNamed:@"AssistantStepDisabled.tiff"];
-			[textCell setTextColor:[NSColor darkGrayColor]];
+			[textCell setFont:[NSFont systemFontOfSize:12.f]];
+			[textCell setTextColor:[NSColor disabledControlTextColor]];
 		}
 		
-		indicatorCell = [[NSImageCell alloc] initImageCell:indicatorImage];
-		[indicatorCell setImageAlignment:NSImageAlignCenter];
+		[indicatorCell setImage:indicatorImage];
 		
 		
 		indicatorRect.size = [indicatorImage size];
@@ -102,9 +111,10 @@ NSString* disabledStep = @"Disabeld";
 		
 		[textCell drawWithFrame:textRect 
 						 inView:self];
-		
-		[textCell release];
 	}
+	
+	[textCell release];
+	[indicatorCell release];
 }
 
 - (BOOL) isFlipped

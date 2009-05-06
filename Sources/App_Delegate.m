@@ -15,6 +15,7 @@
 #import "ControlsWindowController.h"
 #import "SecurityCheckController.h"
 #import "AssistantPage.h"
+#import "XPModuleErrorWindow.h"
 
 @implementation App_Delegate
 
@@ -39,12 +40,14 @@
 	}
 	
 	NSLog(@"%@", [[manager registry] stringFromRegistryContent]);
-	
+		
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
 	securityCheckController = [[SecurityCheckController alloc] init];
 
-	[securityCheckController showWindow:self];
+	//[securityCheckController showWindow:self];
+	
+	[XPModuleErrorWindow presentError:[NSError errorWithDomain:@"" code:1 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"/Applications/XAMPP/xamppfiles/logs/error_log", @"LOGFILE", Nil]]];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender

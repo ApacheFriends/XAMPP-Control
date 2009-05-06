@@ -16,4 +16,3 @@
 #import <SharedXAMPPSupport/XPPlugInCategories.h>
 #import <SharedXAMPPSupport/XPViewController.h>
 #import <SharedXAMPPSupport/XPModuleViewController.h>
-#import <SharedXAMPPSupport/XPSecurityCheck.h>

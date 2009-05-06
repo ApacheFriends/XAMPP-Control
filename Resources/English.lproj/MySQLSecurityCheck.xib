@@ -122,7 +122,7 @@
 					<object class="NSSecureTextField" id="232360614">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{129, 155}, {241, 22}}</string>
+						<string key="NSFrame">{{129, 155}, {267, 22}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSSecureTextFieldCell" key="NSCell" id="1025606854">
@@ -156,7 +156,7 @@
 					<object class="NSSecureTextField" id="423745067">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{129, 123}, {241, 22}}</string>
+						<string key="NSFrame">{{129, 123}, {267, 22}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSSecureTextFieldCell" key="NSCell" id="784474691">
@@ -254,38 +254,6 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 							<reference key="NSBackgroundColor" ref="72675473"/>
 							<reference key="NSTextColor" ref="546281664"/>
 						</object>
-					</object>
-					<object class="NSImageView" id="757220138">
-						<reference key="NSNextResponder" ref="1005"/>
-						<int key="NSvFlags">-2147483392</int>
-						<object class="NSMutableSet" key="NSDragTypes">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="NSMutableArray" key="set.sortedObjects">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<string>Apple PDF pasteboard type</string>
-								<string>Apple PICT pasteboard type</string>
-								<string>Apple PNG pasteboard type</string>
-								<string>NSFilenamesPboardType</string>
-								<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
-								<string>NeXT TIFF v4.0 pasteboard type</string>
-							</object>
-						</object>
-						<string key="NSFrame">{{378, 125}, {18, 18}}</string>
-						<reference key="NSSuperview" ref="1005"/>
-						<bool key="NSEnabled">YES</bool>
-						<object class="NSImageCell" key="NSCell" id="249825538">
-							<int key="NSCellFlags">130560</int>
-							<int key="NSCellFlags2">33554432</int>
-							<object class="NSCustomResource" key="NSContents">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">NSInvalidDataFreestandingTemplate</string>
-							</object>
-							<int key="NSAlign">0</int>
-							<int key="NSScale">0</int>
-							<int key="NSStyle">0</int>
-							<bool key="NSAnimates">YES</bool>
-						</object>
-						<bool key="NSEditable">YES</bool>
 					</object>
 				</object>
 				<string key="NSFrameSize">{416, 320}</string>
@@ -444,7 +412,6 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 							<reference ref="406443600"/>
 							<reference ref="119100706"/>
 							<reference ref="13718883"/>
-							<reference ref="757220138"/>
 						</object>
 						<reference key="parent" ref="1002"/>
 					</object>
@@ -574,20 +541,6 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 						<reference key="object" ref="480550381"/>
 						<reference key="parent" ref="13718883"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">37</int>
-						<reference key="object" ref="757220138"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="249825538"/>
-						</object>
-						<reference key="parent" ref="1005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">38</int>
-						<reference key="object" ref="249825538"/>
-						<reference key="parent" ref="757220138"/>
-					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -694,8 +647,8 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>NSTextField</string>
-							<string>NSTextField</string>
+							<string>NSSecureTextField</string>
+							<string>NSSecureTextField</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

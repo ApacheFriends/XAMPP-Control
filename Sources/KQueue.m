@@ -93,6 +93,8 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 
 - (void) removeIdent:(uint)aIdent fromFilter:(NSString*)aFilter
 {
+	NSParameterAssert(aFilter != Nil);
+	
 	struct timespec	timeout = { 0, 0 };
 	struct kevent	event;
 	NSLog(@"Remove %i", aIdent);
@@ -106,6 +108,8 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 
 - (uint) intFromFilter:(NSString*)aFilter
 {
+	NSParameterAssert(aFilter != Nil);
+	
 	if ([aFilter isEqualToString:KQueueReadFilter])
 		return EVFILT_READ;
 	else if ([aFilter isEqualToString:KQueueWriteFilter])
@@ -126,7 +130,6 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
     struct timespec     timeout = { 5, 0 };
 	int					theFD = queueFD;
 	NSMutableDictionary *event;
-	NSMutableArray		*filterFlags;
 	
 	while (keepThreadRunning) {
 		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -137,7 +140,6 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 				[NSException raise:@"kevent error" format:@"%i: %s", errno, strerror(errno)];
 			else if (n > 0) {
 				event = [[NSMutableDictionary alloc] init];
-				filterFlags = [[NSMutableArray alloc] init];
 				
 				[event setValue:[NSNumber numberWithInt:ev.ident] forKey:KQueueIdentKey];
 				switch (ev.filter) {

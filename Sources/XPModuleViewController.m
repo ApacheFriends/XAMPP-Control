@@ -15,6 +15,8 @@
 
 - (id) initWithModule:(XPModule*) aModule
 {
+	NSParameterAssert(aModule != Nil);
+	
 	self = [self init];
 	if (self != nil) {
 		module = [aModule retain];

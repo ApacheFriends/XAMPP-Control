@@ -131,7 +131,7 @@ static NSLock *authLock = Nil;
 	const char **args;
 	
 	authorizationRef = [XPRootTask authorizationRef];
-	helperPath = [[[NSBundle mainBundle] pathForResource:@"xproottask-helper-tool" ofType:@""] fileSystemRepresentation];
+	helperPath = [[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"xproottask-helper-tool"] fileSystemRepresentation];
 	
 	// Allocate [arguments count] + 2(launchPath, Null) pointers
 	args = malloc(sizeof(char*) * ([arguments count]+2));

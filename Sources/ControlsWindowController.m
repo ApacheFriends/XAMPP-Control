@@ -30,7 +30,12 @@
 {
 	[[self window] setFrame:[[self window] frameRectForContentRect:[self contentFrame]] display:YES animate:NO];
 	[self updateContent];
+	PlugInInvokeHook(@"controlsWindowDidLoad", [NSDictionary dictionaryWithObject:[self window] forKey:@"window"]);
 }
+
+@end
+
+@implementation ControlsWindowController (PRIVATE)
 
 - (NSRect) contentFrame
 {

@@ -127,7 +127,7 @@
 	kill = [[XPRootTask alloc] init];
 	
 	[kill setLaunchPath:@"/bin/kill"];
-	[kill setArguments:[NSArray arrayWithObjects:@"-HUP", [NSString stringWithContentsOfFile:[self pidFile]]]];
+	[kill setArguments:[NSArray arrayWithObjects:@"-HUP", [NSString stringWithContentsOfFile:[self pidFile]], Nil]];
 	
 	// We don't check for success at all :)
 	[kill launch];

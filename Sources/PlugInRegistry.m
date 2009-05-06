@@ -17,6 +17,7 @@
 	self = [super init];
 	if (self != nil) {
 		plugInCategories = [NSMutableDictionary new];
+		hooks = [NSMutableDictionary new];
 	}
 	return self;
 }
@@ -24,6 +25,7 @@
 - (void) dealloc
 {
 	[plugInCategories release];
+	[hooks release];
 	
 	[super dealloc];
 }
@@ -136,11 +138,81 @@
 
 @end
 
+@implementation PlugInRegistry (HOOKS)
+
+- (NSInvocation*) registerTarget:(id)anObject withSelector:(SEL)selector forHook:(NSString*)hookName
+{
+	NSParameterAssert(anObject != Nil);
+	NSParameterAssert(selector != Nil);
+	NSParameterAssert(hookName != Nil);
+	
+	NSInvocation *invocation;
+	
+	invocation = [NSInvocation invocationWithMethodSignature:[anObject methodSignatureForSelector:selector]];
+	[invocation setTarget:anObject];
+	[invocation setSelector:selector];
+	
+	[self registerInvocation:invocation forHook:hookName];
+	
+	return invocation;
+}
+
+- (void) registerInvocation:(NSInvocation*)invocation forHook:(NSString*)hookName
+{
+	NSParameterAssert(invocation != Nil);
+	NSParameterAssert([invocation target] != Nil);
+	NSParameterAssert([invocation selector] != NULL);
+	NSParameterAssert(hookName != Nil);
+	
+	// Look if this hook is already known, if not add it :)
+	if (![hooks valueForKey:hookName])
+		[hooks setValue:[NSArray array] forKey:hookName];
+	
+	[[hooks mutableArrayValueForKey:hookName] addObject:invocation];
+}
+
+- (void) invokeHook:(NSString*)hookName withDictionary:(NSDictionary*)dictionary
+{
+	NSParameterAssert(hookName != Nil);
+	// dictionary is optional
+	
+	NSArray *invocations;
+	NSEnumerator *enumerator;
+	NSInvocation *invocation;
+	
+	invocations = [hooks valueForKey:hookName];
+	
+	if (!invocations || ![invocations count]) {
+		NSLog(@"PlugInRegistry: No hooks for '%@'", hookName);
+		return;
+	}
+	
+	enumerator = [invocations objectEnumerator];
+	
+	while ((invocation = [enumerator nextObject])) {
+		// Ok, the target accepts arguments, the first argument will be our dictionary
+		if ([[invocation methodSignature] numberOfArguments] > 0)
+			[invocation setArgument:dictionary atIndex:0];
+		
+		// Great invoke it an catches the error...
+		@try {
+			NSLog(@"PlugInRegistry: Invoke hook '%@' on %@", hookName, invocation);
+			[invocation invoke];
+		}
+		@catch (NSException * e) {
+			NSLog(@"PlugInRegistry: Hook '%@' failed on %@: %@", hookName, invocation, e);
+		}
+	}
+}
+
+@end
+
+
 @implementation PlugInRegistry (DEBUG)
 
 - (NSString*) stringFromRegistryContent
 {
-	return [plugInCategories description];
+	return [NSString stringWithFormat:@"Categories: %@\nHooks: %@", [plugInCategories description], [hooks description]];
 }
 
 @end

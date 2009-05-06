@@ -16,15 +16,18 @@
 - (BOOL) setupError:(NSError**)anError
 {
 	NSMutableDictionary *dict;
+	NSDictionary* bundleInformations;
 	ApacheModule *module;
 	XPModuleViewController *controller;
 	
+	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [ApacheModule new];
 	controller = [[XPModuleViewController alloc] initWithModule:module];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
-	[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
+	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
+		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
 	
 	[module release];
 	[controller release];

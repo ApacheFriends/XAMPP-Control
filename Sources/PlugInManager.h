@@ -19,6 +19,8 @@ enum {
 	PlugInNotCompatible = 4
 };
 
+#define PlugInInvokeHook(hookName,dictionary) [[[PlugInManager sharedPlugInManager] registry] invokeHook:(hookName) withDictionary:(dictionary)]
+
 @interface PlugInManager : NSObject {
 	NSMutableArray* searchPaths;
 	NSMutableArray* loadedPlugins;
