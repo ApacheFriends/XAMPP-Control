@@ -43,11 +43,9 @@
 		
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
-	securityCheckController = [[SecurityCheckController alloc] init];
-
-	//[securityCheckController showWindow:self];
+	securityCheckController = [[SecurityCheckController alloc] init];	
 	
-	[XPModuleErrorWindow presentError:[NSError errorWithDomain:@"" code:1 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"/Applications/XAMPP/xamppfiles/logs/error_log", @"LOGFILE", Nil]]];
+	[securityCheckController showWindow:self];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender

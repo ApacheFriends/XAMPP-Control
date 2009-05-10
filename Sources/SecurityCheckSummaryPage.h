@@ -11,7 +11,12 @@
 #import <SharedXAMPPSupport/AssistantPage.h>
 
 @interface SecurityCheckSummaryPage : AssistantPage {
-
+	NSArray* securityChecks;
 }
+
+- (id) initWithSecurityChecks:(NSArray*)anArray;
+
+- (void) setSecurityChecks:(NSArray*)anArray;
+- (NSArray*)securityChecks;
 
 @end

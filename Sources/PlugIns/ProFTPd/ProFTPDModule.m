@@ -61,7 +61,7 @@
 								   encoding:NSUTF8StringEncoding];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
-								code:XPCantStart 
+								code:XPDidNotStart 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
 	
@@ -105,7 +105,7 @@
 								   encoding:NSUTF8StringEncoding];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
-								code:XPCantStop 
+								code:XPDidNotStop 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
 	

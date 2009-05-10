@@ -10,6 +10,7 @@
 #import "XPModuleViewController.h"
 #import "StatusView.h"
 #import "XPModule.h"
+#import "XPModuleErrorWindow.h"
 
 @implementation XPModuleViewController
 
@@ -149,7 +150,7 @@
 	error = [module start];
 	
 	if (error)
-		[NSApp presentError:error];
+		[XPModuleErrorWindow presentError:error];
 	
 	[pool release];
 }

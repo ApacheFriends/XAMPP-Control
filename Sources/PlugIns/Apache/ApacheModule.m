@@ -31,7 +31,7 @@
 - (NSError*) start
 {
 	XPRootTask *apachectl = [[XPRootTask alloc] init];
-	NSString *output;
+	NSMutableDictionary* errorDict;
 	NSError *error;
 	
 	working = YES;
@@ -45,9 +45,9 @@
 	if ([[NSFileManager defaultManager] 
 		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"
 		 isDirectory:NO]) // Start with ssl
-		[apachectl setArguments:[NSArray arrayWithObjects:@"-k", @"start", @"-DPHP5", @"-DSSL", nil]];
+		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", @"-DSSL", nil]];
 	else
-		[apachectl setArguments:[NSArray arrayWithObjects:@"-k", @"start", @"-DPHP5", nil]];
+		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", nil]];
 	
 	[apachectl setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];
 	//[apachectl setStandardError:standardError];
@@ -67,16 +67,23 @@
 	}
 	
 	// Hm, ok apache didn't start :/
-	output = [[NSString alloc] initWithData:[[apachectl communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	// Now let us create an error. Because the -E parameter of apachectl we're not intrested
+	// in the output of the apachectl run. All important informations are located in the log
+	// file. :)
 	
-	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
-								code:XPCantStart 
-							userInfo:[NSDictionary dictionaryWithObject:output 
-																 forKey:NSLocalizedDescriptionKey]];
+	errorDict = [NSMutableDictionary new];
 	
+	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
+				 forKey:XPErrorLogFileKey];
+	[errorDict setValue:[self name] 
+				 forKey:XPErrorModuleNameKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPDidNotStart 
+							userInfo:errorDict];
+	
+	[errorDict release];
 	[apachectl release];
-	[output release];
 	
 	[self setStatus:XPNotRunning];
 	working = NO;
@@ -112,7 +119,7 @@
 								   encoding:NSUTF8StringEncoding];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
-								code:XPCantStop 
+								code:XPDidNotStop 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
 	

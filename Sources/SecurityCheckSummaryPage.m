@@ -11,7 +11,7 @@
 
 @implementation SecurityCheckSummaryPage
 
-- (id) init
+- (id) initWithSecurityChecks:(NSArray*)anArray
 {
 	self = [super init];
 	if (self != nil) {
@@ -21,11 +21,29 @@
 			return Nil;
 		}
 		
+		[self setSecurityChecks:anArray];
 		[self setTitle:NSLocalizedString(@"Summary", @"The title of the Security Check summary page")];
 		[self setStepTitle:NSLocalizedString(@"Summary", @"The step title of the Security Check summary page which will displayed on the left side")];
 		[self setType:AssistantSummaryPage];
 	}
 	return self;
+}
+
+#pragma mark -
+#pragma mark Getter and Setter
+
+- (void) setSecurityChecks:(NSArray*)anArray
+{
+	if ([anArray isEqualToArray:securityChecks])
+		return;
+	
+	[securityChecks release];
+	securityChecks = [anArray retain];
+}
+
+- (NSArray*)securityChecks
+{
+	return securityChecks;
 }
 
 @end

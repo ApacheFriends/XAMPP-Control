@@ -7,12 +7,14 @@
  * conditions; see COPYING for details.                              *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-static NSString *XAMPPControlErrorDomain = @"XAMPPControlErrorDomain";
+extern NSString *XAMPPControlErrorDomain;
+extern NSString* XPErrorLogFileKey;
+extern NSString* XPErrorModuleNameKey;
 
-typedef enum {
+typedef enum _XPError {
 	XPNoError,
-	XPCantStart,
-	XPCantStop,
-	XPCantReload,
+	XPDidNotStart,
+	XPDidNotStop,
+	XPDidNotReload,
 	XPUnknownError
 } XPError;
