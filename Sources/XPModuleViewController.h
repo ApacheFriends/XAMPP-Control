@@ -12,10 +12,11 @@
 
 @class XPModule;
 @class StatusView;
+@class StatusIndicatorView;
 
 @interface XPModuleViewController : XPViewController {
 	IBOutlet NSButton	*actionButton;
-	IBOutlet StatusView	*statusView;
+	IBOutlet StatusIndicatorView *statusIndicator;
 	IBOutlet NSTextField*nameField;
 	
 	XPModule			*module;

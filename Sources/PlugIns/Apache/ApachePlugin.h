@@ -10,7 +10,7 @@
 #import <PlugIn/PlugIn.h>
 
 @interface ApachePlugin: PlugIn {
-	NSDictionary *registryInfo;
+
 }
 
 @end

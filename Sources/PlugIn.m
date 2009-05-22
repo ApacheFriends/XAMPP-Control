@@ -11,6 +11,16 @@
 
 @implementation PlugIn
 
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		[self setRegistryInfo:[NSDictionary dictionary]];
+	}
+	return self;
+}
+
+
 - (BOOL) setupError:(NSError**)anError
 {
 	if (anError != NULL) {
@@ -20,9 +30,22 @@
 	return NO;
 }
 
+- (void) setRegistryInfo:(NSDictionary*)anDictionary
+{
+	if ([anDictionary isEqualToDictionary:registryInfo])
+		return;
+	
+	[self willChangeValueForKey:@"registryInfo"];
+	
+	[registryInfo release];
+	registryInfo = [anDictionary retain];
+	
+	[self didChangeValueForKey:@"registryInfo"];
+}
+
 - (NSDictionary*) registryInfo
 {
-	return [NSDictionary dictionary];
+	return registryInfo;
 }
 
 @end

@@ -10,7 +10,10 @@
 
 #import <SharedXAMPPSupport/AssistantPage.h>
 
+@class SecurityTasksView;
+
 @interface SecurityCheckSummaryPage : AssistantPage {
+	IBOutlet SecurityTasksView* tasksView;
 	NSArray* securityChecks;
 }
 

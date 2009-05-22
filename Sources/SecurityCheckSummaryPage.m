@@ -7,7 +7,8 @@
 //
 
 #import "SecurityCheckSummaryPage.h"
-
+#import "SecurityCheckProtocol.h"
+#import "SecurityTasksView.h"
 
 @implementation SecurityCheckSummaryPage
 
@@ -29,6 +30,13 @@
 	return self;
 }
 
+- (void) dealloc
+{
+	[self setSecurityChecks:Nil];
+	[super dealloc];
+}
+
+
 #pragma mark -
 #pragma mark Getter and Setter
 
@@ -46,4 +54,27 @@
 	return securityChecks;
 }
 
+#pragma mark -
+#pragma mark Tasks
+
+- (void) pageWillAppear
+{
+	/*
+	  First calulate all tasks, thenn add them to our tasksArray
+	 */
+	
+	NSEnumerator* enumerator = [securityChecks objectEnumerator];
+	NSMutableArray* tasks = [NSMutableArray array];
+	id<SecurityCheckProtocol> securityCheck;
+	
+	while ((securityCheck = [enumerator nextObject])) {
+		[securityCheck calcualteTasks];
+		
+		[tasks addObjectsFromArray:[securityCheck localizedTaskTitles]];
+	}
+	
+	[tasksView setTasks:tasks];
+}
+
 @end
+

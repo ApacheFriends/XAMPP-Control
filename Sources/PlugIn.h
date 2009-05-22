@@ -12,10 +12,11 @@
 #import <PlugIn/PlugInRegistry.h>
 
 @interface PlugIn : NSObject {
-
+	NSDictionary *registryInfo;
 }
 
 - (BOOL) setupError:(NSError**)anError;
 - (NSDictionary*) registryInfo;
+- (void) setRegistryInfo:(NSDictionary*)registryInfo;
 
 @end

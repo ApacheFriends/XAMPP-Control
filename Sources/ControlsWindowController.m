@@ -42,6 +42,7 @@
 	NSRect frame;
 	NSArray *contols;
 	NSEnumerator *enumerator;
+	int maxWidth = 0;
 	id object;
 	
 	frame = [[self window] frame];
@@ -52,12 +53,15 @@
 	
 	while ((object = [enumerator nextObject])) {
 		if ([object isKindOfClass:[XPViewController class]]) {
+			if (maxWidth < NSWidth([[object view] frame]))
+				maxWidth = NSWidth([[object view] frame]);
 			frame.size.height += NSHeight([[object view] frame]);
 			if (![object isEqual:[contols lastObject]])
 				frame.size.height += SPACE;
 		}
 	}
 	
+	frame.size.width   = maxWidth + MARGIN*2;
 	frame.size.height += MARGIN;
 	
 	return frame;
@@ -80,7 +84,7 @@
 	[[self window] setFrame:[[self window] frameRectForContentRect:contentFrame] display:YES animate:YES];
 	
 	subviews = [[[[self window] contentView] subviews] copy];
-	enumerator = [[[[self window] contentView] subviews] objectEnumerator];
+	enumerator = [subviews objectEnumerator];
 	
 	while ((view = [enumerator nextObject]))
 		[view removeFromSuperviewWithoutNeedingDisplay];
@@ -95,7 +99,7 @@
 	while ((controller = [enumerator nextObject])) {
 		
 		if (![controller isKindOfClass:[XPViewController class]]) {
-			NSLog(@"%p is not an XPViewController!", controls);
+			NSLog(@"%@ is not an XPViewController!", controls);
 			continue;
 		}
 		

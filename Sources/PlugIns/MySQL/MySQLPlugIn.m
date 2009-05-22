@@ -37,20 +37,9 @@
 	[module release];
 	[controller release];
 	
-	registryInfo = [dict retain];
+	[self setRegistryInfo:dict];
 	
 	return YES;
-}
-
-- (void) dealloc
-{
-	[registryInfo release];
-	[super dealloc];
-}
-
-- (NSDictionary*) registryInfo
-{
-	return registryInfo;
 }
 
 @end

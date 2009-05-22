@@ -8,6 +8,12 @@
 
 #import "MySQLSecurityCheck.h"
 
+@interface MySQLSecurityCheck (PRIVAT)
+
+- (void) setLocalizedTaskTitles:(NSArray*)anArray;
+
+@end
+
 
 @implementation MySQLSecurityCheck
 
@@ -39,6 +45,52 @@
 	}
 	
 	return YES;
+}
+
+- (void) calcualteTasks
+{
+	NSMutableArray* taskTitels = [NSMutableArray array];
+	
+	if (skipNetworking)
+		[taskTitels addObject:NSLocalizedString(@"DisableMySQLNetworking", @"Task description for the disable MySQL networking task")];
+	
+	if (setRootPassword)
+		[taskTitels addObject:NSLocalizedString(@"SetMySQLRootPassword", @"Task description for the set mysql's root password task.")];
+	
+	if (setPMAPassword)
+		[taskTitels addObject:NSLocalizedString(@"SetRandomMySQLPMAPassword", @"Taskdrscription for the set a random mysql's pma password task.")];
+		
+	[self setLocalizedTaskTitles:taskTitels];
+}
+
+- (NSArray*) localizedTaskTitles
+{
+	return localizedTaskTitles;
+}
+
+- (uint) tasks
+{
+	return [localizedTaskTitles count];
+}
+
+- (BOOL) doTask:(uint)task
+{
+	sleep(2);
+	[[NSException exceptionWithName:@"blub" reason:@"blub2" userInfo:Nil] raise];
+	return YES;
+}
+
+@end
+
+@implementation MySQLSecurityCheck (PRIVAT)
+
+- (void) setLocalizedTaskTitles:(NSArray*)anArray
+{
+	if ([anArray isEqualToArray:localizedTaskTitles])
+		return;
+	
+	[localizedTaskTitles release];
+	localizedTaskTitles = [anArray retain];
 }
 
 @end

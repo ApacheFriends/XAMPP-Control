@@ -77,7 +77,7 @@
 	[array addObjectsFromArray:securityChecks];
 	
 	[array addObject:[[[SecurityCheckSummaryPage alloc] initWithSecurityChecks:securityChecks] autorelease]];
-	[array addObject:[[SecurityCheckWorkPage new] autorelease]];
+	[array addObject:[[[SecurityCheckWorkPage alloc] initWithSecurityChecks:securityChecks] autorelease]];
 	
 	[self setPages:array];
 	

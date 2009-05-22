@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.SystemVersion">9J61</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.AppKitVersion">949.46</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -81,7 +81,7 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{20, 20}, {376, 230}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<string key="NSClassName">NSView</string>
+						<string key="NSClassName">SecurityTasksView</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{416, 320}</string>
@@ -99,6 +99,14 @@
 						<reference key="destination" ref="1005"/>
 					</object>
 					<int key="connectionID">5</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tasksView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="118111043"/>
+					</object>
+					<int key="connectionID">6</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -183,7 +191,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
-					<string>{{539, 578}, {416, 320}}</string>
+					<string>{{53, 326}, {416, 320}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{217, 442}, {480, 272}}</string>
@@ -212,7 +220,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">5</int>
+			<int key="maxID">6</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -235,14 +243,26 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SecurityCheckSummaryPage</string>
 					<string key="superclassName">AssistantPage</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">tasksView</string>
+						<string key="NS.object.0">SecurityTasksView</string>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Sources/SecurityCheckSummaryPage.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">SecurityTasksView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Sources/SecurityTasksView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">XPViewController</string>
-					<string key="superclassName">NSObject</string>
+					<string key="superclassName">NSResponder</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">view</string>
 						<string key="NS.object.0">NSView</string>

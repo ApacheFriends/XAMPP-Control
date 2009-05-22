@@ -9,8 +9,16 @@
 
 #import "XPModuleViewController.h"
 #import "StatusView.h"
+#import "StatusIndicatorView.h"
 #import "XPModule.h"
 #import "XPModuleErrorWindow.h"
+
+@interface XPModuleViewController (PRIVATE)
+
+- (void) updateActionButton;
+
+@end
+
 
 @implementation XPModuleViewController
 
@@ -65,19 +73,26 @@
 {
 	if (module == object && [keyPath isEqualToString:@"status"]) {
 		// Update status
-		[statusView setStatus:[module status]];
 		
 		switch ([module status]) {
 			case XPNotRunning:
 				[actionButton setTitle:NSLocalizedString(@"Start", @"Start a Module")];
 				[actionButton setEnabled:YES];
+				[statusIndicator setStatus:RedStatus];
 				break;
 			case XPRunning:
 				[actionButton setTitle:NSLocalizedString(@"Stop", @"Stop a Module")];
 				[actionButton setEnabled:YES];
+				[statusIndicator setStatus:GreenStatus];
+				break;
+			case XPStarting:
+			case XPStopping:
+				[actionButton setEnabled:NO];
+				[statusIndicator setStatus:WorkingStatus];
 				break;
 			default:
 				[actionButton setEnabled:NO];
+				[statusIndicator setStatus:UnknownStatus];
 				break;
 		}
 		
@@ -176,3 +191,4 @@
 }
 
 @end
+

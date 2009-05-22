@@ -10,7 +10,7 @@
 #import <PlugIn/PlugIn.h>
 
 @interface ProFTPDPlugin : PlugIn {
-	NSDictionary *registryInfo;
+
 }
 
 @end

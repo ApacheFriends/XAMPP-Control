@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface XPViewController : NSObject {
+@interface XPViewController : NSResponder {
 	IBOutlet NSView *view;
 }
 

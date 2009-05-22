@@ -183,7 +183,7 @@
 
 - (BOOL)isFlipped
 {
-	return YES;
+	return NO;
 }
 
 @end
