@@ -7,6 +7,40 @@
 //
 
 #import "PlugInRegistry.h"
+#import "PlugInPriorityProtocol.h"
+
+NSComparisonResult sortCategorie(id firstObject, id secondObject, void *context)
+{
+	int firstPriority = 0;
+	int secondPriority = 0;
+	NSString* firstComparisonString = @"";
+	NSString* secondComparisonString = @"";
+	
+	if ([firstObject conformsToProtocol:@protocol(PlugInPriorityProtocol)]) {
+		firstPriority = [firstObject priority];
+		firstComparisonString = [firstObject comparisonString];
+	}
+	
+	if ([secondObject conformsToProtocol:@protocol(PlugInPriorityProtocol)]) {
+		secondPriority = [secondObject priority];
+		secondComparisonString = [secondObject comparisonString];
+	}
+	
+	if (firstPriority < secondPriority)
+		return NSOrderedAscending;
+	else if (firstPriority > secondPriority)
+		return NSOrderedDescending;
+	else
+		return [firstComparisonString compare:secondComparisonString];
+}
+
+@interface PlugInRegistry (PRIVAT)
+
+- (void) sortAllCategories;
+- (void) sortCategorie:(NSString*)anCategorie;
+
+@end
+
 
 #define CategorieAssert(categorie) NSParameterAssert((categorie) != Nil && [(categorie) rangeOfString:@"."].location == NSNotFound)
 
@@ -36,7 +70,7 @@
 
 	// We have already this Categorie in our Registry
 	if ([plugInCategories valueForKey:anCategorie]) {
-		NSLog(@"%@ already in this Registry.");
+		NSLog(@"DEBUG: %@ already in this Registry.");
 		return;
 	}
 	
@@ -76,6 +110,7 @@
 	while ((categorie = [categorieEnumerator nextObject])) {		
 		[[plugInCategories mutableArrayValueForKey:categorie] 
 		 addObjectsFromArray:[anDictionary valueForKey:categorie]];
+		[self sortCategorie:categorie];
 	}
 	
 	return YES;
@@ -108,6 +143,7 @@
 	}
 	
 	[[plugInCategories mutableArrayValueForKey:anCategorie] addObject:anObject];
+	[self sortCategorie:anCategorie];
 }
 
 - (void) removeObject:(id)anObject
@@ -183,7 +219,7 @@
 	invocations = [hooks valueForKey:hookName];
 	
 	if (!invocations || ![invocations count]) {
-		NSLog(@"PlugInRegistry: No hooks for '%@'", hookName);
+		NSLog(@"DEBUG: No hooks for '%@'", hookName);
 		return;
 	}
 	
@@ -196,11 +232,11 @@
 		
 		// Great invoke it an catches the error...
 		@try {
-			NSLog(@"PlugInRegistry: Invoke hook '%@' on %@", hookName, invocation);
+			NSLog(@"DEBUG: Invoke hook '%@' on %@", hookName, invocation);
 			[invocation invoke];
 		}
 		@catch (NSException * e) {
-			NSLog(@"PlugInRegistry: Hook '%@' failed on %@: %@", hookName, invocation, e);
+			NSLog(@"ERROR: Hook '%@' failed on %@: %@", hookName, invocation, e);
 		}
 	}
 }
@@ -213,6 +249,28 @@
 - (NSString*) stringFromRegistryContent
 {
 	return [NSString stringWithFormat:@"Categories: %@\nHooks: %@", [plugInCategories description], [hooks description]];
+}
+
+@end
+
+@implementation PlugInRegistry (PRIVAT)
+
+- (void) sortAllCategories
+{
+	NSEnumerator* enumerator;
+	NSString* categorie;
+	
+	enumerator = [[self allCategories] objectEnumerator];
+	
+	while ((categorie = [enumerator nextObject]))
+		[self sortCategorie:categorie];
+}
+
+- (void) sortCategorie:(NSString*)anCategorie;
+{
+	CategorieAssert(anCategorie);
+	
+	[[plugInCategories mutableArrayValueForKey:anCategorie] sortUsingFunction:sortCategorie context:NULL];
 }
 
 @end

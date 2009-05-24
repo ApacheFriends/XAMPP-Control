@@ -38,21 +38,6 @@
 		[module addObserver:self forKeyPath:@"status" options:Nil context:NULL];
 		[self observeValueForKeyPath:@"status" ofObject:module change:Nil context:NULL];
 		[nameField setStringValue:[module name]];
-		
-		startItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Start %@", [module name]]
-											   action:@selector(start:)
-										keyEquivalent:@""];
-		[startItem setTarget:self];
-		
-		stopItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Stop %@", [module name]]
-											  action:@selector(stop:)
-									   keyEquivalent:@""];
-		[stopItem setTarget:self];
-		
-		reloadItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Reload %@", [module name]]
-												action:@selector(reload:)
-										 keyEquivalent:@""];
-		[reloadItem setTarget:self];
 	}
 	return self;
 }
@@ -62,11 +47,6 @@
 	[module release];
 	
 	[super dealloc];
-}
-
-- (NSArray*) menuItems
-{
-	return [NSArray arrayWithObjects:startItem, stopItem, reloadItem, Nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -95,10 +75,6 @@
 				[statusIndicator setStatus:UnknownStatus];
 				break;
 		}
-		
-		// Update the modules menu
-		// we asume thats all the items are in the same menu
-		[[startItem menu] update];
 	}
 }
 
@@ -114,20 +90,6 @@
 		default:
 			break;
 	}
-}
-
-- (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem
-{
-	SEL action = [anItem action];
-	
-	if (action == @selector(start:))
-		return ([module status] == XPNotRunning);
-	else if (action == @selector(stop:))
-		return  ([module status] == XPRunning);
-	else if (action == @selector(reload:))
-		return ([module status] == XPRunning);
-	
-	return YES;
 }
 
 - (IBAction) reload:(id)sender

@@ -9,8 +9,7 @@
 #import "MySQLPlugIn.h"
 #import "MySQLModule.h"
 #import "MySQLSecurityCheck.h"
-
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import "MySQLModuleViewController.h"
 
 @implementation MySQLPlugIn
 
@@ -25,7 +24,7 @@
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [MySQLModule new];
-	controller = [[XPModuleViewController alloc] initWithModule:module];
+	controller = [[MySQLModuleViewController alloc] initWithModule:module];
 	securityCheck = [MySQLSecurityCheck new];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];

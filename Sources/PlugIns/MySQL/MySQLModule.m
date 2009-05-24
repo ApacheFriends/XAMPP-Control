@@ -35,7 +35,7 @@
 - (NSError*) start
 {
 	XPRootTask *mysqlServer = [[XPRootTask alloc] init];
-	NSString *output;
+	NSMutableDictionary* errorDict;
 	NSError *error;
 	
 	working = YES;
@@ -62,15 +62,18 @@
 	}
 	
 	// Hm, ok mysql didn't start :/
-	output = [[NSString alloc] initWithData:[[mysqlServer communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	errorDict = [NSMutableDictionary new];
 	
-	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
+	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
+				 forKey:XPErrorLogFileKey];
+	[errorDict setValue:[self name] 
+				 forKey:XPErrorModuleNameKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
 								code:XPDidNotStart 
-							userInfo:[NSDictionary dictionaryWithObject:output 
-																 forKey:NSLocalizedDescriptionKey]];
+							userInfo:errorDict];
 	
-	[output release];
+	[errorDict release];
 	[mysqlServer release];
 	
 	[self setStatus:XPNotRunning];

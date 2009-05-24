@@ -8,9 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import <PlugIn/PlugIn.h>
 
-@interface PHPSwitchControl : XPViewController {
-
+@interface PHPSwitchControl : XPViewController<PlugInPriorityProtocol> {
+	IBOutlet StatusIndicatorView* statusIndicator;
+	IBOutlet NSPopUpButton* phpVersionSwitch;
+	
 }
+
+- (void) updatePHPVersionsMenu;
 
 @end

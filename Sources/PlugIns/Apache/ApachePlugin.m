@@ -8,8 +8,7 @@
 
 #import "ApachePlugin.h"
 #import "ApacheModule.h"
-
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import "ApacheModuleViewController.h"
 
 @implementation ApachePlugin
 
@@ -23,7 +22,7 @@
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [ApacheModule new];
-	controller = [[XPModuleViewController alloc] initWithModule:module];
+	controller = [[ApacheModuleViewController alloc] initWithModule:module];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
 	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])

@@ -68,6 +68,11 @@
 		9256DFEC0F9F6DF20000BE90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EACDE50F3F14030037FCC2 /* Security.framework */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
+		926DAACA0FC84AB200998643 /* PlugInPriorityProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */; };
+		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
+		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
+		926DAB080FC85CBA00998643 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926DAB070FC85CBA00998643 /* ManagePHPs.xib */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
 		927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */; };
 		927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */; };
@@ -315,6 +320,14 @@
 		9257D7CE0FA1F14F002BF955 /* AssistantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantController.m; sourceTree = "<group>"; };
 		9257D7D90FA1F3FF002BF955 /* AssistantPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantPage.h; sourceTree = "<group>"; };
 		9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantPage.m; sourceTree = "<group>"; };
+		926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInPriorityProtocol.h; sourceTree = "<group>"; };
+		926DAAE10FC851DD00998643 /* ApacheModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApacheModuleViewController.h; sourceTree = "<group>"; };
+		926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApacheModuleViewController.m; sourceTree = "<group>"; };
+		926DAAE40FC8523200998643 /* MySQLModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLModuleViewController.h; sourceTree = "<group>"; };
+		926DAAE50FC8523200998643 /* MySQLModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLModuleViewController.m; sourceTree = "<group>"; };
+		926DAAE70FC8527C00998643 /* ProFTPDModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFTPDModuleViewController.h; sourceTree = "<group>"; };
+		926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProFTPDModuleViewController.m; sourceTree = "<group>"; };
+		926DAB070FC85CBA00998643 /* ManagePHPs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagePHPs.xib; sourceTree = "<group>"; };
 		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		927DFAA90F5192BE00EAD88B /* BetaFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaFeedbackController.h; sourceTree = "<group>"; };
 		927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaFeedbackController.m; sourceTree = "<group>"; };
@@ -642,6 +655,7 @@
 				9240098D0F9D0D56003E2A1B /* PlugInManager.m */,
 				923215750F9E2D2B002E9079 /* PlugIn.h */,
 				923215760F9E2D2B002E9079 /* PlugIn.m */,
+				926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */,
 			);
 			name = PlugIn;
 			sourceTree = "<group>";
@@ -710,6 +724,7 @@
 			children = (
 				92E362140FBECB610018B96E /* PHP-Info.plist */,
 				92E362BC0FBED9310018B96E /* PHPSwitchControl.xib */,
+				926DAB070FC85CBA00998643 /* ManagePHPs.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -801,6 +816,8 @@
 				92F13C1E0FA07D39007ED72B /* ApachePlugin.m */,
 				92F13C5A0FA08230007ED72B /* ApacheModule.h */,
 				92F13C5B0FA08230007ED72B /* ApacheModule.m */,
+				926DAAE10FC851DD00998643 /* ApacheModuleViewController.h */,
+				926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -814,6 +831,8 @@
 				92F13CE60FA08715007ED72B /* MySQLModule.m */,
 				920079790FA48B89002665E0 /* MySQLSecurityCheck.h */,
 				9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */,
+				926DAAE40FC8523200998643 /* MySQLModuleViewController.h */,
+				926DAAE50FC8523200998643 /* MySQLModuleViewController.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -827,6 +846,8 @@
 				92F13CF40FA087DB007ED72B /* ProFTPDModule.m */,
 				9200799C0FA4B8FB002665E0 /* ProFTPDSecurityCheck.h */,
 				9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */,
+				926DAAE70FC8527C00998643 /* ProFTPDModuleViewController.h */,
+				926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -904,6 +925,7 @@
 				921BB23C0F9F58BD00DC56A0 /* PlugInRegistry.h in Headers */,
 				921BB2400F9F58BD00DC56A0 /* PlugIn.h in Headers */,
 				921BB23E0F9F58BD00DC56A0 /* PlugInManager.h in Headers */,
+				926DAACA0FC84AB200998643 /* PlugInPriorityProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				920079AA0FA4BB04002665E0 /* ProFTPDSecurityCheck.xib in Resources */,
+				926DAB080FC85CBA00998643 /* ManagePHPs.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1302,6 +1325,7 @@
 			files = (
 				92F13C420FA07DFA007ED72B /* ApachePlugin.m in Sources */,
 				92F13C5C0FA08230007ED72B /* ApacheModule.m in Sources */,
+				926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1312,6 +1336,7 @@
 				92F13C880FA0851A007ED72B /* MySQLPlugIn.m in Sources */,
 				92F13CE70FA08715007ED72B /* MySQLModule.m in Sources */,
 				9200797B0FA48B89002665E0 /* MySQLSecurityCheck.m in Sources */,
+				926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1322,6 +1347,7 @@
 				92F13CDB0FA085D6007ED72B /* ProFTPDPlugin.m in Sources */,
 				92F13CF50FA087DB007ED72B /* ProFTPDModule.m in Sources */,
 				9200799E0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m in Sources */,
+				926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

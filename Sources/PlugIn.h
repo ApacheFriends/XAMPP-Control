@@ -10,6 +10,7 @@
 
 #import <PlugIn/PlugInManager.h>
 #import <PlugIn/PlugInRegistry.h>
+#import <PlugIn/PlugInPriorityProtocol.h>
 
 @interface PlugIn : NSObject {
 	NSDictionary *registryInfo;

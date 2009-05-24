@@ -18,11 +18,12 @@
 	
 	PHPSwitchControl *viewController = [PHPSwitchControl new];
 	
-	NSLog(@"success %i", [NSBundle loadNibNamed:@"PHPSwitchControl" owner:viewController]);
-	
-	NSLog(@"%@", [viewController view]);
-	
-	//[dict setValue:[NSArray arrayWithObject:viewController] forKey:XPControlsPlugInCategorie];
+	if (![NSBundle loadNibNamed:@"PHPSwitchControl" owner:viewController]) {
+		NSLog(@"Can not load PHPSwitchControl!!!");
+		return NO;
+	}
+		
+	[dict setValue:[NSArray arrayWithObject:viewController] forKey:XPControlsPlugInCategorie];
 	
 	[self setRegistryInfo:dict];
 	

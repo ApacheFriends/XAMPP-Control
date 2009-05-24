@@ -9,8 +9,7 @@
 #import "ProFTPDPlugin.h"
 #import "ProFTPDModule.h"
 #import "ProFTPDSecurityCheck.h"
-
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import "ProFTPDModuleViewController.h"
 
 @implementation ProFTPDPlugin
 
@@ -25,7 +24,7 @@
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [ProFTPDModule new];
-	controller = [[XPModuleViewController alloc] initWithModule:module];
+	controller = [[ProFTPDModuleViewController alloc] initWithModule:module];
 	securityCheck = [ProFTPDSecurityCheck new];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];

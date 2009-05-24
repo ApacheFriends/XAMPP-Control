@@ -33,6 +33,4 @@
 - (IBAction) start:(id)sender;
 - (IBAction) reload:(id)sender;
 
-- (NSArray*) menuItems;
-
 @end
