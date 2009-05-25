@@ -6,6 +6,35 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9204BAB70FCB2B1300B849F0 /* Common */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9204BAD80FCB2B8400B849F0 /* Build configuration list for PBXAggregateTarget "Common" */;
+			buildPhases = (
+			);
+			dependencies = (
+				9204BABD0FCB2B2000B849F0 /* PBXTargetDependency */,
+				9204BABB0FCB2B1D00B849F0 /* PBXTargetDependency */,
+			);
+			name = Common;
+			productName = Common;
+		};
+		9204BABE0FCB2B3800B849F0 /* PlugIns */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9204BAD90FCB2B8400B849F0 /* Build configuration list for PBXAggregateTarget "PlugIns" */;
+			buildPhases = (
+			);
+			dependencies = (
+				9204BAC80FCB2B4500B849F0 /* PBXTargetDependency */,
+				9204BAC60FCB2B4500B849F0 /* PBXTargetDependency */,
+				9204BAC40FCB2B4500B849F0 /* PBXTargetDependency */,
+				9204BAC20FCB2B4500B849F0 /* PBXTargetDependency */,
+			);
+			name = PlugIns;
+			productName = PlugIns;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -19,7 +48,6 @@
 		920078BF0FA3AC0F002665E0 /* AssistantPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9257D7D90FA1F3FF002BF955 /* AssistantPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		920078D30FA3B017002665E0 /* SecurityCheckWelcomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 920078D20FA3B017002665E0 /* SecurityCheckWelcomePage.m */; };
 		920078D40FA3B02D002665E0 /* SecurityCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920078C10FA3ACDA002665E0 /* SecurityCheckController.m */; };
-		920078DE0FA3B48C002665E0 /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99E0FA218B000B8D0D7 /* Assistant.xib */; };
 		920078E90FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920078E80FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib */; };
 		920078F80FA45AF8002665E0 /* SecurityCheckSummaryPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 920078F70FA45AF8002665E0 /* SecurityCheckSummaryPage.m */; };
 		920078FC0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920078FB0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib */; };
@@ -30,7 +58,6 @@
 		9200791B0FA463F5002665E0 /* AssistantStepActive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079180FA463F5002665E0 /* AssistantStepActive.tiff */; };
 		9200791C0FA463F5002665E0 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		9200791D0FA463F5002665E0 /* AssistantStepDisabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */; };
-		920079470FA47AD0002665E0 /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99E0FA218B000B8D0D7 /* Assistant.xib */; };
 		9200794D0FA47BA0002665E0 /* AssistantStepActive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079180FA463F5002665E0 /* AssistantStepActive.tiff */; };
 		9200794E0FA47BA0002665E0 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		9200794F0FA47BA0002665E0 /* AssistantStepDisabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */; };
@@ -40,6 +67,8 @@
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
 		9204BA8A0FCB216E00B849F0 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA880FCB216E00B849F0 /* ProFTPDSecurityCheck.xib */; };
+		9204BAB20FCB2AB700B849F0 /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
+		9204BAB30FCB2AB700B849F0 /* ModuleErrorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAB00FCB2AB700B849F0 /* ModuleErrorWindow.xib */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Team.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Team.html */; };
 		921BB1DF0F9F505B00DC56A0 /* TestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */; };
@@ -104,7 +133,6 @@
 		92ED0D7C0FB33EF400ED5BB9 /* XPModuleErrorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */; };
 		92ED0D7D0FB33EF500ED5BB9 /* XPModuleErrorWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92ED0DB90FB33F4700ED5BB9 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
-		92ED0E000FB3478300ED5BB9 /* ModuleErrorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92ED0DFC0FB3457C00ED5BB9 /* ModuleErrorWindow.xib */; };
 		92F13BED0FA077A5007ED72B /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92F13BF20FA077AA007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
 		92F13BFE0FA07B10007ED72B /* XPPlugInCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F13BFC0FA07B10007ED72B /* XPPlugInCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -134,33 +162,96 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9204BABA0FCB2B1D00B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */;
+			remoteInfo = SharedXAMPPSupport;
+		};
+		9204BABC0FCB2B2000B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
+			remoteInfo = PlugIn;
+		};
+		9204BAC10FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13CA50FA08576007ED72B /* ProFTPd */;
+			remoteInfo = ProFTPd;
+		};
+		9204BAC30FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E362120FBECB610018B96E /* PHP */;
+			remoteInfo = PHP;
+		};
+		9204BAC50FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B /* MySQL */;
+			remoteInfo = MySQL;
+		};
+		9204BAC70FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13C230FA07D7B007ED72B /* Apache */;
+			remoteInfo = Apache;
+		};
+		9204BAC90FCB2B5100B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteInfo = Common;
+		};
+		9204BACB0FCB2B5400B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteInfo = Common;
+		};
+		9204BACD0FCB2B5900B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteInfo = Common;
+		};
+		9204BACF0FCB2B5C00B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteInfo = Common;
+		};
+		9204BAD10FCB2B6A00B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteInfo = Common;
+		};
+		9204BAD30FCB2B6C00B849F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9204BABE0FCB2B3800B849F0 /* PlugIns */;
+			remoteInfo = PlugIns;
+		};
 		921BB2340F9F58AC00DC56A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0;
 			remoteInfo = PlugIn;
-		};
-		921BB2380F9F58AF00DC56A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0;
-			remoteInfo = PlugIn;
-		};
-		9256DF3A0F9F6D950000BE90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9256DF280F9F6CA80000BE90;
-			remoteInfo = SharedXAMPPSupport;
-		};
-		92E362400FBECB860018B96E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E362120FBECB610018B96E;
-			remoteInfo = PHP;
 		};
 		92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -175,27 +266,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0;
 			remoteInfo = PlugIn;
-		};
-		92F13C2B0FA07D93007ED72B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92F13C230FA07D7B007ED72B;
-			remoteInfo = Apache;
-		};
-		92F13C890FA0852B007ED72B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B;
-			remoteInfo = MySQL;
-		};
-		92F13CB70FA0858F007ED72B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
-			remoteInfo = ProFTPd;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -265,9 +335,9 @@
 		920079080FA45E5A002665E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckWorkPage.xib; sourceTree = "<group>"; };
 		9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantStepIndicatorView.h; sourceTree = "<group>"; };
 		920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantStepIndicatorView.m; sourceTree = "<group>"; };
-		920079180FA463F5002665E0 /* AssistantStepActive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = AssistantStepActive.tiff; path = Resources/AssistantStepActive.tiff; sourceTree = "<group>"; };
-		920079190FA463F5002665E0 /* AssistantStepInactive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = AssistantStepInactive.tiff; path = Resources/AssistantStepInactive.tiff; sourceTree = "<group>"; };
-		9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = AssistantStepDisabled.tiff; path = Resources/AssistantStepDisabled.tiff; sourceTree = "<group>"; };
+		920079180FA463F5002665E0 /* AssistantStepActive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepActive.tiff; sourceTree = "<group>"; };
+		920079190FA463F5002665E0 /* AssistantStepInactive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepInactive.tiff; sourceTree = "<group>"; };
+		9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepDisabled.tiff; sourceTree = "<group>"; };
 		920079790FA48B89002665E0 /* MySQLSecurityCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLSecurityCheck.h; sourceTree = "<group>"; };
 		9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLSecurityCheck.m; sourceTree = "<group>"; };
 		9200799C0FA4B8FB002665E0 /* ProFTPDSecurityCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFTPDSecurityCheck.h; sourceTree = "<group>"; };
@@ -276,6 +346,8 @@
 		9204BA830FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ManagePHPs.xib; sourceTree = "<group>"; };
 		9204BA850FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchControl.xib; sourceTree = "<group>"; };
 		9204BA890FCB216E00B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProFTPDSecurityCheck.xib; sourceTree = "<group>"; };
+		9204BAAF0FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Assistant.xib; sourceTree = "<group>"; };
+		9204BAB10FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleErrorWindow.xib; sourceTree = "<group>"; };
 		92178A600F5D787800425525 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		92178A630F5D7AB800425525 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		92178A640F5D7AB800425525 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
@@ -289,15 +361,15 @@
 		921C836B0F8F64CA00703423 /* PHPSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPSwitchController.h; sourceTree = "<group>"; };
 		921C836C0F8F64CA00703423 /* PHPSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPSwitchController.m; sourceTree = "<group>"; };
 		921C836F0F8F655F00703423 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchView.xib; sourceTree = "<group>"; };
-		922D70C30F387EB600FDF9E2 /* XPModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPModule.h; path = Sources/XPModule.h; sourceTree = "<group>"; };
-		922D70C40F387EB600FDF9E2 /* XPModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPModule.m; path = Sources/XPModule.m; sourceTree = "<group>"; };
-		922D70C60F38802900FDF9E2 /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPStatus.h; path = Sources/XPStatus.h; sourceTree = "<group>"; };
+		922D70C30F387EB600FDF9E2 /* XPModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModule.h; sourceTree = "<group>"; };
+		922D70C40F387EB600FDF9E2 /* XPModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModule.m; sourceTree = "<group>"; };
+		922D70C60F38802900FDF9E2 /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPStatus.h; sourceTree = "<group>"; };
 		922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace (Process).h"; sourceTree = "<group>"; };
 		922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace (Process).m"; sourceTree = "<group>"; };
-		922D71000F389DCF00FDF9E2 /* XPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPError.h; path = Sources/XPError.h; sourceTree = "<group>"; };
+		922D71000F389DCF00FDF9E2 /* XPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPError.h; sourceTree = "<group>"; };
 		922D726C0F39D1FA00FDF9E2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleView.xib; sourceTree = "<group>"; };
-		922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPModuleViewController.h; path = Sources/XPModuleViewController.h; sourceTree = "<group>"; };
-		922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPModuleViewController.m; path = Sources/XPModuleViewController.m; sourceTree = "<group>"; };
+		922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleViewController.h; sourceTree = "<group>"; };
+		922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleViewController.m; sourceTree = "<group>"; };
 		922D72790F39D57B00FDF9E2 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
 		922D727A0F39D57B00FDF9E2 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
@@ -309,13 +381,12 @@
 		9240097F0F9D019A003E2A1B /* PlugInRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlugInRegistry.m; sourceTree = "<group>"; };
 		9240098C0F9D0D56003E2A1B /* PlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInManager.h; sourceTree = "<group>"; };
 		9240098D0F9D0D56003E2A1B /* PlugInManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlugInManager.m; sourceTree = "<group>"; };
-		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KQueue.h; path = Sources/KQueue.h; sourceTree = "<group>"; };
-		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KQueue.m; path = Sources/KQueue.m; sourceTree = "<group>"; };
+		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
+		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
 		9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedXAMPPSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9256DF2A0F9F6CA80000BE90 /* SharedXAMPPSupport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SharedXAMPPSupport-Info.plist"; sourceTree = "<group>"; };
+		9256DF2A0F9F6CA80000BE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9256DFFF0F9F75450000BE90 /* App_Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App_Delegate.h; sourceTree = "<group>"; };
 		9256E0000F9F75450000BE90 /* App_Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App_Delegate.m; sourceTree = "<group>"; };
-		9257D7910FA1D7AB002BF955 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Assistant.xib; sourceTree = "<group>"; };
 		9257D7940FA1DA73002BF955 /* XPBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBox.h; sourceTree = "<group>"; };
 		9257D7950FA1DA73002BF955 /* XPBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBox.m; sourceTree = "<group>"; };
 		9257D7CD0FA1F14F002BF955 /* AssistantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantController.h; sourceTree = "<group>"; };
@@ -336,9 +407,8 @@
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
-		92A4C30A0FB1DD5D00CE3050 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleErrorWindow.xib; sourceTree = "<group>"; };
-		92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPModuleErrorWindow.h; path = Sources/XPModuleErrorWindow.h; sourceTree = "<group>"; };
-		92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPModuleErrorWindow.m; path = Sources/XPModuleErrorWindow.m; sourceTree = "<group>"; };
+		92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleErrorWindow.h; sourceTree = "<group>"; };
+		92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleErrorWindow.m; sourceTree = "<group>"; };
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
 		92CBCBC20FC032B900C136BE /* SecurityTasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTasksView.h; sourceTree = "<group>"; };
 		92CBCBC30FC032B900C136BE /* SecurityTasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTasksView.m; sourceTree = "<group>"; };
@@ -356,14 +426,14 @@
 		92E3627B0FBED1FF0018B96E /* PHPPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPPlugIn.m; sourceTree = "<group>"; };
 		92E362D40FBEDC1C0018B96E /* PHPSwitchControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPSwitchControl.h; sourceTree = "<group>"; };
 		92E362D50FBEDC1C0018B96E /* PHPSwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPSwitchControl.m; sourceTree = "<group>"; };
-		92EACD370F3EFCA00037FCC2 /* XPRootTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPRootTask.h; path = Sources/XPRootTask.h; sourceTree = "<group>"; };
-		92EACD380F3EFCA00037FCC2 /* XPRootTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPRootTask.m; path = Sources/XPRootTask.m; sourceTree = "<group>"; };
+		92EACD370F3EFCA00037FCC2 /* XPRootTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPRootTask.h; sourceTree = "<group>"; };
+		92EACD380F3EFCA00037FCC2 /* XPRootTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPRootTask.m; sourceTree = "<group>"; };
 		92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xproottask-helper-tool"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "xproottask-helper-tool.c"; sourceTree = "<group>"; };
 		92EACDE50F3F14030037FCC2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
-		92ED0D710FB337EF00ED5BB9 /* XPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPError.m; path = Sources/XPError.m; sourceTree = "<group>"; };
-		92F13BFC0FA07B10007ED72B /* XPPlugInCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPPlugInCategories.h; path = Sources/XPPlugInCategories.h; sourceTree = "<group>"; };
-		92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPPlugInCategories.m; path = Sources/XPPlugInCategories.m; sourceTree = "<group>"; };
+		92ED0D710FB337EF00ED5BB9 /* XPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPError.m; sourceTree = "<group>"; };
+		92F13BFC0FA07B10007ED72B /* XPPlugInCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPPlugInCategories.h; sourceTree = "<group>"; };
+		92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPPlugInCategories.m; sourceTree = "<group>"; };
 		92F13C1D0FA07D39007ED72B /* ApachePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApachePlugin.h; sourceTree = "<group>"; };
 		92F13C1E0FA07D39007ED72B /* ApachePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApachePlugin.m; sourceTree = "<group>"; };
 		92F13C240FA07D7B007ED72B /* Apache.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Apache.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,11 +457,11 @@
 		92F13D450FA09A5A007ED72B /* ControlsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsWindowController.h; sourceTree = "<group>"; };
 		92F13D460FA09A5A007ED72B /* ControlsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsWindowController.m; sourceTree = "<group>"; };
 		92F13D480FA09A6E007ED72B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ControlsWindow.xib; sourceTree = "<group>"; };
-		92F13D5D0FA0C313007ED72B /* XPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPViewController.h; path = Sources/XPViewController.h; sourceTree = "<group>"; };
-		92F13D5E0FA0C313007ED72B /* XPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPViewController.m; path = Sources/XPViewController.m; sourceTree = "<group>"; };
-		92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedXAMPPSupport.h; path = Sources/SharedXAMPPSupport.h; sourceTree = "<group>"; };
-		92FA25850F4FF780005EEFB3 /* XPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPConfiguration.h; path = Sources/XPConfiguration.h; sourceTree = "<group>"; };
-		92FA25860F4FF780005EEFB3 /* XPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPConfiguration.m; path = Sources/XPConfiguration.m; sourceTree = "<group>"; };
+		92F13D5D0FA0C313007ED72B /* XPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPViewController.h; sourceTree = "<group>"; };
+		92F13D5E0FA0C313007ED72B /* XPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPViewController.m; sourceTree = "<group>"; };
+		92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedXAMPPSupport.h; sourceTree = "<group>"; };
+		92FA25850F4FF780005EEFB3 /* XPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPConfiguration.h; sourceTree = "<group>"; };
+		92FA25860F4FF780005EEFB3 /* XPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,7 +551,6 @@
 			isa = PBXGroup;
 			children = (
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				9240098B0F9D0D31003E2A1B /* PlugIn */,
 				921BB1CD0F9F4F7700DC56A0 /* Test Plugin */,
 				927DFAA80F51929400EAD88B /* XAMPPBeta */,
 				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
@@ -676,13 +745,6 @@
 			name = "Test Plugin";
 			sourceTree = "<group>";
 		};
-		9240098B0F9D0D31003E2A1B /* PlugIn */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PlugIn;
-			sourceTree = "<group>";
-		};
 		9257D7D80FA1F3E5002BF955 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,8 +755,7 @@
 				9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */,
 				920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */,
 			);
-			name = Assistant;
-			path = Sources;
+			path = Assistant;
 			sourceTree = "<group>";
 		};
 		92592C410F55B09100039573 /* XAMPPBeta */ = {
@@ -776,7 +837,7 @@
 				92ED0E260FB3480B00ED5BB9 /* Resources */,
 				92ED0E1B0FB347F100ED5BB9 /* Sources */,
 			);
-			name = SharedXAMPPSupport;
+			path = SharedXAMPPSupport;
 			sourceTree = "<group>";
 		};
 		92ED0E1B0FB347F100ED5BB9 /* Sources */ = {
@@ -804,20 +865,20 @@
 				92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */,
 				92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */,
 			);
-			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		92ED0E260FB3480B00ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9204BAAE0FCB2AB700B849F0 /* Assistant.xib */,
+				9204BAB00FCB2AB700B849F0 /* ModuleErrorWindow.xib */,
 				920079180FA463F5002665E0 /* AssistantStepActive.tiff */,
 				920079190FA463F5002665E0 /* AssistantStepInactive.tiff */,
 				9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */,
-				92ED0DFC0FB3457C00ED5BB9 /* ModuleErrorWindow.xib */,
-				92BDB99E0FA218B000B8D0D7 /* Assistant.xib */,
-				9256DF2A0F9F6CA80000BE90 /* SharedXAMPPSupport-Info.plist */,
+				9256DF2A0F9F6CA80000BE90 /* Info.plist */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		92ED0E580FB3485E00ED5BB9 /* PlugIns */ = {
@@ -981,13 +1042,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				92E362410FBECB860018B96E /* PBXTargetDependency */,
 				92EACDB90F3F11890037FCC2 /* PBXTargetDependency */,
-				921BB2390F9F58AF00DC56A0 /* PBXTargetDependency */,
-				9256DF3B0F9F6D950000BE90 /* PBXTargetDependency */,
-				92F13C2C0FA07D93007ED72B /* PBXTargetDependency */,
-				92F13C8A0FA0852B007ED72B /* PBXTargetDependency */,
-				92F13CB80FA0858F007ED72B /* PBXTargetDependency */,
+				9204BAD20FCB2B6A00B849F0 /* PBXTargetDependency */,
+				9204BAD40FCB2B6C00B849F0 /* PBXTargetDependency */,
 			);
 			name = "XAMPP Control";
 			productInstallPath = "$(HOME)/Applications";
@@ -1061,6 +1118,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9204BACE0FCB2B5900B849F0 /* PBXTargetDependency */,
 			);
 			name = PHP;
 			productName = PHP;
@@ -1094,6 +1152,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9204BACA0FCB2B5100B849F0 /* PBXTargetDependency */,
 			);
 			name = Apache;
 			productName = Apache;
@@ -1111,6 +1170,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9204BACC0FCB2B5400B849F0 /* PBXTargetDependency */,
 			);
 			name = MySQL;
 			productName = MySQL;
@@ -1128,6 +1188,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9204BAD00FCB2B5C00B849F0 /* PBXTargetDependency */,
 			);
 			name = ProFTPd;
 			productName = ProFTPd;
@@ -1154,6 +1215,8 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* XAMPP Control */,
+				9204BAB70FCB2B1300B849F0 /* Common */,
+				9204BABE0FCB2B3800B849F0 /* PlugIns */,
 				92F13C230FA07D7B007ED72B /* Apache */,
 				92F13C7D0FA084F7007ED72B /* MySQL */,
 				92E362120FBECB610018B96E /* PHP */,
@@ -1174,7 +1237,6 @@
 				9200794D0FA47BA0002665E0 /* AssistantStepActive.tiff in Resources */,
 				9200794E0FA47BA0002665E0 /* AssistantStepInactive.tiff in Resources */,
 				9200794F0FA47BA0002665E0 /* AssistantStepDisabled.tiff in Resources */,
-				920079470FA47AD0002665E0 /* Assistant.xib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */,
@@ -1215,11 +1277,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92ED0E000FB3478300ED5BB9 /* ModuleErrorWindow.xib in Resources */,
-				920078DE0FA3B48C002665E0 /* Assistant.xib in Resources */,
 				9200791B0FA463F5002665E0 /* AssistantStepActive.tiff in Resources */,
 				9200791C0FA463F5002665E0 /* AssistantStepInactive.tiff in Resources */,
 				9200791D0FA463F5002665E0 /* AssistantStepDisabled.tiff in Resources */,
+				9204BAB20FCB2AB700B849F0 /* Assistant.xib in Resources */,
+				9204BAB30FCB2AB700B849F0 /* ModuleErrorWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1373,25 +1435,70 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9204BABB0FCB2B1D00B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */;
+			targetProxy = 9204BABA0FCB2B1D00B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BABD0FCB2B2000B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
+			targetProxy = 9204BABC0FCB2B2000B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAC20FCB2B4500B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
+			targetProxy = 9204BAC10FCB2B4500B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAC40FCB2B4500B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E362120FBECB610018B96E /* PHP */;
+			targetProxy = 9204BAC30FCB2B4500B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAC60FCB2B4500B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13C7D0FA084F7007ED72B /* MySQL */;
+			targetProxy = 9204BAC50FCB2B4500B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAC80FCB2B4500B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13C230FA07D7B007ED72B /* Apache */;
+			targetProxy = 9204BAC70FCB2B4500B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BACA0FCB2B5100B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BAB70FCB2B1300B849F0 /* Common */;
+			targetProxy = 9204BAC90FCB2B5100B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BACC0FCB2B5400B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BAB70FCB2B1300B849F0 /* Common */;
+			targetProxy = 9204BACB0FCB2B5400B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BACE0FCB2B5900B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BAB70FCB2B1300B849F0 /* Common */;
+			targetProxy = 9204BACD0FCB2B5900B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAD00FCB2B5C00B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BAB70FCB2B1300B849F0 /* Common */;
+			targetProxy = 9204BACF0FCB2B5C00B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAD20FCB2B6A00B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BAB70FCB2B1300B849F0 /* Common */;
+			targetProxy = 9204BAD10FCB2B6A00B849F0 /* PBXContainerItemProxy */;
+		};
+		9204BAD40FCB2B6C00B849F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9204BABE0FCB2B3800B849F0 /* PlugIns */;
+			targetProxy = 9204BAD30FCB2B6C00B849F0 /* PBXContainerItemProxy */;
+		};
 		921BB2350F9F58AC00DC56A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
 			targetProxy = 921BB2340F9F58AC00DC56A0 /* PBXContainerItemProxy */;
-		};
-		921BB2390F9F58AF00DC56A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
-			targetProxy = 921BB2380F9F58AF00DC56A0 /* PBXContainerItemProxy */;
-		};
-		9256DF3B0F9F6D950000BE90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */;
-			targetProxy = 9256DF3A0F9F6D950000BE90 /* PBXContainerItemProxy */;
-		};
-		92E362410FBECB860018B96E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92E362120FBECB610018B96E /* PHP */;
-			targetProxy = 92E362400FBECB860018B96E /* PBXContainerItemProxy */;
 		};
 		92EACDB90F3F11890037FCC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1402,21 +1509,6 @@
 			isa = PBXTargetDependency;
 			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
 			targetProxy = 92ED0DAC0FB33F3C00ED5BB9 /* PBXContainerItemProxy */;
-		};
-		92F13C2C0FA07D93007ED72B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92F13C230FA07D7B007ED72B /* Apache */;
-			targetProxy = 92F13C2B0FA07D93007ED72B /* PBXContainerItemProxy */;
-		};
-		92F13C8A0FA0852B007ED72B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92F13C7D0FA084F7007ED72B /* MySQL */;
-			targetProxy = 92F13C890FA0852B007ED72B /* PBXContainerItemProxy */;
-		};
-		92F13CB80FA0858F007ED72B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
-			targetProxy = 92F13CB70FA0858F007ED72B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1493,6 +1585,22 @@
 			name = ProFTPDSecurityCheck.xib;
 			sourceTree = "<group>";
 		};
+		9204BAAE0FCB2AB700B849F0 /* Assistant.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9204BAAF0FCB2AB700B849F0 /* English */,
+			);
+			name = Assistant.xib;
+			sourceTree = "<group>";
+		};
+		9204BAB00FCB2AB700B849F0 /* ModuleErrorWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9204BAB10FCB2AB700B849F0 /* English */,
+			);
+			name = ModuleErrorWindow.xib;
+			sourceTree = "<group>";
+		};
 		92178A7A0F5D809F00425525 /* Team.html */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1549,27 +1657,51 @@
 			name = ControlsWindow.xib;
 			sourceTree = "<group>";
 		};
-		92BDB99E0FA218B000B8D0D7 /* Assistant.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9257D7910FA1D7AB002BF955 /* English */,
-			);
-			name = Assistant.xib;
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		92ED0DFC0FB3457C00ED5BB9 /* ModuleErrorWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92A4C30A0FB1DD5D00CE3050 /* English */,
-			);
-			name = ModuleErrorWindow.xib;
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9204BAB80FCB2B1300B849F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Common;
+			};
+			name = Debug;
+		};
+		9204BAB90FCB2B1300B849F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Common;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		9204BABF0FCB2B3800B849F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = PlugIns;
+			};
+			name = Debug;
+		};
+		9204BAC00FCB2B3800B849F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = PlugIns;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		921BB1DC0F9F502400DC56A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1689,7 +1821,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "SharedXAMPPSupport-Info.plist";
+				INFOPLIST_FILE = SharedXAMPPSupport/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks//$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
@@ -1716,7 +1848,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "SharedXAMPPSupport-Info.plist";
+				INFOPLIST_FILE = SharedXAMPPSupport/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -2022,6 +2154,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9204BAD80FCB2B8400B849F0 /* Build configuration list for PBXAggregateTarget "Common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9204BAB80FCB2B1300B849F0 /* Debug */,
+				9204BAB90FCB2B1300B849F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9204BAD90FCB2B8400B849F0 /* Build configuration list for PBXAggregateTarget "PlugIns" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9204BABF0FCB2B3800B849F0 /* Debug */,
+				9204BAC00FCB2B3800B849F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		921BB1DE0F9F502400DC56A0 /* Build configuration list for PBXNativeTarget "TestPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
