@@ -6,8 +6,6 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "PlugInManager.h"
-#import "PlugInRegistry.h"
 #import "PlugIn.h"
 
 NSString* PlugInErrorDomain = @"org.apachefriends.xampp.control.plugin";

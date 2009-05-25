@@ -285,7 +285,7 @@
 		921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPlugin.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		921BB1DB0F9F502300DC56A0 /* TestPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestPlugin-Info.plist"; sourceTree = "<group>"; };
 		921BB22F0F9F58A700DC56A0 /* PlugIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlugIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		921BB2300F9F58A700DC56A0 /* PlugIn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlugIn-Info.plist"; sourceTree = "<group>"; };
+		921BB2300F9F58A700DC56A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		921C836B0F8F64CA00703423 /* PHPSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPSwitchController.h; sourceTree = "<group>"; };
 		921C836C0F8F64CA00703423 /* PHPSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPSwitchController.m; sourceTree = "<group>"; };
 		921C836F0F8F655F00703423 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchView.xib; sourceTree = "<group>"; };
@@ -481,7 +481,6 @@
 			isa = PBXGroup;
 			children = (
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				92F13C070FA07C77007ED72B /* PlugIns */,
 				9240098B0F9D0D31003E2A1B /* PlugIn */,
 				921BB1CD0F9F4F7700DC56A0 /* Test Plugin */,
 				927DFAA80F51929400EAD88B /* XAMPPBeta */,
@@ -553,6 +552,7 @@
 		29B97314FDCFA39411CA2CEA /* XAMPP Control */ = {
 			isa = PBXGroup;
 			children = (
+				9204BA8B0FCB230D00B849F0 /* PlugIn Framework */,
 				92ED0E580FB3485E00ED5BB9 /* PlugIns */,
 				92ED0E1A0FB347DD00ED5BB9 /* SharedXAMPPSupport */,
 				080E96DDFE201D6D7F000001 /* Sources */,
@@ -561,7 +561,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				921BB1DB0F9F502300DC56A0 /* TestPlugin-Info.plist */,
-				921BB2300F9F58A700DC56A0 /* PlugIn-Info.plist */,
 			);
 			name = "XAMPP Control";
 			sourceTree = "<group>";
@@ -637,6 +636,37 @@
 			name = Pages;
 			sourceTree = "<group>";
 		};
+		9204BA8B0FCB230D00B849F0 /* PlugIn Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9204BA8D0FCB233700B849F0 /* Resources */,
+				9204BA8C0FCB232100B849F0 /* Sources */,
+			);
+			path = "PlugIn Framework";
+			sourceTree = "<group>";
+		};
+		9204BA8C0FCB232100B849F0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9240097E0F9D019A003E2A1B /* PlugInRegistry.h */,
+				9240097F0F9D019A003E2A1B /* PlugInRegistry.m */,
+				9240098C0F9D0D56003E2A1B /* PlugInManager.h */,
+				9240098D0F9D0D56003E2A1B /* PlugInManager.m */,
+				923215750F9E2D2B002E9079 /* PlugIn.h */,
+				923215760F9E2D2B002E9079 /* PlugIn.m */,
+				926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9204BA8D0FCB233700B849F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				921BB2300F9F58A700DC56A0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		921BB1CD0F9F4F7700DC56A0 /* Test Plugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,13 +679,6 @@
 		9240098B0F9D0D31003E2A1B /* PlugIn */ = {
 			isa = PBXGroup;
 			children = (
-				9240097E0F9D019A003E2A1B /* PlugInRegistry.h */,
-				9240097F0F9D019A003E2A1B /* PlugInRegistry.m */,
-				9240098C0F9D0D56003E2A1B /* PlugInManager.h */,
-				9240098D0F9D0D56003E2A1B /* PlugInManager.m */,
-				923215750F9E2D2B002E9079 /* PlugIn.h */,
-				923215760F9E2D2B002E9079 /* PlugIn.m */,
-				926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */,
 			);
 			name = PlugIn;
 			sourceTree = "<group>";
@@ -800,9 +823,9 @@
 		92ED0E580FB3485E00ED5BB9 /* PlugIns */ = {
 			isa = PBXGroup;
 			children = (
-				92E361FB0FBECB270018B96E /* PHP */,
 				92F13C040FA07C08007ED72B /* Apache */,
 				92F13C050FA07C1D007ED72B /* MySQL */,
+				92E361FB0FBECB270018B96E /* PHP */,
 				92F13C060FA07C28007ED72B /* ProFTPd */,
 			);
 			path = PlugIns;
@@ -902,13 +925,6 @@
 				92ED0E5B0FB3489400ED5BB9 /* Sources */,
 			);
 			path = ProFTPd;
-			sourceTree = "<group>";
-		};
-		92F13C070FA07C77007ED72B /* PlugIns */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PlugIns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1618,7 +1634,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PlugIn-Info.plist";
+				INFOPLIST_FILE = "PlugIn Framework/Resources/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
@@ -1645,7 +1661,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PlugIn-Info.plist";
+				INFOPLIST_FILE = "PlugIn Framework/Resources/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1725,7 +1741,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PHP-Info.plist";
+				INFOPLIST_FILE = PlugIns/PHP/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1749,7 +1765,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PHP-Info.plist";
+				INFOPLIST_FILE = PlugIns/PHP/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1855,7 +1871,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "MySQL-Info.plist";
+				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1879,7 +1895,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "MySQL-Info.plist";
+				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1905,7 +1921,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "ProFTPd-Info.plist";
+				INFOPLIST_FILE = PlugIns/ProFTPD/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1929,7 +1945,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "ProFTPd-Info.plist";
+				INFOPLIST_FILE = PlugIns/ProFTPD/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
