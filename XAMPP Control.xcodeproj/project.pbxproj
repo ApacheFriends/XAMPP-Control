@@ -13,7 +13,6 @@
 			buildPhases = (
 			);
 			dependencies = (
-				9204BABD0FCB2B2000B849F0 /* PBXTargetDependency */,
 				9204BABB0FCB2B1D00B849F0 /* PBXTargetDependency */,
 			);
 			name = Common;
@@ -72,14 +71,6 @@
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Team.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Team.html */; };
 		921BB1DF0F9F505B00DC56A0 /* TestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */; };
-		921BB23C0F9F58BD00DC56A0 /* PlugInRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9240097E0F9D019A003E2A1B /* PlugInRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		921BB23D0F9F58BD00DC56A0 /* PlugInRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240097F0F9D019A003E2A1B /* PlugInRegistry.m */; };
-		921BB23E0F9F58BD00DC56A0 /* PlugInManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9240098C0F9D0D56003E2A1B /* PlugInManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		921BB23F0F9F58BD00DC56A0 /* PlugInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9240098D0F9D0D56003E2A1B /* PlugInManager.m */; };
-		921BB2400F9F58BD00DC56A0 /* PlugIn.h in Headers */ = {isa = PBXBuildFile; fileRef = 923215750F9E2D2B002E9079 /* PlugIn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		921BB2410F9F58BD00DC56A0 /* PlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 923215760F9E2D2B002E9079 /* PlugIn.m */; };
-		921BB2450F9F58D600DC56A0 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
-		921BB2490F9F58DC00DC56A0 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		921C836D0F8F64CA00703423 /* PHPSwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921C836C0F8F64CA00703423 /* PHPSwitchController.m */; };
 		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
 		922D727B0F39D57B00FDF9E2 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D727A0F39D57B00FDF9E2 /* StatusView.m */; };
@@ -99,7 +90,6 @@
 		9256DFEC0F9F6DF20000BE90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EACDE50F3F14030037FCC2 /* Security.framework */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
-		926DAACA0FC84AB200998643 /* PlugInPriorityProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */; };
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
@@ -108,6 +98,12 @@
 		927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
 		9290982A0F50243900BBE38B /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 929098280F50243900BBE38B /* GettingStarted.html */; };
+		92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92952C2D0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92952C2F0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92952C390FCB425200F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9940FA218A800B8D0D7 /* ModuleView.xib */; };
 		92BDB9970FA218A800B8D0D7 /* GettingStarted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9960FA218A800B8D0D7 /* GettingStarted.xib */; };
 		92BDB9990FA218A800B8D0D7 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9980FA218A800B8D0D7 /* About.xib */; };
@@ -115,6 +111,7 @@
 		92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */; };
 		92CBCBBE0FC02F8800C136BE /* Success.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CBCBBD0FC02F8800C136BE /* Success.png */; };
 		92CBCBC40FC032B900C136BE /* SecurityTasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCBC30FC032B900C136BE /* SecurityTasksView.m */; };
+		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */; };
 		92D8EAC80FBEB258005010BC /* IndicatorGreen.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC40FBEB258005010BC /* IndicatorGreen.tiff */; };
 		92D8EAC90FBEB258005010BC /* IndicatorRed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */; };
@@ -122,7 +119,6 @@
 		92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */; };
 		92E361760FBEB8390018B96E /* StatusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E361750FBEB8390018B96E /* StatusIndicatorView.m */; };
 		92E3622A0FBECB7B0018B96E /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
-		92E3622B0FBECB7B0018B96E /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92E362500FBECB920018B96E /* PHP.plugin in PlugIns */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
 		92E3627C0FBED1FF0018B96E /* PHPPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E3627B0FBED1FF0018B96E /* PHPPlugIn.m */; };
 		92E362D60FBEDC1C0018B96E /* PHPSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E362D50FBEDC1C0018B96E /* PHPSwitchControl.m */; };
@@ -132,21 +128,16 @@
 		92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
 		92ED0D7C0FB33EF400ED5BB9 /* XPModuleErrorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */; };
 		92ED0D7D0FB33EF500ED5BB9 /* XPModuleErrorWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92ED0DB90FB33F4700ED5BB9 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
-		92F13BED0FA077A5007ED72B /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92F13BF20FA077AA007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
 		92F13BFE0FA07B10007ED72B /* XPPlugInCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F13BFC0FA07B10007ED72B /* XPPlugInCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92F13BFF0FA07B10007ED72B /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
 		92F13C340FA07D9A007ED72B /* Apache.plugin in PlugIns */ = {isa = PBXBuildFile; fileRef = 92F13C240FA07D7B007ED72B /* Apache.plugin */; };
 		92F13C420FA07DFA007ED72B /* ApachePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13C1E0FA07D39007ED72B /* ApachePlugin.m */; };
 		92F13C480FA07E12007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
-		92F13C4C0FA07E1B007ED72B /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92F13C5C0FA08230007ED72B /* ApacheModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13C5B0FA08230007ED72B /* ApacheModule.m */; };
 		92F13C880FA0851A007ED72B /* MySQLPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13C760FA08486007ED72B /* MySQLPlugIn.m */; };
 		92F13C910FA08532007ED72B /* MySQL.plugin in PlugIns */ = {isa = PBXBuildFile; fileRef = 92F13C7E0FA084F7007ED72B /* MySQL.plugin */; };
-		92F13C960FA08542007ED72B /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92F13C970FA08542007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
-		92F13CAF0FA0858B007ED72B /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */; };
 		92F13CB00FA0858B007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
 		92F13CC20FA08596007ED72B /* ProFTPd.plugin in PlugIns */ = {isa = PBXBuildFile; fileRef = 92F13CA60FA08576007ED72B /* ProFTPd.plugin */; };
 		92F13CDB0FA085D6007ED72B /* ProFTPDPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13CDA0FA085D6007ED72B /* ProFTPDPlugin.m */; };
@@ -166,92 +157,78 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */;
+			remoteGlobalIDString = 9256DF280F9F6CA80000BE90;
 			remoteInfo = SharedXAMPPSupport;
-		};
-		9204BABC0FCB2B2000B849F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
-			remoteInfo = PlugIn;
 		};
 		9204BAC10FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13CA50FA08576007ED72B /* ProFTPd */;
+			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
 			remoteInfo = ProFTPd;
 		};
 		9204BAC30FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92E362120FBECB610018B96E /* PHP */;
+			remoteGlobalIDString = 92E362120FBECB610018B96E;
 			remoteInfo = PHP;
 		};
 		9204BAC50FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B /* MySQL */;
+			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B;
 			remoteInfo = MySQL;
 		};
 		9204BAC70FCB2B4500B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13C230FA07D7B007ED72B /* Apache */;
+			remoteGlobalIDString = 92F13C230FA07D7B007ED72B;
 			remoteInfo = Apache;
 		};
 		9204BAC90FCB2B5100B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0;
 			remoteInfo = Common;
 		};
 		9204BACB0FCB2B5400B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0;
 			remoteInfo = Common;
 		};
 		9204BACD0FCB2B5900B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0;
 			remoteInfo = Common;
 		};
 		9204BACF0FCB2B5C00B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0;
 			remoteInfo = Common;
 		};
 		9204BAD10FCB2B6A00B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0 /* Common */;
+			remoteGlobalIDString = 9204BAB70FCB2B1300B849F0;
 			remoteInfo = Common;
 		};
 		9204BAD30FCB2B6C00B849F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9204BABE0FCB2B3800B849F0 /* PlugIns */;
+			remoteGlobalIDString = 9204BABE0FCB2B3800B849F0;
 			remoteInfo = PlugIns;
-		};
-		921BB2340F9F58AC00DC56A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0;
-			remoteInfo = PlugIn;
 		};
 		92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -259,13 +236,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92EACD980F3F0E930037FCC2;
 			remoteInfo = "xproottask-helper-tool";
-		};
-		92ED0DAC0FB33F3C00ED5BB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 921BB22E0F9F58A700DC56A0;
-			remoteInfo = PlugIn;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -301,8 +271,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */,
 				92F13BF20FA077AA007ED72B /* SharedXAMPPSupport.framework in Frameworks */,
-				92F13BED0FA077A5007ED72B /* PlugIn.framework in Frameworks */,
 			);
 			name = Frameworks;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,8 +326,6 @@
 		921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPlugin.m; sourceTree = "<group>"; };
 		921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPlugin.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		921BB1DB0F9F502300DC56A0 /* TestPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestPlugin-Info.plist"; sourceTree = "<group>"; };
-		921BB22F0F9F58A700DC56A0 /* PlugIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlugIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		921BB2300F9F58A700DC56A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		921C836B0F8F64CA00703423 /* PHPSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPSwitchController.h; sourceTree = "<group>"; };
 		921C836C0F8F64CA00703423 /* PHPSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPSwitchController.m; sourceTree = "<group>"; };
 		921C836F0F8F655F00703423 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchView.xib; sourceTree = "<group>"; };
@@ -375,12 +343,6 @@
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
 		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckProtocol.h; sourceTree = "<group>"; };
-		923215750F9E2D2B002E9079 /* PlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugIn.h; sourceTree = "<group>"; };
-		923215760F9E2D2B002E9079 /* PlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlugIn.m; sourceTree = "<group>"; };
-		9240097E0F9D019A003E2A1B /* PlugInRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInRegistry.h; sourceTree = "<group>"; };
-		9240097F0F9D019A003E2A1B /* PlugInRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlugInRegistry.m; sourceTree = "<group>"; };
-		9240098C0F9D0D56003E2A1B /* PlugInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInManager.h; sourceTree = "<group>"; };
-		9240098D0F9D0D56003E2A1B /* PlugInManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlugInManager.m; sourceTree = "<group>"; };
 		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
 		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
 		9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedXAMPPSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,7 +355,6 @@
 		9257D7CE0FA1F14F002BF955 /* AssistantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantController.m; sourceTree = "<group>"; };
 		9257D7D90FA1F3FF002BF955 /* AssistantPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantPage.h; sourceTree = "<group>"; };
 		9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantPage.m; sourceTree = "<group>"; };
-		926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlugInPriorityProtocol.h; sourceTree = "<group>"; };
 		926DAAE10FC851DD00998643 /* ApacheModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApacheModuleViewController.h; sourceTree = "<group>"; };
 		926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApacheModuleViewController.m; sourceTree = "<group>"; };
 		926DAAE40FC8523200998643 /* MySQLModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLModuleViewController.h; sourceTree = "<group>"; };
@@ -407,6 +368,7 @@
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
+		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = ../build/Debug/PlugIn.framework; sourceTree = SOURCE_ROOT; };
 		92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleErrorWindow.h; sourceTree = "<group>"; };
 		92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleErrorWindow.m; sourceTree = "<group>"; };
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
@@ -470,22 +432,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9256DF3E0F9F6DA10000BE90 /* SharedXAMPPSupport.framework in Frameworks */,
-				921BB2490F9F58DC00DC56A0 /* PlugIn.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */,
 				929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */,
+				92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		921BB1D80F9F502300DC56A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				921BB2450F9F58D600DC56A0 /* PlugIn.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		921BB22D0F9F58A700DC56A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,7 +450,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92ED0DB90FB33F4700ED5BB9 /* PlugIn.framework in Frameworks */,
+				92952C390FCB425200F3D16C /* PlugIn.framework in Frameworks */,
 				9256DFEC0F9F6DF20000BE90 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E3622A0FBECB7B0018B96E /* SharedXAMPPSupport.framework in Frameworks */,
-				92E3622B0FBECB7B0018B96E /* PlugIn.framework in Frameworks */,
+				92952C2D0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,8 +475,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F13C4C0FA07E1B007ED72B /* PlugIn.framework in Frameworks */,
 				92F13C480FA07E12007ED72B /* SharedXAMPPSupport.framework in Frameworks */,
+				92952C2F0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,8 +484,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F13C960FA08542007ED72B /* PlugIn.framework in Frameworks */,
 				92F13C970FA08542007ED72B /* SharedXAMPPSupport.framework in Frameworks */,
+				92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,8 +493,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F13CAF0FA0858B007ED72B /* PlugIn.framework in Frameworks */,
 				92F13CB00FA0858B007ED72B /* SharedXAMPPSupport.framework in Frameworks */,
+				92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +539,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92952C2B0FCB422B00F3D16C /* PlugIn.framework */,
 				929097570F501EBC00BBE38B /* WebKit.framework */,
 				92EACDE50F3F14030037FCC2 /* Security.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -608,7 +563,6 @@
 				8D1107320486CEB800E47090 /* XAMPP Control.app */,
 				92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */,
 				921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */,
-				921BB22F0F9F58A700DC56A0 /* PlugIn.framework */,
 				9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */,
 				92F13C240FA07D7B007ED72B /* Apache.plugin */,
 				92F13C7E0FA084F7007ED72B /* MySQL.plugin */,
@@ -621,7 +575,6 @@
 		29B97314FDCFA39411CA2CEA /* XAMPP Control */ = {
 			isa = PBXGroup;
 			children = (
-				9204BA8B0FCB230D00B849F0 /* PlugIn Framework */,
 				92ED0E580FB3485E00ED5BB9 /* PlugIns */,
 				92ED0E1A0FB347DD00ED5BB9 /* SharedXAMPPSupport */,
 				080E96DDFE201D6D7F000001 /* Sources */,
@@ -703,37 +656,6 @@
 				920079010FA45D8C002665E0 /* SecurityCheckWorkPage.m */,
 			);
 			name = Pages;
-			sourceTree = "<group>";
-		};
-		9204BA8B0FCB230D00B849F0 /* PlugIn Framework */ = {
-			isa = PBXGroup;
-			children = (
-				9204BA8D0FCB233700B849F0 /* Resources */,
-				9204BA8C0FCB232100B849F0 /* Sources */,
-			);
-			path = "PlugIn Framework";
-			sourceTree = "<group>";
-		};
-		9204BA8C0FCB232100B849F0 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9240097E0F9D019A003E2A1B /* PlugInRegistry.h */,
-				9240097F0F9D019A003E2A1B /* PlugInRegistry.m */,
-				9240098C0F9D0D56003E2A1B /* PlugInManager.h */,
-				9240098D0F9D0D56003E2A1B /* PlugInManager.m */,
-				923215750F9E2D2B002E9079 /* PlugIn.h */,
-				923215760F9E2D2B002E9079 /* PlugIn.m */,
-				926DAAC90FC84AB200998643 /* PlugInPriorityProtocol.h */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		9204BA8D0FCB233700B849F0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				921BB2300F9F58A700DC56A0 /* Info.plist */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		921BB1CD0F9F4F7700DC56A0 /* Test Plugin */ = {
@@ -991,17 +913,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		921BB22A0F9F58A700DC56A0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				921BB23C0F9F58BD00DC56A0 /* PlugInRegistry.h in Headers */,
-				921BB2400F9F58BD00DC56A0 /* PlugIn.h in Headers */,
-				921BB23E0F9F58BD00DC56A0 /* PlugInManager.h in Headers */,
-				926DAACA0FC84AB200998643 /* PlugInPriorityProtocol.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9256DF240F9F6CA80000BE90 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1063,30 +974,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				921BB2350F9F58AC00DC56A0 /* PBXTargetDependency */,
 			);
 			name = TestPlugin;
 			productName = TestPlugin;
 			productReference = 921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */;
 			productType = "com.apple.product-type.bundle";
-		};
-		921BB22E0F9F58A700DC56A0 /* PlugIn */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 921BB2330F9F58A800DC56A0 /* Build configuration list for PBXNativeTarget "PlugIn" */;
-			buildPhases = (
-				921BB22A0F9F58A700DC56A0 /* Headers */,
-				921BB22B0F9F58A700DC56A0 /* Resources */,
-				921BB22C0F9F58A700DC56A0 /* Sources */,
-				921BB22D0F9F58A700DC56A0 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PlugIn;
-			productName = PlugIn;
-			productReference = 921BB22F0F9F58A700DC56A0 /* PlugIn.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */ = {
 			isa = PBXNativeTarget;
@@ -1100,7 +992,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				92ED0DAD0FB33F3C00ED5BB9 /* PBXTargetDependency */,
 			);
 			name = SharedXAMPPSupport;
 			productName = SharedXAMPPSupport;
@@ -1223,7 +1114,6 @@
 				92F13CA50FA08576007ED72B /* ProFTPd */,
 				92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */,
 				921BB1D90F9F502300DC56A0 /* TestPlugin */,
-				921BB22E0F9F58A700DC56A0 /* PlugIn */,
 				9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */,
 			);
 		};
@@ -1260,13 +1150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		921BB1D60F9F502300DC56A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		921BB22B0F9F58A700DC56A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1353,16 +1236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		921BB22C0F9F58A700DC56A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				921BB23D0F9F58BD00DC56A0 /* PlugInRegistry.m in Sources */,
-				921BB23F0F9F58BD00DC56A0 /* PlugInManager.m in Sources */,
-				921BB2410F9F58BD00DC56A0 /* PlugIn.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9256DF260F9F6CA80000BE90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1440,11 +1313,6 @@
 			target = 9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */;
 			targetProxy = 9204BABA0FCB2B1D00B849F0 /* PBXContainerItemProxy */;
 		};
-		9204BABD0FCB2B2000B849F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
-			targetProxy = 9204BABC0FCB2B2000B849F0 /* PBXContainerItemProxy */;
-		};
 		9204BAC20FCB2B4500B849F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
@@ -1495,20 +1363,10 @@
 			target = 9204BABE0FCB2B3800B849F0 /* PlugIns */;
 			targetProxy = 9204BAD30FCB2B6C00B849F0 /* PBXContainerItemProxy */;
 		};
-		921BB2350F9F58AC00DC56A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
-			targetProxy = 921BB2340F9F58AC00DC56A0 /* PBXContainerItemProxy */;
-		};
 		92EACDB90F3F11890037FCC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */;
 			targetProxy = 92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */;
-		};
-		92ED0DAD0FB33F3C00ED5BB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 921BB22E0F9F58A700DC56A0 /* PlugIn */;
-			targetProxy = 92ED0DAC0FB33F3C00ED5BB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1752,61 +1610,6 @@
 			};
 			name = Release;
 		};
-		921BB2310F9F58A700DC56A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PlugIn Framework/Resources/Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = PlugIn;
-			};
-			name = Debug;
-		};
-		921BB2320F9F58A700DC56A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "PlugIn Framework/Resources/Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = PlugIn;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		9256DF2B0F9F6CA90000BE90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1814,6 +1617,10 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -1843,6 +1650,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1867,6 +1678,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1893,6 +1708,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1947,6 +1766,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1973,6 +1796,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1997,6 +1824,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -2023,6 +1854,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2047,6 +1882,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -2073,6 +1912,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2097,6 +1940,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -2115,6 +1962,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XAMPP Control_Prefix.pch";
@@ -2177,15 +2028,6 @@
 			buildConfigurations = (
 				921BB1DC0F9F502400DC56A0 /* Debug */,
 				921BB1DD0F9F502400DC56A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		921BB2330F9F58A800DC56A0 /* Build configuration list for PBXNativeTarget "PlugIn" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				921BB2310F9F58A700DC56A0 /* Debug */,
-				921BB2320F9F58A700DC56A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
