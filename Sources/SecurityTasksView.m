@@ -111,13 +111,13 @@
 		NSLog(@"row %f", yPos);
 	}
 	
-	/* Ok now everything is calculated center the list verticaly :) */
+	/* Ok now everything is calculated center the list verticaly :) 
 	
 	centerOffset = (NSHeight([self bounds]) - (yPos - 5.f)) / 2.f;
 	
 	NSLog(@"height: %f content height: %f and centerOffset: %f", NSHeight([self bounds]), yPos -5.f , centerOffset);
 	
-	if (centerOffset > 0.f && 0) {
+	if (centerOffset > 0.f) {
 		NSMutableDictionary* dict;
 		NSEnumerator* enumerator;
 
@@ -136,7 +136,7 @@
 			[dict setObject:NSStringFromRect(indicatorRect) forKey:@"indicatorRect"];
 			[dict setObject:NSStringFromRect(textRect) forKey:@"textRect"];
 		}
-	}
+	}*/
 	
 	[self setTaskInformations:informations];
 	
@@ -179,12 +179,15 @@
 	[textStorage addLayoutManager:layoutManager];
 	//[textContainer setLineFragmentPadding:0.0];
 	
+	[textStorage addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:[NSFont systemFontSize]]
+						range:NSMakeRange(0, [textStorage length])];
+	
 	/* Force the layoutmanage to layout the string so we can access the height */
 	(void) [layoutManager glyphRangeForTextContainer:textContainer];
 	
 	//return [layoutManager defaultLineHeightForFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
 
-	return NSHeight([layoutManager usedRectForTextContainer:textContainer])*1.125;
+	return NSHeight([layoutManager usedRectForTextContainer:textContainer]);
 }
 
 - (void) setupViews
