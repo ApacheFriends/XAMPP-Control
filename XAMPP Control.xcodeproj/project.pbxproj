@@ -71,10 +71,7 @@
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Team.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Team.html */; };
-		921BB1DF0F9F505B00DC56A0 /* TestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */; };
-		921C836D0F8F64CA00703423 /* PHPSwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921C836C0F8F64CA00703423 /* PHPSwitchController.m */; };
 		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
-		922D727B0F39D57B00FDF9E2 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D727A0F39D57B00FDF9E2 /* StatusView.m */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
 		922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9256DF300F9F6D6F0000BE90 /* KQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 924D9F3C0F447AAE00DC9E43 /* KQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -323,12 +320,6 @@
 		92178A630F5D7AB800425525 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		92178A640F5D7AB800425525 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		92178A780F5D809400425525 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/Team.html; sourceTree = "<group>"; };
-		921BB1CE0F9F4F8700DC56A0 /* TestPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPlugin.h; sourceTree = "<group>"; };
-		921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPlugin.m; sourceTree = "<group>"; };
-		921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPlugin.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		921BB1DB0F9F502300DC56A0 /* TestPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestPlugin-Info.plist"; sourceTree = "<group>"; };
-		921C836B0F8F64CA00703423 /* PHPSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPSwitchController.h; sourceTree = "<group>"; };
-		921C836C0F8F64CA00703423 /* PHPSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPSwitchController.m; sourceTree = "<group>"; };
 		921C836F0F8F655F00703423 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchView.xib; sourceTree = "<group>"; };
 		922D70C30F387EB600FDF9E2 /* XPModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModule.h; sourceTree = "<group>"; };
 		922D70C40F387EB600FDF9E2 /* XPModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModule.m; sourceTree = "<group>"; };
@@ -339,8 +330,6 @@
 		922D726C0F39D1FA00FDF9E2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleView.xib; sourceTree = "<group>"; };
 		922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleViewController.h; sourceTree = "<group>"; };
 		922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleViewController.m; sourceTree = "<group>"; };
-		922D72790F39D57B00FDF9E2 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
-		922D727A0F39D57B00FDF9E2 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
 		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckProtocol.h; sourceTree = "<group>"; };
@@ -423,6 +412,7 @@
 		92F13D5D0FA0C313007ED72B /* XPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPViewController.h; sourceTree = "<group>"; };
 		92F13D5E0FA0C313007ED72B /* XPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPViewController.m; sourceTree = "<group>"; };
 		92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedXAMPPSupport.h; sourceTree = "<group>"; };
+		92F9AD8F0FCDC95400037F27 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		92FA25850F4FF780005EEFB3 /* XPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPConfiguration.h; sourceTree = "<group>"; };
 		92FA25860F4FF780005EEFB3 /* XPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -437,13 +427,6 @@
 				92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */,
 				929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */,
 				92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		921BB1D80F9F502300DC56A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,21 +489,15 @@
 			isa = PBXGroup;
 			children = (
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				921BB1CD0F9F4F7700DC56A0 /* Test Plugin */,
 				927DFAA80F51929400EAD88B /* XAMPPBeta */,
 				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
-				9276D9F60F3B2F2F00866FEB /* Module */,
 				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
 				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
 				922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */,
 				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
-				922D72790F39D57B00FDF9E2 /* StatusView.h */,
-				922D727A0F39D57B00FDF9E2 /* StatusView.m */,
 				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
 				92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */,
-				921C836B0F8F64CA00703423 /* PHPSwitchController.h */,
-				921C836C0F8F64CA00703423 /* PHPSwitchController.m */,
 				9256DFFF0F9F75450000BE90 /* App_Delegate.h */,
 				9256E0000F9F75450000BE90 /* App_Delegate.m */,
 				92F13CFC0FA089BD007ED72B /* ModulesMenuController.h */,
@@ -563,7 +540,6 @@
 			children = (
 				8D1107320486CEB800E47090 /* XAMPP Control.app */,
 				92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */,
-				921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */,
 				9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */,
 				92F13C240FA07D7B007ED72B /* Apache.plugin */,
 				92F13C7E0FA084F7007ED72B /* MySQL.plugin */,
@@ -583,7 +559,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				921BB1DB0F9F502300DC56A0 /* TestPlugin-Info.plist */,
+				92F9AD8F0FCDC95400037F27 /* COPYING */,
 			);
 			name = "XAMPP Control";
 			sourceTree = "<group>";
@@ -659,15 +635,6 @@
 			name = Pages;
 			sourceTree = "<group>";
 		};
-		921BB1CD0F9F4F7700DC56A0 /* Test Plugin */ = {
-			isa = PBXGroup;
-			children = (
-				921BB1CE0F9F4F8700DC56A0 /* TestPlugin.h */,
-				921BB1CF0F9F4F8700DC56A0 /* TestPlugin.m */,
-			);
-			name = "Test Plugin";
-			sourceTree = "<group>";
-		};
 		9257D7D80FA1F3E5002BF955 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,13 +655,6 @@
 			);
 			name = XAMPPBeta;
 			path = ../XAMPPBeta/Resources;
-			sourceTree = "<group>";
-		};
-		9276D9F60F3B2F2F00866FEB /* Module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Module;
 			sourceTree = "<group>";
 		};
 		9276D9FE0F3B2F4E00866FEB /* AboutBox */ = {
@@ -964,23 +924,6 @@
 			productReference = 8D1107320486CEB800E47090 /* XAMPP Control.app */;
 			productType = "com.apple.product-type.application";
 		};
-		921BB1D90F9F502300DC56A0 /* TestPlugin */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 921BB1DE0F9F502400DC56A0 /* Build configuration list for PBXNativeTarget "TestPlugin" */;
-			buildPhases = (
-				921BB1D60F9F502300DC56A0 /* Resources */,
-				921BB1D70F9F502300DC56A0 /* Sources */,
-				921BB1D80F9F502300DC56A0 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TestPlugin;
-			productName = TestPlugin;
-			productReference = 921BB1DA0F9F502300DC56A0 /* TestPlugin.plugin */;
-			productType = "com.apple.product-type.bundle";
-		};
 		9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9256DF2D0F9F6CA90000BE90 /* Build configuration list for PBXNativeTarget "SharedXAMPPSupport" */;
@@ -1114,7 +1057,6 @@
 				92E362120FBECB610018B96E /* PHP */,
 				92F13CA50FA08576007ED72B /* ProFTPd */,
 				92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */,
-				921BB1D90F9F502300DC56A0 /* TestPlugin */,
 				9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */,
 			);
 		};
@@ -1148,13 +1090,6 @@
 				92D8EACA0FBEB258005010BC /* IndicatorYellow.tiff in Resources */,
 				92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */,
 				92CBCBBE0FC02F8800C136BE /* Success.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		921BB1D60F9F502300DC56A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,12 +1147,10 @@
 				920078D40FA3B02D002665E0 /* SecurityCheckController.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */,
-				922D727B0F39D57B00FDF9E2 /* StatusView.m in Sources */,
 				922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */,
 				92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */,
 				927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */,
 				92178A650F5D7AB800425525 /* AboutController.m in Sources */,
-				921C836D0F8F64CA00703423 /* PHPSwitchController.m in Sources */,
 				9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */,
 				92F13CFE0FA089BD007ED72B /* ModulesMenuController.m in Sources */,
 				92F13D470FA09A5A007ED72B /* ControlsWindowController.m in Sources */,
@@ -1227,14 +1160,6 @@
 				920079020FA45D8C002665E0 /* SecurityCheckWorkPage.m in Sources */,
 				92E361760FBEB8390018B96E /* StatusIndicatorView.m in Sources */,
 				92CBCBC40FC032B900C136BE /* SecurityTasksView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		921BB1D70F9F502300DC56A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				921BB1DF0F9F505B00DC56A0 /* TestPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1558,56 +1483,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = PlugIns;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-		921BB1DC0F9F502400DC56A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestPlugin-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = TestPlugin;
-				WRAPPER_EXTENSION = plugin;
-			};
-			name = Debug;
-		};
-		921BB1DD0F9F502400DC56A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestPlugin-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = TestPlugin;
-				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2021,15 +1896,6 @@
 			buildConfigurations = (
 				9204BABF0FCB2B3800B849F0 /* Debug */,
 				9204BAC00FCB2B3800B849F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		921BB1DE0F9F502400DC56A0 /* Build configuration list for PBXNativeTarget "TestPlugin" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				921BB1DC0F9F502400DC56A0 /* Debug */,
-				921BB1DD0F9F502400DC56A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
