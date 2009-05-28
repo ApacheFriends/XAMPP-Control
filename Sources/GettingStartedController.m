@@ -46,8 +46,6 @@
 			[self release];
 			return nil;
 		}
-				
-		[self setupContent];
 		
 		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"showGettingStartedWindowAtStartup"])
 			[self showWindow:self];
@@ -55,9 +53,11 @@
 	return self;
 }
 
-- (void) setupContent
+- (void) awakeFromNib
 {
 	NSMutableString *htmlCode;
+	
+	[[self window] setBackgroundColor:[NSColor whiteColor]];
 	
 	htmlCode = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GettingStarted" ofType:@"html"]];
 	
