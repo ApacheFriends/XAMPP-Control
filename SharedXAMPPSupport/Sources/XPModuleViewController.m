@@ -24,7 +24,6 @@
  */
 
 #import "XPModuleViewController.h"
-#import "StatusView.h"
 #import "StatusIndicatorView.h"
 #import "XPModule.h"
 #import "XPModuleErrorWindow.h"
