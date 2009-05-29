@@ -34,9 +34,10 @@ static NSLock *authLock = Nil;
 
 @implementation XPRootTask
 
-+ (AuthorizationRef) authorizationRef
++ (NSError*) authorize
 {
 	OSStatus status;
+	NSError* error = Nil;
 	AuthorizationFlags flags = kAuthorizationFlagDefaults;
 	
 	if (!authLock)
@@ -49,7 +50,18 @@ static NSLock *authLock = Nil;
 		
 		if (status != errAuthorizationSuccess) {
 			[authLock unlock];
-			return false;
+			
+			if (status == errAuthorizationCanceled) {
+				error = [NSError errorWithDomain:NSCocoaErrorDomain 
+											code:NSUserCancelledError 
+										userInfo:Nil];
+			}
+			else {
+				error = [NSError errorWithDomain:NSOSStatusErrorDomain 
+											code:status 
+										userInfo:Nil];
+			}
+			return error;
 		}
 	}
 	
@@ -57,11 +69,32 @@ static NSLock *authLock = Nil;
 	AuthorizationRights rights = {1, &items};
 	
 	flags = kAuthorizationFlagDefaults | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagPreAuthorize | kAuthorizationFlagExtendRights;
-		
+	
 	status = AuthorizationCopyRights(authRef, &rights, NULL, flags, NULL);
 	
 	[authLock unlock];
 	
+	if (status == errAuthorizationCanceled) {
+		error = [NSError errorWithDomain:NSCocoaErrorDomain 
+									code:NSUserCancelledError 
+								userInfo:Nil];
+	}
+	else if (status != errAuthorizationSuccess) {
+		error = [NSError errorWithDomain:NSOSStatusErrorDomain 
+									code:status 
+								userInfo:Nil];
+	}
+	
+	return error;
+}
+
+- (NSError*) authorize
+{
+	return [[self class] authorize];
+}
+
++ (AuthorizationRef) authorizationRef
+{	
 	return authRef;
 }
 
@@ -146,7 +179,9 @@ static NSLock *authLock = Nil;
 	const char *helperPath;
 	const char **args;
 	
-	authorizationRef = [XPRootTask authorizationRef];
+	[self authorize];
+	
+	authorizationRef = [[self class] authorizationRef];
 	helperPath = [[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"xproottask-helper-tool"] fileSystemRepresentation];
 	
 	// Allocate [arguments count] + 2(launchPath, Null) pointers

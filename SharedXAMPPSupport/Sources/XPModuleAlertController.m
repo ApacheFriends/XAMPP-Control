@@ -82,6 +82,10 @@
 {
 	NSAlert* alert;
 	
+	if ([[error domain] isEqualToString:NSCocoaErrorDomain]
+		&& [error code] == NSUserCancelledError)
+		return Nil;
+	
 	alert = [NSAlert alertWithError:error];
 	
 	[alert setAlertStyle:NSCriticalAlertStyle];

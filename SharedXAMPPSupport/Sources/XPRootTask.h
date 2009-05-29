@@ -35,6 +35,9 @@
 	pid_t			taskPid;
 }
 
++ (NSError*) authorize;
+- (NSError*) authorize;
+
 - (NSArray*) arguments;
 - (void) setArguments:(NSArray*) arguments;
 

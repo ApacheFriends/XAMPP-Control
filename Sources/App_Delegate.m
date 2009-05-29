@@ -32,7 +32,6 @@
 #import "ControlsWindowController.h"
 #import "SecurityCheckController.h"
 #import "AssistantPage.h"
-#import "XPModuleErrorWindow.h"
 
 @implementation App_Delegate
 

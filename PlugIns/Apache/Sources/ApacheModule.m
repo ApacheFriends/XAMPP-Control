@@ -47,13 +47,23 @@
 
 - (NSError*) start
 {
-	XPRootTask *apachectl = [[XPRootTask alloc] init];
+	XPRootTask *apachectl = [XPRootTask new];
 	NSMutableDictionary* errorDict;
 	NSError *error;
 	
 	working = YES;
 	
 	[self setStatus:XPStarting];
+	
+	error = [apachectl authorize];
+	if (error) {
+		[apachectl release];
+		working = NO;
+		
+		[self setStatus:XPNotRunning];
+		
+		return error;
+	}
 	
 	// Fix Rights if needed
 	[self checkFixRightsAndRunIfNeeded];
@@ -94,6 +104,10 @@
 				 forKey:XPErrorLogFileKey];
 	[errorDict setValue:[self name] 
 				 forKey:XPErrorModuleNameKey];
+	[errorDict setValue:@"Apache did not start!" 
+				 forKey:NSLocalizedDescriptionKey];
+	[errorDict setValue:@"Please take a look into the log file of Apache for informations why Apache didn't start." 
+				 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain
 								code:XPDidNotStart 
