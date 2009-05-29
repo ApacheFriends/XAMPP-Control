@@ -28,4 +28,13 @@
 
 @implementation XPModuleAlertController
 
++ (void) presentError:(NSError*)anError
+{
+	XPModuleAlertController* controller = [[self alloc] initWithError:anError];
+	
+	[controller runModal];
+	
+	[controller release];
+}
+
 @end
