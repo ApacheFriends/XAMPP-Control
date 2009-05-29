@@ -169,6 +169,10 @@
 	XPRootTask *kill;
 	NSError* error;
 	
+	error = [self syntaxCheck];
+	if (error)
+		return error;
+	
 	kill = [[XPRootTask new] autorelease];
 	
 	error = [kill authorize];
