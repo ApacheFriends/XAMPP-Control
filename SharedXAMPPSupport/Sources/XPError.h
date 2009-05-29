@@ -33,5 +33,6 @@ typedef enum _XPError {
 	XPDidNotStop,
 	XPDidNotReload,
 	XPWebSharingIsOn,
+	XPSyntaxError,
 	XPUnknownError
 } XPError;

@@ -33,6 +33,9 @@
 @interface ApacheModule(PRIVAT)
 
 - (BOOL) systemApacheIsRunning;
+- (NSError*) syntaxCheck;
+
+- (NSArray*)defines;
 
 @end
 
@@ -57,6 +60,7 @@
 {
 	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
+	NSArray* arguments;
 	NSError *error;
 	
 	if ([self systemApacheIsRunning]) {
@@ -74,6 +78,10 @@
 		return error;
 	}
 	
+	error = [self syntaxCheck];
+	if (error)
+		return error;
+	
 	error = [apachectl authorize];
 	if (error)
 		return error;
@@ -82,11 +90,9 @@
 	[self checkFixRightsAndRunIfNeeded];
 	
 	[apachectl setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/apachectl"];
-	if ([[NSFileManager defaultManager] 
-		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"]) // Start with ssl
-		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", @"-DSSL", nil]];
-	else
-		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", nil]];
+	arguments = [NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", Nil];
+	arguments = [arguments arrayByAddingObjectsFromArray:[self defines]];
+	[apachectl setArguments:arguments];
 	
 	[apachectl setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];
 	//[apachectl setStandardError:standardError];
@@ -193,6 +199,55 @@
 		return NO;
 	
 	return [[NSWorkspace sharedWorkspace] processIsRunning:[pid intValue]];
+}
+
+- (NSError*) syntaxCheck
+{
+	NSTask* httpd = [[NSTask new] autorelease];
+	NSPipe* errorPipe = [NSPipe pipe];
+	NSData* outputData;
+	NSString* output;
+	NSMutableDictionary* errDict;
+	
+	[httpd setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/httpd"];
+	[httpd setArguments:[[self defines] arrayByAddingObject:@"-t"]];
+	[httpd setStandardError:errorPipe];
+	
+	[httpd launch];
+	[httpd waitUntilExit];
+	
+	outputData = [[errorPipe fileHandleForReading] readDataToEndOfFile];
+	output = [[[NSString alloc] initWithData:outputData encoding:NSASCIIStringEncoding] autorelease];
+	
+	output = [output stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	
+	if (!output || [output isEqualToString:@""])
+		return Nil;
+	
+	errDict = [NSMutableDictionary dictionary];
+	
+	[errDict setValue:@"Apache syntax error!" 
+			   forKey:NSLocalizedDescriptionKey];
+	[errDict setValue:output
+			   forKey:NSLocalizedRecoverySuggestionErrorKey];
+	
+	return [NSError errorWithDomain:XAMPPControlErrorDomain 
+							   code:XPSyntaxError 
+						   userInfo:errDict];
+}
+
+- (NSArray*)defines
+{
+	NSMutableArray* defines = [NSMutableArray array];
+	
+	[defines addObject: @"-DPHP5"];
+	
+	if ([[NSFileManager defaultManager] 
+		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"]) {
+		[defines addObject:@"-DSSL"];
+	}
+	
+	return defines;
 }
 
 @end
