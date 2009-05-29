@@ -27,7 +27,7 @@
 
 
 @interface XPModuleAlertController : NSObject {
-
+	NSAlert*	_alert;
 }
 
 + (void) presentError:(NSError*)anError;

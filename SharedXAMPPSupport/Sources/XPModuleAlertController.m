@@ -25,6 +25,15 @@
 
 #import "XPModuleAlertController.h"
 
+@interface XPModuleAlertController(PRIVAT)
+
+- (NSAlert*) alertForError:(NSError*)error;
+
+- (void) setAlert:(NSAlert*)anAlert;
+- (NSAlert*) alert;
+
+@end
+
 
 @implementation XPModuleAlertController
 
@@ -35,6 +44,49 @@
 	[controller runModal];
 	
 	[controller release];
+}
+
+- (id) initWithError:(NSError*)anError
+{
+	self = [super init];
+	if (self != nil) {
+		[self setAlert:[self alertForError:anError]];
+	}
+	return self;
+}
+
+- (void) runModal
+{
+	[[self alert] runModal];
+}
+
+@end
+
+@implementation XPModuleAlertController(PRIVAT)
+
+- (void) setAlert:(NSAlert*)anAlert
+{
+	if ([anAlert isEqualTo:_alert])
+		return;
+	
+	[_alert release];
+	_alert = [anAlert retain];
+}
+
+- (NSAlert*) alert
+{
+	return _alert;
+}
+
+- (NSAlert*) alertForError:(NSError*)error
+{
+	NSAlert* alert;
+	
+	alert = [NSAlert alertWithError:error];
+	
+	[alert setAlertStyle:NSCriticalAlertStyle];
+	
+	return alert;
 }
 
 @end

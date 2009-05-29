@@ -28,6 +28,7 @@
 #import <PlugIn/PlugInRegistry.h>
 #import <SharedXAMPPSupport/XPPlugInCategories.h>
 #import <SharedXAMPPSupport/XPModule.h>
+#import <SharedXAMPPSupport/XPModuleAlertController.h>
 
 @interface ModulesMenuController (PRIVAT)
 
@@ -168,7 +169,7 @@ NSString *ModulesMenuControllerContext = @"ModulesMenuControllerContext";
 	error = [module start];
 	
 	if (error)
-		[NSApp presentError:error];
+		[XPModuleAlertController presentError:error];
 	
 	[pool release];
 }
@@ -193,7 +194,7 @@ NSString *ModulesMenuControllerContext = @"ModulesMenuControllerContext";
 	error = [module stop];
 	
 	if (error)
-		[NSApp presentError:error];
+		[XPModuleAlertController presentError:error];
 	
 	[pool release];
 }
@@ -218,7 +219,7 @@ NSString *ModulesMenuControllerContext = @"ModulesMenuControllerContext";
 	error = [module reload];
 	
 	if (error)
-		[NSApp presentError:error];
+		[XPModuleAlertController presentError:error];
 	
 	[pool release];
 }

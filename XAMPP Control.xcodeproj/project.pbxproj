@@ -126,8 +126,6 @@
 		92EACDBA0F3F11940037FCC2 /* xproottask-helper-tool in Other Executables */ = {isa = PBXBuildFile; fileRef = 92EACD990F3F0E930037FCC2 /* xproottask-helper-tool */; };
 		92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EACDE50F3F14030037FCC2 /* Security.framework */; };
 		92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
-		92ED0D7C0FB33EF400ED5BB9 /* XPModuleErrorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */; };
-		92ED0D7D0FB33EF500ED5BB9 /* XPModuleErrorWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92F13BF20FA077AA007ED72B /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
 		92F13BFE0FA07B10007ED72B /* XPPlugInCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F13BFC0FA07B10007ED72B /* XPPlugInCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92F13BFF0FA07B10007ED72B /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
@@ -363,8 +361,6 @@
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = ../build/Debug/PlugIn.framework; sourceTree = SOURCE_ROOT; };
-		92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleErrorWindow.h; sourceTree = "<group>"; };
-		92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleErrorWindow.m; sourceTree = "<group>"; };
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
 		92CBCBC20FC032B900C136BE /* SecurityTasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTasksView.h; sourceTree = "<group>"; };
 		92CBCBC30FC032B900C136BE /* SecurityTasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTasksView.m; sourceTree = "<group>"; };
@@ -749,8 +745,6 @@
 				922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */,
 				922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */,
 				92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */,
-				92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */,
-				92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */,
 				92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */,
 				92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */,
 			);
@@ -899,7 +893,6 @@
 				920078BF0FA3AC0F002665E0 /* AssistantPage.h in Headers */,
 				920079110FA461CD002665E0 /* AssistantStepIndicatorView.h in Headers */,
 				922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */,
-				92ED0D7D0FB33EF500ED5BB9 /* XPModuleErrorWindow.h in Headers */,
 				92303CF20FCFF30A0078E7C0 /* XPModuleAlertController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1186,7 +1179,6 @@
 				9200789F0FA3A2A0002665E0 /* NSObject+Unproxy.m in Sources */,
 				920079120FA461CD002665E0 /* AssistantStepIndicatorView.m in Sources */,
 				92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */,
-				92ED0D7C0FB33EF400ED5BB9 /* XPModuleErrorWindow.m in Sources */,
 				92303CF30FCFF30A0078E7C0 /* XPModuleAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
