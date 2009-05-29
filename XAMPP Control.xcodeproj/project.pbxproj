@@ -74,6 +74,8 @@
 		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
 		922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92303CF20FCFF30A0078E7C0 /* XPModuleAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92303CF30FCFF30A0078E7C0 /* XPModuleAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */; };
 		9256DF300F9F6D6F0000BE90 /* KQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 924D9F3C0F447AAE00DC9E43 /* KQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9256DF310F9F6D6F0000BE90 /* KQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D9F3D0F447AAE00DC9E43 /* KQueue.m */; };
 		9256DF320F9F6D6F0000BE90 /* XPModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 922D70C30F387EB600FDF9E2 /* XPModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -333,6 +335,8 @@
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
 		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckProtocol.h; sourceTree = "<group>"; };
+		92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleAlertController.h; sourceTree = "<group>"; };
+		92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleAlertController.m; sourceTree = "<group>"; };
 		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
 		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
 		9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedXAMPPSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -747,6 +751,8 @@
 				92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */,
 				92A4C30D0FB1E22200CE3050 /* XPModuleErrorWindow.h */,
 				92A4C30E0FB1E22200CE3050 /* XPModuleErrorWindow.m */,
+				92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */,
+				92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -894,6 +900,7 @@
 				920079110FA461CD002665E0 /* AssistantStepIndicatorView.h in Headers */,
 				922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */,
 				92ED0D7D0FB33EF500ED5BB9 /* XPModuleErrorWindow.h in Headers */,
+				92303CF20FCFF30A0078E7C0 /* XPModuleAlertController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,6 +1187,7 @@
 				920079120FA461CD002665E0 /* AssistantStepIndicatorView.m in Sources */,
 				92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */,
 				92ED0D7C0FB33EF400ED5BB9 /* XPModuleErrorWindow.m in Sources */,
+				92303CF30FCFF30A0078E7C0 /* XPModuleAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
