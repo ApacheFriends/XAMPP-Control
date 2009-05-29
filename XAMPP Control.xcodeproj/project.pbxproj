@@ -71,7 +71,6 @@
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Team.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Team.html */; };
-		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
 		922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92303D2C0FD00A6B0078E7C0 /* AlertLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92303D2B0FD00A6B0078E7C0 /* AlertLogView.xib */; };
@@ -92,6 +91,8 @@
 		9256DFEC0F9F6DF20000BE90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EACDE50F3F14030037FCC2 /* Security.framework */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
+		926CA1010FD064DE00DDFC27 /* NSWorkspace (Process).h in Headers */ = {isa = PBXBuildFile; fileRef = 922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */; settings = {ATTRIBUTES = (Public, ); }; };
+		926CA1020FD064DE00DDFC27 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
 		926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */; };
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
@@ -326,8 +327,8 @@
 		922D70C30F387EB600FDF9E2 /* XPModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModule.h; sourceTree = "<group>"; };
 		922D70C40F387EB600FDF9E2 /* XPModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModule.m; sourceTree = "<group>"; };
 		922D70C60F38802900FDF9E2 /* XPStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPStatus.h; sourceTree = "<group>"; };
-		922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace (Process).h"; sourceTree = "<group>"; };
-		922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace (Process).m"; sourceTree = "<group>"; };
+		922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWorkspace (Process).h"; path = "../../Sources/NSWorkspace (Process).h"; sourceTree = "<group>"; };
+		922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWorkspace (Process).m"; path = "../../Sources/NSWorkspace (Process).m"; sourceTree = "<group>"; };
 		922D71000F389DCF00FDF9E2 /* XPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPError.h; sourceTree = "<group>"; };
 		922D726C0F39D1FA00FDF9E2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleView.xib; sourceTree = "<group>"; };
 		922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleViewController.h; sourceTree = "<group>"; };
@@ -498,8 +499,6 @@
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
 				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
-				922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */,
-				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
 				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
 				92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */,
 				9256DFFF0F9F75450000BE90 /* App_Delegate.h */,
@@ -751,6 +750,8 @@
 				92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */,
 				92303D350FD013470078E7C0 /* XPAlert.h */,
 				92303D360FD013470078E7C0 /* XPAlert.m */,
+				922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */,
+				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -884,6 +885,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926CA1010FD064DE00DDFC27 /* NSWorkspace (Process).h in Headers */,
 				9256DF300F9F6D6F0000BE90 /* KQueue.h in Headers */,
 				9256DF340F9F6D6F0000BE90 /* XPStatus.h in Headers */,
 				9256DF350F9F6D6F0000BE90 /* XPError.h in Headers */,
@@ -1154,7 +1156,6 @@
 			files = (
 				920078D40FA3B02D002665E0 /* SecurityCheckController.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */,
 				922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */,
 				92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */,
 				927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */,
@@ -1175,6 +1176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926CA1020FD064DE00DDFC27 /* NSWorkspace (Process).m in Sources */,
 				920078BC0FA3AC02002665E0 /* AssistantController.m in Sources */,
 				920078BD0FA3AC02002665E0 /* AssistantPage.m in Sources */,
 				92F13D990FA0D403007ED72B /* XPModuleViewController.m in Sources */,

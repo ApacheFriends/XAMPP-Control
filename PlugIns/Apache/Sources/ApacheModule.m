@@ -27,7 +27,15 @@
 
 #import <SharedXAMPPSupport/XPError.h>
 #import <SharedXAMPPSupport/XPRootTask.h>
+#import <SharedXAMPPSupport/NSWorkspace (Process).h>
 #import <unistd.h>
+
+@interface ApacheModule(PRIVAT)
+
+- (BOOL) systemApacheIsRunning;
+
+@end
+
 
 @implementation ApacheModule
 
@@ -50,6 +58,21 @@
 	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
 	NSError *error;
+	
+	if ([self systemApacheIsRunning]) {
+		errorDict = [NSMutableDictionary dictionary];
+
+		[errorDict setValue:@"Web Sharing is on!" 
+					 forKey:NSLocalizedDescriptionKey];
+		[errorDict setValue:@"XAMPP's Apache can not start until Web Sharing is turned off! Please go to the System Preferences and turn it in the sharing panel off." 
+					 forKey:NSLocalizedRecoverySuggestionErrorKey];
+		
+		error = [NSError errorWithDomain:XAMPPControlErrorDomain
+									code:XPWebSharingIsOn 
+								userInfo:errorDict];
+		
+		return error;
+	}
 	
 	error = [apachectl authorize];
 	if (error)
@@ -154,6 +177,22 @@
 	[kill waitUntilExit];
 		
 	return nil;
+}
+
+@end
+
+@implementation ApacheModule(PRIVAT)
+
+- (BOOL) systemApacheIsRunning
+{
+	NSString* pid;
+	
+	pid = [NSString stringWithContentsOfFile:@"/var/run/httpd.pid"];
+	
+	if (!pid)
+		return NO;
+	
+	return [[NSWorkspace sharedWorkspace] processIsRunning:[pid intValue]];
 }
 
 @end
