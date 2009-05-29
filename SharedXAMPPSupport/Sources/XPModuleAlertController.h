@@ -30,4 +30,10 @@
 
 }
 
++ (void) presentError:(NSError*)anError;
+
+- (id) initWithError:(NSError*)anError;
+
+- (void) runModal;
+
 @end
