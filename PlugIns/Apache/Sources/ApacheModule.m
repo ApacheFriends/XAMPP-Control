@@ -45,25 +45,15 @@
 	return @"Apache";
 }
 
-- (NSError*) start
+- (NSError*) doStart
 {
-	XPRootTask *apachectl = [XPRootTask new];
+	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
 	NSError *error;
 	
-	working = YES;
-	
-	[self setStatus:XPStarting];
-	
 	error = [apachectl authorize];
-	if (error) {
-		[apachectl release];
-		working = NO;
-		
-		[self setStatus:XPNotRunning];
-		
+	if (error)
 		return error;
-	}
 	
 	// Fix Rights if needed
 	[self checkFixRightsAndRunIfNeeded];
@@ -83,13 +73,11 @@
 	[apachectl waitUntilExit];
 	
 	if ([apachectl terminationStatus] == 0) { // Great apache is up and running :)
-		[apachectl release];
 		
 		// Ok, wait until a pid file is created, to prevent the status check to dedect a not running apache
 		// while he is in the starting phase ;) Not nice but works
 		while (![[NSFileManager defaultManager] fileExistsAtPath:pidFile isDirectory:NO]) usleep(5000);
 		
-		working = NO;
 		return Nil;
 	}
 	
@@ -98,7 +86,7 @@
 	// in the output of the apachectl run. All important informations are located in the log
 	// file. :)
 	
-	errorDict = [NSMutableDictionary new];
+	errorDict = [NSMutableDictionary dictionary];
 	
 	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
 				 forKey:XPErrorLogFileKey];
@@ -110,24 +98,19 @@
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain
 								code:XPDidNotStart 
 							userInfo:errorDict];
-	
-	[errorDict release];
-	[apachectl release];
-	
-	[self setStatus:XPNotRunning];
-	working = NO;
+
 	return error;
 }
 
-- (NSError*) stop
+- (NSError*) doStop
 {
-	XPRootTask *apachectl = [[XPRootTask alloc] init];
+	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSString *output;
 	NSError *error;
 	
-	working = YES;
-	
-	[self setStatus:XPStopping];
+	error = [apachectl authorize];
+	if (error)
+		return error;
 	
 	[apachectl setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/apachectl"];
 	[apachectl setArguments:[NSArray arrayWithObjects:@"-k", @"stop", nil]];
@@ -138,33 +121,31 @@
 	[apachectl waitUntilExit];
 	
 	if ([apachectl terminationStatus] == 0) { // Great apache is stopped :)
-		[apachectl release];
-		working = NO;
 		return Nil;
 	}
 	
 	// Hm, ok apache didn't stop?!?! :S
-	output = [[NSString alloc] initWithData:[[apachectl communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	output = [[[NSString alloc] initWithData:[[apachectl communicationsPipe] readDataToEndOfFile]
+								    encoding:NSUTF8StringEncoding] autorelease];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
 								code:XPDidNotStop 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
-	
-	[output release];
-	[apachectl release];
-	
-	[self setStatus:XPRunning];
-	working = NO;
+
 	return error;
 }
 
-- (NSError*) reload
+- (NSError*) doReload
 {
 	XPRootTask *kill;
+	NSError* error;
 	
-	kill = [[XPRootTask alloc] init];
+	kill = [[XPRootTask new] autorelease];
+	
+	error = [kill authorize];
+	if (error)
+		return error;
 	
 	[kill setLaunchPath:@"/bin/kill"];
 	[kill setArguments:[NSArray arrayWithObjects:@"-USR1", [NSString stringWithContentsOfFile:[self pidFile]], Nil]];
@@ -172,9 +153,7 @@
 	// We don't check for success at all :)
 	[kill launch];
 	[kill waitUntilExit];
-	
-	[kill release];
-	
+		
 	return nil;
 }
 

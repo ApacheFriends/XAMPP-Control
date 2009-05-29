@@ -45,15 +45,15 @@
 	return @"FTP";
 }
 
-- (NSError*) start
+- (NSError*) doStart
 {
-	XPRootTask *proftpd = [[XPRootTask alloc] init];
+	XPRootTask *proftpd = [[XPRootTask new] autorelease];
 	NSString *output;
 	NSError *error;
 	
-	working = YES;
-	
-	[self setStatus:XPStarting];
+	error = [proftpd authorize];
+	if (error)
+		return error;
 	
 	// Fix rights if needed
 	[self checkFixRightsAndRunIfNeeded];
@@ -66,40 +66,31 @@
 	[proftpd launch];
 	[proftpd waitUntilExit];
 	
-	if ([proftpd terminationStatus] == 0) { // Great proftpd is up and running :)
-		[proftpd release];
-		
-		working = NO;
+	if ([proftpd terminationStatus] == 0) // Great proftpd is up and running :)
 		return Nil;
-	}
 	
 	// Hm, ok proftpd didn't start :/
-	output = [[NSString alloc] initWithData:[[proftpd communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	output = [[[NSString alloc] initWithData:[[proftpd communicationsPipe] readDataToEndOfFile]
+								    encoding:NSUTF8StringEncoding] autorelease];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
 								code:XPDidNotStart 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
 	
-	[output release];
-	[proftpd release];
-	
-	[self setStatus:XPNotRunning];
-	working = NO;
 	return error;
 }
 
-- (NSError*) stop
+- (NSError*) doStop
 {
-	XPRootTask *kill = [[XPRootTask alloc] init];
+	XPRootTask *kill = [[XPRootTask new] autorelease];
 	NSString *output;
 	NSError *error;
 	NSString *pid;
 	
-	working = YES;
-	
-	[self setStatus:XPStopping];
+	error = [kill authorize];
+	if (error)
+		return error;
 	
 	pid = [[NSString stringWithContentsOfFile:pidFile] stringByTrimmingCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
 	
@@ -111,34 +102,31 @@
 	[kill launch];
 	[kill waitUntilExit];
 	
-	if ([kill terminationStatus] == 0) { // Great proftpd is stopped :)
-		[kill release];
-		working = NO;
+	if ([kill terminationStatus] == 0) // Great proftpd is stopped :)
 		return Nil;
-	}
-	
+
 	// Hm, ok proftpd didn't stop?!?! :S
-	output = [[NSString alloc] initWithData:[[kill communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	output = [[[NSString alloc] initWithData:[[kill communicationsPipe] readDataToEndOfFile]
+									encoding:NSUTF8StringEncoding] autorelease];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
 								code:XPDidNotStop 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
-	
-	[output release];
-	[kill release];
-	
-	[self setStatus:XPRunning];
-	working = NO;
+
 	return error;
 }
 
-- (NSError*) reload
+- (NSError*) doReload
 {
 	XPRootTask *kill;
+	NSError* error;
 	
-	kill = [[XPRootTask alloc] init];
+	kill = [[XPRootTask new] autorelease];
+	
+	error = [kill authorize];
+	if (error)
+		return error;
 	
 	[kill setLaunchPath:@"/bin/kill"];
 	[kill setArguments:[NSArray arrayWithObjects:@"-HUP", [NSString stringWithContentsOfFile:[self pidFile]], Nil]];
@@ -146,9 +134,7 @@
 	// We don't check for success at all :)
 	[kill launch];
 	[kill waitUntilExit];
-	
-	[kill release];
-	
+		
 	return nil;
 }
 

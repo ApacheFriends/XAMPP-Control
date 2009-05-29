@@ -49,15 +49,15 @@
 	return @"MySQL";
 }
 
-- (NSError*) start
+- (NSError*) doStart
 {
-	XPRootTask *mysqlServer = [[XPRootTask alloc] init];
+	XPRootTask *mysqlServer = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
-	NSError *error;
+	NSError *error = Nil;
 	
-	working = YES;
-	
-	[self setStatus:XPStarting];
+	error = [mysqlServer authorize];
+	if (error)
+		return error;
 	
 	// Fix rights if needed
 	[self checkFixRightsAndRunIfNeeded];
@@ -71,15 +71,11 @@
 	[mysqlServer launch];
 	[mysqlServer waitUntilExit];
 	
-	if ([mysqlServer terminationStatus] == 0) { // Great mysql is up and running :)
-		[mysqlServer release];
-		
-		working = NO;
+	if ([mysqlServer terminationStatus] == 0) // Great mysql is up and running :)
 		return Nil;
-	}
 	
 	// Hm, ok mysql didn't start :/
-	errorDict = [NSMutableDictionary new];
+	errorDict = [NSMutableDictionary dictionary];
 	
 	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
 				 forKey:XPErrorLogFileKey];
@@ -90,23 +86,18 @@
 								code:XPDidNotStart 
 							userInfo:errorDict];
 	
-	[errorDict release];
-	[mysqlServer release];
-	
-	[self setStatus:XPNotRunning];
-	working = NO;
 	return error;
 }
 
-- (NSError*) stop
+- (NSError*) doStop
 {
-	XPRootTask *mysqlServer = [[XPRootTask alloc] init];
+	XPRootTask *mysqlServer = [[XPRootTask new] autorelease];
 	NSString *output;
-	NSError *error;
+	NSError *error = Nil;
 	
-	working = YES;
-	
-	[self setStatus:XPStopping];
+	error = [mysqlServer authorize];
+	if (error)
+		return error;
 	
 	[mysqlServer setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/mysql.server"];
 	[mysqlServer setArguments:[NSArray arrayWithObjects:@"stop", nil]];
@@ -117,34 +108,30 @@
 	[mysqlServer launch];
 	[mysqlServer waitUntilExit];
 	
-	if ([mysqlServer terminationStatus] == 0) { // Great mysql has stopped :)
-		[mysqlServer release];
-		working = NO;
+	if ([mysqlServer terminationStatus] == 0) // Great mysql has stopped :)
 		return Nil;
-	}
 	
 	// Hm, ok mysql didn't stop?!?! :/
-	output = [[NSString alloc] initWithData:[[mysqlServer communicationsPipe] readDataToEndOfFile]
-								   encoding:NSUTF8StringEncoding];
+	output = [[[NSString alloc] initWithData:[[mysqlServer communicationsPipe] readDataToEndOfFile]
+								    encoding:NSUTF8StringEncoding] autorelease];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain 
 								code:XPDidNotStop 
 							userInfo:[NSDictionary dictionaryWithObject:output 
 																 forKey:NSLocalizedDescriptionKey]];
-	
-	[mysqlServer release];
-	[output release];
-	
-	[self setStatus:XPRunning];
-	working = NO;
 	return error;
 }
 
-- (NSError*) reload
+- (NSError*) doReload
 {
 	XPRootTask *kill;
+	NSError *error = Nil;
 	
-	kill = [[XPRootTask alloc] init];
+	kill = [[XPRootTask new] autorelease];
+	
+	error = [kill authorize];
+	if (error)
+		return error;
 	
 	[kill setLaunchPath:@"/bin/kill"];
 	[kill setArguments:[NSArray arrayWithObjects:@"-HUP", [NSString stringWithContentsOfFile:[self pidFile]], Nil]];
@@ -152,9 +139,7 @@
 	// We don't check for success at all :)
 	[kill launch];
 	[kill waitUntilExit];
-	
-	[kill release];
-	
+		
 	return nil;
 }
 

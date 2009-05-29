@@ -32,6 +32,15 @@
 
 static NSLock *fixRightsLock = Nil;
 
+@interface XPModule(PRIVAT)
+
+- (NSError*) doStart;
+- (NSError*) doStop;
+- (NSError*) doReload;
+
+@end
+
+
 @implementation XPModule
 
 - (id) init
@@ -71,6 +80,26 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) start
 {
+	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSError* error = Nil;
+	
+	working = YES;
+	[self setStatus:XPStarting];
+	
+	error = [[self doStart] retain];
+	
+	if (error)
+		[self setStatus:XPNotRunning];
+	else
+		[self setStatus:XPRunning];
+	working = NO;
+	
+	[pool release];
+	return [error autorelease];
+}
+
+- (NSError*) doStart
+{
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 
 						   userInfo:nil] raise];
@@ -79,6 +108,26 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) stop
 {
+	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSError* error = Nil;
+	
+	working = YES;
+	[self setStatus:XPStopping];
+	
+	error = [[self doStop] retain];
+	
+	if (error)
+		[self setStatus:XPRunning];
+	else
+		[self setStatus:XPNotRunning];
+	working = NO;
+	
+	[pool release];
+	return [error autorelease];
+}
+
+- (NSError*) doStop
+{
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 
 						   userInfo:nil] raise];
@@ -86,6 +135,23 @@ static NSLock *fixRightsLock = Nil;
 }
 
 - (NSError*) reload
+{
+	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSError* error = Nil;
+	
+	working = YES;
+	[self setStatus:XPStopping];
+	
+	error = [[self doReload] retain];
+	
+	[self setStatus:XPRunning];
+	working = NO;
+	
+	[pool release];
+	return [error autorelease];
+}
+
+- (NSError*) doReload
 {
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 
