@@ -25,9 +25,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@interface XPAlert : NSObject {
 
-@interface XPModuleAlertController : NSObject {
-	NSAlert*	_alert;
 }
 
 + (void) presentError:(NSError*)anError;

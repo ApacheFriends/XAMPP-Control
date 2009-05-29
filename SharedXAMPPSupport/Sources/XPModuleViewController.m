@@ -26,7 +26,7 @@
 #import "XPModuleViewController.h"
 #import "StatusIndicatorView.h"
 #import "XPModule.h"
-#import "XPModuleAlertController.h"
+#import "XPAlert.h"
 
 @interface XPModuleViewController (PRIVATE)
 
@@ -122,7 +122,7 @@
 	error = [module reload];
 	
 	if (error)
-		[XPModuleAlertController presentError:error];
+		[XPAlert presentError:error];
 	
 	[pool release];
 }
@@ -142,7 +142,7 @@
 	error = [module start];
 	
 	if (error)
-		[XPModuleAlertController presentError:error];
+		[XPAlert presentError:error];
 	
 	[pool release];
 }
@@ -162,7 +162,7 @@
 	error = [module stop];
 	
 	if (error)
-		[XPModuleAlertController presentError:error];
+		[XPAlert presentError:error];
 	
 	[pool release];
 }

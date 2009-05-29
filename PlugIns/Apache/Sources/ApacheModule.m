@@ -102,8 +102,6 @@
 	
 	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
 				 forKey:XPErrorLogFileKey];
-	[errorDict setValue:[self name] 
-				 forKey:XPErrorModuleNameKey];
 	[errorDict setValue:@"Apache did not start!" 
 				 forKey:NSLocalizedDescriptionKey];
 	[errorDict setValue:@"Please take a look into the log file of Apache for informations why Apache didn't start." 

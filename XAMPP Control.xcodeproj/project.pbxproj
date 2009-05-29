@@ -74,8 +74,10 @@
 		922D70EB0F38876900FDF9E2 /* NSWorkspace (Process).m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
 		922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92303CF20FCFF30A0078E7C0 /* XPModuleAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92303CF30FCFF30A0078E7C0 /* XPModuleAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */; };
+		92303D2C0FD00A6B0078E7C0 /* AlertLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92303D2B0FD00A6B0078E7C0 /* AlertLogView.xib */; };
+		92303D340FD011040078E7C0 /* AlertCautionIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 92303D330FD011040078E7C0 /* AlertCautionIcon.icns */; };
+		92303D370FD013470078E7C0 /* XPAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 92303D350FD013470078E7C0 /* XPAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92303D380FD013470078E7C0 /* XPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 92303D360FD013470078E7C0 /* XPAlert.m */; };
 		9256DF300F9F6D6F0000BE90 /* KQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 924D9F3C0F447AAE00DC9E43 /* KQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9256DF310F9F6D6F0000BE90 /* KQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D9F3D0F447AAE00DC9E43 /* KQueue.m */; };
 		9256DF320F9F6D6F0000BE90 /* XPModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 922D70C30F387EB600FDF9E2 /* XPModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -333,8 +335,10 @@
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
 		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
 		922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckProtocol.h; sourceTree = "<group>"; };
-		92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPModuleAlertController.h; sourceTree = "<group>"; };
-		92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleAlertController.m; sourceTree = "<group>"; };
+		92303D2B0FD00A6B0078E7C0 /* AlertLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertLogView.xib; sourceTree = "<group>"; };
+		92303D330FD011040078E7C0 /* AlertCautionIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AlertCautionIcon.icns; sourceTree = "<group>"; };
+		92303D350FD013470078E7C0 /* XPAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlert.h; sourceTree = "<group>"; };
+		92303D360FD013470078E7C0 /* XPAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlert.m; sourceTree = "<group>"; };
 		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
 		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
 		9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedXAMPPSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -745,8 +749,8 @@
 				922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */,
 				922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */,
 				92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */,
-				92303CF00FCFF30A0078E7C0 /* XPModuleAlertController.h */,
-				92303CF10FCFF30A0078E7C0 /* XPModuleAlertController.m */,
+				92303D350FD013470078E7C0 /* XPAlert.h */,
+				92303D360FD013470078E7C0 /* XPAlert.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -754,12 +758,14 @@
 		92ED0E260FB3480B00ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92303D330FD011040078E7C0 /* AlertCautionIcon.icns */,
 				9204BAAE0FCB2AB700B849F0 /* Assistant.xib */,
 				9204BAB00FCB2AB700B849F0 /* ModuleErrorWindow.xib */,
 				920079180FA463F5002665E0 /* AssistantStepActive.tiff */,
 				920079190FA463F5002665E0 /* AssistantStepInactive.tiff */,
 				9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */,
 				9256DF2A0F9F6CA80000BE90 /* Info.plist */,
+				92303D2B0FD00A6B0078E7C0 /* AlertLogView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -893,7 +899,7 @@
 				920078BF0FA3AC0F002665E0 /* AssistantPage.h in Headers */,
 				920079110FA461CD002665E0 /* AssistantStepIndicatorView.h in Headers */,
 				922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */,
-				92303CF20FCFF30A0078E7C0 /* XPModuleAlertController.h in Headers */,
+				92303D370FD013470078E7C0 /* XPAlert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1108,8 @@
 				9200791D0FA463F5002665E0 /* AssistantStepDisabled.tiff in Resources */,
 				9204BAB20FCB2AB700B849F0 /* Assistant.xib in Resources */,
 				9204BAB30FCB2AB700B849F0 /* ModuleErrorWindow.xib in Resources */,
+				92303D2C0FD00A6B0078E7C0 /* AlertLogView.xib in Resources */,
+				92303D340FD011040078E7C0 /* AlertCautionIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1179,7 +1187,7 @@
 				9200789F0FA3A2A0002665E0 /* NSObject+Unproxy.m in Sources */,
 				920079120FA461CD002665E0 /* AssistantStepIndicatorView.m in Sources */,
 				92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */,
-				92303CF30FCFF30A0078E7C0 /* XPModuleAlertController.m in Sources */,
+				92303D380FD013470078E7C0 /* XPAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
