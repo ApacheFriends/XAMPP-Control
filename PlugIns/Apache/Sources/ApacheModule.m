@@ -60,8 +60,7 @@
 	
 	[apachectl setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/apachectl"];
 	if ([[NSFileManager defaultManager] 
-		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"
-		 isDirectory:NO]) // Start with ssl
+		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"]) // Start with ssl
 		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", @"-DSSL", nil]];
 	else
 		[apachectl setArguments:[NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", @"-DPHP5", nil]];
