@@ -53,6 +53,14 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	return self;
 }
 
+- (void) dealloc
+{
+	[self setTitle:Nil];
+	[self setPages:Nil];
+	
+	[super dealloc];
+}
+
 
 - (void) awakeFromNib
 {	
@@ -60,7 +68,6 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 					  forKeyPath:@"selection" 
 						 options:0 
 						 context:AssistantControllerContext];
-	NSLog(@"%@", stepIndicatorView);
 }
 
 - (IBAction) showWindow:(id)sender
@@ -76,7 +83,6 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 
 - (void)setPages:(NSArray*)anArray
 {
-	NSParameterAssert(anArray != Nil);
 	NSEnumerator* enumerator;
 	AssistantPage* page;
 	NSMutableArray* steps;
@@ -108,9 +114,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 }
 
 - (void) setTitle:(NSString*)anString
-{
-	NSParameterAssert(anString != Nil);
-	
+{	
 	if ([anString isEqualToString:title])
 		return;
 	
