@@ -58,7 +58,7 @@
 	return @"Apache";
 }
 
-- (NSError*) doStart
+- (NSError*) realStart
 {
 	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
@@ -131,7 +131,7 @@
 	return error;
 }
 
-- (NSError*) doStop
+- (NSError*) realStop
 {
 	XPRootTask *apachectl = [[XPRootTask new] autorelease];
 	NSString *output;
@@ -165,7 +165,7 @@
 	return error;
 }
 
-- (NSError*) doReload
+- (NSError*) realReload
 {
 	XPRootTask *kill;
 	NSError* error;

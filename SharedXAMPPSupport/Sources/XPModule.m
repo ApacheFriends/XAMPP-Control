@@ -34,9 +34,9 @@ static NSLock *fixRightsLock = Nil;
 
 @interface XPModule(PRIVAT)
 
-- (NSError*) doStart;
-- (NSError*) doStop;
-- (NSError*) doReload;
+- (NSError*) realStart;
+- (NSError*) realStop;
+- (NSError*) realReload;
 
 @end
 
@@ -91,7 +91,7 @@ static NSLock *fixRightsLock = Nil;
 	working = YES;
 	[self setStatus:XPStarting];
 	
-	error = [[self doStart] retain];
+	error = [[self realStart] retain];
 	
 	if (error)
 		[self setStatus:XPNotRunning];
@@ -103,7 +103,7 @@ static NSLock *fixRightsLock = Nil;
 	return [error autorelease];
 }
 
-- (NSError*) doStart
+- (NSError*) realStart
 {
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 
@@ -124,7 +124,7 @@ static NSLock *fixRightsLock = Nil;
 	working = YES;
 	[self setStatus:XPStopping];
 	
-	error = [[self doStop] retain];
+	error = [[self realStop] retain];
 	
 	if (error)
 		[self setStatus:XPRunning];
@@ -136,7 +136,7 @@ static NSLock *fixRightsLock = Nil;
 	return [error autorelease];
 }
 
-- (NSError*) doStop
+- (NSError*) realStop
 {
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 
@@ -156,7 +156,7 @@ static NSLock *fixRightsLock = Nil;
 	working = YES;
 	[self setStatus:XPStopping];
 	
-	error = [[self doReload] retain];
+	error = [[self realReload] retain];
 	
 	[self setStatus:XPRunning];
 	working = NO;
@@ -165,7 +165,7 @@ static NSLock *fixRightsLock = Nil;
 	return [error autorelease];
 }
 
-- (NSError*) doReload
+- (NSError*) realReload
 {
 	[[NSException exceptionWithName:@"NotImplemented" 
 							 reason:@"NotImplemented" 

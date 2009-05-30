@@ -49,7 +49,7 @@
 	return @"MySQL";
 }
 
-- (NSError*) doStart
+- (NSError*) realStart
 {
 	XPRootTask *mysqlServer = [[XPRootTask new] autorelease];
 	NSMutableDictionary* errorDict;
@@ -89,7 +89,7 @@
 	return error;
 }
 
-- (NSError*) doStop
+- (NSError*) realStop
 {
 	XPRootTask *mysqlServer = [[XPRootTask new] autorelease];
 	NSString *output;
@@ -122,7 +122,7 @@
 	return error;
 }
 
-- (NSError*) doReload
+- (NSError*) realReload
 {
 	XPRootTask *kill;
 	NSError *error = Nil;

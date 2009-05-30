@@ -45,7 +45,7 @@
 	return @"FTP";
 }
 
-- (NSError*) doStart
+- (NSError*) realStart
 {
 	XPRootTask *proftpd = [[XPRootTask new] autorelease];
 	NSString *output;
@@ -81,7 +81,7 @@
 	return error;
 }
 
-- (NSError*) doStop
+- (NSError*) realStop
 {
 	XPRootTask *kill = [[XPRootTask new] autorelease];
 	NSString *output;
@@ -117,7 +117,7 @@
 	return error;
 }
 
-- (NSError*) doReload
+- (NSError*) realReload
 {
 	XPRootTask *kill;
 	NSError* error;
