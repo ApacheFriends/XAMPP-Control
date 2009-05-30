@@ -151,12 +151,14 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) reload
 {
-	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSAutoreleasePool* pool;
 	NSError* error = Nil;
 	
 	if ([self status] != XPRunning)
 // TODO: Make an NSError for this situation
 		return Nil;
+	
+	pool = [NSAutoreleasePool new];
 	
 	[self setStatus:XPStopping];
 	
