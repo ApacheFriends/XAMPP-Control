@@ -320,8 +320,6 @@ static NSLock *fixRightsLock = Nil;
 	// Be sure to not run 2 or more fix_rights at one time
 	[fixRightsLock lock];
 	
-	NSLog(@"will run fix_rights");
-	
 	// If rights has allready fixed, skip it
 	if (![[XPConfiguration sharedConfiguration] hasFixRights]) {
 		XPRootTask *fix_rights = [[XPRootTask alloc] init];
@@ -329,7 +327,6 @@ static NSLock *fixRightsLock = Nil;
 		[fix_rights setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/fix_rights"];
 		
 		[fix_rights launch];
-		NSLog(@"run fix_rights");
 		[fix_rights waitUntilExit];
 		
 		[fix_rights release];
