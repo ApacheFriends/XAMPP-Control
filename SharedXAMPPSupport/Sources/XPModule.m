@@ -292,7 +292,6 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) newKEvent:(NSNotification*)noti
 {
-	//NSLog(@"Notifaction %@", noti);
 	NSDictionary *userInfo = [noti userInfo];
 	
 	if ([[userInfo valueForKey:KQueueFilterKey] isEqualToString:KQueueVNodeFilter]

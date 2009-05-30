@@ -114,7 +114,7 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 	
 	struct timespec	timeout = { 0, 0 };
 	struct kevent	event;
-	NSLog(@"Remove %i", aIdent);
+
 	EV_SET(&event, aIdent, 
 	       [self intFromFilter:aFilter], 
 	       EV_DELETE | EV_CLEAR,
