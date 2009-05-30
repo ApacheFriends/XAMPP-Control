@@ -30,7 +30,7 @@
 
 @implementation NSWorkspace (Process)
 
-- (bool) processIsRunning:(pid_t)aPID
+- (BOOL) processIsRunning:(pid_t)aPID
 {
 	int name[] = {CTL_KERN, KERN_PROC, KERN_PROC_ALL, 0};
 	
@@ -61,6 +61,25 @@
 	free(result);
 	
 	return NO;
+}
+
+- (BOOL) portIsUsed:(uint)port
+{
+	NSTask* bash = [[NSTask new] autorelease];
+	NSString* argument;
+	
+	argument = [NSString stringWithFormat:@"netstat -an | egrep -q \"[.:]%i .*LISTEN\"", port];
+	
+	[bash setLaunchPath:@"/bin/bash"];
+	[bash setArguments:[NSArray arrayWithObjects:@"-c", argument, Nil]];
+	
+	[bash launch];
+	[bash waitUntilExit];
+	
+	if ([bash terminationStatus] == 0) // egrep returns success == one programm is using port 80
+		return YES;
+	else
+		return NO;
 }
 
 @end

@@ -28,6 +28,7 @@
 
 @interface NSWorkspace (Process)
 
-- (bool) processIsRunning:(pid_t)aPID;
+- (BOOL) processIsRunning:(pid_t)aPID;
+- (BOOL) portIsUsed:(uint)port;
 
 @end

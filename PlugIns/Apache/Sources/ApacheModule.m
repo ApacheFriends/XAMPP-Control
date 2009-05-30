@@ -33,9 +33,11 @@
 @interface ApacheModule(PRIVAT)
 
 - (BOOL) systemApacheIsRunning;
+- (NSError*) otherWebserverCheck;
 - (NSError*) syntaxCheck;
 
 - (NSArray*)defines;
+- (BOOL) isSSLEnabled;
 
 @end
 
@@ -77,6 +79,10 @@
 		
 		return error;
 	}
+	
+	error = [self otherWebserverCheck];
+	if (error)
+		return error;
 	
 	error = [self syntaxCheck];
 	if (error)
@@ -205,6 +211,44 @@
 	return [[NSWorkspace sharedWorkspace] processIsRunning:[pid intValue]];
 }
 
+- (NSError*) otherWebserverCheck
+{
+	NSError* error;
+	NSMutableDictionary* errorDict;
+	BOOL port80AlreadyUsed = NO;
+	BOOL port443AlreadyUsed = NO;
+	
+	port80AlreadyUsed = [[NSWorkspace sharedWorkspace] portIsUsed:80];
+	
+	if ([self isSSLEnabled])
+		port443AlreadyUsed = [[NSWorkspace sharedWorkspace] portIsUsed:443];
+	
+	if (!port80AlreadyUsed
+		&& !port443AlreadyUsed)
+		return Nil;
+	
+	errorDict = [NSMutableDictionary dictionary];
+	
+	[errorDict setValue:@"Another webserver is already running!" 
+				 forKey:NSLocalizedDescriptionKey];
+	
+	if (port80AlreadyUsed && port443AlreadyUsed)
+		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 80 (and 433). Please turn it off and try again." 
+					 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	else if (port443AlreadyUsed)
+		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 433. Please turn it off and try again." 
+					 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	else
+		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 80. Please turn it off and try again." 
+					 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPOtherServerRunning 
+							userInfo:errorDict];
+	
+	return error;
+}
+
 - (NSError*) syntaxCheck
 {
 	NSTask* httpd = [[NSTask new] autorelease];
@@ -246,12 +290,17 @@
 	
 	[defines addObject: @"-DPHP5"];
 	
-	if ([[NSFileManager defaultManager] 
-		 fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"]) {
+	if ([self isSSLEnabled]) {
 		[defines addObject:@"-DSSL"];
 	}
 	
 	return defines;
+}
+
+- (BOOL) isSSLEnabled
+{
+	return [[NSFileManager defaultManager] 
+			fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"];
 }
 
 @end
