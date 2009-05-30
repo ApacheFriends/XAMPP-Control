@@ -63,8 +63,6 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) dealloc
 {
-	[checkTimer invalidate];
-	[checkTimer release];
 	[self setName:Nil];
 	[self setPidFile:Nil];
 	

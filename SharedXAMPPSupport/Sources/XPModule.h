@@ -27,7 +27,6 @@
 #import "XPStatus.h"
 
 @interface XPModule : NSObject {
-	NSTimer *checkTimer;
 	NSString *pidFile;
 	NSString* _name;
 	XPStatus status;
