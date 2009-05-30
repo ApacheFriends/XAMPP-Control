@@ -327,6 +327,8 @@
 		[[NSColor redColor] set];
 		NSRectFill(NSRectFromString([informationsDict objectForKey:@"indicatorRect"]));
 	}
+	
+	[textCell release];
 }
 
 @end

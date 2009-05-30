@@ -51,6 +51,7 @@
 		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
 	
 	[module release];
+	[securityCheck release];
 	[controller release];
 	
 	[self setRegistryInfo:dict];

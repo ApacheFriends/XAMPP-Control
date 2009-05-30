@@ -37,6 +37,7 @@
 	
 	if (![NSBundle loadNibNamed:@"PHPSwitchControl" owner:viewController]) {
 		NSLog(@"Can not load PHPSwitchControl!!!");
+		[viewController release];
 		return NO;
 	}
 		

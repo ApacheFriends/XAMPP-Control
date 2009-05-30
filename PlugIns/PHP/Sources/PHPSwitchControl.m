@@ -48,6 +48,8 @@
 	[menu addItem:[self managePHPsMenuItem]];
 	
 	[phpVersionSwitch setMenu:menu];
+	
+	[menu release];
 }
 
 #pragma mark -

@@ -67,7 +67,7 @@
 		}
 	}
 	
-	return securityChecks;
+	return [securityChecks autorelease];
 }
 
 - (BOOL) setupPages
