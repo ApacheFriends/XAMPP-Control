@@ -44,6 +44,7 @@
 	[dict setValue:[NSArray arrayWithObject:viewController] forKey:XPControlsPlugInCategorie];
 	
 	[self setRegistryInfo:dict];
+	[viewController release];
 	
 	return YES;
 }
