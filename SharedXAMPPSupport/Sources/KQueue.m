@@ -68,7 +68,8 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 		queueFD = kqueue();
 		if( queueFD == -1 )
 		{
-			[NSException raise:@"KQueue create faild" format:@"creating a kqueue faild with '%s'(%i)", strerror(errno), errno];
+			[NSException raise:@"KQueue create faild"
+						format:@"Creating a kqueue failed with '%s'(%i)!", strerror(errno), errno];
 			[self release];
 			return nil;
 		}
