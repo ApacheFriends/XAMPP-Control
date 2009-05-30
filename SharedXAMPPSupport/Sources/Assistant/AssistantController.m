@@ -171,8 +171,8 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	pageIndex = [pages indexOfObject:currentPage];
 	
 	if (pageIndex == 0
-		|| [currentPage type] == AssistantWorkPage
-		|| [currentPage type] == AssistantFinishPage)
+		|| [currentPage type] == AssistantWoringkPage
+		|| [currentPage type] == AssistantConclusionPage)
 		[backButton setEnabled:NO];
 	else
 		[backButton setEnabled:YES];
@@ -184,7 +184,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	else
 		[forwardButton setTitle:NSLocalizedString(@"Continue", @"Continue the assistant")];
 		
-	if ([currentPage type] == AssistantWorkPage)
+	if ([currentPage type] == AssistantWoringkPage)
 		[forwardButton setEnabled:NO];
 	else
 		[forwardButton setEnabled:YES];

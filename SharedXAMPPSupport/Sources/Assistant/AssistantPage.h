@@ -29,8 +29,8 @@
 typedef enum {
 	AssistantNormalPage = 1,
 	AssistantSummaryPage = 2,
-	AssistantWorkPage = 3,
-	AssistantFinishPage = 4,
+	AssistantWoringkPage = 3,
+	AssistantConclusionPage = 4,
 	AssistantUnknownPage = 5
 } AssistantPageType;
 
