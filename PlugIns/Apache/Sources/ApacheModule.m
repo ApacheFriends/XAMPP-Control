@@ -107,11 +107,6 @@
 	[apachectl waitUntilExit];
 	
 	if ([apachectl terminationStatus] == 0) { // Great apache is up and running :)
-		
-		// Ok, wait until a pid file is created, to prevent the status check to dedect a not running apache
-		// while he is in the starting phase ;) Not nice but works
-		while (![[NSFileManager defaultManager] fileExistsAtPath:pidFile isDirectory:NO]) usleep(5000);
-		
 		return Nil;
 	}
 	
