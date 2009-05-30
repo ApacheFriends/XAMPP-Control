@@ -28,6 +28,14 @@
 
 @implementation XPViewController
 
+- (void) dealloc
+{
+	[self setView:Nil];
+	
+	[super dealloc];
+}
+
+
 - (NSView*) view
 {
 	return view;
