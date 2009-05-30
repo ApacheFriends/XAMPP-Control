@@ -80,8 +80,13 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) start
 {
-	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSAutoreleasePool* pool;
 	NSError* error = Nil;
+	
+	if ([self status] == XPRunning)
+		return Nil;
+	
+	pool  = [NSAutoreleasePool new];
 	
 	working = YES;
 	[self setStatus:XPStarting];
@@ -108,8 +113,13 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) stop
 {
-	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSAutoreleasePool* pool;
 	NSError* error = Nil;
+	
+	if ([self status] == XPNotRunning)
+		return Nil;
+	
+	pool  = [NSAutoreleasePool new];
 	
 	working = YES;
 	[self setStatus:XPStopping];
