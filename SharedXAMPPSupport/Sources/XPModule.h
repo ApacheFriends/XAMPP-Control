@@ -26,7 +26,10 @@
 #import <Cocoa/Cocoa.h>
 #import "XPStatus.h"
 
+@class XPProcessWatcher;
+
 @interface XPModule : NSObject {
+	XPProcessWatcher* apacheWatcher;
 	NSString *pidFile;
 	NSString* _name;
 	XPStatus status;
@@ -53,8 +56,8 @@
 
 - (void) checkFixRightsAndRunIfNeeded;
 
-- (void) refreshStatusCheck;
+/*- (void) refreshStatusCheck;
 - (void) removeStatusCheck;
-- (void) setupStatusCheck;
+- (void) setupStatusCheck;*/
 
 @end

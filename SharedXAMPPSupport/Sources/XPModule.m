@@ -28,6 +28,7 @@
 #import "KQueue.h"
 #import "XPRootTask.h"
 #import "XPConfiguration.h"
+#import "XPProcessWatcher.h"
 #include <unistd.h>
 
 static NSLock *fixRightsLock = Nil;
@@ -47,22 +48,22 @@ static NSLock *fixRightsLock = Nil;
 {
 	self = [super init];
 	if (self != nil) {
+		apacheWatcher = [XPProcessWatcher new];
 		pidFile = Nil;
 		status = XPUnknownStatus;
 		
+		[apacheWatcher setDelegate:self];
+		
 		if (fixRightsLock == Nil)
 			fixRightsLock = [[NSLock alloc] init];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self 
-												 selector:@selector(newKEvent:)
-													 name:KQueueNewEvent
-												   object:[KQueue sharedKQueue]];
+
 	}
 	return self;
 }
 
 - (void) dealloc
 {
+	[apacheWatcher release];
 	[self setName:Nil];
 	[self setPidFile:Nil];
 	
@@ -189,7 +190,7 @@ static NSLock *fixRightsLock = Nil;
 		[self willChangeValueForKey:@"status"];
 		status = aStatus;
 
-		[self refreshStatusCheck];
+		//[self refreshStatusCheck];
 		[self didChangeValueForKey:@"status"];
 	}
 }
@@ -201,118 +202,33 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) setPidFile:(NSString*) aPidFile
 {
+	[apacheWatcher setPidFile:aPidFile];
+	
 	if ([aPidFile isEqualToString:pidFile])
 		return;
 	
-	[self removeStatusCheck];
+	//[self removeStatusCheck];
 	[pidFile release];
 	pidFile = [aPidFile retain];
-	[self setupStatusCheck];
+	//[self setupStatusCheck];
+}
+
+- (void) processExited:(XPProcessWatcher*)watcher
+{
+	if ([watcher isEqualTo:apacheWatcher]) {
+		[self setStatus:XPNotRunning];
+	}
+}
+
+- (void) processStarted:(XPProcessWatcher*)watcher
+{
+	if ([watcher isEqualTo:apacheWatcher]) {
+		[self setStatus:XPRunning];
+	}
 }
 
 #pragma mark -
 #pragma mark Privat Methods
-
-- (void) removeStatusCheck
-{
-	if (watchDirFD > 0) {
-		[[KQueue sharedKQueue] removeIdent:watchDirFD fromFilter:KQueueVNodeFilter];
-		close(watchDirFD);
-		watchDirFD = -1;
-	}
-	if (watchPID > 0) {
-		[[KQueue sharedKQueue] removeIdent:watchPID fromFilter:KQueueProcFilter];
-		watchPID = -1;
-	}
-}
-
-- (void) setupStatusCheck
-{
-	watchDirFD = -1;
-	watchPID = -1;
-	
-	if ([[NSFileManager defaultManager] fileExistsAtPath:pidFile isDirectory:NO]) {
-		// It's probbably running, but check it :)
-		
-		pid_t pid = [[NSString stringWithContentsOfFile:pidFile] intValue];
-		
-		if (pid < 0 
-			|| ![[NSWorkspace sharedWorkspace] processIsRunning:pid]) {
-			[self setStatus:XPNotRunning];
-		}
-		else {
-			[self setStatus:XPRunning];
-		}
-
-	}
-	else {
-		[self setStatus:XPNotRunning];
-	}
-	[self refreshStatusCheck];
-}
-
-- (void) refreshStatusCheck
-{
-	pid_t pid = [[NSString stringWithContentsOfFile:pidFile] intValue];
-	
-	if (watchPID < 0 && status == XPRunning && pid > 0) {
-		// The Module is running but we dont watch the pid for exit
-		
-		if (watchDirFD > 0) {
-			[[KQueue sharedKQueue] removeIdent:watchDirFD
-									fromFilter:KQueueVNodeFilter];
-			close(watchDirFD);
-			watchDirFD = -1;
-		}
-				
-		// Set up watch
-		[[KQueue sharedKQueue] addIdent:pid 
-							 withFilter:KQueueProcFilter 
-						 andFilterFlags:KQueueProcessExitFilterFlag];
-		watchPID = pid;
-	}
-	else if (watchDirFD < 0 && status == XPNotRunning) {
-		// the Module is not running but we dont watch the dir for a new pid file
-		
-		if (watchPID > 0) {
-			[[KQueue sharedKQueue] removeIdent:watchPID 
-									fromFilter:KQueueProcFilter];
-			watchPID = -1;
-		}
-				
-		// Set up watch
-		watchDirFD = open([[pidFile stringByDeletingLastPathComponent] fileSystemRepresentation], O_EVTONLY, 0);
-
-		if (watchDirFD < 0)
-			NSLog(@"Directory for pid does not exits!");
-		else 
-			[[KQueue sharedKQueue] addIdent:watchDirFD 
-								 withFilter:KQueueVNodeFilter 
-							 andFilterFlags:KQueueVNodeWriteFilterFlag];
-	}
-}
-
-- (void) newKEvent:(NSNotification*)noti
-{
-	NSDictionary *userInfo = [noti userInfo];
-	
-	if ([[userInfo valueForKey:KQueueFilterKey] isEqualToString:KQueueVNodeFilter]
-		&& [[userInfo valueForKey:KQueueIdentKey] isEqualToNumber:[NSNumber numberWithInt:watchDirFD]]
-		&& [[userInfo valueForKey:KQueueFilterFlagsKey] intValue] & KQueueVNodeWriteFilterFlag
-		&& [[NSFileManager defaultManager] fileExistsAtPath:pidFile isDirectory:NO]) {
-		
-		pid_t pid = [[NSString stringWithContentsOfFile:pidFile] intValue];
-		
-		if ([[NSWorkspace sharedWorkspace] processIsRunning:pid])
-			[self setStatus:XPRunning];
-	}
-	else if ([[userInfo valueForKey:KQueueFilterKey] isEqualToString:KQueueProcFilter]
-			 && [[userInfo valueForKey:KQueueIdentKey] isEqualToNumber:[NSNumber numberWithInt:watchPID]]
-			 && [[userInfo valueForKey:KQueueFilterFlagsKey] intValue] & KQueueProcessExitFilterFlag)
-		[self setStatus:XPNotRunning];
-		
-		
-}
 
 - (void) checkFixRightsAndRunIfNeeded
 {

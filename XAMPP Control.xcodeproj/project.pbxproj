@@ -151,6 +151,8 @@
 		92F13D990FA0D403007ED72B /* XPModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */; };
 		92F13D9A0FA0D408007ED72B /* XPModuleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 922D72750F39D3CC00FDF9E2 /* XPModuleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92F13DAA0FA0D57F007ED72B /* SharedXAMPPSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F13DA90FA0D57F007ED72B /* SharedXAMPPSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92FEC9160FD1C9300071E676 /* XPProcessWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */; };
+		92FEC9170FD1C9300071E676 /* XPProcessWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -420,6 +422,8 @@
 		92F9AD8F0FCDC95400037F27 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
 		92FA25850F4FF780005EEFB3 /* XPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPConfiguration.h; sourceTree = "<group>"; };
 		92FA25860F4FF780005EEFB3 /* XPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPConfiguration.m; sourceTree = "<group>"; };
+		92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPProcessWatcher.h; sourceTree = "<group>"; };
+		92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPProcessWatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,6 +756,8 @@
 				92303D360FD013470078E7C0 /* XPAlert.m */,
 				922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */,
 				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
+				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
+				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				920079110FA461CD002665E0 /* AssistantStepIndicatorView.h in Headers */,
 				922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */,
 				92303D370FD013470078E7C0 /* XPAlert.h in Headers */,
+				92FEC9160FD1C9300071E676 /* XPProcessWatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1197,7 @@
 				920079120FA461CD002665E0 /* AssistantStepIndicatorView.m in Sources */,
 				92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */,
 				92303D380FD013470078E7C0 /* XPAlert.m in Sources */,
+				92FEC9170FD1C9300071E676 /* XPProcessWatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
