@@ -40,13 +40,9 @@
 		gethostname(hostname, 256);
 		
 		[self setPidFile:[NSString stringWithFormat:@"/Applications/XAMPP/xamppfiles/var/mysql/%s.pid", hostname]];
+		[self setName:@"MySQL"];
 	}
 	return self;
-}
-
-- (NSString*) name
-{
-	return @"MySQL";
 }
 
 - (NSError*) realStart

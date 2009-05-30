@@ -49,7 +49,6 @@ static NSLock *fixRightsLock = Nil;
 	if (self != nil) {
 		pidFile = Nil;
 		status = XPUnknownStatus;
-		working = NO;
 		
 		if (fixRightsLock == Nil)
 			fixRightsLock = [[NSLock alloc] init];
@@ -66,16 +65,28 @@ static NSLock *fixRightsLock = Nil;
 {
 	[checkTimer invalidate];
 	[checkTimer release];
+	[self setName:Nil];
+	[self setPidFile:Nil];
 	
 	[super dealloc];
 }
 
 - (NSString*) name
 {
-	[[NSException exceptionWithName:@"NotImplemented" 
-							 reason:@"NotImplemented" 
-						   userInfo:nil] raise];
-	return nil;
+	return _name;
+}
+
+- (void) setName:(NSString*)anName
+{
+	if ([anName isEqualToString:_name])
+		return;
+	
+	[self willChangeValueForKey:@"name"];
+	
+	[_name release];
+	_name = [anName retain];
+	
+	[self didChangeValueForKey:@"name"];
 }
 
 - (NSError*) start
@@ -88,7 +99,6 @@ static NSLock *fixRightsLock = Nil;
 	
 	pool  = [NSAutoreleasePool new];
 	
-	working = YES;
 	[self setStatus:XPStarting];
 	
 	error = [[self realStart] retain];
@@ -97,7 +107,6 @@ static NSLock *fixRightsLock = Nil;
 		[self setStatus:XPNotRunning];
 	else
 		[self setStatus:XPRunning];
-	working = NO;
 	
 	[pool release];
 	return [error autorelease];
@@ -121,7 +130,6 @@ static NSLock *fixRightsLock = Nil;
 	
 	pool  = [NSAutoreleasePool new];
 	
-	working = YES;
 	[self setStatus:XPStopping];
 	
 	error = [[self realStop] retain];
@@ -130,7 +138,6 @@ static NSLock *fixRightsLock = Nil;
 		[self setStatus:XPRunning];
 	else
 		[self setStatus:XPNotRunning];
-	working = NO;
 	
 	[pool release];
 	return [error autorelease];
@@ -153,13 +160,11 @@ static NSLock *fixRightsLock = Nil;
 // TODO: Make an NSError for this situation
 		return Nil;
 	
-	working = YES;
 	[self setStatus:XPStopping];
 	
 	error = [[self realReload] retain];
 	
 	[self setStatus:XPRunning];
-	working = NO;
 	
 	[pool release];
 	return [error autorelease];

@@ -29,8 +29,8 @@
 @interface XPModule : NSObject {
 	NSTimer *checkTimer;
 	NSString *pidFile;
+	NSString* _name;
 	XPStatus status;
-	bool working;
 	
 	int watchDirFD;
 	int watchPID;
@@ -38,6 +38,7 @@
 
 // The Name of the Module
 - (NSString*) name;
+- (void) setName:(NSString*)anName;
 
 - (NSString*) pidFile;
 - (void) setPidFile:(NSString*)aPidFile;

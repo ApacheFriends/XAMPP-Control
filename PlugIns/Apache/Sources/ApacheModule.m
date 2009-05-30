@@ -49,13 +49,9 @@
 	self = [super init];
 	if (self != nil) {		
 		[self setPidFile:@"/Applications/XAMPP/xamppfiles/logs/httpd.pid"];
+		[self setName:@"Apache"];
 	}
 	return self;
-}
-
-- (NSString*) name
-{
-	return @"Apache";
 }
 
 - (NSError*) realStart

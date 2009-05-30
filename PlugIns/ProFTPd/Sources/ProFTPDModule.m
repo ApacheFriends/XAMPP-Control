@@ -36,13 +36,9 @@
 	self = [super init];
 	if (self != nil) {
 		[self setPidFile:@"/Applications/XAMPP/xamppfiles/var/proftpd.pid"];
+		[self setName:@"FTP"];
 	}
 	return self;
-}
-
-- (NSString*) name
-{
-	return @"FTP";
 }
 
 - (NSError*) realStart
