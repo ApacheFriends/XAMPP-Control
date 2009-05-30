@@ -126,7 +126,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	[self didChangeValueForKey:@"title"];
 }
 
-- (IBAction) forward:(id)sender
+- (IBAction) continue:(id)sender
 {	
 	if (![pagesController canSelectNext])
 		return [self close];
@@ -139,7 +139,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	[pagesController selectNext:sender];
 }
 
-- (IBAction) back:(id)sender
+- (IBAction) goBack:(id)sender
 {
 	[pagesController selectPrevious:sender];
 }

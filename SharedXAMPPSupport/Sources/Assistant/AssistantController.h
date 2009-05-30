@@ -47,7 +47,7 @@
 - (NSString*) title;
 - (void) setTitle:(NSString*)anString;
 
-- (IBAction) forward:(id)sender;
-- (IBAction) back:(id)sender;
+- (IBAction) continue:(id)sender;
+- (IBAction) goBack:(id)sender;
 
 @end
