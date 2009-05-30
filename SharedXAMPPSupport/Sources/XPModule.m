@@ -149,6 +149,10 @@ static NSLock *fixRightsLock = Nil;
 	NSAutoreleasePool* pool = [NSAutoreleasePool new];
 	NSError* error = Nil;
 	
+	if ([self status] != XPRunning)
+// TODO: Make an NSError for this situation
+		return Nil;
+	
 	working = YES;
 	[self setStatus:XPStopping];
 	
