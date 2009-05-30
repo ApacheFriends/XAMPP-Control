@@ -28,6 +28,15 @@
 
 @implementation AssistantPage
 
+- (void) dealloc
+{
+	[self setTitle:Nil];
+	[self setStepTitle:Nil];
+	
+	[super dealloc];
+}
+
+
 #pragma mark -
 #pragma mark Getter and Setter
 
@@ -37,9 +46,7 @@
 }
 
 - (void) setType:(AssistantPageType)anType
-{
-	NSParameterAssert(anType > 0 && anType < AssistantUnknownPage);
-	
+{	
 	type = anType;
 }
 
@@ -49,9 +56,7 @@
 }
 
 - (void) setTitle:(NSString*)anTitle
-{
-	NSParameterAssert(anTitle != Nil);
-	
+{	
 	if ([anTitle isEqualToString:title])
 		return;
 	
@@ -66,8 +71,6 @@
 
 - (void) setStepTitle:(NSString*)anStepTitle
 {
-	NSParameterAssert(anStepTitle != Nil);
-	
 	if ([anStepTitle isEqualToString:stepTitle])
 		return;
 	
