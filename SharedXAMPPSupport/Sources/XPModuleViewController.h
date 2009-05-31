@@ -27,7 +27,6 @@
 #import <SharedXAMPPSupport/XPViewController.h>
 
 @class XPModule;
-@class StatusView;
 @class StatusIndicatorView;
 
 @interface XPModuleViewController : XPViewController {
