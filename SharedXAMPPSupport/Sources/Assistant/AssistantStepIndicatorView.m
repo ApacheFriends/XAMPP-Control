@@ -30,14 +30,30 @@ NSString* disabledStep = @"Disabeld";
 
 @implementation AssistantStepIndicatorView
 
+- (void) awakeFromNib
+{
+		activeImage = [[NSImage alloc] initWithContentsOfFile:
+					   [[NSBundle bundleForClass:[AssistantStepIndicatorView class]] 
+						pathForImageResource:@"AssistantStepActive"]];
+		inactiveImage = [[NSImage alloc] initWithContentsOfFile:
+						 [[NSBundle bundleForClass:[AssistantStepIndicatorView class]] 
+						  pathForImageResource:@"AssistantStepInactive"]];
+		disabledImage = [[NSImage alloc] initWithContentsOfFile:
+						 [[NSBundle bundleForClass:[AssistantStepIndicatorView class]] 
+						  pathForImageResource:@"AssistantStepDisabled"]];
+}
+
+
 - (void) dealloc
 {
+	[activeImage release];
+	[inactiveImage release];
+	[disabledImage release];
 	[steps release];
 	[stepInformations release];
 	
 	[super dealloc];
 }
-
 
 - (NSArray*) steps
 {
@@ -97,15 +113,15 @@ NSString* disabledStep = @"Disabeld";
 		
 		// First draw the indicator image
 		if (i ==  currentStepIndex) {
-			indicatorImage = [NSImage imageNamed:@"AssistantStepActive.tiff"];
+			indicatorImage = activeImage;
 			[textCell setFont:[NSFont boldSystemFontOfSize:12.f]];
 			[textCell setTextColor:[NSColor controlTextColor]];
 		} else if ([stepInformation isEqualToString:inactiveStep]) {
-			indicatorImage = [NSImage imageNamed:@"AssistantStepInactive.tiff"];
+			indicatorImage = inactiveImage;
 			[textCell setFont:[NSFont systemFontOfSize:12.f]];
 			[textCell setTextColor:[NSColor controlTextColor]];
 		} else {
-			indicatorImage = [NSImage imageNamed:@"AssistantStepDisabled.tiff"];
+			indicatorImage = disabledImage;
 			[textCell setFont:[NSFont systemFontOfSize:12.f]];
 			[textCell setTextColor:[NSColor disabledControlTextColor]];
 		}

@@ -57,9 +57,6 @@
 		9200791B0FA463F5002665E0 /* AssistantStepActive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079180FA463F5002665E0 /* AssistantStepActive.tiff */; };
 		9200791C0FA463F5002665E0 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		9200791D0FA463F5002665E0 /* AssistantStepDisabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */; };
-		9200794D0FA47BA0002665E0 /* AssistantStepActive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079180FA463F5002665E0 /* AssistantStepActive.tiff */; };
-		9200794E0FA47BA0002665E0 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
-		9200794F0FA47BA0002665E0 /* AssistantStepDisabled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */; };
 		9200797B0FA48B89002665E0 /* MySQLSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */; };
 		9200799E0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */; };
 		9204BA7E0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */; };
@@ -1083,9 +1080,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				920650540FCC99B500B1A42C /* Assistant.xib in Resources */,
-				9200794D0FA47BA0002665E0 /* AssistantStepActive.tiff in Resources */,
-				9200794E0FA47BA0002665E0 /* AssistantStepInactive.tiff in Resources */,
-				9200794F0FA47BA0002665E0 /* AssistantStepDisabled.tiff in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */,

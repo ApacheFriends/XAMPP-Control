@@ -30,6 +30,10 @@
 	NSArray*		steps;
 	NSMutableArray*	stepInformations;
 	uint			currentStepIndex;
+	
+	NSImage*		activeImage;
+	NSImage*		inactiveImage;
+	NSImage*		disabledImage;
 }
 
 - (NSArray*) steps;
