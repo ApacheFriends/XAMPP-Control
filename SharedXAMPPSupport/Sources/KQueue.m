@@ -24,6 +24,7 @@
  */
 
 #import "KQueue.h"
+#import "NSObject (MainThread).h"
 #include <unistd.h>
 
 static id sharedKQueue;
@@ -181,10 +182,12 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 				}
 				
 				[event setValue:[NSNumber numberWithInt:ev.fflags] forKey:KQueueFilterFlagsKey];
-								
-				[[NSNotificationCenter defaultCenter] postNotificationName:KQueueNewEvent 
-																	object:self 
-																  userInfo:event];
+				
+				[[[NSNotificationCenter defaultCenter] mainThreadProxy] postNotificationName:KQueueNewEvent
+																					  object:self
+																					userInfo:event];
+				
+				//[self postOnMainThread:KQueueNewEvent object:self userInfo:event];
 				
 				[event release];
 			}

@@ -186,6 +186,9 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) setStatus:(XPStatus) aStatus
 {
+	if (![NSThread isMainThread])
+		NSLog(@"[%@ setStatus:%i] not on the main thread", self, aStatus);
+	
 	if (status != aStatus) {
 		[self willChangeValueForKey:@"status"];
 		status = aStatus;

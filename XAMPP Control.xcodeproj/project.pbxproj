@@ -74,6 +74,10 @@
 		92303D340FD011040078E7C0 /* AlertCautionIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 92303D330FD011040078E7C0 /* AlertCautionIcon.icns */; };
 		92303D370FD013470078E7C0 /* XPAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 92303D350FD013470078E7C0 /* XPAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92303D380FD013470078E7C0 /* XPAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 92303D360FD013470078E7C0 /* XPAlert.m */; };
+		92419BCC0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */; };
+		92419BCD0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */; };
+		92419BD20FD2AEDA00CEA9F5 /* NSObject (MainThread).h in Headers */ = {isa = PBXBuildFile; fileRef = 92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */; };
+		92419BD30FD2AEDA00CEA9F5 /* NSObject (MainThread).m in Sources */ = {isa = PBXBuildFile; fileRef = 92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */; };
 		9256DF300F9F6D6F0000BE90 /* KQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 924D9F3C0F447AAE00DC9E43 /* KQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9256DF310F9F6D6F0000BE90 /* KQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 924D9F3D0F447AAE00DC9E43 /* KQueue.m */; };
 		9256DF320F9F6D6F0000BE90 /* XPModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 922D70C30F387EB600FDF9E2 /* XPModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -339,6 +343,10 @@
 		92303D330FD011040078E7C0 /* AlertCautionIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AlertCautionIcon.icns; sourceTree = "<group>"; };
 		92303D350FD013470078E7C0 /* XPAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlert.h; sourceTree = "<group>"; };
 		92303D360FD013470078E7C0 /* XPAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlert.m; sourceTree = "<group>"; };
+		92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPMainThreadProxy.h; path = ../XPMainThreadProxy.h; sourceTree = "<group>"; };
+		92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPMainThreadProxy.m; path = ../XPMainThreadProxy.m; sourceTree = "<group>"; };
+		92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject (MainThread).h"; sourceTree = "<group>"; };
+		92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject (MainThread).m"; sourceTree = "<group>"; };
 		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
 		924D9F3D0F447AAE00DC9E43 /* KQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KQueue.m; sourceTree = "<group>"; };
 		9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedXAMPPSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -755,6 +763,10 @@
 				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
 				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
 				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
+				92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */,
+				92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */,
+				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
+				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -906,6 +918,8 @@
 				922E85B90FAA2E460002FAF1 /* SecurityCheckProtocol.h in Headers */,
 				92303D370FD013470078E7C0 /* XPAlert.h in Headers */,
 				92FEC9160FD1C9300071E676 /* XPProcessWatcher.h in Headers */,
+				92419BCC0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h in Headers */,
+				92419BD20FD2AEDA00CEA9F5 /* NSObject (MainThread).h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1206,8 @@
 				92ED0D720FB337EF00ED5BB9 /* XPError.m in Sources */,
 				92303D380FD013470078E7C0 /* XPAlert.m in Sources */,
 				92FEC9170FD1C9300071E676 /* XPProcessWatcher.m in Sources */,
+				92419BCD0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m in Sources */,
+				92419BD30FD2AEDA00CEA9F5 /* NSObject (MainThread).m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
