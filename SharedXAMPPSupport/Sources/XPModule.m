@@ -25,6 +25,7 @@
 
 #import "XPModule.h"
 #import "NSWorkspace (Process).h"
+#import "NSObject (MainThread).h"
 #import "KQueue.h"
 #import "XPRootTask.h"
 #import "XPConfiguration.h"
@@ -92,20 +93,22 @@ static NSLock *fixRightsLock = Nil;
 {
 	NSAutoreleasePool* pool;
 	NSError* error = Nil;
-	
+	id mainThreadInstance;
+
 	if ([self status] == XPRunning)
 		return Nil;
 	
 	pool  = [NSAutoreleasePool new];
+	mainThreadInstance = [self mainThreadProxy];
 	
-	[self setStatus:XPStarting];
+	[mainThreadInstance setStatus:XPStarting];
 	
 	error = [[self realStart] retain];
 	
 	if (error)
-		[self setStatus:XPNotRunning];
+		[mainThreadInstance setStatus:XPNotRunning];
 	else
-		[self setStatus:XPRunning];
+		[mainThreadInstance setStatus:XPRunning];
 	
 	[pool release];
 	return [error autorelease];
@@ -123,20 +126,22 @@ static NSLock *fixRightsLock = Nil;
 {
 	NSAutoreleasePool* pool;
 	NSError* error = Nil;
+	id mainThreadInstance;
 	
 	if ([self status] == XPNotRunning)
 		return Nil;
 	
 	pool  = [NSAutoreleasePool new];
+	mainThreadInstance = [self mainThreadProxy];
 	
-	[self setStatus:XPStopping];
+	[mainThreadInstance setStatus:XPStopping];
 	
 	error = [[self realStop] retain];
-	
+
 	if (error)
-		[self setStatus:XPRunning];
+		[mainThreadInstance setStatus:XPRunning];
 	else
-		[self setStatus:XPNotRunning];
+		[mainThreadInstance setStatus:XPNotRunning];
 	
 	[pool release];
 	return [error autorelease];
@@ -154,18 +159,20 @@ static NSLock *fixRightsLock = Nil;
 {
 	NSAutoreleasePool* pool;
 	NSError* error = Nil;
+	id mainThreadInstance;
 	
 	if ([self status] != XPRunning)
 // TODO: Make an NSError for this situation
 		return Nil;
 	
 	pool = [NSAutoreleasePool new];
+	mainThreadInstance = [self mainThreadProxy];
 	
-	[self setStatus:XPStopping];
+	[mainThreadInstance setStatus:XPStopping];
 	
 	error = [[self realReload] retain];
 	
-	[self setStatus:XPRunning];
+	[mainThreadInstance setStatus:XPRunning];
 	
 	[pool release];
 	return [error autorelease];
@@ -186,9 +193,6 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) setStatus:(XPStatus) aStatus
 {
-	if (![NSThread isMainThread])
-		NSLog(@"[%@ setStatus:%i] not on the main thread", self, aStatus);
-	
 	if (status != aStatus) {
 		[self willChangeValueForKey:@"status"];
 		status = aStatus;
@@ -210,10 +214,8 @@ static NSLock *fixRightsLock = Nil;
 	if ([aPidFile isEqualToString:pidFile])
 		return;
 	
-	//[self removeStatusCheck];
 	[pidFile release];
 	pidFile = [aPidFile retain];
-	//[self setupStatusCheck];
 }
 
 - (void) processExited:(XPProcessWatcher*)watcher
