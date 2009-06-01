@@ -29,6 +29,7 @@
 #import <PlugIn/PlugInManager.h>
 #import <XAMPP Control/XPPlugInCategories.h>
 #import <XAMPP Control/XPViewController.h>
+#import <XAMPP Control/XPPLugInHooks.h>
 
 #define SPACE (8)
 #define MARGIN (17)
@@ -47,7 +48,10 @@
 {
 	[[self window] setFrame:[[self window] frameRectForContentRect:[self contentFrame]] display:YES animate:NO];
 	[self updateContent];
-	PlugInInvokeHook(@"controlsWindowDidLoad", [NSDictionary dictionaryWithObject:[self window] forKey:@"window"]);
+	
+	PlugInInvokeHook(ControlsWindowDidLoadHook, 
+					 [NSDictionary dictionaryWithObject:[self window] 
+												 forKey:HookWindowKey]);
 }
 
 @end

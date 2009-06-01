@@ -26,24 +26,10 @@
 #import "AboutController.h"
 #import "XPConfiguration.h"
 
+#import <XAMPP Control/XPPlugInHooks.h>
 #import <PlugIn/PlugIn.h>
 
 @implementation AboutController
-
-- (id) init
-{
-	self = [super init];
-	if (self != nil) {
-		/*if (![NSBundle loadNibNamed:@"About" owner:self]) {
-			[self release];
-			return nil;
-		}
-		
-		[self setupContent];*/
-		NSLog(@"owner %@", [self owner]);
-	}
-	return self;
-}
 
 - (NSString *)windowNibName
 {
@@ -75,7 +61,13 @@
 															attributes:[NSDictionary dictionaryWithObject:centeredParagraphStyle forKey:NSParagraphStyleAttributeName]];
 	creditsHTML = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Team" ofType:@"html"]];
 	
-	PlugInInvokeHook(@"SetupAboutContent", [NSDictionary dictionaryWithObjectsAndKeys:XAMPPString,@"XAMPPString",versionsString,@"versionString",creditsHTML,@"creditsHTML",Nil]);
+	PlugInInvokeHook(AboutWindowSetupHook, 
+					 [NSDictionary dictionaryWithObjectsAndKeys:
+					  XAMPPString, HookXAMPPLabelKey,
+					  versionsString, HookVersionsStringKey,
+					  creditsHTML, HookCreditsHTMLKey,
+					  [self window], HookWindowKey,
+					  Nil]);
 	
 	[XAMPPName setAttributedStringValue:XAMPPString];
 	[versionsField setAttributedStringValue:versionsString];
