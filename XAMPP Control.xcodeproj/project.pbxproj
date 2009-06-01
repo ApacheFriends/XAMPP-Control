@@ -18,6 +18,7 @@
 				92E28EDE0FD407BD00DBA78F /* PBXTargetDependency */,
 				92E28F450FD4165100DBA78F /* PBXTargetDependency */,
 				92E28F5A0FD416FF00DBA78F /* PBXTargetDependency */,
+				928EF3430FD46A64002FC497 /* PBXTargetDependency */,
 			);
 			name = BetaRelease;
 			productName = BetaRelease;
@@ -75,6 +76,7 @@
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
+		928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
 		9290982A0F50243900BBE38B /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 929098280F50243900BBE38B /* GettingStarted.html */; };
 		92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
@@ -158,6 +160,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		928EF3420FD46A64002FC497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
+			remoteInfo = BetaSupport;
+		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -255,6 +264,7 @@
 			dstPath = "XAMPP Control.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
+				928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */,
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
 				92E28F2C0FD408B500DBA78F /* Apache.plugin in CopyFiles */,
@@ -368,8 +378,8 @@
 		92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorRed.tiff; sourceTree = "<group>"; };
 		92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorYellow.tiff; sourceTree = "<group>"; };
 		92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorUnknown.tiff; sourceTree = "<group>"; };
-		92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetaSupport.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E28EAF0FD4034100DBA78F /* BetaSupport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetaSupport-Info.plist"; sourceTree = "<group>"; };
+		92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetaSupport.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E28EAF0FD4034100DBA78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
 		92E28EBC0FD4045100DBA78F /* BetaFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaFeedbackController.h; sourceTree = "<group>"; };
 		92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaFeedbackController.m; sourceTree = "<group>"; };
@@ -557,7 +567,7 @@
 				92F13C7E0FA084F7007ED72B /* MySQL.plugin */,
 				92F13CA60FA08576007ED72B /* ProFTPd.plugin */,
 				92E362130FBECB610018B96E /* PHP.plugin */,
-				92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */,
+				92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -708,7 +718,7 @@
 			isa = PBXGroup;
 			children = (
 				92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */,
-				92E28EAF0FD4034100DBA78F /* BetaSupport-Info.plist */,
+				92E28EAF0FD4034100DBA78F /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -925,7 +935,7 @@
 			);
 			name = BetaSupport;
 			productName = BetaSupport;
-			productReference = 92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */;
+			productReference = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 		92E362120FBECB610018B96E /* PHP */ = {
@@ -1218,6 +1228,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		928EF3430FD46A64002FC497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
+			targetProxy = 928EF3420FD46A64002FC497 /* PBXContainerItemProxy */;
+		};
 		92E28EC80FD4055700DBA78F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* XAMPP Control */;
@@ -1414,17 +1429,20 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "BetaSupport-Info.plist";
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
+				INFOPLIST_FILE = PlugIns/BetaSupport/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
+					"-bundle_loader",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BetaSupport;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
 		};
@@ -1438,13 +1456,16 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "BetaSupport-Info.plist";
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
+				INFOPLIST_FILE = PlugIns/BetaSupport/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
 					"-framework",
 					AppKit,
+					"-bundle_loader",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = BetaSupport;
