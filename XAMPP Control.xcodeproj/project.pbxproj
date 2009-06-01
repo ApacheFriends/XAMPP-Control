@@ -335,8 +335,8 @@
 		92303D330FD011040078E7C0 /* AlertCautionIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AlertCautionIcon.icns; sourceTree = "<group>"; };
 		92303D350FD013470078E7C0 /* XPAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlert.h; sourceTree = "<group>"; };
 		92303D360FD013470078E7C0 /* XPAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlert.m; sourceTree = "<group>"; };
-		92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPMainThreadProxy.h; path = ../SharedXAMPPSupport/XPMainThreadProxy.h; sourceTree = "<group>"; };
-		92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPMainThreadProxy.m; path = ../SharedXAMPPSupport/XPMainThreadProxy.m; sourceTree = "<group>"; };
+		92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMainThreadProxy.h; sourceTree = "<group>"; };
+		92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMainThreadProxy.m; sourceTree = "<group>"; };
 		92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject (MainThread).h"; sourceTree = "<group>"; };
 		92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject (MainThread).m"; sourceTree = "<group>"; };
 		924D9F3C0F447AAE00DC9E43 /* KQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KQueue.h; sourceTree = "<group>"; };
@@ -487,11 +487,14 @@
 		080E96DDFE201D6D7F000001 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9257D7D80FA1F3E5002BF955 /* Assistant */,
+				920078C80FA3AE39002665E0 /* SecurityCheck */,
+				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
+				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
 				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
 				92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */,
 				92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */,
-				9257D7D80FA1F3E5002BF955 /* Assistant */,
 				9257D7CD0FA1F14F002BF955 /* AssistantController.h */,
 				9257D7CE0FA1F14F002BF955 /* AssistantController.m */,
 				9257D7D90FA1F3FF002BF955 /* AssistantPage.h */,
@@ -522,9 +525,6 @@
 				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
 				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
 				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
-				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
-				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
 				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
 				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
