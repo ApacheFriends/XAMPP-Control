@@ -98,8 +98,6 @@
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
-		927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */; };
-		927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
 		9290982A0F50243900BBE38B /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 929098280F50243900BBE38B /* GettingStarted.html */; };
 		92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
@@ -121,6 +119,8 @@
 		92D8EAC90FBEB258005010BC /* IndicatorRed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */; };
 		92D8EACA0FBEB258005010BC /* IndicatorYellow.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */; };
 		92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */; };
+		92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */; };
+		92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */; };
 		92E361760FBEB8390018B96E /* StatusIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E361750FBEB8390018B96E /* StatusIndicatorView.m */; };
 		92E3622A0FBECB7B0018B96E /* SharedXAMPPSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */; };
 		92E362500FBECB920018B96E /* PHP.plugin in PlugIns */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
@@ -366,9 +366,6 @@
 		926DAAE70FC8527C00998643 /* ProFTPDModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFTPDModuleViewController.h; sourceTree = "<group>"; };
 		926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProFTPDModuleViewController.m; sourceTree = "<group>"; };
 		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		927DFAA90F5192BE00EAD88B /* BetaFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaFeedbackController.h; sourceTree = "<group>"; };
-		927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaFeedbackController.m; sourceTree = "<group>"; };
-		927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
@@ -382,6 +379,11 @@
 		92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorRed.tiff; sourceTree = "<group>"; };
 		92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorYellow.tiff; sourceTree = "<group>"; };
 		92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorUnknown.tiff; sourceTree = "<group>"; };
+		92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetaSupport.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E28EAF0FD4034100DBA78F /* BetaSupport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetaSupport-Info.plist"; sourceTree = "<group>"; };
+		92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
+		92E28EBC0FD4045100DBA78F /* BetaFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaFeedbackController.h; sourceTree = "<group>"; };
+		92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaFeedbackController.m; sourceTree = "<group>"; };
 		92E361740FBEB8390018B96E /* StatusIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusIndicatorView.h; sourceTree = "<group>"; };
 		92E361750FBEB8390018B96E /* StatusIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusIndicatorView.m; sourceTree = "<group>"; };
 		92E362130FBECB610018B96E /* PHP.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PHP.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +455,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92E28EAC0FD4034100DBA78F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E362110FBECB610018B96E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,7 +512,6 @@
 			isa = PBXGroup;
 			children = (
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				927DFAA80F51929400EAD88B /* XAMPPBeta */,
 				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
@@ -557,6 +565,7 @@
 				92F13C7E0FA084F7007ED72B /* MySQL.plugin */,
 				92F13CA60FA08576007ED72B /* ProFTPd.plugin */,
 				92E362130FBECB610018B96E /* PHP.plugin */,
+				92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -593,7 +602,6 @@
 				92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */,
 				92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */,
 				92CBCBBD0FC02F8800C136BE /* Success.png */,
-				92592C410F55B09100039573 /* XAMPPBeta */,
 				929098280F50243900BBE38B /* GettingStarted.html */,
 				9276D9EE0F3B2ED900866FEB /* Icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -660,15 +668,6 @@
 			path = Assistant;
 			sourceTree = "<group>";
 		};
-		92592C410F55B09100039573 /* XAMPPBeta */ = {
-			isa = PBXGroup;
-			children = (
-				927DFAAC0F5192E500EAD88B /* BetaFeedback.xib */,
-			);
-			name = XAMPPBeta;
-			path = ../XAMPPBeta/Resources;
-			sourceTree = "<group>";
-		};
 		9276D9FE0F3B2F4E00866FEB /* AboutBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,14 +677,31 @@
 			name = AboutBox;
 			sourceTree = "<group>";
 		};
-		927DFAA80F51929400EAD88B /* XAMPPBeta */ = {
+		92E28EA50FD402D700DBA78F /* BetaSupport */ = {
 			isa = PBXGroup;
 			children = (
-				927DFAA90F5192BE00EAD88B /* BetaFeedbackController.h */,
-				927DFAAA0F5192BE00EAD88B /* BetaFeedbackController.m */,
+				92E28EA70FD402F700DBA78F /* Resources */,
+				92E28EA60FD402EC00DBA78F /* Sources */,
 			);
-			name = XAMPPBeta;
-			path = ../XAMPPBeta/Sources;
+			path = BetaSupport;
+			sourceTree = "<group>";
+		};
+		92E28EA60FD402EC00DBA78F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92E28EBC0FD4045100DBA78F /* BetaFeedbackController.h */,
+				92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92E28EA70FD402F700DBA78F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */,
+				92E28EAF0FD4034100DBA78F /* BetaSupport-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		92E361FB0FBECB270018B96E /* PHP */ = {
@@ -789,6 +805,7 @@
 		92ED0E580FB3485E00ED5BB9 /* PlugIns */ = {
 			isa = PBXGroup;
 			children = (
+				92E28EA50FD402D700DBA78F /* BetaSupport */,
 				92F13C040FA07C08007ED72B /* Apache */,
 				92F13C050FA07C1D007ED72B /* MySQL */,
 				92E361FB0FBECB270018B96E /* PHP */,
@@ -968,6 +985,23 @@
 			productReference = 9256DF290F9F6CA80000BE90 /* SharedXAMPPSupport.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		92E28EAD0FD4034100DBA78F /* BetaSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E28EB20FD4034200DBA78F /* Build configuration list for PBXNativeTarget "BetaSupport" */;
+			buildPhases = (
+				92E28EAA0FD4034100DBA78F /* Resources */,
+				92E28EAB0FD4034100DBA78F /* Sources */,
+				92E28EAC0FD4034100DBA78F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetaSupport;
+			productName = BetaSupport;
+			productReference = 92E28EAE0FD4034100DBA78F /* BetaSupport.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		92E362120FBECB610018B96E /* PHP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92E362170FBECB630018B96E /* Build configuration list for PBXNativeTarget "PHP" */;
@@ -1082,6 +1116,7 @@
 				92F13C7D0FA084F7007ED72B /* MySQL */,
 				92E362120FBECB610018B96E /* PHP */,
 				92F13CA50FA08576007ED72B /* ProFTPd */,
+				92E28EAD0FD4034100DBA78F /* BetaSupport */,
 				92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */,
 				9256DF280F9F6CA80000BE90 /* SharedXAMPPSupport */,
 			);
@@ -1100,7 +1135,6 @@
 				9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */,
 				92BDB9970FA218A800B8D0D7 /* GettingStarted.xib in Resources */,
 				9290982A0F50243900BBE38B /* GettingStarted.html in Resources */,
-				927DFAAD0F5192E500EAD88B /* BetaFeedback.xib in Resources */,
 				92BDB9990FA218A800B8D0D7 /* About.xib in Resources */,
 				92178A7B0F5D809F00425525 /* Team.html in Resources */,
 				92BDB99B0FA218B000B8D0D7 /* PHPSwitchView.xib in Resources */,
@@ -1127,6 +1161,14 @@
 				9204BAB30FCB2AB700B849F0 /* ModuleErrorWindow.xib in Resources */,
 				92303D2C0FD00A6B0078E7C0 /* AlertLogView.xib in Resources */,
 				92303D340FD011040078E7C0 /* AlertCautionIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E28EAA0FD4034100DBA78F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,7 +1215,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */,
 				92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */,
-				927DFAAB0F5192BE00EAD88B /* BetaFeedbackController.m in Sources */,
 				92178A650F5D7AB800425525 /* AboutController.m in Sources */,
 				9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */,
 				92F13CFE0FA089BD007ED72B /* ModulesMenuController.m in Sources */,
@@ -1208,6 +1249,14 @@
 				92FEC9170FD1C9300071E676 /* XPProcessWatcher.m in Sources */,
 				92419BCD0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m in Sources */,
 				92419BD30FD2AEDA00CEA9F5 /* NSObject (MainThread).m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E28EAB0FD4034100DBA78F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1578,6 +1627,56 @@
 			};
 			name = Release;
 		};
+		92E28EB00FD4034100DBA78F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "BetaSupport-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BetaSupport;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		92E28EB10FD4034100DBA78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "BetaSupport-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = BetaSupport;
+				WRAPPER_EXTENSION = plugin;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		92E362150FBECB620018B96E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1933,6 +2032,15 @@
 			buildConfigurations = (
 				9256DF2B0F9F6CA90000BE90 /* Debug */,
 				9256DF2C0F9F6CA90000BE90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E28EB20FD4034200DBA78F /* Build configuration list for PBXNativeTarget "BetaSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E28EB00FD4034100DBA78F /* Debug */,
+				92E28EB10FD4034100DBA78F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
