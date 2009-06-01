@@ -25,9 +25,9 @@
 
 #import "ApacheModule.h"
 
-#import <SharedXAMPPSupport/XPError.h>
-#import <SharedXAMPPSupport/XPRootTask.h>
-#import <SharedXAMPPSupport/NSWorkspace (Process).h>
+#import <XAMPP Control/XPError.h>
+#import <XAMPP Control/XPRootTask.h>
+#import <XAMPP Control/NSWorkspace (Process).h>
 #import <unistd.h>
 
 @interface ApacheModule(PRIVAT)
