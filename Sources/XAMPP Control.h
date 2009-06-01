@@ -29,5 +29,6 @@
 #import <XAMPP Control/XPRootTask.h>
 #import <XAMPP Control/XPConfiguration.h>
 #import <XAMPP Control/XPPlugInCategories.h>
+#import <XAMPP Control/XPPlugInHooks.h>
 #import <XAMPP Control/XPViewController.h>
 #import <XAMPP Control/XPModuleViewController.h>
