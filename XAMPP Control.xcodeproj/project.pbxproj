@@ -100,7 +100,6 @@
 		92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9257D7CD0FA1F14F002BF955 /* AssistantController.h */; };
 		92E28F030FD4080C00DBA78F /* AssistantPage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9257D7D90FA1F3FF002BF955 /* AssistantPage.h */; };
 		92E28F050FD4081300DBA78F /* AssistantStepIndicatorView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */; };
-		92E28F060FD4081400DBA78F /* KQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 924D9F3C0F447AAE00DC9E43 /* KQueue.h */; };
 		92E28F070FD4081500DBA78F /* NSObject (MainThread).h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */; };
 		92E28F080FD4081700DBA78F /* NSWorkspace (Process).h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922D70E90F38876900FDF9E2 /* NSWorkspace (Process).h */; };
 		92E28F090FD4081800DBA78F /* XAMPP Control.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92F13DA90FA0D57F007ED72B /* XAMPP Control.h */; };
@@ -232,7 +231,6 @@
 				92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */,
 				92E28F030FD4080C00DBA78F /* AssistantPage.h in CopyFiles */,
 				92E28F050FD4081300DBA78F /* AssistantStepIndicatorView.h in CopyFiles */,
-				92E28F060FD4081400DBA78F /* KQueue.h in CopyFiles */,
 				92E28F070FD4081500DBA78F /* NSObject (MainThread).h in CopyFiles */,
 				92E28F080FD4081700DBA78F /* NSWorkspace (Process).h in CopyFiles */,
 				92E28F090FD4081800DBA78F /* XAMPP Control.h in CopyFiles */,
