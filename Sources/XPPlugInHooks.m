@@ -25,11 +25,11 @@
 
 #import "XPPlugInHooks.h"
 
-NSString* ControlsWindowDidLoadHook = @"controlsWindowDidLoad";
+NSString* const ControlsWindowDidLoadHook = @"controlsWindowDidLoad";
 
-NSString* AboutWindowSetupHook = @"aboutSetup";
-	NSString* HookVersionsStringKey = @"versionsString";
-	NSString* HookCreditsHTMLKey = @"creditsHTML";
-	NSString* HookXAMPPLabelKey = @"XAMPPLabel";
+NSString* const AboutWindowSetupHook = @"aboutSetup";
+	NSString* const HookVersionsStringKey = @"versionsString";
+	NSString* const HookCreditsHTMLKey = @"creditsHTML";
+	NSString* const HookXAMPPLabelKey = @"XAMPPLabel";
 
-NSString* HookWindowKey = @"window";
+NSString* const HookWindowKey = @"window";

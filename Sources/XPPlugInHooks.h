@@ -45,7 +45,7 @@
    - HookWindowKey (NSWindow*)
  
  */
-extern NSString* ControlsWindowDidLoadHook;
+extern NSString* const ControlsWindowDidLoadHook;
 
 /*
  
@@ -58,10 +58,10 @@ extern NSString* ControlsWindowDidLoadHook;
  - HookXAMPPLabelKey (NSMutableAttributedString*)
  
  */
-extern NSString* AboutWindowSetupHook;
-	extern NSString* HookVersionsStringKey;
-	extern NSString* HookCreditsHTMLKey;
-	extern NSString* HookXAMPPLabelKey;
+extern NSString* const AboutWindowSetupHook;
+	extern NSString* const HookVersionsStringKey;
+	extern NSString* const HookCreditsHTMLKey;
+	extern NSString* const HookXAMPPLabelKey;
 
 /*
  
@@ -69,4 +69,4 @@ extern NSString* AboutWindowSetupHook;
  
  */
 
-extern NSString* HookWindowKey;
+extern NSString* const HookWindowKey;
