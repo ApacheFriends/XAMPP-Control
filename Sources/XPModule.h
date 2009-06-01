@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "XPStatus.h"
+#import <XAMPP Control/XPStatus.h>
 
 @class XPProcessWatcher;
 

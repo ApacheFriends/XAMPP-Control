@@ -23,12 +23,33 @@
  
  */
 
-#import <XAMPP Control/XPModule.h>
-#import <XAMPP Control/XPStatus.h>
-#import <XAMPP Control/XPError.h>
-#import <XAMPP Control/XPRootTask.h>
-#import <XAMPP Control/XPConfiguration.h>
+/* PlugIn Stuff */
 #import <XAMPP Control/XPPlugInCategories.h>
 #import <XAMPP Control/XPPlugInHooks.h>
-#import <XAMPP Control/XPViewController.h>
+
+/* Status und Error (Handling) */
+#import <XAMPP Control/XPStatus.h>
+#import <XAMPP Control/XPError.h>
+#import <XAMPP Control/XPAlert.h>
+
+/* Module */
 #import <XAMPP Control/XPModuleViewController.h>
+#import <XAMPP Control/XPModule.h>
+
+/* Assistant */
+#import <XAMPP Control/AssistantPage.h>
+#import <XAMPP Control/AssistantController.h>
+
+/* Security Check */
+#import <XAMPP Control/SecurityCheckProtocol.h>
+
+/* Utilitys */
+#import <XAMPP Control/XPRootTask.h>
+#import <XAMPP Control/XPConfiguration.h>
+#import <XAMPP Control/XPViewController.h>
+#import <XAMPP Control/XPProcessWatcher.h>
+
+/* Additions */
+#import <XAMPP Control/NSObject (MainThread).h>
+#import <XAMPP Control/NSObject+unproxy.h>
+#import <XAMPP Control/NSWorkspace (Process).h>

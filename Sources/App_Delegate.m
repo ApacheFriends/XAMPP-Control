@@ -31,7 +31,6 @@
 #import "ModulesMenuController.h"
 #import "ControlsWindowController.h"
 #import "SecurityCheckController.h"
-#import "AssistantPage.h"
 
 @implementation App_Delegate
 
