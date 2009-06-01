@@ -23,12 +23,13 @@
  
  */
 
-#import <SharedXAMPPSupport/KQueue.h>
-#import <SharedXAMPPSupport/XPModule.h>
-#import <SharedXAMPPSupport/XPStatus.h>
-#import <SharedXAMPPSupport/XPError.h>
-#import <SharedXAMPPSupport/XPRootTask.h>
-#import <SharedXAMPPSupport/XPConfiguration.h>
-#import <SharedXAMPPSupport/XPPlugInCategories.h>
-#import <SharedXAMPPSupport/XPViewController.h>
-#import <SharedXAMPPSupport/XPModuleViewController.h>
+#import "XPPlugInHooks.h"
+
+NSString* ControlsWindowDidLoadHook = @"controlsWindowDidLoad";
+
+NSString* AboutWindowSetupHook = @"aboutSetup";
+	NSString* HookVersionsStringKey = @"versionsString";
+	NSString* HookCreditsHTMLKey = @"creditsHTML";
+	NSString* HookXAMPPLabelKey = @"XAMPPLabel";
+
+NSString* HookWindowKey = @"window";
