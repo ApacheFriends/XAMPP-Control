@@ -27,8 +27,8 @@
 
 #import <PlugIn/PlugInRegistry.h>
 #import <PlugIn/PlugInManager.h>
-#import <SharedXAMPPSupport/XPPlugInCategories.h>
-#import <SharedXAMPPSupport/XPViewController.h>
+#import <XAMPP Control/XPPlugInCategories.h>
+#import <XAMPP Control/XPViewController.h>
 
 #define SPACE (8)
 #define MARGIN (17)

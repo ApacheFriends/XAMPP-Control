@@ -25,7 +25,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import <SharedXAMPPSupport/AssistantController.h>
+#import <XAMPP Control/AssistantController.h>
 
 @interface SecurityCheckController : AssistantController {
 

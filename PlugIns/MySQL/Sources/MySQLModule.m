@@ -25,8 +25,8 @@
 
 #import "MySQLModule.h"
 
-#import <SharedXAMPPSupport/XPError.h>
-#import <SharedXAMPPSupport/XPRootTask.h>
+#import <XAMPP Control/XPError.h>
+#import <XAMPP Control/XPRootTask.h>
 #import <unistd.h>
 
 @implementation MySQLModule

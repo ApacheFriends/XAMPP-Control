@@ -25,7 +25,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import <SharedXAMPPSupport/AssistantPage.h>
+#import <XAMPP Control/AssistantPage.h>
 
 @interface ProFTPDSecurityCheck : AssistantPage {
 	IBOutlet NSSecureTextField*	password;

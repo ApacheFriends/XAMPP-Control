@@ -31,7 +31,7 @@
 #import "SecurityCheckProtocol.h"
 
 #import <PlugIn/PlugIn.h>
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import <XAMPP Control/SharedXAMPPSupport.h>
 
 @interface SecurityCheckController (PRIVATE)
 

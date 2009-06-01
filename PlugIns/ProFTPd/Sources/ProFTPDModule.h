@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <SharedXAMPPSupport/XPModule.h>
+#import <XAMPP Control/XPModule.h>
 
 @interface ProFTPDModule : XPModule {
 

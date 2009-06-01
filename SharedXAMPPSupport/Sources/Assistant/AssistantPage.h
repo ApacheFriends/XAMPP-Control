@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import <XAMPP Control/SharedXAMPPSupport.h>
 
 typedef enum {
 	AssistantNormalPage = 1,

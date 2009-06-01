@@ -26,7 +26,7 @@
 #import "App_Delegate.h"
 
 #import <PlugIn/PlugIn.h>
-#import <SharedXAMPPSupport/SharedXAMPPSupport.h>
+#import <XAMPP Control/SharedXAMPPSupport.h>
 
 #import "ModulesMenuController.h"
 #import "ControlsWindowController.h"

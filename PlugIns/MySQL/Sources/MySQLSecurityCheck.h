@@ -24,8 +24,8 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <SharedXAMPPSupport/AssistantPage.h>
-#import <SharedXAMPPSupport/SecurityCheckProtocol.h>
+#import <XAMPP Control/AssistantPage.h>
+#import <XAMPP Control/SecurityCheckProtocol.h>
 
 @interface MySQLSecurityCheck : AssistantPage<SecurityCheckProtocol> {
 	IBOutlet NSSecureTextField*	password;

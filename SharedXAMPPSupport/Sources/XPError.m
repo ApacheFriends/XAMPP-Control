@@ -23,7 +23,7 @@
  
  */
 
-#import <SharedXAMPPSupport/XPError.h>
+#import <XAMPP Control/XPError.h>
 
 NSString *XAMPPControlErrorDomain = @"XAMPPErrorDomain";
 NSString* XPErrorLogFileKey = @"LogFile";

@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <SharedXAMPPSupport/XPViewController.h>
+#import <XAMPP Control/XPViewController.h>
 
 @class XPModule;
 @class StatusIndicatorView;

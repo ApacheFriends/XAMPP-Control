@@ -26,9 +26,9 @@
 #import "ModulesMenuController.h"
 #import <PlugIn/PlugInManager.h>
 #import <PlugIn/PlugInRegistry.h>
-#import <SharedXAMPPSupport/XPPlugInCategories.h>
-#import <SharedXAMPPSupport/XPModule.h>
-#import <SharedXAMPPSupport/XPAlert.h>
+#import <XAMPP Control/XPPlugInCategories.h>
+#import <XAMPP Control/XPModule.h>
+#import <XAMPP Control/XPAlert.h>
 
 @interface ModulesMenuController (PRIVAT)
 
