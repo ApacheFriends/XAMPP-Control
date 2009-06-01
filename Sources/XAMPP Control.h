@@ -23,7 +23,6 @@
  
  */
 
-#import <XAMPP Control/KQueue.h>
 #import <XAMPP Control/XPModule.h>
 #import <XAMPP Control/XPStatus.h>
 #import <XAMPP Control/XPError.h>
