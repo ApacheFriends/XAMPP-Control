@@ -25,6 +25,24 @@
 
 #import <Cocoa/Cocoa.h>
 
+/* Mal ein kleiner code schnipsel aus dem alten cp
+ 
+ id superview = [[[self window] standardWindowButton:NSWindowCloseButton] superview];
+ NSRect frame;
+ 
+ frame.size = [betaButton frame].size;
+ //frame.origin.y = -1.f + NSMaxY([superview frame]) - (frame.size.height + ceil((NSHeight([[self window] frame]) - NSHeight([[[self window] contentView] frame]) - NSHeight([NSWindow contentRectForFrameRect:[[self window] frame] styleMask:[[self window] styleMask]]) - NSHeight([[[self window] contentView] frame]) - frame.size.height) / 2.0));
+ frame.origin.y = NSHeight([superview frame]) - NSHeight(frame) - 5.f;
+ frame.origin.x = NSMaxX([superview frame]) - frame.size.width - 5.f;
+ [betaButton setFrame:frame];
+ [betaButton setToolTip:@"You have an Beta Version of XAMPP. Please send us Feedback."];
+ [superview addSubview:betaButton];
+ 
+ NSLog(@"frame %@ betaButton %@", NSStringFromRect(frame), betaButton);
+ NSLog(@"frame %@", NSStringFromRect([superview frame]));
+ 
+ */
+
 
 @interface BetaFeedbackController : NSWindowController {
 	IBOutlet	NSTextView	*feedbackText;
