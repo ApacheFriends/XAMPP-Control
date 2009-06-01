@@ -46,12 +46,14 @@
 	NSError *error;
 	PlugInManager *manager = [PlugInManager sharedPlugInManager];
 	
+	[manager setSearchPaths:[self plugInDirectories]];
+	
 	// Setup plugin categories
 	[[manager registry] addCategorie:XPModulesPlugInCategorie];
 	[[manager registry] addCategorie:XPControlsPlugInCategorie];
 	[[manager registry] addCategorie:XPSecurityChecksPlugInCategorie];
 	
-	if (![[PlugInManager sharedPlugInManager] loadAllPluginsError:&error]) {
+	if (![manager loadAllPluginsError:&error]) {
 		[NSApp presentError:error];
 	}
 	
@@ -92,6 +94,23 @@
 - (IBAction) sendFeedback:(id)sender
 {
 	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[[NSString stringWithFormat:@"mailto:kleinweby@apachefriends.org?subject=XAMPP for Mac OS X %@ Feedback", [XPConfiguration version]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+}
+
+- (NSArray*) plugInDirectories
+{
+	NSMutableArray* directories = [NSMutableArray array];
+	NSArray* appSupportPaths;
+	NSEnumerator* enumerator;
+	NSString* path;
+	
+	[directories addObject:[[NSBundle mainBundle] builtInPlugInsPath]];
+	
+	appSupportPaths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+	enumerator = [appSupportPaths objectEnumerator];
+	while ((path = [enumerator nextObject]))
+		[directories addObject:[path stringByAppendingPathComponent:@"XAMPP Control/PlugIns"]];
+		
+	return directories;
 }
 
 @end

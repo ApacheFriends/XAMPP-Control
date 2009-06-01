@@ -255,13 +255,13 @@
 	[httpd launch];
 	[httpd waitUntilExit];
 	
+	if ([httpd terminationStatus] == 0)
+		return Nil;
+	
 	outputData = [[errorPipe fileHandleForReading] readDataToEndOfFile];
 	output = [[[NSString alloc] initWithData:outputData encoding:NSASCIIStringEncoding] autorelease];
 	
 	output = [output stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	
-	if (!output || [output isEqualToString:@""])
-		return Nil;
 	
 	errDict = [NSMutableDictionary dictionary];
 	
