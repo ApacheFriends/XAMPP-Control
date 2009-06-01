@@ -26,43 +26,66 @@
 #import "AboutController.h"
 #import "XPConfiguration.h"
 
+#import <PlugIn/PlugIn.h>
+
 @implementation AboutController
 
 - (id) init
 {
 	self = [super init];
 	if (self != nil) {
-		if (![NSBundle loadNibNamed:@"About" owner:self]) {
+		/*if (![NSBundle loadNibNamed:@"About" owner:self]) {
 			[self release];
 			return nil;
 		}
 		
-		[self setupContent];
+		[self setupContent];*/
+		NSLog(@"owner %@", [self owner]);
 	}
 	return self;
 }
 
+- (NSString *)windowNibName
+{
+	return @"About";
+}
+
+- (IBAction)showWindow:(id)sender
+{
+	if (![self isWindowLoaded])
+		[self loadWindow];
+	
+	[self setupContent];
+	
+	return [super showWindow:sender];
+}
+
 - (void) setupContent
 {
-	if ([XPConfiguration isBetaVersion] && NO) {
-		NSMutableAttributedString *name = [[XAMPPName attributedStringValue] mutableCopy];
-		NSMutableAttributedString *beta = [[NSMutableAttributedString alloc] initWithString:@"Beta"];
-		
-		[beta setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:	[NSColor redColor],@"NSColor",
-																		[NSNumber numberWithFloat:0.3], NSObliquenessAttributeName,
-																		[NSFont boldSystemFontOfSize:12.f], NSFontAttributeName, Nil]
-					  range:NSMakeRange(0, [beta length])];
-		[name appendAttributedString:beta];
-				
-		[XAMPPName setAttributedStringValue:name];
-		[name release];
-		[beta release];
-	}
+	NSMutableAttributedString* versionsString;
+	NSMutableAttributedString* XAMPPString;
+	NSMutableString* creditsHTML;
+	NSMutableParagraphStyle* centeredParagraphStyle;
 	
-	[versionsField setStringValue:[NSString stringWithFormat:@"Version %@", [XPConfiguration version]]];
+	centeredParagraphStyle = [NSMutableParagraphStyle new];
+	[centeredParagraphStyle setAlignment:NSCenterTextAlignment];
 	
-	[[webView mainFrame] loadHTMLString:[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Team" ofType:@"html"]] 
+	XAMPPString = [[XAMPPName attributedStringValue] mutableCopy];
+	versionsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Version %@", [XPConfiguration version]]
+															attributes:[NSDictionary dictionaryWithObject:centeredParagraphStyle forKey:NSParagraphStyleAttributeName]];
+	creditsHTML = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Team" ofType:@"html"]];
+	
+	PlugInInvokeHook(@"SetupAboutContent", [NSDictionary dictionaryWithObjectsAndKeys:XAMPPString,@"XAMPPString",versionsString,@"versionString",creditsHTML,@"creditsHTML",Nil]);
+	
+	[XAMPPName setAttributedStringValue:XAMPPString];
+	[versionsField setAttributedStringValue:versionsString];
+	[[webView mainFrame] loadHTMLString:creditsHTML 
 								baseURL:Nil];
+	
+	[versionsString release];
+	[XAMPPString release];
+	[creditsHTML release];
+	[centeredParagraphStyle release];
 }
 
 @end
