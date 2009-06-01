@@ -299,8 +299,8 @@
 		920079000FA45D8C002665E0 /* SecurityCheckWorkPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckWorkPage.h; sourceTree = "<group>"; };
 		920079010FA45D8C002665E0 /* SecurityCheckWorkPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityCheckWorkPage.m; sourceTree = "<group>"; };
 		920079080FA45E5A002665E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckWorkPage.xib; sourceTree = "<group>"; };
-		9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssistantStepIndicatorView.h; path = Assistant/AssistantStepIndicatorView.h; sourceTree = "<group>"; };
-		920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssistantStepIndicatorView.m; path = Assistant/AssistantStepIndicatorView.m; sourceTree = "<group>"; };
+		9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantStepIndicatorView.h; sourceTree = "<group>"; };
+		920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantStepIndicatorView.m; sourceTree = "<group>"; };
 		920079180FA463F5002665E0 /* AssistantStepActive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepActive.tiff; sourceTree = "<group>"; };
 		920079190FA463F5002665E0 /* AssistantStepInactive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepInactive.tiff; sourceTree = "<group>"; };
 		9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepDisabled.tiff; sourceTree = "<group>"; };
@@ -345,10 +345,10 @@
 		9256E0000F9F75450000BE90 /* App_Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App_Delegate.m; sourceTree = "<group>"; };
 		9257D7940FA1DA73002BF955 /* XPBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBox.h; sourceTree = "<group>"; };
 		9257D7950FA1DA73002BF955 /* XPBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBox.m; sourceTree = "<group>"; };
-		9257D7CD0FA1F14F002BF955 /* AssistantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssistantController.h; path = Assistant/AssistantController.h; sourceTree = "<group>"; };
-		9257D7CE0FA1F14F002BF955 /* AssistantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssistantController.m; path = Assistant/AssistantController.m; sourceTree = "<group>"; };
-		9257D7D90FA1F3FF002BF955 /* AssistantPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssistantPage.h; path = Assistant/AssistantPage.h; sourceTree = "<group>"; };
-		9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssistantPage.m; path = Assistant/AssistantPage.m; sourceTree = "<group>"; };
+		9257D7CD0FA1F14F002BF955 /* AssistantController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantController.h; sourceTree = "<group>"; };
+		9257D7CE0FA1F14F002BF955 /* AssistantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantController.m; sourceTree = "<group>"; };
+		9257D7D90FA1F3FF002BF955 /* AssistantPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantPage.h; sourceTree = "<group>"; };
+		9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantPage.m; sourceTree = "<group>"; };
 		926DAAE10FC851DD00998643 /* ApacheModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApacheModuleViewController.h; sourceTree = "<group>"; };
 		926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApacheModuleViewController.m; sourceTree = "<group>"; };
 		926DAAE40FC8523200998643 /* MySQLModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLModuleViewController.h; sourceTree = "<group>"; };
@@ -495,12 +495,6 @@
 				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
 				92419BD00FD2AEDA00CEA9F5 /* NSObject (MainThread).h */,
 				92419BD10FD2AEDA00CEA9F5 /* NSObject (MainThread).m */,
-				9257D7CD0FA1F14F002BF955 /* AssistantController.h */,
-				9257D7CE0FA1F14F002BF955 /* AssistantController.m */,
-				9257D7D90FA1F3FF002BF955 /* AssistantPage.h */,
-				9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */,
-				9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */,
-				920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */,
 				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
 				924D9F3D0F447AAE00DC9E43 /* KQueue.m */,
 				922D70C30F387EB600FDF9E2 /* XPModule.h */,
@@ -674,6 +668,12 @@
 		9257D7D80FA1F3E5002BF955 /* Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				9257D7CD0FA1F14F002BF955 /* AssistantController.h */,
+				9257D7CE0FA1F14F002BF955 /* AssistantController.m */,
+				9257D7D90FA1F3FF002BF955 /* AssistantPage.h */,
+				9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */,
+				9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */,
+				920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */,
 			);
 			path = Assistant;
 			sourceTree = "<group>";
