@@ -164,42 +164,42 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* XAMPP Control */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = "XAMPP Control";
 		};
 		92E28EDD0FD407BD00DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13C230FA07D7B007ED72B /* Apache */;
+			remoteGlobalIDString = 92F13C230FA07D7B007ED72B;
 			remoteInfo = Apache;
 		};
 		92E28EE70FD407CA00DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F /* Common */;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
 			remoteInfo = Common;
 		};
 		92E28F440FD4165100DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B /* MySQL */;
+			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B;
 			remoteInfo = MySQL;
 		};
 		92E28F590FD416FF00DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92F13CA50FA08576007ED72B /* ProFTPd */;
+			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
 			remoteInfo = ProFTPd;
 		};
 		92E28F870FD43E2800DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92E28ECB0FD4058D00DBA78F /* XAMPP Control Public Headers */;
+			remoteGlobalIDString = 92E28ECB0FD4058D00DBA78F;
 			remoteInfo = "XAMPP Control Public Headers";
 		};
 		92EACDB80F3F11890037FCC2 /* PBXContainerItemProxy */ = {
@@ -492,23 +492,18 @@
 		080E96DDFE201D6D7F000001 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				928EF2F50FD45E62002FC497 /* Helper Classes */,
 				92E28FF90FD4523B00DBA78F /* Additions */,
 				9257D7D80FA1F3E5002BF955 /* Assistant */,
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
 				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				92E290000FD4528200DBA78F /* PlugIn System */,
-				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
-				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
-				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
-				924D9F3D0F447AAE00DC9E43 /* KQueue.m */,
 				922D70C30F387EB600FDF9E2 /* XPModule.h */,
 				922D70C40F387EB600FDF9E2 /* XPModule.m */,
 				922D70C60F38802900FDF9E2 /* XPStatus.h */,
 				922D71000F389DCF00FDF9E2 /* XPError.h */,
 				92ED0D710FB337EF00ED5BB9 /* XPError.m */,
-				92EACD370F3EFCA00037FCC2 /* XPRootTask.h */,
-				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
 				92FA25850F4FF780005EEFB3 /* XPConfiguration.h */,
 				92FA25860F4FF780005EEFB3 /* XPConfiguration.m */,
 				92F13D5D0FA0C313007ED72B /* XPViewController.h */,
@@ -518,8 +513,6 @@
 				92F13DA90FA0D57F007ED72B /* XAMPP Control.h */,
 				92303D350FD013470078E7C0 /* XPAlert.h */,
 				92303D360FD013470078E7C0 /* XPAlert.m */,
-				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
-				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
 				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
 				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
@@ -686,6 +679,17 @@
 			name = AboutBox;
 			sourceTree = "<group>";
 		};
+		928EF2F50FD45E62002FC497 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
+				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
+				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
+				924D9F3D0F447AAE00DC9E43 /* KQueue.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		92E28EA50FD402D700DBA78F /* BetaSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +726,10 @@
 				922D70EA0F38876900FDF9E2 /* NSWorkspace (Process).m */,
 				9200789C0FA3A2A0002665E0 /* NSObject+Unproxy.h */,
 				9200789D0FA3A2A0002665E0 /* NSObject+Unproxy.m */,
+				92EACD370F3EFCA00037FCC2 /* XPRootTask.h */,
+				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
+				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
+				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
