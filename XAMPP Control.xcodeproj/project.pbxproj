@@ -92,6 +92,8 @@
 		92CBCBBE0FC02F8800C136BE /* Success.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CBCBBD0FC02F8800C136BE /* Success.png */; };
 		92CBCBC40FC032B900C136BE /* SecurityTasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCBC30FC032B900C136BE /* SecurityTasksView.m */; };
 		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */; };
+		92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */; };
 		92D8EAC80FBEB258005010BC /* IndicatorGreen.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC40FBEB258005010BC /* IndicatorGreen.tiff */; };
 		92D8EAC90FBEB258005010BC /* IndicatorRed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */; };
@@ -164,7 +166,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
+			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F;
 			remoteInfo = BetaSupport;
 		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
@@ -372,6 +374,8 @@
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
 		92CBCBC20FC032B900C136BE /* SecurityTasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTasksView.h; sourceTree = "<group>"; };
 		92CBCBC30FC032B900C136BE /* SecurityTasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTasksView.m; sourceTree = "<group>"; };
+		92D175B90FD59FFD00C8F4C7 /* BetaSupportPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaSupportPlugIn.h; sourceTree = "<group>"; };
+		92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaSupportPlugIn.m; sourceTree = "<group>"; };
 		92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
 		92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
 		92D8EAC40FBEB258005010BC /* IndicatorGreen.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorGreen.tiff; sourceTree = "<group>"; };
@@ -450,6 +454,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +715,8 @@
 			children = (
 				92E28EBC0FD4045100DBA78F /* BetaFeedbackController.h */,
 				92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */,
+				92D175B90FD59FFD00C8F4C7 /* BetaSupportPlugIn.h */,
+				92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1173,6 +1180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */,
+				92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,6 +1431,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1452,6 +1464,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

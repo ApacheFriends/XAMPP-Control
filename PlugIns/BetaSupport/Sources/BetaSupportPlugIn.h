@@ -24,38 +24,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import <PlugIn/PlugIn.h>
 
-/* Mal ein kleiner code schnipsel aus dem alten cp
- 
- 
- 
- */
+@interface BetaSupportPlugIn : PlugIn {
 
-
-@interface BetaFeedbackController : NSWindowController {
-	IBOutlet	NSTextView	*feedbackText;
-	IBOutlet	NSTextField	*feedbackEMail;
-	IBOutlet	NSButton	*includeSystemVersion;
-	
-	IBOutlet	NSProgressIndicator *progressIndicator;
-	IBOutlet	NSTextField	*progressText;
-	IBOutlet	NSButton	*sendOrCloseButton;
-	
-	NSURL					*betaFeedbackURL;
-	
-	NSMutableData			*returnedData;
-	NSURLConnection			*feedbackConnection;
-	
-	bool					hasSendFeedback;
 }
-
-- (IBAction) sendOrClose:(id)sender;
-- (void) sendFeedback;
-- (NSString*) buildFeedbackMessage;
-
-- (NSString*) systemVersion;
-- (NSString*) systemArch;
-
-- (void) clearFields;
 
 @end
