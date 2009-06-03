@@ -44,6 +44,13 @@
 	return self;
 }
 
+- (void) awakeFromNib
+{
+	extraInformationsViewSize = [extraInformationsView frame].size;
+	NSLog(@"rect %@", NSStringFromRect([extraInformationsView frame]));
+	[self disclosureTrianglePressed:extraInformationsDisclosure];
+}
+
 - (void) showWindow:(id)sender
 {
 	hasSendFeedback = YES;
@@ -59,6 +66,48 @@
 		[self close];
 	else
 		[self sendFeedback];
+}
+
+- (IBAction)test:(id)sender
+{
+	NSLog(@"test");
+}
+
+- (IBAction)disclosureTrianglePressed:(id)sender {
+    NSWindow *window = [sender window];
+    NSRect frame = [window frame];
+    // The extra +14 accounts for the space between the box and its neighboring views
+    float sizeChange = extraInformationsViewSize.height;
+	NSLog(@"changed %f", sizeChange);
+	BOOL hidden;
+	NSLog(@"rect %@", NSStringFromRect([extraInformationsView frame]));
+    switch ([sender state]) {
+        case NSOnState:
+            // Show the extra box.
+            //[extraInformationsView setHidden:NO];
+			hidden = NO;
+			NSLog(@"show");
+            // Make the window bigger.
+            frame.size.height += sizeChange;
+            // Move the origin.
+            frame.origin.y -= sizeChange;
+            break;
+        case NSOffState:
+            // Hide the extra box.
+			hidden = YES;
+            [extraInformationsView setHidden:YES];
+            // Make the window smaller.
+            frame.size.height -= sizeChange;
+            // Move the origin.
+			NSLog(@"hide");
+            frame.origin.y += sizeChange;
+            break;
+        default:
+            break;
+    }
+	
+    [window setFrame:frame display:YES animate:YES];
+	[extraInformationsView setHidden:hidden];
 }
 
 - (void) sendFeedback

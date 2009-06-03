@@ -24,9 +24,27 @@
  */
 
 #import "BetaSupportPlugIn.h"
+#import "BetaFeedbackController.h"
 #import <XAMPP Control/XAMPP Control.h>
 
 @implementation BetaSupportPlugIn
+
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		feedbackController = [BetaFeedbackController new];
+	}
+	return self;
+}
+
+- (void) dealloc
+{
+	[feedbackController release];
+	
+	[super dealloc];
+}
+
 
 - (BOOL) setupError:(NSError**)anError
 {
@@ -52,6 +70,9 @@
 	[[betaButton cell] setControlSize:NSSmallControlSize];
 	[betaButton setBezelStyle:NSRecessedBezelStyle];
 	[betaButton setTitle:@"Beta!"];
+	
+	[betaButton setTarget:feedbackController];
+	[betaButton setAction:@selector(showWindow:)];
 	
 	frame.size = [betaButton frame].size;
 	frame.origin.y = NSHeight([superview frame]) - NSHeight(frame) - 4.f;

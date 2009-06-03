@@ -41,6 +41,10 @@
 	IBOutlet	NSTextField	*progressText;
 	IBOutlet	NSButton	*sendOrCloseButton;
 	
+	IBOutlet	NSView		*extraInformationsView;
+	NSSize					extraInformationsViewSize;
+	IBOutlet	NSButton	*extraInformationsDisclosure;
+	
 	NSURL					*betaFeedbackURL;
 	
 	NSMutableData			*returnedData;
@@ -57,5 +61,9 @@
 - (NSString*) systemArch;
 
 - (void) clearFields;
+
+- (IBAction)test:(id)sender;
+
+- (IBAction)disclosureTrianglePressed:(id)sender;
 
 @end

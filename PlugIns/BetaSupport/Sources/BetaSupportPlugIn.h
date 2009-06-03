@@ -26,8 +26,10 @@
 #import <Cocoa/Cocoa.h>
 #import <PlugIn/PlugIn.h>
 
-@interface BetaSupportPlugIn : PlugIn {
+@class BetaFeedbackController;
 
+@interface BetaSupportPlugIn : PlugIn {
+	BetaFeedbackController* feedbackController;
 }
 
 @end
