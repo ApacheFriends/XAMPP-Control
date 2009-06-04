@@ -38,10 +38,11 @@
 
 - (IBAction)showWindow:(id)sender
 {
-	if (![self isWindowLoaded])
+	if (![self isWindowLoaded]) {
 		[self loadWindow];
 	
-	[self setupContent];
+		[self setupContent];
+	}
 	
 	return [super showWindow:sender];
 }
