@@ -29,7 +29,8 @@
 
 @interface BetaSupportPlugIn(PRIVAT)
 
-- (void) addMainMenuButtons;
+- (void) costumizeMainMenu;
+- (void) costumizeControlsWindow:(NSDictionary*)test;
 
 @end
 
@@ -60,6 +61,8 @@
 	[reg registerTarget:self 
 		   withSelector:@selector(costumizeControlsWindow:) 
 				forHook:ControlsWindowDidLoadHook];
+	
+	[self costumizeMainMenu];
 	
 	return YES;
 }
@@ -102,9 +105,20 @@
 	NSLog(@"frame %@", NSStringFromRect([superview frame]));
 }
 
-- (void) addMainMenuButtons
+- (void) costumizeMainMenu
 {
+	NSMenu *helpMenu;
+	NSMenuItem *menuItem;
 	
+	helpMenu = [[[NSApp mainMenu] itemWithTag:6] submenu];
+	
+	if (!helpMenu) {
+		NSLog(@"Can't find the Help Menu!");
+	}
+		
+	menuItem = [helpMenu itemWithTag:3];
+	[menuItem setTarget:feedbackController];
+	[menuItem setAction:@selector(showWindow:)];
 }
 
 @end
