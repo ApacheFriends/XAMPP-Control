@@ -2,14 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">1040</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.SystemVersion">9J61</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.AppKitVersion">949.46</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="106"/>
-			<integer value="482"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -701,6 +700,7 @@
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
+									<int key="NSTag">1</int>
 								</object>
 								<object class="NSMenuItem" id="170456682">
 									<reference key="NSMenu" ref="374024848"/>
@@ -709,6 +709,7 @@
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
+									<int key="NSTag">2</int>
 								</object>
 								<object class="NSMenuItem" id="575850898">
 									<reference key="NSMenu" ref="374024848"/>
@@ -717,14 +718,7 @@
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
-								</object>
-								<object class="NSMenuItem" id="1034509089">
-									<reference key="NSMenu" ref="374024848"/>
-									<string key="NSTitle">Send Beta Feedback...</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="35465992"/>
-									<reference key="NSMixedImage" ref="502551668"/>
+									<int key="NSTag">3</int>
 								</object>
 								<object class="NSMenuItem" id="174203253">
 									<reference key="NSMenu" ref="374024848"/>
@@ -733,11 +727,11 @@
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
+									<int key="NSTag">4</int>
 								</object>
 								<object class="NSMenuItem" id="238773614">
 									<reference key="NSMenu" ref="374024848"/>
 									<bool key="NSIsDisabled">YES</bool>
-									<bool key="NSIsHidden">YES</bool>
 									<string key="NSTitle">XAMPP Control Help</string>
 									<string key="NSKeyEquiv">?</string>
 									<int key="NSKeyEquivModMask">1048576</int>
@@ -757,35 +751,8 @@
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
 			</object>
-			<object class="NSButton" id="650223725">
-				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
-				<string key="NSFrameSize">{75, 17}</string>
-				<reference key="NSSuperview"/>
-				<bool key="NSEnabled">YES</bool>
-				<object class="NSButtonCell" key="NSCell" id="553466208">
-					<int key="NSCellFlags">67239424</int>
-					<int key="NSCellFlags2">134348800</int>
-					<string key="NSContents">Feedback!</string>
-					<object class="NSFont" key="NSSupport">
-						<string key="NSName">LucidaGrande-Bold</string>
-						<double key="NSSize">1.200000e+01</double>
-						<int key="NSfFlags">16</int>
-					</object>
-					<reference key="NSControlView" ref="650223725"/>
-					<int key="NSButtonFlags">-2038152961</int>
-					<int key="NSButtonFlags2">173</int>
-					<string key="NSAlternateContents"/>
-					<string key="NSKeyEquivalent"/>
-					<int key="NSPeriodicDelay">400</int>
-					<int key="NSPeriodicInterval">75</int>
-				</object>
-			</object>
 			<object class="NSCustomObject" id="1019300187">
 				<string key="NSClassName">GettingStartedController</string>
-			</object>
-			<object class="NSCustomObject" id="528345816">
-				<string key="NSClassName">BetaFeedbackController</string>
 			</object>
 			<object class="NSCustomObject" id="981055008">
 				<string key="NSClassName">AboutController</string>
@@ -1081,22 +1048,6 @@
 						<reference key="destination" ref="174203253"/>
 					</object>
 					<int key="connectionID">486</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">showWindow:</string>
-						<reference key="source" ref="528345816"/>
-						<reference key="destination" ref="650223725"/>
-					</object>
-					<int key="connectionID">488</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">showWindow:</string>
-						<reference key="source" ref="528345816"/>
-						<reference key="destination" ref="1034509089"/>
-					</object>
-					<int key="connectionID">492</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -1497,7 +1448,6 @@
 							<reference ref="170456682"/>
 							<reference ref="575850898"/>
 							<reference ref="174203253"/>
-							<reference ref="1034509089"/>
 						</object>
 						<reference key="parent" ref="391199113"/>
 						<string key="objectName">2</string>
@@ -1719,33 +1669,9 @@
 						<reference key="parent" ref="374024848"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">482</int>
-						<reference key="object" ref="650223725"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="553466208"/>
-						</object>
-						<reference key="parent" ref="1049"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">483</int>
-						<reference key="object" ref="553466208"/>
-						<reference key="parent" ref="650223725"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">485</int>
 						<reference key="object" ref="1019300187"/>
 						<reference key="parent" ref="1049"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">487</int>
-						<reference key="object" ref="528345816"/>
-						<reference key="parent" ref="1049"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">489</int>
-						<reference key="object" ref="1034509089"/>
-						<reference key="parent" ref="374024848"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">493</int>
@@ -1915,12 +1841,7 @@
 					<string>456.IBPluginDependency</string>
 					<string>457.IBPluginDependency</string>
 					<string>458.IBPluginDependency</string>
-					<string>482.IBEditorWindowLastContentRect</string>
-					<string>482.IBPluginDependency</string>
-					<string>483.IBPluginDependency</string>
 					<string>485.IBPluginDependency</string>
-					<string>487.IBPluginDependency</string>
-					<string>489.IBPluginDependency</string>
 					<string>493.IBPluginDependency</string>
 					<string>495.IBPluginDependency</string>
 					<string>496.IBEditorWindowLastContentRect</string>
@@ -1970,7 +1891,7 @@
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1" id="9"/>
-					<string>{{734, 475}, {235, 123}}</string>
+					<string>{{734, 495}, {235, 103}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{596, 852}, {216, 23}}</string>
@@ -2100,11 +2021,6 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{351, 728}, {75, 17}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2225,39 +2141,6 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">BetaFeedbackController</string>
-					<string key="superclassName">NSWindowController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">sendOrClose:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSMutableArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>feedbackEMail</string>
-							<string>feedbackText</string>
-							<string>includeSystemVersion</string>
-							<string>progressIndicator</string>
-							<string>progressText</string>
-							<string>sendOrCloseButton</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>NSTextField</string>
-							<string>NSTextView</string>
-							<string>NSButton</string>
-							<string>NSProgressIndicator</string>
-							<string>NSTextField</string>
-							<string>NSButton</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">XAMPPBeta/Sources/BetaFeedbackController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">GettingStartedController</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="outlets">
@@ -2267,6 +2150,20 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Sources/GettingStartedController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Sources/NSObject (MainThread).h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Sources/NSObject+Unproxy.h</string>
 					</object>
 				</object>
 			</object>
