@@ -27,6 +27,13 @@
 #import "BetaFeedbackController.h"
 #import <XAMPP Control/XAMPP Control.h>
 
+@interface BetaSupportPlugIn(PRIVAT)
+
+- (void) addMainMenuButtons;
+
+@end
+
+
 @implementation BetaSupportPlugIn
 
 - (id) init
@@ -93,6 +100,11 @@
 	
 	NSLog(@"frame %@ betaButton %@", NSStringFromRect(frame), betaButton);
 	NSLog(@"frame %@", NSStringFromRect([superview frame]));
+}
+
+- (void) addMainMenuButtons
+{
+	
 }
 
 @end
