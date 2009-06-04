@@ -30,7 +30,8 @@
 @interface BetaSupportPlugIn(PRIVAT)
 
 - (void) costumizeMainMenu;
-- (void) costumizeControlsWindow:(NSDictionary*)test;
+- (void) costumizeAboutWindow:(NSDictionary*)dict;
+- (void) costumizeControlsWindow:(NSDictionary*)dict;
 
 @end
 
@@ -61,15 +62,18 @@
 	[reg registerTarget:self 
 		   withSelector:@selector(costumizeControlsWindow:) 
 				forHook:ControlsWindowDidLoadHook];
+	[reg registerTarget:self 
+		   withSelector:@selector(costumizeAboutWindow:) 
+				forHook:AboutWindowSetupHook];
 	
 	[self costumizeMainMenu];
 	
 	return YES;
 }
 
-- (void) costumizeControlsWindow:(NSDictionary*)test
+- (void) costumizeControlsWindow:(NSDictionary*)dict
 {
-	id superview = [[[test objectForKey:HookWindowKey] standardWindowButton:NSWindowCloseButton] superview];
+	id superview = [[[dict objectForKey:HookWindowKey] standardWindowButton:NSWindowCloseButton] superview];
 	NSRect frame;
 	NSButton* betaButton = [[NSButton alloc] initWithFrame:NSMakeRect(0.f, 0.f, 50.f, 17.f)];
 	
@@ -103,6 +107,26 @@
 	
 	NSLog(@"frame %@ betaButton %@", NSStringFromRect(frame), betaButton);
 	NSLog(@"frame %@", NSStringFromRect([superview frame]));
+}
+
+- (void) costumizeAboutWindow:(NSDictionary*)dict
+{
+	NSMutableAttributedString* XAMPPLabel = [dict objectForKey:HookXAMPPLabelKey];
+	NSMutableAttributedString* BetaPart = [[NSMutableAttributedString alloc] initWithString:@"Beta"];
+
+	[BetaPart addAttribute:NSForegroundColorAttributeName 
+					 value:[NSColor redColor] 
+					 range:NSMakeRange(0, [BetaPart length])];
+	[BetaPart addAttribute:NSObliquenessAttributeName 
+					 value:[NSNumber numberWithFloat:0.3] 
+					 range:NSMakeRange(0, [BetaPart length])];
+	[BetaPart addAttribute:NSFontAttributeName 
+					 value:[NSFont boldSystemFontOfSize:12.f] 
+					 range:NSMakeRange(0, [BetaPart length])];
+ 
+	[XAMPPLabel appendAttributedString:BetaPart];
+	
+	[BetaPart release];
 }
 
 - (void) costumizeMainMenu
