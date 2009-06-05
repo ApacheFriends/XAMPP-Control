@@ -30,6 +30,7 @@
 
 @interface BetaSupportPlugIn : PlugIn {
 	BetaFeedbackController* _feedbackController;
+	NSButton*				_windowBetaButton;
 }
 
 @end
