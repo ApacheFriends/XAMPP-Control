@@ -29,6 +29,9 @@
 
 @interface BetaSupportPlugIn(PRIVAT)
 
+- (void) setFeedbackController:(BetaFeedbackController*)controller;
+- (BetaFeedbackController*) feedbackController;
+
 - (void) costumizeMainMenu;
 - (void) costumizeAboutWindow:(NSDictionary*)dict;
 - (void) costumizeControlsWindow:(NSDictionary*)dict;
@@ -42,18 +45,31 @@
 {
 	self = [super init];
 	if (self != nil) {
-		feedbackController = [BetaFeedbackController new];
+		[self setFeedbackController:[[BetaFeedbackController new] autorelease]];
 	}
 	return self;
 }
 
 - (void) dealloc
 {
-	[feedbackController release];
+	[self setFeedbackController:Nil];
 	
 	[super dealloc];
 }
 
+- (void) setFeedbackController:(BetaFeedbackController*)controller
+{
+	if ([controller isEqualTo:_feedbackController])
+		return;
+	
+	[_feedbackController release];
+	_feedbackController = [controller retain];
+}
+
+- (BetaFeedbackController*) feedbackController
+{
+	return _feedbackController;
+}
 
 - (BOOL) setupError:(NSError**)anError
 {
@@ -85,7 +101,7 @@
 	[betaButton setBezelStyle:NSRecessedBezelStyle];
 	[betaButton setTitle:@"Beta!"];
 	
-	[betaButton setTarget:feedbackController];
+	[betaButton setTarget:[self feedbackController]];
 	[betaButton setAction:@selector(showWindow:)];
 	
 	frame.size = [betaButton frame].size;
@@ -141,7 +157,7 @@
 	}
 		
 	menuItem = [helpMenu itemWithTag:3];
-	[menuItem setTarget:feedbackController];
+	[menuItem setTarget:[self feedbackController]];
 	[menuItem setAction:@selector(showWindow:)];
 }
 

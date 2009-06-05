@@ -29,7 +29,7 @@
 @class BetaFeedbackController;
 
 @interface BetaSupportPlugIn : PlugIn {
-	BetaFeedbackController* feedbackController;
+	BetaFeedbackController* _feedbackController;
 }
 
 @end
