@@ -25,12 +25,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-/* Mal ein kleiner code schnipsel aus dem alten cp
- 
- 
- 
- */
-
 
 @interface BetaFeedbackController : NSWindowController {
 	IBOutlet	NSTextView	*feedbackText;
@@ -44,6 +38,7 @@
 	IBOutlet	NSView		*extraInformationsView;
 	NSSize					extraInformationsViewSize;
 	IBOutlet	NSButton	*extraInformationsDisclosure;
+	IBOutlet	NSArrayController*extraInformationsController;
 	
 	NSURL					*betaFeedbackURL;
 	
@@ -65,5 +60,7 @@
 - (IBAction)test:(id)sender;
 
 - (IBAction)disclosureTrianglePressed:(id)sender;
+
+- (NSArray*) extraInformations;
 
 @end

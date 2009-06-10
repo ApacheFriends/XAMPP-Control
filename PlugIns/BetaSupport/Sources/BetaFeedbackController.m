@@ -56,6 +56,8 @@
 	hasSendFeedback = YES;
 	[self clearFields];
 	
+	[extraInformationsController setContent:[self extraInformations]];
+	
 	[[self window] makeFirstResponder:feedbackText];
 	[super showWindow:self];
 }
@@ -136,7 +138,7 @@
 	/* Version */
 	[formString appendFormat:@"\r\n\r\n--%@\r\n",stringBoundary];
 	[formString appendFormat:@"Content-Disposition: form-data; name=\"version\"\r\n\r\n"];
-	[formString appendFormat:@"XAMPP for Mac OS X %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+	[formString appendFormat:@"XAMPP for Mac OS X %@", [XPConfiguration version]];
 	
 	/* E Mail */
 	[formString appendFormat:@"\r\n--%@\r\n",stringBoundary];
@@ -166,16 +168,56 @@
 - (NSString*) buildFeedbackMessage
 {
 	NSMutableString *message = [NSMutableString string];
+	NSEnumerator* enumerator = [[extraInformationsController arrangedObjects] objectEnumerator];
+	NSDictionary* info;
 	
 	[message appendString:@"==Feedback out of XAMPP Control==\r\n\r\n"];
-	[message appendFormat:@" Version: %@\r\n", [XPConfiguration version]];
-	[message appendFormat:@" System Version: %@\r\n", ([includeSystemVersion intValue] == 1)?[self systemVersion]:@"Unknown"];
-	[message appendFormat:@" System Arch: %@\r\n\r\n", ([includeSystemVersion intValue] == 1)?[self systemArch]:@"Unknown"];
-	[message appendString:@"=Feedback Message=\r\n"];
+	
+	if ([includeSystemVersion intValue] == 1) {
+		while ((info = [enumerator nextObject])) {
+			[message appendFormat:@"  %@: %@\r\n", [info objectForKey:@"key"], [info objectForKey:@"value"]];
+		}
+	}
+	else {
+		[message appendString:@"More informations disabled\r\n"];
+	}
+
+	[message appendString:@"\r\n=Feedback Message=\r\n"];
 	
 	[message appendString:[feedbackText string]];
 	
 	return message;
+}
+
+- (NSArray*) extraInformations
+{
+	NSMutableArray* informations = [NSMutableArray array];
+	
+	[informations addObject:
+	 [NSDictionary dictionaryWithObjectsAndKeys:
+	  @"System Version", @"key",
+	  NSLocalizedString(@"System Version", @"Localized Key for the System Version"), @"localizedKey",
+	  [self systemVersion], @"value",
+	  Nil
+	 ]];
+	
+	[informations addObject:
+	 [NSDictionary dictionaryWithObjectsAndKeys:
+	  @"System Arch", @"key",
+	  NSLocalizedString(@"System Architecture", @"Localized Key for the System Architecture"), @"localizedKey",
+	  [self systemArch], @"value",
+	  Nil
+	  ]];
+	
+	[informations addObject:
+	 [NSDictionary dictionaryWithObjectsAndKeys:
+	  @"XAMPP Version", @"key",
+	  NSLocalizedString(@"XAMPP Version", @"Localized Key for the XAMPP Version"), @"localizedKey",
+	  [XPConfiguration version], @"value",
+	  Nil
+	  ]];
+	
+	return informations;
 }
 
 - (NSString*) systemVersion
@@ -196,10 +238,10 @@
 	
 	switch (value) {
 		case CPU_TYPE_X86:
-			return @"i386";
+			return @"Intel (32-bit)";
 			break;
 		case CPU_TYPE_POWERPC:
-			return @"ppc";
+			return @"PowerPC";
 			break;
 		default:
 			return [NSString stringWithFormat:@"Unknown (%i)", value];
