@@ -30,6 +30,4 @@
 	IBOutlet	WebView	*webView;
 }
 
-- (void) setupContent;
-
 @end

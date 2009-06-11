@@ -103,7 +103,17 @@ static id sharedConfiguration = Nil;
 
 - (NSString*) fullXAMPPPathFor:(NSString*)anPath
 {
-	return [@"/Applications/XAMPP/" stringByAppendingPathComponent:anPath];
+	return [[self XAMPPPath] stringByAppendingPathComponent:anPath];
+}
+
++ (NSString*) XAMPPPath
+{
+	return [[self sharedConfiguration] XAMPPPath];
+}
+
+- (NSString*) XAMPPPath
+{
+	return @"/Applications/XAMPP";
 }
 
 - (NSURL*) supportForumURL

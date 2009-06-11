@@ -42,6 +42,8 @@
 
 + (NSString*) fullXAMPPPathFor:(NSString*)anPath;
 - (NSString*) fullXAMPPPathFor:(NSString*)anPath;
++ (NSString*) XAMPPPath;
+- (NSString*) XAMPPPath;
 
 - (NSArray*) PHPVersions;
 - (void) setPHPVersions:(NSArray*)anArray;

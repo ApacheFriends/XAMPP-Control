@@ -24,7 +24,7 @@
  */
 
 #import "GettingStartedController.h"
-
+#import "XPConfiguration.h"
 
 @implementation GettingStartedController
 
@@ -63,6 +63,10 @@
 	
 	[htmlCode replaceOccurrencesOfString:@"#USER#" 
 							  withString:NSUserName() 
+								 options:NSCaseInsensitiveSearch
+								   range:NSMakeRange(0, [htmlCode length])];
+	[htmlCode replaceOccurrencesOfString:@"#XAMPP_ROOT#" 
+							  withString:[XPConfiguration XAMPPPath]
 								 options:NSCaseInsensitiveSearch
 								   range:NSMakeRange(0, [htmlCode length])];
 	
