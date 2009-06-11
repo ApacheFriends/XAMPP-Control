@@ -61,8 +61,6 @@
 	[self setTaskInformations:Nil];
 	
 	[self recalculateInformations];
-	
-	//[self setupViews];
 }
 
 - (NSArray*) tasks
@@ -128,7 +126,7 @@
 		NSLog(@"row %f", yPos);
 	}
 	
-	/* Ok now everything is calculated center the list verticaly :) 
+	/* Ok now everything is calculated center the list verticaly :)
 	
 	centerOffset = (NSHeight([self bounds]) - (yPos - 5.f)) / 2.f;
 	
@@ -153,7 +151,7 @@
 			[dict setObject:NSStringFromRect(indicatorRect) forKey:@"indicatorRect"];
 			[dict setObject:NSStringFromRect(textRect) forKey:@"textRect"];
 		}
-	}*/
+	}/**/
 	
 	[self setTaskInformations:informations];
 	
@@ -202,101 +200,52 @@
 	/* Force the layoutmanage to layout the string so we can access the height */
 	(void) [layoutManager glyphRangeForTextContainer:textContainer];
 	
-	//return [layoutManager defaultLineHeightForFont:[NSFont systemFontOfSize:[NSFont systemFontSize]]];
-
 	return NSHeight([layoutManager usedRectForTextContainer:textContainer]);
-}
-
-- (void) setupViews
-{
-	NSEnumerator* enumerator = [taskViews objectEnumerator];
-	NSMutableDictionary* dict;
-	NSString *task;
-	NSProgressIndicator *progressView;
-	NSImageView *imageView;
-	NSTextField* textField;
-	int x = 0;
-	int y = 0;
-	
-	while ((dict = [enumerator nextObject])) {
-		[[dict objectForKey:@"textField"] removeFromSuperview];
-		[[dict objectForKey:@"progressView"] removeFromSuperview];
-		[[dict objectForKey:@"imageView"] removeFromSuperview];
-	}
-	
-	[taskViews release];
-	taskViews = [[NSMutableArray alloc] init];
-		
-	enumerator = [tasks objectEnumerator];
-	while ((task = [enumerator nextObject])) {
-		NSRect textRect;
-		dict = [NSMutableDictionary dictionary];
-		
-		progressView = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(x, y, 16, 16)];
-		imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(x, y, 16, 16)];
-		textField = [[NSTextField alloc] init];
-		
-		[progressView setControlSize:NSSmallControlSize];
-		[progressView setStyle:NSProgressIndicatorSpinningStyle];
-		[progressView setIndeterminate:YES];
-		[progressView setHidden:YES];
-		[imageView setHidden:YES];
-		[textField setEditable:NO];
-		[textField setSelectable:NO];
-		[textField setBezeled:NO];
-		[textField setDrawsBackground:NO];
-		[textField setStringValue:task];
-		
-		textRect.size = [[textField cell] cellSize];
-		textRect.origin.x = 16.f + 5.f;
-		textRect.origin.y = y + 16.f/2.f - NSHeight(textRect)/2.f;
-		[textField setFrame:textRect];
-		
-		[self addSubview:progressView];
-		[dict setObject:progressView forKey:@"progressView"];
-		[self addSubview:imageView];
-		[dict setObject:imageView forKey:@"imageView"];
-		[self addSubview:textField];
-		[dict setObject:textField forKey:@"textField"];
-		[dict setObject:[NSNumber numberWithInt:SecurityTaskNoStatus] forKey:@"status"];
-		
-		[taskViews addObject:dict];
-		
-		y += 16.f + 9.f;
-	}
 }
 
 - (SecurityTaskStatus) statusForTask:(uint)task
 {
-	return [[[taskViews objectAtIndex:task] objectForKey:@"status"] intValue];
+	return [[[[self taskInformations] objectAtIndex:task] objectForKey:@"status"] intValue];
 }
+
 - (void) setStatus:(SecurityTaskStatus)status forTask:(uint)task
 {
-	NSMutableDictionary* dict;
-	NSImageView* imageView;
-	NSProgressIndicator* progressView;
+	NSMutableDictionary* informationsDict;
+	NSProgressIndicator* progressIndicator;
 	
-	dict = [taskViews objectAtIndex:task];
+	informationsDict = [[[self taskInformations] objectAtIndex:task] mutableCopy];
 	
-	imageView = [dict objectForKey:@"imageView"];
-	progressView = [dict objectForKey:@"progressView"];
+	if ([[informationsDict valueForKey:@"status"] intValue] == status)
+		return;
 	
-	[imageView setHidden:YES];
-	[progressView setHidden:YES];
-	[progressView stopAnimation:self];
+	progressIndicator = [informationsDict valueForKey:@"progressIndicator"];
+	if (![progressIndicator isEqualTo:[NSNull null]]) {
+		[progressIndicator stopAnimation:self];
+		[progressIndicator removeFromSuperview];
+		[informationsDict setValue:[NSNull null] forKey:@"progressIndicator"];
+	}
+	
+	[informationsDict setValue:[NSNumber numberWithInt:status] forKey:@"status"];
 	
 	switch (status) {
-		case SecurityTaskSuccessStatus:
-			[imageView setImage:[NSImage imageNamed:@"Success"]];
-			[imageView setHidden:NO];
-			break;
 		case SecurityTaskWorkingStatus:
-			[progressView startAnimation:self];
-			[progressView setHidden:NO];
+			progressIndicator = [[NSProgressIndicator alloc] initWithFrame:
+								 NSRectFromString([informationsDict objectForKey:@"indicatorRect"])];
+			[progressIndicator setControlSize:NSSmallControlSize];
+			[progressIndicator setStyle:NSProgressIndicatorSpinningStyle];
+			[progressIndicator setIndeterminate:YES];
+			[progressIndicator startAnimation:self];
+			[self addSubview:progressIndicator];
+			[informationsDict setValue:progressIndicator forKey:@"progressIndicator"];
+			[progressIndicator release];
 			break;
 		default:
 			break;
 	}
+	
+	[[self mutableArrayValueForKey:@"taskInformations"] replaceObjectAtIndex:task withObject:informationsDict];
+	[self setNeedsDisplayInRect:NSRectFromString([informationsDict objectForKey:@"indicatorRect"])];
+	[informationsDict release];
 }
 
 - (BOOL) isFlipped
@@ -311,8 +260,10 @@
 	NSString* taskString;
 	NSDictionary* informationsDict;
 	NSTextFieldCell* textCell;
+	NSImageCell* imageCell;
 	
 	textCell = [NSTextFieldCell new];
+	imageCell = [NSImageCell new];
 	informationsEnumerator = [[self taskInformations] objectEnumerator];
 	tasksEnumerator = [[self tasks] objectEnumerator];
 	
@@ -321,13 +272,22 @@
 		
 		[textCell setStringValue:taskString];
 		
+		switch ([[informationsDict valueForKey:@"status"] intValue]) {
+			case SecurityTaskSuccessStatus:
+				[imageCell setImage:[NSImage imageNamed:@"Success"]];
+				break;
+			default:
+				[imageCell setImage:Nil];
+				break;
+		}
+		
 		[textCell drawWithFrame:NSRectFromString([informationsDict objectForKey:@"textRect"])
 						 inView:self];
-		
-		[[NSColor redColor] set];
-		NSRectFill(NSRectFromString([informationsDict objectForKey:@"indicatorRect"]));
+		[imageCell drawWithFrame:NSRectFromString([informationsDict objectForKey:@"indicatorRect"])
+						  inView:self];
 	}
 	
+	[imageCell release];
 	[textCell release];
 }
 

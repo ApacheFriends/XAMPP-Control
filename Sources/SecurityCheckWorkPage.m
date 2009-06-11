@@ -126,7 +126,7 @@
 		}
 	}
 	
-	[[self assistantController] performSelectorOnMainThread:@selector(forward:) withObject:self waitUntilDone:NO];
+	[[self assistantController] performSelectorOnMainThread:@selector(continue:) withObject:self waitUntilDone:NO];
 	
 	[pool drain];
 	[pool release];

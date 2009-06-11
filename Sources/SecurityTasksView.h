@@ -37,7 +37,6 @@ typedef enum _SecurityTaskStatus SecurityTaskStatus;
 
 @interface SecurityTasksView : NSView {
 	NSArray* tasks;
-	NSMutableArray* taskViews;
 	
 	NSArray* taskInformations;
 }
