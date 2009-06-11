@@ -24,9 +24,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <XAMPP Control/XPModule.h>
+#import <PlugIn/PlugIn.h>
+#import <XAMPP Control/XAMPP Control.h>
 
-@interface ApacheModule : XPModule {
+@interface ApacheModule : XPModule<PlugInPriorityProtocol> {
 
 }
 

@@ -140,4 +140,17 @@
 	return nil;
 }
 
+#pragma mark -
+#pragma mark Priority Protocol
+
+- (int) priority
+{
+	return -1000;
+}
+
+- (NSString*) comparisonString
+{
+	return @"MySQL";
+}
+
 @end

@@ -24,9 +24,10 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <XAMPP Control/XPModule.h>
+#import <XAMPP Control/XAMPP Control.h>
+#import <PlugIn/PlugIn.h>
 
-@interface MySQLModule : XPModule {
+@interface MySQLModule : XPModule<PlugInPriorityProtocol> {
 
 }
 

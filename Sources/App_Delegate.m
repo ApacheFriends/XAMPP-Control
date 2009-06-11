@@ -62,7 +62,7 @@
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
 	securityCheckController = [[SecurityCheckController alloc] init];	
 	
-	[securityCheckController showWindow:self];
+	//[securityCheckController showWindow:self];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender

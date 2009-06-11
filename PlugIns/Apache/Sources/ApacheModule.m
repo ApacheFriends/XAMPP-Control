@@ -295,4 +295,17 @@
 			fileExistsAtPath:[XPConfiguration fullXAMPPPathFor:@"/etc/xampp/startssl"]];
 }
 
+#pragma mark -
+#pragma mark Priority Protocol
+
+- (int) priority
+{
+	return -1000;
+}
+
+- (NSString*) comparisonString
+{
+	return @"Apache";
+}
+
 @end
