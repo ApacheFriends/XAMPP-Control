@@ -250,13 +250,13 @@
 				 forKey:NSLocalizedDescriptionKey];
 	
 	if (port80AlreadyUsed && port443AlreadyUsed)
-		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 80 (and 433). Please turn it off and try again." 
+		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 80 (and 433). Please turn it off and try again." 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	else if (port443AlreadyUsed)
-		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 433. Please turn it off and try again." 
+		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 433. Please turn it off and try again." 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	else
-		[errorDict setValue:@"XAMPP's Apache can not start while another web server is using port 80. Please turn it off and try again." 
+		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 80. Please turn it off and try again." 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain

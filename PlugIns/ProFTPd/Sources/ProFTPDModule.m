@@ -28,7 +28,15 @@
 #import <XAMPP Control/XPError.h>
 #import <XAMPP Control/XPRootTask.h>
 #import <XAMPP Control/XPConfiguration.h>
+#import <XAMPP Control/NSWorkspace (Process).h>
 #import <unistd.h>
+
+@interface ProFTPDModule (PRIVAT)
+
+- (NSError*) otherFTPServerCheck;
+
+@end
+
 
 @implementation ProFTPDModule
 
@@ -47,6 +55,10 @@
 	XPRootTask *proftpd = [[XPRootTask new] autorelease];
 	NSString *output;
 	NSError *error;
+	
+	error = [self otherFTPServerCheck];
+	if (error)
+		return error;
 	
 	error = [proftpd authorize];
 	if (error)
@@ -146,6 +158,32 @@
 - (NSString*) comparisonString
 {
 	return @"ProFTPD";
+}
+
+@end
+
+@implementation ProFTPDModule (PRIVAT)
+
+- (NSError*) otherFTPServerCheck
+{
+	NSError* error;
+	NSMutableDictionary* errorDict;
+	
+	if (![[NSWorkspace sharedWorkspace] portIsUsed:21])
+		return Nil;
+	
+	errorDict = [NSMutableDictionary dictionary];
+	
+	[errorDict setValue:@"Another ftpserver is already running!" 
+				 forKey:NSLocalizedDescriptionKey];
+	[errorDict setValue:@"XAMPP's FTP can not start while another ftpserver is using port 21. Please turn it off and try again." 
+				 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPOtherServerRunning 
+							userInfo:errorDict];
+	
+	return error;
 }
 
 @end
