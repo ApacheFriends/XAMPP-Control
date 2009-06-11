@@ -24,7 +24,7 @@
  */
 
 #import "BetaFeedbackController.h"
-#import "XPConfiguration.h"
+#import <XAMPP Control/XAMPP Control.h>
 #include <sys/sysctl.h>
 
 @implementation BetaFeedbackController
@@ -46,8 +46,8 @@
 
 - (void) awakeFromNib
 {
+	/* We're hiding the exta informations view by default */
 	extraInformationsViewSize = [extraInformationsView frame].size;
-	NSLog(@"rect %@", NSStringFromRect([extraInformationsView frame]));
 	[self disclosureTrianglePressed:extraInformationsDisclosure];
 }
 
@@ -70,25 +70,18 @@
 		[self sendFeedback];
 }
 
-- (IBAction)test:(id)sender
-{
-	NSLog(@"test");
-}
-
 - (IBAction)disclosureTrianglePressed:(id)sender {
     NSWindow *window = [sender window];
     NSRect frame = [window frame];
     // The extra +14 accounts for the space between the box and its neighboring views
     float sizeChange = extraInformationsViewSize.height;
-	NSLog(@"changed %f", sizeChange);
 	BOOL hidden;
-	NSLog(@"rect %@", NSStringFromRect([extraInformationsView frame]));
+
     switch ([sender state]) {
         case NSOnState:
             // Show the extra box.
             //[extraInformationsView setHidden:NO];
 			hidden = NO;
-			NSLog(@"show");
             // Make the window bigger.
             frame.size.height += sizeChange;
             // Move the origin.
@@ -101,7 +94,6 @@
             // Make the window smaller.
             frame.size.height -= sizeChange;
             // Move the origin.
-			NSLog(@"hide");
             frame.origin.y += sizeChange;
             break;
         default:
@@ -125,7 +117,7 @@
 	
 	[progressIndicator setHidden:NO];
 	[progressIndicator startAnimation:self];
-	[progressText setStringValue:@"Sending Feedback... Thank you!"];
+	[progressText setStringValue:XPLocalizedString(@"SendingFeedbackLabel", @"\"Sending Feedback... Thank you!\"")];
 	[progressText setHidden:NO];
 	
 	formString = [NSMutableString string];
@@ -196,7 +188,7 @@
 	[informations addObject:
 	 [NSDictionary dictionaryWithObjectsAndKeys:
 	  @"System Version", @"key",
-	  NSLocalizedString(@"System Version", @"Localized Key for the System Version"), @"localizedKey",
+	  XPLocalizedString(@"System Version", @"Localized Key for the System Version"), @"localizedKey",
 	  [self systemVersion], @"value",
 	  Nil
 	 ]];
@@ -204,7 +196,7 @@
 	[informations addObject:
 	 [NSDictionary dictionaryWithObjectsAndKeys:
 	  @"System Arch", @"key",
-	  NSLocalizedString(@"System Architecture", @"Localized Key for the System Architecture"), @"localizedKey",
+	  XPLocalizedString(@"System Architecture", @"Localized Key for the System Architecture"), @"localizedKey",
 	  [self systemArch], @"value",
 	  Nil
 	  ]];
@@ -212,7 +204,7 @@
 	[informations addObject:
 	 [NSDictionary dictionaryWithObjectsAndKeys:
 	  @"XAMPP Version", @"key",
-	  NSLocalizedString(@"XAMPP Version", @"Localized Key for the XAMPP Version"), @"localizedKey",
+	  XPLocalizedString(@"XAMPP Version", @"Localized Key for the XAMPP Version"), @"localizedKey",
 	  [XPConfiguration version], @"value",
 	  Nil
 	  ]];
@@ -256,38 +248,34 @@
 {
 	// Yeah we've sucessfully send the feedback
 	[sendOrCloseButton setEnabled:YES];
-	[sendOrCloseButton setTitle:@"Close"];
+	[sendOrCloseButton setTitle:XPLocalizedString(@"CloseButton", @"Close Button")];
 	hasSendFeedback = YES;
 	
 	[progressIndicator setHidden:YES];
 	[progressIndicator stopAnimation:self];
 	[progressText setHidden:NO];
-	[progressText setStringValue:@"Thank you for sending!"];
-		
-	//NSLog(@"Response: %@", [[[NSString alloc] initWithData:returnedData encoding:NSUTF8StringEncoding] autorelease]);
-//	[returnedData release];
+	[progressText setStringValue:XPLocalizedString(@"ThankForSendingFeedback", @"Thank you for sending!")];
+
 	[feedbackConnection release];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {	
 	[sendOrCloseButton setEnabled:YES];
-	[sendOrCloseButton setTitle:@"Close"];
+	[sendOrCloseButton setTitle:XPLocalizedString(@"CloseButton", @"Close Button")];
 	hasSendFeedback = YES;
 	
 	[progressIndicator setHidden:YES];
 	[progressIndicator stopAnimation:self];
 	[progressText setHidden:YES];
-	
-	//NSLog(@"error %@", error);
-	
+		
 	[NSApp presentError:error];
 	[feedbackConnection release];
 }
 
 - (void) clearFields
 {
-	[sendOrCloseButton setTitle:@"Send Feedback"];
+	[sendOrCloseButton setTitle:XPLocalizedString(@"SendFeedbackButton", @"Send Feedback")];
 	[sendOrCloseButton setEnabled:YES];
 	[feedbackEMail setStringValue:@""];
 	[feedbackEMail setEnabled:YES];

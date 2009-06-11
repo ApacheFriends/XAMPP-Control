@@ -90,6 +90,8 @@
 		92BDB9990FA218A800B8D0D7 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9980FA218A800B8D0D7 /* About.xib */; };
 		92BDB99B0FA218B000B8D0D7 /* PHPSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99A0FA218B000B8D0D7 /* PHPSwitchView.xib */; };
 		92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */; };
+		92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CB83BD0FE1167500AA0CB6 /* Localizable.strings */; };
+		92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */; };
 		92CBCBBE0FC02F8800C136BE /* Success.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CBCBBD0FC02F8800C136BE /* Success.png */; };
 		92CBCBC40FC032B900C136BE /* SecurityTasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBCBC30FC032B900C136BE /* SecurityTasksView.m */; };
 		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
@@ -258,6 +260,7 @@
 				92E28FE80FD451DA00DBA78F /* SecurityCheckProtocol.h in CopyFiles */,
 				92E28FE90FD451E500DBA78F /* NSObject+Unproxy.h in CopyFiles */,
 				92E290140FD4546B00DBA78F /* XPPlugInHooks.h in CopyFiles */,
+				92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +375,8 @@
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = ../build/Debug/PlugIn.framework; sourceTree = SOURCE_ROOT; };
+		92CB83BB0FE1162A00AA0CB6 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPLocalization.h; sourceTree = "<group>"; };
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
 		92CBCBC20FC032B900C136BE /* SecurityTasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTasksView.h; sourceTree = "<group>"; };
 		92CBCBC30FC032B900C136BE /* SecurityTasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTasksView.m; sourceTree = "<group>"; };
@@ -539,6 +544,7 @@
 				9257D7950FA1DA73002BF955 /* XPBox.m */,
 				92E361740FBEB8390018B96E /* StatusIndicatorView.h */,
 				92E361750FBEB8390018B96E /* StatusIndicatorView.m */,
+				92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -727,6 +733,7 @@
 			children = (
 				92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */,
 				92E28EAF0FD4034100DBA78F /* Info.plist */,
+				92CB83BD0FE1167500AA0CB6 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1100,6 +1107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */,
+				92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,6 +1431,14 @@
 				92F13D480FA09A6E007ED72B /* English */,
 			);
 			name = ControlsWindow.xib;
+			sourceTree = "<group>";
+		};
+		92CB83BD0FE1167500AA0CB6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92CB83BB0FE1162A00AA0CB6 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -57,8 +57,6 @@
 
 - (void) clearFields;
 
-- (IBAction)test:(id)sender;
-
 - (IBAction)disclosureTrianglePressed:(id)sender;
 
 - (NSArray*) extraInformations;

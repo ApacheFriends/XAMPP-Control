@@ -103,10 +103,10 @@
 	[button setShowsBorderOnlyWhileMouseInside:YES];
 	[[button cell] setControlSize:NSSmallControlSize];
 	[button setBezelStyle:NSRecessedBezelStyle];
-	[button setTitle:@"Beta!"];
+	[button setTitle:XPLocalizedString(@"WindowButtonLabel", @"Short 'Beta!' for the upper right in the windows titel bar")];
 	[button setTarget:[self feedbackController]];
 	[button setAction:@selector(showWindow:)];
-	[button setToolTip:@"You have an Beta Version of XAMPP. Please send us Feedback."];
+	[button setToolTip:XPLocalizedString(@"WindowButtonToolTip", @"A tooltip that indicate that the user is currently using an Beta version of XAMPP and should provide feedback")];
 	
 	NSMutableAttributedString* string = [[button attributedTitle] mutableCopy];
 	[string addAttributes:[NSDictionary dictionaryWithObject:[NSColor colorWithCalibratedRed:1.f green:50.f/255.f blue:0.f alpha:1.f] forKey:@"NSColor"]
