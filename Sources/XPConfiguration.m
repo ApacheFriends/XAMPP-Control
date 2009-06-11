@@ -84,7 +84,7 @@ static id sharedConfiguration = Nil;
 - (NSString*) version
 {
 	if (!version) {
-		version = [NSString stringWithContentsOfFile:@"/Applications/XAMPP/xamppfiles/lib/VERSION"];
+		version = [NSString stringWithContentsOfFile:[self fullXAMPPPathFor:@"/xamppfiles/lib/VERSION"]];
 		version = [version stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		
 		[version retain];
@@ -118,7 +118,7 @@ static id sharedConfiguration = Nil;
 
 - (BOOL) hasFixRights
 {
-	return [[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/fix_rights"];
+	return [[NSFileManager defaultManager] fileExistsAtPath:[self fullXAMPPPathFor:@"/etc/xampp/fix_rights"]];
 }
 
 - (NSArray*) PHPVersions
@@ -144,7 +144,7 @@ static id sharedConfiguration = Nil;
 	char buf[BUFSIZ];
 	int rc = 0;
 	
-	files = [[NSFileManager defaultManager] directoryContentsAtPath:@"/Applications/XAMPP/xamppfiles/bin"];
+	files = [[NSFileManager defaultManager] directoryContentsAtPath:[self fullXAMPPPathFor:@"/bin"]];
 	
 	files = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF MATCHES 'php-[0-9].*'"]];
 	
@@ -159,7 +159,7 @@ static id sharedConfiguration = Nil;
 	
 	[self setPHPVersions:tmp];
 	
-	rc = readlink("/Applications/XAMPP/xamppfiles/bin/php", buf, BUFSIZ);
+	rc = readlink([[self fullXAMPPPathFor:@"/bin/php"] fileSystemRepresentation], buf, BUFSIZ);
 	
 	if (rc > 0) {
 		buf[rc] = '\0';
