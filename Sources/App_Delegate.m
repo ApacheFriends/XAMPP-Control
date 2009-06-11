@@ -61,8 +61,6 @@
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
 	securityCheckController = [[SecurityCheckController alloc] init];	
-	
-	//[securityCheckController showWindow:self];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -75,6 +73,11 @@
 	[controlsWindowController showWindow:theApplication];
 	
 	return YES;
+}
+
+- (IBAction) showSecurityCheck:(id)sender
+{
+	[securityCheckController showWindow:sender];
 }
 
 #pragma mark -
