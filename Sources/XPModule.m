@@ -246,7 +246,7 @@ static NSLock *fixRightsLock = Nil;
 	if (![[XPConfiguration sharedConfiguration] hasFixRights]) {
 		XPRootTask *fix_rights = [[XPRootTask alloc] init];
 		
-		[fix_rights setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/fix_rights"];
+		[fix_rights setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/fix_rights"]];
 		
 		[fix_rights launch];
 		[fix_rights waitUntilExit];

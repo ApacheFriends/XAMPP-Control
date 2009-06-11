@@ -27,6 +27,7 @@
 
 #import <XAMPP Control/XPError.h>
 #import <XAMPP Control/XPRootTask.h>
+#import <XAMPP Control/XPConfiguration.h>
 #import <unistd.h>
 
 @implementation MySQLModule
@@ -39,7 +40,7 @@
 		
 		gethostname(hostname, 256);
 		
-		[self setPidFile:[NSString stringWithFormat:@"/Applications/XAMPP/xamppfiles/var/mysql/%s.pid", hostname]];
+		[self setPidFile:[XPConfiguration fullXAMPPPathFor:[NSString stringWithFormat:@"/xamppfiles/var/mysql/%s.pid", hostname]]];
 		[self setName:@"MySQL"];
 	}
 	return self;
@@ -58,7 +59,7 @@
 	// Fix rights if needed
 	[self checkFixRightsAndRunIfNeeded];
 	
-	[mysqlServer setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/mysql.server"];
+	[mysqlServer setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/mysql.server"]];
 	[mysqlServer setArguments:[NSArray arrayWithObjects:@"start", nil]];
 	
 	[mysqlServer setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];
@@ -73,7 +74,7 @@
 	// Hm, ok mysql didn't start :/
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
+	[errorDict setValue:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/logs/error_log"]
 				 forKey:XPErrorLogFileKey];
 	[errorDict setValue:[self name] 
 				 forKey:XPErrorModuleNameKey];
@@ -95,7 +96,7 @@
 	if (error)
 		return error;
 	
-	[mysqlServer setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/mysql.server"];
+	[mysqlServer setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/mysql.server"]];
 	[mysqlServer setArguments:[NSArray arrayWithObjects:@"stop", nil]];
 	
 	[mysqlServer setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];

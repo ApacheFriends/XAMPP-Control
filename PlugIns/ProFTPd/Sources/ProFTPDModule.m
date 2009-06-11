@@ -27,6 +27,7 @@
 
 #import <XAMPP Control/XPError.h>
 #import <XAMPP Control/XPRootTask.h>
+#import <XAMPP Control/XPConfiguration.h>
 #import <unistd.h>
 
 @implementation ProFTPDModule
@@ -35,7 +36,7 @@
 {
 	self = [super init];
 	if (self != nil) {
-		[self setPidFile:@"/Applications/XAMPP/xamppfiles/var/proftpd.pid"];
+		[self setPidFile:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/var/proftpd.pid"]];
 		[self setName:@"FTP"];
 	}
 	return self;
@@ -54,7 +55,7 @@
 	// Fix rights if needed
 	[self checkFixRightsAndRunIfNeeded];
 	
-	[proftpd setLaunchPath:@"/Applications/XAMPP/xamppfiles/sbin/proftpd"];
+	[proftpd setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/sbin/proftpd"]];
 	
 	[proftpd setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];
 	//[apachectl setStandardError:standardError];

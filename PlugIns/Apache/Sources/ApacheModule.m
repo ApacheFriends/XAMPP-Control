@@ -28,6 +28,7 @@
 #import <XAMPP Control/XPError.h>
 #import <XAMPP Control/XPRootTask.h>
 #import <XAMPP Control/NSWorkspace (Process).h>
+#import <XAMPP Control/XPConfiguration.h>
 #import <unistd.h>
 
 @interface ApacheModule(PRIVAT)
@@ -48,7 +49,7 @@
 {
 	self = [super init];
 	if (self != nil) {		
-		[self setPidFile:@"/Applications/XAMPP/xamppfiles/logs/httpd.pid"];
+		[self setPidFile:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/logs/httpd.pid"]];
 		[self setName:@"Apache"];
 	}
 	return self;
@@ -91,8 +92,8 @@
 	// Fix Rights if needed
 	[self checkFixRightsAndRunIfNeeded];
 	
-	[apachectl setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/apachectl"];
-	arguments = [NSArray arrayWithObjects:@"-E", @"/Applications/XAMPP/xamppfiles/logs/error_log", @"-k", @"start", Nil];
+	[apachectl setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/apachectl"]];
+	arguments = [NSArray arrayWithObjects:@"-E", [XPConfiguration fullXAMPPPathFor:@"/xamppfiles/logs/error_log"], @"-k", @"start", Nil];
 	arguments = [arguments arrayByAddingObjectsFromArray:[self defines]];
 	[apachectl setArguments:arguments];
 	
@@ -113,7 +114,7 @@
 	
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:@"/Applications/XAMPP/xamppfiles/logs/error_log"
+	[errorDict setValue:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/logs/error_log"]
 				 forKey:XPErrorLogFileKey];
 	[errorDict setValue:@"Apache did not start!" 
 				 forKey:NSLocalizedDescriptionKey];
@@ -137,7 +138,7 @@
 	if (error)
 		return error;
 	
-	[apachectl setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/apachectl"];
+	[apachectl setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/apachectl"]];
 	[apachectl setArguments:[NSArray arrayWithObjects:@"-k", @"stop", nil]];
 	
 	//[apachectl setEnvironment:[NSDictionary dictionaryWithObject:@"C" forKey:@"LANG"]];
@@ -248,7 +249,7 @@
 	NSString* output;
 	NSMutableDictionary* errDict;
 	
-	[httpd setLaunchPath:@"/Applications/XAMPP/xamppfiles/bin/httpd"];
+	[httpd setLaunchPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/bin/httpd"]];
 	[httpd setArguments:[[self defines] arrayByAddingObject:@"-t"]];
 	[httpd setStandardError:errorPipe];
 	
@@ -291,7 +292,7 @@
 - (BOOL) isSSLEnabled
 {
 	return [[NSFileManager defaultManager] 
-			fileExistsAtPath:@"/Applications/XAMPP/etc/xampp/startssl"];
+			fileExistsAtPath:[XPConfiguration fullXAMPPPathFor:@"/etc/xampp/startssl"]];
 }
 
 @end
