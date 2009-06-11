@@ -34,6 +34,7 @@
 @interface ApacheModule(PRIVAT)
 
 - (BOOL) systemApacheIsRunning;
+- (NSError*) systemApacheCheck;
 - (NSError*) otherWebserverCheck;
 - (NSError*) syntaxCheck;
 
@@ -62,20 +63,9 @@
 	NSArray* arguments;
 	NSError *error;
 	
-	if ([self systemApacheIsRunning]) {
-		errorDict = [NSMutableDictionary dictionary];
-
-		[errorDict setValue:@"Web Sharing is on!" 
-					 forKey:NSLocalizedDescriptionKey];
-		[errorDict setValue:@"XAMPP's Apache can not start until Web Sharing is turned off! Please go to the System Preferences and turn it in the sharing panel off." 
-					 forKey:NSLocalizedRecoverySuggestionErrorKey];
-		
-		error = [NSError errorWithDomain:XAMPPControlErrorDomain
-									code:XPWebSharingIsOn 
-								userInfo:errorDict];
-		
+	error = [self systemApacheCheck];
+	if (error)
 		return error;
-	}
 	
 	error = [self otherWebserverCheck];
 	if (error)
@@ -214,6 +204,28 @@
 		return NO;
 	
 	return [[NSWorkspace sharedWorkspace] processIsRunning:[pid intValue]];
+}
+
+- (NSError*) systemApacheCheck
+{
+	NSError* error;
+	NSMutableDictionary* errorDict;
+	
+	if (![self systemApacheIsRunning])
+		return Nil;
+	
+	errorDict = [NSMutableDictionary dictionary];
+	
+	[errorDict setValue:@"Web Sharing is on!" 
+				 forKey:NSLocalizedDescriptionKey];
+	[errorDict setValue:@"XAMPP's Apache can not start while Web Sharing is on! Please go to System Preferences > Sharing and turn it off." 
+				 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPWebSharingIsOn 
+							userInfo:errorDict];
+	
+	return error;
 }
 
 - (NSError*) otherWebserverCheck
