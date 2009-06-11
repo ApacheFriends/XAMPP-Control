@@ -60,7 +60,7 @@
 	XAMPPString = [[XAMPPName attributedStringValue] mutableCopy];
 	versionsString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Version %@", [XPConfiguration version]]
 															attributes:[NSDictionary dictionaryWithObject:centeredParagraphStyle forKey:NSParagraphStyleAttributeName]];
-	creditsHTML = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Team" ofType:@"html"]];
+	creditsHTML = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"html"]];
 	
 	PlugInInvokeHook(AboutWindowSetupHook, 
 					 [NSDictionary dictionaryWithObjectsAndKeys:
