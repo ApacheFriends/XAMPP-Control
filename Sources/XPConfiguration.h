@@ -40,6 +40,9 @@
 + (NSString*) version;
 - (NSString*) version;
 
++ (NSString*) fullXAMPPPathFor:(NSString*)anPath;
+- (NSString*) fullXAMPPPathFor:(NSString*)anPath;
+
 - (NSArray*) PHPVersions;
 - (void) setPHPVersions:(NSArray*)anArray;
 - (NSString*) activePHP;

@@ -96,6 +96,16 @@ static id sharedConfiguration = Nil;
 	return version;
 }
 
++ (NSString*) fullXAMPPPathFor:(NSString*)anPath
+{
+	return [[self sharedConfiguration] fullXAMPPPathFor:anPath];
+}
+
+- (NSString*) fullXAMPPPathFor:(NSString*)anPath
+{
+	return [@"/Applications/XAMPP/" stringByAppendingPathComponent:anPath];
+}
+
 - (NSURL*) supportForumURL
 {
 	return [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"SupportForumURL"]];
