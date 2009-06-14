@@ -23,15 +23,17 @@
  
  */
 
-#import <Cocoa/Cocoa.h>
-#import <XAMPP Control/XAMPP Control.h>
-#import <PlugIn/PlugIn.h>
+#import <Foundation/Foundation.h>
 
-@interface PHPSwitchControl : XPViewController<PlugInPriorityProtocol> {
-	IBOutlet StatusIndicatorView* statusIndicator;
-	IBOutlet NSPopUpButton* phpVersionSwitch;
+
+@interface PHP : NSObject {
+	NSString*	_version;
 }
 
-- (void) updatePHPVersionsMenu;
+- (NSString*) version;
+- (void) setVersion:(NSString*)string;
+
+/* To make this PHP active use the PHPManager */
+- (BOOL) isActive;
 
 @end

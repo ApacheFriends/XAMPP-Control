@@ -108,6 +108,7 @@
 		92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2450FE524C6009D4503 /* Debug.h */; };
 		92DBE2480FE524C6009D4503 /* Debug.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2460FE524C6009D4503 /* Debug.m */; };
 		92DBE2490FE524C6009D4503 /* Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2460FE524C6009D4503 /* Debug.m */; };
+		92DBE2860FE528DF009D4503 /* PHPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2850FE528DF009D4503 /* PHPManager.m */; };
 		92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */; };
 		92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */; };
 		92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9257D7CD0FA1F14F002BF955 /* AssistantController.h */; };
@@ -408,6 +409,8 @@
 		92DBE2420FE523A3009D4503 /* PHP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHP.m; sourceTree = "<group>"; };
 		92DBE2450FE524C6009D4503 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
 		92DBE2460FE524C6009D4503 /* Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debug.m; sourceTree = "<group>"; };
+		92DBE2840FE528DF009D4503 /* PHPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPManager.h; sourceTree = "<group>"; };
+		92DBE2850FE528DF009D4503 /* PHPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPManager.m; sourceTree = "<group>"; };
 		92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetaSupport.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E28EAF0FD4034100DBA78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
@@ -816,6 +819,8 @@
 				92E362D50FBEDC1C0018B96E /* PHPSwitchControl.m */,
 				92DBE2410FE523A3009D4503 /* PHP.h */,
 				92DBE2420FE523A3009D4503 /* PHP.m */,
+				92DBE2840FE528DF009D4503 /* PHPManager.h */,
+				92DBE2850FE528DF009D4503 /* PHPManager.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1226,6 +1231,7 @@
 				92E3627C0FBED1FF0018B96E /* PHPPlugIn.m in Sources */,
 				92E362D60FBEDC1C0018B96E /* PHPSwitchControl.m in Sources */,
 				92DBE2430FE523A3009D4503 /* PHP.m in Sources */,
+				92DBE2860FE528DF009D4503 /* PHPManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,8 @@
  */
 
 #import "PHPSwitchControl.h"
+#import "PHPManager.h"
+#import "PHP.h"
 
 @interface PHPSwitchControl(PRIVAT)
 
@@ -42,6 +44,13 @@
 - (void) updatePHPVersionsMenu
 {
 	NSMenu* menu = [NSMenu new];
+	
+	NSEnumerator* enumerator = [[[PHPManager sharedPHPManager] availablePHPs] objectEnumerator];
+	PHP* php;
+	
+	while ((php = [enumerator nextObject])) {
+		[menu addItemWithTitle:[php version] action:NULL keyEquivalent:@""];
+	}
 	
 	[menu addItem:[NSMenuItem separatorItem]];
 	

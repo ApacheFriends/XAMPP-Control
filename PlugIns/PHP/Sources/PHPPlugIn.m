@@ -25,6 +25,7 @@
 
 #import "PHPPlugIn.h"
 #import "PHPSwitchControl.h"
+#import "PHPManager.h"
 
 @implementation PHPPlugIn
 
@@ -45,6 +46,10 @@
 	
 	[self setRegistryInfo:dict];
 	[viewController release];
+	
+	PHPManager* manager = [PHPManager sharedPHPManager];
+	
+	NSLog(@"phps %@", [manager availablePHPs]);
 	
 	return YES;
 }

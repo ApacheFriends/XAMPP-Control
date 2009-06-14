@@ -23,15 +23,36 @@
  
  */
 
-#import <Cocoa/Cocoa.h>
-#import <XAMPP Control/XAMPP Control.h>
-#import <PlugIn/PlugIn.h>
+#import "PHP.h"
 
-@interface PHPSwitchControl : XPViewController<PlugInPriorityProtocol> {
-	IBOutlet StatusIndicatorView* statusIndicator;
-	IBOutlet NSPopUpButton* phpVersionSwitch;
+
+@implementation PHP
+
+- (void) dealloc
+{
+	[self setVersion:Nil];
+	
+	[super dealloc];
 }
 
-- (void) updatePHPVersionsMenu;
+
+- (NSString*) version
+{
+	return _version;
+}
+
+- (void) setVersion:(NSString*)string
+{
+	if ([string isEqualToString:_version])
+		return;
+	
+	[_version release];
+	_version = [string retain];
+}
+
+- (NSString*) description
+{
+	return [NSString stringWithFormat:@"<%@(%p) %@>", [self className], self, [self version]];
+}
 
 @end
