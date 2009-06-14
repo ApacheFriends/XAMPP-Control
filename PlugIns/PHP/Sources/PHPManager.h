@@ -28,7 +28,8 @@
 @class PHP;
 
 @interface PHPManager : NSObject {
-	NSArray* _availablePHPs;
+	NSArray*	_availablePHPs;
+	PHP*		_activePHP;
 }
 
 + (id) sharedPHPManager;

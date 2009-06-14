@@ -24,7 +24,7 @@
  */
 
 #import "PHP.h"
-
+#import "PHPManager.h"
 
 @implementation PHP
 
@@ -48,6 +48,11 @@
 	
 	[_version release];
 	_version = [string retain];
+}
+
+- (BOOL) isActive
+{
+	return [self isEqual:[[PHPManager sharedPHPManager] activePHP]];
 }
 
 - (NSString*) description

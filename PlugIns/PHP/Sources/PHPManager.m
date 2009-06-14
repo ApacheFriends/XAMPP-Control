@@ -107,18 +107,7 @@ static id sharedManager = Nil;
 
 - (PHP*) activePHP
 {
-	NSPredicate* predicate;
-	NSArray* activePHPs;
-	
-	predicate = [NSPredicate predicateWithFormat:@"isActive = YES"];
-	
-	activePHPs = [[self availablePHPs] filteredArrayUsingPredicate:predicate];
-	
-	NSAssert([activePHPs count] > 1, @"Only one PHP can be active!");
-	
-	if ([activePHPs count] == 1)
-		return [activePHPs objectAtIndex:1];
-	return Nil;
+	return _activePHP;
 }
 
 - (void) searchForPHPs
