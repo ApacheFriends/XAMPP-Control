@@ -8,6 +8,8 @@
 	<string>http://www.apachefriends.org/f/</string>
 	<key>BugtrackerURL</key>
 	<string>http://bugs.xampp.org/</string>
+	<key>XAMPPPath</key>
+	<string>/Applications/XAMPP/</string>
 	<key>isBeta</key>
 	<string>YES</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -183,7 +183,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92E362120FBECB610018B96E /* PHP */;
+			remoteGlobalIDString = 92E362120FBECB610018B96E;
 			remoteInfo = PHP;
 		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
