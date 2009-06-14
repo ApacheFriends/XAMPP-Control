@@ -19,6 +19,7 @@
 				92E28F450FD4165100DBA78F /* PBXTargetDependency */,
 				92E28F5A0FD416FF00DBA78F /* PBXTargetDependency */,
 				928EF3430FD46A64002FC497 /* PBXTargetDependency */,
+				92DBE2190FE50E90009D4503 /* PBXTargetDependency */,
 			);
 			name = BetaRelease;
 			productName = BetaRelease;
@@ -102,6 +103,7 @@
 		92D8EAC90FBEB258005010BC /* IndicatorRed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */; };
 		92D8EACA0FBEB258005010BC /* IndicatorYellow.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */; };
 		92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */; };
+		92DBE2210FE50E97009D4503 /* PHP.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
 		92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */; };
 		92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */; };
 		92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9257D7CD0FA1F14F002BF955 /* AssistantController.h */; };
@@ -171,6 +173,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F;
 			remoteInfo = BetaSupport;
+		};
+		92DBE2180FE50E90009D4503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E362120FBECB610018B96E /* PHP */;
+			remoteInfo = PHP;
 		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -270,6 +279,7 @@
 			dstPath = "XAMPP Control.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
+				92DBE2210FE50E97009D4503 /* PHP.plugin in CopyFiles */,
 				928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */,
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
@@ -1251,6 +1261,11 @@
 			target = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
 			targetProxy = 928EF3420FD46A64002FC497 /* PBXContainerItemProxy */;
 		};
+		92DBE2190FE50E90009D4503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E362120FBECB610018B96E /* PHP */;
+			targetProxy = 92DBE2180FE50E90009D4503 /* PBXContainerItemProxy */;
+		};
 		92E28EC80FD4055700DBA78F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* XAMPP Control */;
@@ -1586,6 +1601,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
 				INFOPLIST_FILE = PlugIns/PHP/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
@@ -1593,6 +1609,8 @@
 					Foundation,
 					"-framework",
 					AppKit,
+					"-bundle_loader",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = PHP;
@@ -1614,6 +1632,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
 				INFOPLIST_FILE = PlugIns/PHP/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				OTHER_LDFLAGS = (
@@ -1621,6 +1640,8 @@
 					Foundation,
 					"-framework",
 					AppKit,
+					"-bundle_loader",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = PHP;
