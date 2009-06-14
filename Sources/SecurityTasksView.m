@@ -120,17 +120,17 @@
 			[[dict objectForKey:@"progressIndicator"] setFrame:indicatorRect];
 		
 		[informations addObject:dict];
-		NSLog(@"row %f; height %f", yPos, rowHeight);
+		DLog(@"row %f; height %f", yPos, rowHeight);
 
 		yPos += rowHeight + 5.f;
-		NSLog(@"row %f", yPos);
+		DLog(@"row %f", yPos);
 	}
 	
 	/* Ok now everything is calculated center the list verticaly :)
 	
 	centerOffset = (NSHeight([self bounds]) - (yPos - 5.f)) / 2.f;
 	
-	NSLog(@"height: %f content height: %f and centerOffset: %f", NSHeight([self bounds]), yPos -5.f , centerOffset);
+	DLog(@"height: %f content height: %f and centerOffset: %f", NSHeight([self bounds]), yPos -5.f , centerOffset);
 	
 	if (centerOffset > 0.f) {
 		NSMutableDictionary* dict;
@@ -155,7 +155,7 @@
 	
 	[self setTaskInformations:informations];
 	
-	NSLog(@"informations %@", informations);
+	DLog(@"informations %@", informations);
 }
 
 - (double) textWidth

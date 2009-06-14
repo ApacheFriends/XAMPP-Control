@@ -56,7 +56,7 @@
 		[NSApp presentError:error];
 	}
 	
-	NSLog(@"%@", [[manager registry] stringFromRegistryContent]);
+	DLog(@"%@", [[manager registry] stringFromRegistryContent]);
 		
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];

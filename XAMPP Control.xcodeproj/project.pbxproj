@@ -104,6 +104,10 @@
 		92D8EACA0FBEB258005010BC /* IndicatorYellow.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */; };
 		92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */; };
 		92DBE2210FE50E97009D4503 /* PHP.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
+		92DBE2430FE523A3009D4503 /* PHP.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2420FE523A3009D4503 /* PHP.m */; };
+		92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2450FE524C6009D4503 /* Debug.h */; };
+		92DBE2480FE524C6009D4503 /* Debug.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2460FE524C6009D4503 /* Debug.m */; };
+		92DBE2490FE524C6009D4503 /* Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2460FE524C6009D4503 /* Debug.m */; };
 		92E28EBB0FD4044200DBA78F /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */; };
 		92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E28EBD0FD4045100DBA78F /* BetaFeedbackController.m */; };
 		92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9257D7CD0FA1F14F002BF955 /* AssistantController.h */; };
@@ -270,6 +274,8 @@
 				92E28FE90FD451E500DBA78F /* NSObject+Unproxy.h in CopyFiles */,
 				92E290140FD4546B00DBA78F /* XPPlugInHooks.h in CopyFiles */,
 				92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */,
+				92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */,
+				92DBE2480FE524C6009D4503 /* Debug.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +404,10 @@
 		92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorRed.tiff; sourceTree = "<group>"; };
 		92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorYellow.tiff; sourceTree = "<group>"; };
 		92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = IndicatorUnknown.tiff; sourceTree = "<group>"; };
+		92DBE2410FE523A3009D4503 /* PHP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHP.h; sourceTree = "<group>"; };
+		92DBE2420FE523A3009D4503 /* PHP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHP.m; sourceTree = "<group>"; };
+		92DBE2450FE524C6009D4503 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
+		92DBE2460FE524C6009D4503 /* Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debug.m; sourceTree = "<group>"; };
 		92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetaSupport.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E28EAF0FD4034100DBA78F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E28EBA0FD4044200DBA78F /* BetaFeedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetaFeedback.xib; sourceTree = "<group>"; };
@@ -555,6 +565,8 @@
 				92E361740FBEB8390018B96E /* StatusIndicatorView.h */,
 				92E361750FBEB8390018B96E /* StatusIndicatorView.m */,
 				92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */,
+				92DBE2450FE524C6009D4503 /* Debug.h */,
+				92DBE2460FE524C6009D4503 /* Debug.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -802,6 +814,8 @@
 				92E3627B0FBED1FF0018B96E /* PHPPlugIn.m */,
 				92E362D40FBEDC1C0018B96E /* PHPSwitchControl.h */,
 				92E362D50FBEDC1C0018B96E /* PHPSwitchControl.m */,
+				92DBE2410FE523A3009D4503 /* PHP.h */,
+				92DBE2420FE523A3009D4503 /* PHP.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1192,6 +1206,7 @@
 				92E28F240FD4084700DBA78F /* XPRootTask.m in Sources */,
 				92E28F250FD4084800DBA78F /* XPViewController.m in Sources */,
 				92E290090FD452BB00DBA78F /* XPPlugInHooks.m in Sources */,
+				92DBE2490FE524C6009D4503 /* Debug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1225,7 @@
 			files = (
 				92E3627C0FBED1FF0018B96E /* PHPPlugIn.m in Sources */,
 				92E362D60FBEDC1C0018B96E /* PHPSwitchControl.m in Sources */,
+				92DBE2430FE523A3009D4503 /* PHP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

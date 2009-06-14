@@ -61,7 +61,7 @@
 	for (int i = 0; i < [securityChecks count]; i++) {
 		id obj = [securityChecks objectAtIndex:i];
 		if (![obj conformsToProtocol:@protocol(SecurityCheckProtocol)]) {
-			NSLog(@"%@ does not conforms to the SecurityCheckProtocol!", obj);
+			DLog(@"%@ does not conforms to the SecurityCheckProtocol!", obj);
 			[securityChecks removeObjectAtIndex:i];
 			i--;
 		}

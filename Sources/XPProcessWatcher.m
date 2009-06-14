@@ -120,7 +120,7 @@ enum {
 			[self setupWatchForPID];
 		}
 		else {
-			NSLog(@"PID File %@ created but process is not running");
+			DLog(@"PID File %@ created but process is not running");
 		}
 
 	}

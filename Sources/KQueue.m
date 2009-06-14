@@ -193,7 +193,7 @@ NSString *KQueueSignalFilter = @"KQueueSignalFilter";
 			}
 		}
 		@catch (NSException * e) {
-			NSLog(@"Ignoring Exception in [%@ watcherThread]: %@", [self className], e);
+			DLog(@"Ignoring Exception in [%@ watcherThread]: %@", [self className], e);
 		}
 		@finally {
 			[pool release];

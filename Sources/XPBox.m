@@ -32,7 +32,7 @@ static BOOL hasFillColorMethods = NO;
 + (void)initialize
 {
 	if ([super instancesRespondToSelector:@selector(fillColor)]) {
-		NSLog(@"NSBox supports fillColor.");
+		DLog(@"NSBox supports fillColor.");
 		hasFillColorMethods = YES;
 	}
 }

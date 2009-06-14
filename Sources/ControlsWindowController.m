@@ -120,7 +120,7 @@
 	while ((controller = [enumerator nextObject])) {
 		
 		if (![controller isKindOfClass:[XPViewController class]]) {
-			NSLog(@"%@ is not an XPViewController!", controls);
+			DLog(@"%@ is not an XPViewController!", controls);
 			continue;
 		}
 		

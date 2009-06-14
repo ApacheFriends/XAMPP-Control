@@ -45,7 +45,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	self = [super init];
 	if (self != nil) {
 		if (![NSBundle loadNibNamed:@"Assistant" owner:self]) {
-			NSLog(@"failed!!");
+			DLog(@"failed!!");
 			[self release];
 			return Nil;
 		}
