@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -42,6 +42,7 @@
 
 /* Security Check */
 #import <XAMPP Control/SecurityCheckProtocol.h>
+#import <XAMPP Control/SecurityTaskProtocol.h>
 
 /* Utilitys */
 #import <XAMPP Control/XPRootTask.h>

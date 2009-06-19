@@ -25,9 +25,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XAMPP Control/XAMPP Control.h>
-#import <PlugIn/PlugIn.h>
 
-@interface MySQLModule : XPModule<PlugInPriorityProtocol> {
+@interface MySQLSkipNetworkingTask : NSObject<SecurityTaskProtocol> {
 
 }
 

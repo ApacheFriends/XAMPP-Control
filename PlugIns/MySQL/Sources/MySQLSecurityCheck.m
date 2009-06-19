@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -25,9 +25,11 @@
 
 #import "MySQLSecurityCheck.h"
 
+#import "MySQLSkipNetworkingTask.h"
+
 @interface MySQLSecurityCheck (PRIVAT)
 
-- (void) setLocalizedTaskTitles:(NSArray*)anArray;
+- (void) setTasks:(NSArray*)anArray;
 
 @end
 
@@ -51,6 +53,14 @@
 	return self;
 }
 
+- (void) dealloc
+{
+	[self setTasks:Nil];
+	
+	[super dealloc];
+}
+
+
 - (BOOL) valid
 {
 	if (setRootPassword) {	
@@ -66,48 +76,36 @@
 
 - (void) calcualteTasks
 {
-	NSMutableArray* taskTitels = [NSMutableArray array];
+	NSMutableArray* tasks = [NSMutableArray array];
 	
 	if (skipNetworking)
-		[taskTitels addObject:NSLocalizedString(@"DisableMySQLNetworking", @"Task description for the disable MySQL networking task")];
+		[tasks addObject:[[MySQLSkipNetworkingTask new] autorelease]];
 	
 	if (setRootPassword)
-		[taskTitels addObject:NSLocalizedString(@"SetMySQLRootPassword", @"Task description for the set mysql's root password task.")];
+		[tasks addObject:NSLocalizedString(@"SetMySQLRootPassword", @"Task description for the set mysql's root password task.")];
 	
 	if (setPMAPassword)
-		[taskTitels addObject:NSLocalizedString(@"SetRandomMySQLPMAPassword", @"Taskdrscription for the set a random mysql's pma password task.")];
+		[tasks addObject:NSLocalizedString(@"SetRandomMySQLPMAPassword", @"Taskdrscription for the set a random mysql's pma password task.")];
 		
-	[self setLocalizedTaskTitles:taskTitels];
+	[self setTasks:tasks];
 }
 
-- (NSArray*) localizedTaskTitles
+- (NSArray*) tasks
 {
-	return localizedTaskTitles;
-}
-
-- (uint) tasks
-{
-	return [localizedTaskTitles count];
-}
-
-- (BOOL) doTask:(uint)task
-{
-	sleep(2);
-	[[NSException exceptionWithName:@"blub" reason:@"blub2" userInfo:Nil] raise];
-	return YES;
+	return _tasks;
 }
 
 @end
 
 @implementation MySQLSecurityCheck (PRIVAT)
 
-- (void) setLocalizedTaskTitles:(NSArray*)anArray
+- (void) setTasks:(NSArray*)anArray
 {
-	if ([anArray isEqualToArray:localizedTaskTitles])
+	if ([anArray isEqualToArray:_tasks])
 		return;
 	
-	[localizedTaskTitles release];
-	localizedTaskTitles = [anArray retain];
+	[_tasks release];
+	_tasks = [anArray retain];
 }
 
 @end

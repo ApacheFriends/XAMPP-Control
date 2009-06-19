@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -25,6 +25,7 @@
 
 #import "SecurityCheckWorkPage.h"
 #import "SecurityCheckProtocol.h"
+#import "SecurityTaskProtocol.h"
 #import "SecurityTasksView.h"
 
 @implementation SecurityCheckWorkPage
@@ -71,26 +72,44 @@
 	return securityChecks;
 }
 
+- (NSArray*) tasks
+{
+	return _tasks;
+}
+
+- (void) setTasks:(NSArray*)anArray
+{
+	if ([anArray isEqualToArray:_tasks])
+		return;
+	
+	[_tasks release];
+	_tasks = [anArray retain];
+}
+
 #pragma mark -
 #pragma mark Tasks
 
 - (void) pageWillAppear
 {
-	/*
-	 First calulate all tasks, thenn add them to our tasksArray
-	 */
-	
+	// Well add the titels to the TasksView 
 	NSEnumerator* enumerator = [securityChecks objectEnumerator];
+	NSMutableArray* taskTitels = [NSMutableArray array];
 	NSMutableArray* tasks = [NSMutableArray array];
 	id<SecurityCheckProtocol> securityCheck;
 	
 	while ((securityCheck = [enumerator nextObject])) {
-		[securityCheck calcualteTasks];
+		NSEnumerator* tasksEnumerator = [[securityCheck tasks] objectEnumerator];
+		id<SecurityTaskProtocol> task;
 		
-		[tasks addObjectsFromArray:[securityCheck localizedTaskTitles]];
+		while ((task = [tasksEnumerator nextObject])) {
+			[taskTitels addObject:[task localizedTitle]];
+		}
+		
+		[tasks addObjectsFromArray:[securityCheck tasks]];
 	}
 	
-	[tasksView setTasks:tasks];
+	[tasksView setTaskTitels:taskTitels];
+	[self setTasks:tasks];
 }
 
 - (void) pageDidAppear
@@ -102,31 +121,28 @@
 
 - (void) work
 {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	NSEnumerator* enumerator = [securityChecks objectEnumerator];
-	id<SecurityCheckProtocol,NSObject> securityCheck;
+	NSAutoreleasePool* pool = [NSAutoreleasePool new];
+	NSEnumerator* enumerator = [[self tasks] objectEnumerator];
+	id<SecurityTaskProtocol,NSObject> task;
 	uint currentTask = 0;
 	
-	while ((securityCheck = [enumerator nextObject])) {
-		for (int i = 0; i < [securityCheck tasks]; i++) {
-			[tasksView setStatus:SecurityTaskWorkingStatus forTask:currentTask];
-			@try {
-				if ([securityCheck doTask:i])
-					[tasksView setStatus:SecurityTaskSuccessStatus forTask:currentTask];
-				else
-					[tasksView setStatus:SecurityTaskFailStatus forTask:currentTask];
-			}
-			@catch (NSException * e) {
-				NSLog(@"Exception while [%@<%p> doTask:%i]: %@", NSStringFromClass([securityCheck class]), securityCheck, i, e);
+	while ((task = [enumerator nextObject])) {
+		NSLog(@"%@", task);
+		[tasksView setStatus:SecurityTaskWorkingStatus forTask:currentTask];
+		@try {
+			if ([task run])
+				[tasksView setStatus:SecurityTaskSuccessStatus forTask:currentTask];
+			else
 				[tasksView setStatus:SecurityTaskFailStatus forTask:currentTask];
-			}
-			@finally {
-				currentTask++;
-			}
+		}
+		@catch (NSException * e) {
+			NSLog(@"Exception while [%@<%p> run]: %@", NSStringFromClass([task class]), task, e);
+			[tasksView setStatus:SecurityTaskFailStatus forTask:currentTask];
+		}
+		@finally {
+			currentTask++;
 		}
 	}
-	
-	[[self assistantController] performSelectorOnMainThread:@selector(continue:) withObject:self waitUntilDone:NO];
 	
 	[pool drain];
 	[pool release];

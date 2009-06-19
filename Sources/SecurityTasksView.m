@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -44,28 +44,28 @@
 
 - (void) dealloc
 {
-	[self setTasks:Nil];
+	[self setTaskTitels:Nil];
 	
 	[super dealloc];
 }
 
 
-- (void) setTasks:(NSArray*)anArray
+- (void) setTaskTitels:(NSArray*)anArray
 {
-	if ([anArray isEqualToArray:tasks])
+	if ([anArray isEqualToArray:taskTitels])
 		return;
 	
-	[tasks release];
-	tasks = [anArray retain];
+	[taskTitels release];
+	taskTitels = [anArray retain];
 
 	[self setTaskInformations:Nil];
 	
 	[self recalculateInformations];
 }
 
-- (NSArray*) tasks
+- (NSArray*) taskTitels
 {
-	return tasks;
+	return taskTitels;
 }
 
 - (void) setTaskInformations:(NSArray*)anArray
@@ -88,11 +88,11 @@
 	int i;
 	float yPos = 0;
 	float centerOffset = 0.f;
-	informations = [NSMutableArray arrayWithCapacity:[[self tasks] count]];
+	informations = [NSMutableArray arrayWithCapacity:[[self taskTitels] count]];
 		
-	for (i = 0; i < [[self tasks] count]; i++) {
+	for (i = 0; i < [[self taskTitels] count]; i++) {
 		NSMutableDictionary* dict = [[self taskInformations] objectAtIndex:i];
-		NSString* taskString = [[self tasks] objectAtIndex:i];
+		NSString* taskString = [[self taskTitels] objectAtIndex:i];
 		float rowHeight = 0;
 		NSRect textRect;
 		NSRect indicatorRect;
@@ -265,7 +265,7 @@
 	textCell = [NSTextFieldCell new];
 	imageCell = [NSImageCell new];
 	informationsEnumerator = [[self taskInformations] objectEnumerator];
-	tasksEnumerator = [[self tasks] objectEnumerator];
+	tasksEnumerator = [[self taskTitels] objectEnumerator];
 	
 	while ((taskString = [tasksEnumerator nextObject]) 
 		   && (informationsDict = [informationsEnumerator nextObject])) {
@@ -274,7 +274,10 @@
 		
 		switch ([[informationsDict valueForKey:@"status"] intValue]) {
 			case SecurityTaskSuccessStatus:
-				[imageCell setImage:[NSImage imageNamed:@"Success"]];
+				[imageCell setImage:[NSImage imageNamed:@"TaskSuccess"]];
+				break;
+			case SecurityTaskFailStatus:
+				[imageCell setImage:[NSImage imageNamed:@"TaskFailed"]];
 				break;
 			default:
 				[imageCell setImage:Nil];

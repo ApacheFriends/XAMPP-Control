@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -25,7 +25,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@protocol SecurityCheckProtocol
+@protocol SecurityTaskProtocol
 
 - (NSString*) localizedTitle;
 - (BOOL) run;

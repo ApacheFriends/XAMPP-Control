@@ -4,7 +4,7 @@ XAMPP
 Copyright (C) 2009 by Apache Friends
 
 Authors of this file:
-- Christian Speich <kleinweby@apachefriends>
+- Christian Speich <kleinweby@apachefriends.org>
 
 This file is part of XAMPP.
 

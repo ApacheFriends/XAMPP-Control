@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -32,11 +32,16 @@
 @interface SecurityCheckWorkPage : AssistantPage {
 	IBOutlet SecurityTasksView* tasksView;
 	NSArray* securityChecks;
+	
+	NSArray* _tasks;
 }
 
 - (id) initWithSecurityChecks:(NSArray*)anArray;
 
 - (void) setSecurityChecks:(NSArray*)anArray;
 - (NSArray*)securityChecks;
+
+- (NSArray*) tasks;
+- (void) setTasks:(NSArray*)anArray;
 
 @end

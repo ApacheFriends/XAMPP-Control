@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -36,13 +36,13 @@ enum _SecurityTaskStatus {
 typedef enum _SecurityTaskStatus SecurityTaskStatus;
 
 @interface SecurityTasksView : NSView {
-	NSArray* tasks;
+	NSArray* taskTitels;
 	
 	NSArray* taskInformations;
 }
 
-- (void) setTasks:(NSArray*)anArray;
-- (NSArray*) tasks;
+- (void) setTaskTitels:(NSArray*)anArray;
+- (NSArray*) taskTitels;
 
 - (SecurityTaskStatus) statusForTask:(uint)task;
 - (void) setStatus:(SecurityTaskStatus)status forTask:(uint)task;

@@ -23,12 +23,22 @@
  
  */
 
-#import <Cocoa/Cocoa.h>
-#import <XAMPP Control/XAMPP Control.h>
-#import <PlugIn/PlugIn.h>
+#import "MySQLSkipNetworkingTask.h"
 
-@interface MySQLModule : XPModule<PlugInPriorityProtocol> {
 
+@implementation MySQLSkipNetworkingTask
+
+- (NSString*) localizedTitle
+{
+	return NSLocalizedString(@"DisableMySQLNetworking", 
+							 @"Task description for the disable MySQL networking task");
+}
+
+- (BOOL) run
+{
+	NSLog(@"run");
+	sleep(3);
+	return YES;
 }
 
 @end

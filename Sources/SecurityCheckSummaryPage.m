@@ -4,7 +4,7 @@
  Copyright (C) 2009 by Apache Friends
  
  Authors of this file:
- - Christian Speich <kleinweby@apachefriends>
+ - Christian Speich <kleinweby@apachefriends.org>
  
  This file is part of XAMPP.
  
@@ -25,6 +25,7 @@
 
 #import "SecurityCheckSummaryPage.h"
 #import "SecurityCheckProtocol.h"
+#import "SecurityTaskProtocol.h"
 #import "SecurityTasksView.h"
 
 @implementation SecurityCheckSummaryPage
@@ -76,21 +77,24 @@
 
 - (void) pageWillAppear
 {
-	/*
-	  First calulate all tasks, thenn add them to our tasksArray
-	 */
+	// Calculate all tasks
+	[securityChecks makeObjectsPerformSelector:@selector(calcualteTasks)];
 	
+	// Well add the titels to the TasksView 
 	NSEnumerator* enumerator = [securityChecks objectEnumerator];
-	NSMutableArray* tasks = [NSMutableArray array];
+	NSMutableArray* taskTitels = [NSMutableArray array];
 	id<SecurityCheckProtocol> securityCheck;
 	
 	while ((securityCheck = [enumerator nextObject])) {
-		[securityCheck calcualteTasks];
+		NSEnumerator* tasksEnumerator = [[securityCheck tasks] objectEnumerator];
+		id<SecurityTaskProtocol> task;
 		
-		[tasks addObjectsFromArray:[securityCheck localizedTaskTitles]];
+		while ((task = [tasksEnumerator nextObject])) {
+			[taskTitels addObject:[task localizedTitle]];
+		}
 	}
 	
-	[tasksView setTasks:tasks];
+	[tasksView setTaskTitels:taskTitels];
 }
 
 @end
