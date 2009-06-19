@@ -91,6 +91,7 @@
 		92BDB9990FA218A800B8D0D7 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9980FA218A800B8D0D7 /* About.xib */; };
 		92BDB99B0FA218B000B8D0D7 /* PHPSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99A0FA218B000B8D0D7 /* PHPSwitchView.xib */; };
 		92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */; };
+		92C87B4B0FEBBF85007C6F87 /* SecurityTaskProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */; };
 		92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CB83BD0FE1167500AA0CB6 /* Localizable.strings */; };
 		92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */; };
 		92CBCBBE0FC02F8800C136BE /* Success.png in Resources */ = {isa = PBXBuildFile; fileRef = 92CBCBBD0FC02F8800C136BE /* Success.png */; };
@@ -291,6 +292,7 @@
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
 				92E28F2C0FD408B500DBA78F /* Apache.plugin in CopyFiles */,
+				92C87B4B0FEBBF85007C6F87 /* SecurityTaskProtocol.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +394,7 @@
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		929098290F50243900BBE38B /* GettingStarted.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = GettingStarted.html; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = ../build/Debug/PlugIn.framework; sourceTree = SOURCE_ROOT; };
+		92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTaskProtocol.h; sourceTree = "<group>"; };
 		92CB83BB0FE1162A00AA0CB6 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPLocalization.h; sourceTree = "<group>"; };
 		92CBCBBD0FC02F8800C136BE /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
@@ -683,6 +686,7 @@
 				922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */,
 				92CBCBC20FC032B900C136BE /* SecurityTasksView.h */,
 				92CBCBC30FC032B900C136BE /* SecurityTasksView.m */,
+				92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */,
 			);
 			name = SecurityCheck;
 			sourceTree = "<group>";

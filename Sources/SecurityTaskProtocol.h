@@ -23,10 +23,11 @@
  
  */
 
+#import <Cocoa/Cocoa.h>
+
 @protocol SecurityCheckProtocol
 
-- (void) calcualteTasks;
-
-- (NSArray*) tasks;
+- (NSString*) localizedTitle;
+- (BOOL) run;
 
 @end
