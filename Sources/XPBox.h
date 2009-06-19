@@ -27,7 +27,7 @@
 
 
 @interface XPBox : NSBox {
-	NSColor *fillColor;
+	NSColor *xp_fillColor;
 }
 
 - (void)setFillColor:(NSColor *)fillColor;

@@ -41,15 +41,26 @@ static BOOL hasFillColorMethods = NO;
 {
 	if (hasFillColorMethods)
 		return [super setFillColor:fillColor];
+	else {
+		[xp_fillColor release];
+		xp_fillColor = [fillColor retain];
+	}
 }
 
 - (NSColor *)fillColor
 {
 	if (hasFillColorMethods)
 		return [super fillColor];
+	else
+		return xp_fillColor;
 }
 
 - (void)drawRect:(NSRect)rect {
+	if (!hasFillColorMethods) {
+		NSLog(@"%@", [self fillColor]);
+		[[self fillColor] setFill];
+		NSRectFill(rect);
+	}
     [super drawRect:rect];
 }
 
