@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.SystemVersion">9J61</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.AppKitVersion">949.46</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -205,8 +205,8 @@
 						<object class="NSTextFieldCell" key="NSCell" id="105714939">
 							<int key="NSCellFlags">67239424</int>
 							<int key="NSCellFlags2">272629760</int>
-							<string type="base64-UTF8" key="NSContents">Tm9ybWFseSB5b3UgZG9uJ3QgbmVlZCB0byBhY2Nlc3NuIE15U1FMIHZpYSB0aGUgTmV0d29yaywgc28g
-eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
+							<string type="base64-UTF8" key="NSContents">Tm9ybWFseSB5b3UgZG9uJ3QgbmVlZCB0byBhY2Nlc3MgTXlTUUwgdmlhIHRoZSBOZXR3b3JrLCBzbyB5
+b3UgY2FuIHNpbXBseSBkaXNhYmxlIE15U1FMJ3MgbmV0d29ya2luZy4</string>
 							<object class="NSFont" key="NSSupport" id="141431333">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">1.300000e+01</double>
@@ -632,7 +632,7 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 					<string key="superclassName">XPViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Sources/AssistantPage.h</string>
+						<string key="minorKey">Sources/Assistant/AssistantPage.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -653,7 +653,14 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Sources/PlugIns/MySQL/MySQLSecurityCheck.h</string>
+						<string key="minorKey">PlugIns/MySQL/Sources/MySQLSecurityCheck.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Sources/NSObject (MainThread).h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -665,7 +672,7 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">XPViewController</string>
-					<string key="superclassName">NSObject</string>
+					<string key="superclassName">NSResponder</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">view</string>
 						<string key="NS.object.0">NSView</string>
@@ -678,7 +685,7 @@ eW91IGNhbiBzaW1wbHkgZGlzYWJsZSBNeVNRTCdzIG5ldHdvcmtpbmcuA</string>
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../../XAMPP Control.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../../../../XAMPP Control.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>
