@@ -60,7 +60,10 @@
 		
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
-	securityCheckController = [[SecurityCheckController alloc] init];	
+	securityCheckController = [[SecurityCheckController alloc] init];
+	
+	// Always show the Controls Window on startup
+	[controlsWindowController showWindow:self];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender
