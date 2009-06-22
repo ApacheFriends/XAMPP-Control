@@ -59,7 +59,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="992943018">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">205520896</int>
-								<string key="NSContents">Um XAMPP Besser zu machen, bitten wir dich um deine Erfahrungen mit dieser Beta Version. Teile uns bitte auch mit wenn du keine Probleme bemerkst.</string>
+								<string key="NSContents">Um XAMPP Besser zu machen, bitten wir dich um deine Erfahrungen mit dieser Beta Version. Teile uns bitte auch mit, wenn du keine Probleme bemerkst.</string>
 								<object class="NSFont" key="NSSupport" id="749282659">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">1.300000e+01</double>

@@ -51,23 +51,25 @@
 
 - (NSMutableArray *) mutableSecurityChecksArray {
 	PlugInRegistry* plugInRegistry = [[PlugInManager sharedPlugInManager] registry];
-	NSMutableArray* securityChecks = [[plugInRegistry objectsForCategorie:XPSecurityChecksPlugInCategorie] mutableCopy];
+	NSArray* securityChecksAll = [plugInRegistry objectsForCategorie:XPSecurityChecksPlugInCategorie];
+	NSMutableArray* securityChecks = [NSMutableArray array];
 	
 	/* Go thorugh our array of securitychecks and check if it confroms to the securitycheckprotocol.
 	   If not, we remove it from the array and decrement i to not exceed the array bounds.
 	 
 	   TODO: Maybe this can be done with an predicate? */
 	
-	for (int i = 0; i < [securityChecks count]; i++) {
-		id obj = [securityChecks objectAtIndex:i];
-		if (![obj conformsToProtocol:@protocol(SecurityCheckProtocol)]) {
+	for (int i = 0; i < [securityChecksAll count]; i++) {
+		id obj = [securityChecksAll objectAtIndex:i];
+		if ([obj conformsToProtocol:@protocol(SecurityCheckProtocol)]) {
+			[securityChecks addObject:obj];
+		}
+		else {
 			DLog(@"%@ does not conforms to the SecurityCheckProtocol!", obj);
-			[securityChecks removeObjectAtIndex:i];
-			i--;
 		}
 	}
 	
-	return [securityChecks autorelease];
+	return securityChecks;
 }
 
 - (BOOL) setupPages
