@@ -26,7 +26,7 @@
 
 f=/Applications/XAMPP/etc/my.cnf
 
-$awk '
+awk '
 /^\[mysqld\]/,/^\[mysqldump\]/ { 
 	if($1=="#skip-networking") {
 		print "# commented in by xampp security"

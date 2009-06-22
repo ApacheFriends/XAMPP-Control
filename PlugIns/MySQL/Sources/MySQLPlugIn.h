@@ -26,8 +26,13 @@
 #import <Cocoa/Cocoa.h>
 #import <PlugIn/PlugIn.h>
 
-@interface MySQLPlugIn : PlugIn {
+@class MySQLModule;
 
+@interface MySQLPlugIn : PlugIn {
+	MySQLModule*	_module;
 }
+
+- (MySQLModule*) module;
+- (void) setModule:(MySQLModule*) module;
 
 @end

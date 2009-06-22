@@ -1,0 +1,26 @@
+﻿/* Close Button */
+"CloseButton" = "Schließen";
+
+/* Send Feedback */
+"SendFeedbackButton" = "Sende Feedback";
+
+/* \"Sending Feedback... Thank you!\" */
+"SendingFeedbackLabel" = "Sende Feedback... Danke!";
+
+/* Localized Key for the System Architecture */
+"System Architecture" = "System Architektur";
+
+/* Localized Key for the System Version */
+"System Version" = "System Version";
+
+/* Thank you for sending! */
+"ThankForSendingFeedback" = "Danke!";
+
+/* Short 'Beta!' for the upper right in the windows titel bar */
+"WindowButtonLabel" = "Beta!";
+
+/* A tooltip that indicate that the user is currently using an Beta version of XAMPP and should provide feedback */
+"WindowButtonToolTip" = "Du hast eine Beta Version von XAMPP installiert. Bitte schicke uns dein Feedback!";
+
+/* Localized Key for the XAMPP Version */
+"XAMPP Version" = "XAMPP Version";

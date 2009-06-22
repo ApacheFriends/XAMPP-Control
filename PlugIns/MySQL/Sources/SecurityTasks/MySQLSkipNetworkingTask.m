@@ -23,8 +23,11 @@
  
  */
 
-#import "MySQLSkipNetworkingTask.h"
+#import <PlugIn/PlugIn.h>
 
+#import "MySQLSkipNetworkingTask.h"
+#import "MySQLPlugIn.h"
+#import "MySQLModule.h"
 
 @implementation MySQLSkipNetworkingTask
 
@@ -36,9 +39,47 @@
 
 - (BOOL) run
 {
-	NSLog(@"run");
-	sleep(3);
-	return YES;
+	MySQLPlugIn* plugIn;
+	MySQLModule* module;
+	XPRootTask* enableSkipNetworking;
+	NSBundle* bundle;
+	BOOL shouldStart = NO;
+	BOOL success = YES;
+	
+	bundle = [NSBundle bundleForClass:[self class]];
+	
+	plugIn = [[[[PlugInManager sharedPlugInManager] plugInInformations]
+			   objectForKey:[bundle bundleIdentifier]]
+			  objectForKey:@"instance"];
+	module = [plugIn module];
+	
+	if ([XPRootTask authorize])
+		return NO;
+	
+	if ([module status] == XPRunning) {
+		shouldStart = YES;
+// TODO: Missing error check
+		[module stop];
+	}
+	
+	enableSkipNetworking = [XPRootTask new];
+	
+	[enableSkipNetworking setLaunchPath:[bundle pathForAuxiliaryExecutable:@"enableSkipNetworking.sh"]];
+	
+	[enableSkipNetworking launch];
+	[enableSkipNetworking waitUntilExit];
+	
+	if ([enableSkipNetworking terminationStatus] != 0)
+		success = NO;
+	
+	[enableSkipNetworking release];
+	
+	if (shouldStart) {
+// TODO: Missing error check
+		[module start];
+	}
+	
+	return success;
 }
 
 @end

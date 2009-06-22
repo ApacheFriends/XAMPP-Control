@@ -30,6 +30,14 @@
 
 @implementation MySQLPlugIn
 
+- (void) dealloc
+{
+	[self setModule:Nil];
+	
+	[super dealloc];
+}
+
+
 - (BOOL) setupError:(NSError**)anError
 {
 	NSMutableDictionary *dict;
@@ -40,9 +48,11 @@
 	
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
-	module = [MySQLModule new];
+	module = [MySQLModule new];	
 	controller = [[MySQLModuleViewController alloc] initWithModule:module];
 	securityCheck = [MySQLSecurityCheck new];
+	
+	[self setModule:module];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
 	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
@@ -57,6 +67,17 @@
 	[self setRegistryInfo:dict];
 	
 	return YES;
+}
+
+- (MySQLModule*) module
+{
+	return _module;
+}
+
+- (void) setModule:(MySQLModule*) module
+{
+	[_module release];
+	_module = [module retain];
 }
 
 @end
