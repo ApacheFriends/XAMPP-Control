@@ -128,7 +128,7 @@ static id sharedConfiguration = Nil;
 
 - (BOOL) hasFixRights
 {
-	return [[NSFileManager defaultManager] fileExistsAtPath:[self fullXAMPPPathFor:@"/etc/xampp/fix_rights"]];
+	return [[NSFileManager defaultManager] fileExistsAtPath:[self fullXAMPPPathFor:@"/etc/xampp/rights_fixed"]];
 }
 
 - (NSArray*) PHPVersions
