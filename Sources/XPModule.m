@@ -49,11 +49,11 @@ static NSLock *fixRightsLock = Nil;
 {
 	self = [super init];
 	if (self != nil) {
-		apacheWatcher = [XPProcessWatcher new];
+		processWatcher = [XPProcessWatcher new];
 		pidFile = Nil;
 		status = XPUnknownStatus;
 		
-		[apacheWatcher setDelegate:self];
+		[processWatcher setDelegate:self];
 		
 		if (fixRightsLock == Nil)
 			fixRightsLock = [[NSLock alloc] init];
@@ -64,7 +64,7 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) dealloc
 {
-	[apacheWatcher release];
+	[processWatcher release];
 	[self setName:Nil];
 	[self setPidFile:Nil];
 	
@@ -209,7 +209,7 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) setPidFile:(NSString*) aPidFile
 {
-	[apacheWatcher setPidFile:aPidFile];
+	[processWatcher setPidFile:aPidFile];
 	
 	if ([aPidFile isEqualToString:pidFile])
 		return;
@@ -220,14 +220,14 @@ static NSLock *fixRightsLock = Nil;
 
 - (void) processExited:(XPProcessWatcher*)watcher
 {
-	if ([watcher isEqualTo:apacheWatcher]) {
+	if ([watcher isEqualTo:processWatcher]) {
 		[self setStatus:XPNotRunning];
 	}
 }
 
 - (void) processStarted:(XPProcessWatcher*)watcher
 {
-	if ([watcher isEqualTo:apacheWatcher]) {
+	if ([watcher isEqualTo:processWatcher]) {
 		[self setStatus:XPRunning];
 	}
 }

@@ -29,7 +29,7 @@
 @class XPProcessWatcher;
 
 @interface XPModule : NSObject {
-	XPProcessWatcher* apacheWatcher;
+	XPProcessWatcher* processWatcher;
 	NSString *pidFile;
 	NSString* _name;
 	XPStatus status;
