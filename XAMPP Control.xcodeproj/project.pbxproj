@@ -19,7 +19,6 @@
 				92E28F450FD4165100DBA78F /* PBXTargetDependency */,
 				92E28F5A0FD416FF00DBA78F /* PBXTargetDependency */,
 				928EF3430FD46A64002FC497 /* PBXTargetDependency */,
-				92DBE2190FE50E90009D4503 /* PBXTargetDependency */,
 			);
 			name = BetaRelease;
 			productName = BetaRelease;
@@ -109,7 +108,6 @@
 		92D8EAC90FBEB258005010BC /* IndicatorRed.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC50FBEB258005010BC /* IndicatorRed.tiff */; };
 		92D8EACA0FBEB258005010BC /* IndicatorYellow.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC60FBEB258005010BC /* IndicatorYellow.tiff */; };
 		92D8EACB0FBEB258005010BC /* IndicatorUnknown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 92D8EAC70FBEB258005010BC /* IndicatorUnknown.tiff */; };
-		92DBE2210FE50E97009D4503 /* PHP.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
 		92DBE2430FE523A3009D4503 /* PHP.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2420FE523A3009D4503 /* PHP.m */; };
 		92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2450FE524C6009D4503 /* Debug.h */; };
 		92DBE2480FE524C6009D4503 /* Debug.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2460FE524C6009D4503 /* Debug.m */; };
@@ -183,13 +181,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F;
 			remoteInfo = BetaSupport;
-		};
-		92DBE2180FE50E90009D4503 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E362120FBECB610018B96E;
-			remoteInfo = PHP;
 		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -302,7 +293,6 @@
 			dstPath = "XAMPP Control.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
-				92DBE2210FE50E97009D4503 /* PHP.plugin in CopyFiles */,
 				928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */,
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
@@ -1323,11 +1313,6 @@
 			isa = PBXTargetDependency;
 			target = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
 			targetProxy = 928EF3420FD46A64002FC497 /* PBXContainerItemProxy */;
-		};
-		92DBE2190FE50E90009D4503 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92E362120FBECB610018B96E /* PHP */;
-			targetProxy = 92DBE2180FE50E90009D4503 /* PBXContainerItemProxy */;
 		};
 		92E28EC80FD4055700DBA78F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
