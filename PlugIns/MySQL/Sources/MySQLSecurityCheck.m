@@ -26,6 +26,7 @@
 #import "MySQLSecurityCheck.h"
 
 #import "MySQLSkipNetworkingTask.h"
+#import "MySQLRandomPMAPasswordTask.h"
 
 @interface MySQLSecurityCheck (PRIVAT)
 
@@ -85,8 +86,8 @@
 		[tasks addObject:NSLocalizedString(@"SetMySQLRootPassword", @"Task description for the set mysql's root password task.")];
 	
 	if (setPMAPassword)
-		[tasks addObject:NSLocalizedString(@"SetRandomMySQLPMAPassword", @"Taskdrscription for the set a random mysql's pma password task.")];
-		
+		[tasks addObject:[[MySQLRandomPMAPasswordTask new] autorelease]];
+	
 	[self setTasks:tasks];
 }
 

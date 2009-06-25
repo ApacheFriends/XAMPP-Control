@@ -72,6 +72,8 @@
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
+		925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
+		925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */; };
 		926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */; };
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
@@ -388,6 +390,9 @@
 		9257D7CE0FA1F14F002BF955 /* AssistantController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantController.m; sourceTree = "<group>"; };
 		9257D7D90FA1F3FF002BF955 /* AssistantPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantPage.h; sourceTree = "<group>"; };
 		9257D7DA0FA1F3FF002BF955 /* AssistantPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantPage.m; sourceTree = "<group>"; };
+		925EF18E0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLRandomPMAPasswordTask.h; sourceTree = "<group>"; };
+		925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLRandomPMAPasswordTask.m; sourceTree = "<group>"; };
+		925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmysqlclient.dylib; path = /Applications/XAMPP/xamppfiles/lib/mysql/libmysqlclient.dylib; sourceTree = "<absolute>"; };
 		926A5CE80FED01100073DDF8 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		926DAAE10FC851DD00998643 /* ApacheModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApacheModuleViewController.h; sourceTree = "<group>"; };
 		926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApacheModuleViewController.m; sourceTree = "<group>"; };
@@ -530,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
+				925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +598,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */,
 				92952C2B0FCB422B00F3D16C /* PlugIn.framework */,
 				929097570F501EBC00BBE38B /* WebKit.framework */,
 				92EACDE50F3F14030037FCC2 /* Security.framework */,
@@ -755,6 +762,8 @@
 			children = (
 				92C87B840FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.h */,
 				92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */,
+				925EF18E0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.h */,
+				925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */,
 			);
 			path = SecurityTasks;
 			sourceTree = "<group>";
@@ -1292,6 +1301,7 @@
 				9200797B0FA48B89002665E0 /* MySQLSecurityCheck.m in Sources */,
 				926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */,
 				92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */,
+				925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1818,9 +1828,16 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
+					/Applications/XAMPP/xamppfiles/include,
+				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/XAMPP/xamppfiles/lib/mysql\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -1849,9 +1866,16 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
+					/Applications/XAMPP/xamppfiles/include,
+				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/XAMPP/xamppfiles/lib/mysql\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
