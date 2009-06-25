@@ -63,18 +63,6 @@
 	NSArray* arguments;
 	NSError *error;
 	
-	error = [self systemApacheCheck];
-	if (error)
-		return error;
-	
-	error = [self otherWebserverCheck];
-	if (error)
-		return error;
-	
-	error = [self syntaxCheck];
-	if (error)
-		return error;
-	
 	error = [apachectl authorize];
 	if (error)
 		return error;
@@ -116,6 +104,25 @@
 							userInfo:errorDict];
 
 	return error;
+}
+
+- (NSError*) runStartTests
+{
+	NSError* error;
+	
+	error = [self systemApacheCheck];
+	if (error)
+		return error;
+	
+	error = [self otherWebserverCheck];
+	if (error)
+		return error;
+	
+	error = [self syntaxCheck];
+	if (error)
+		return error;
+	
+	return Nil;
 }
 
 - (NSError*) realStop

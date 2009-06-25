@@ -33,6 +33,7 @@
 	NSString *pidFile;
 	NSString* _name;
 	XPStatus status;
+	BOOL _shouldRunStartTests;
 	
 	int watchDirFD;
 	int watchPID;
@@ -50,6 +51,10 @@
 - (NSError*) start;
 - (NSError*) stop;
 - (NSError*) reload;
+
+//
+- (BOOL) shouldRunStartTests;
+- (void) setShouldRunStartTests:(BOOL)should;
 
 - (XPStatus) status;
 - (void) setStatus:(XPStatus) aStatus;

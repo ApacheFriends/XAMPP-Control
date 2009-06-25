@@ -59,6 +59,7 @@
 		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
 	if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
 		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
+	[module setShouldRunStartTests:[[bundleInformations objectForKey:@"RunStartTests"] boolValue]];
 	
 	[module release];
 	[securityCheck release];

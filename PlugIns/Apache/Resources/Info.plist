@@ -20,5 +20,7 @@
 	<string>ApachePlugIn</string>
 	<key>RegisterControlsController</key>
 	<string>YES</string>
+	<key>RunStartTests</key>
+	<string>YES</string>
 </dict>
 </plist>

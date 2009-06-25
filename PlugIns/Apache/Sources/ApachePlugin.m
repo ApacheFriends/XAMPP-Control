@@ -44,6 +44,7 @@
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
 	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
 		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
+	[module setShouldRunStartTests:[[bundleInformations objectForKey:@"RunStartTests"] boolValue]];
 	
 	[module release];
 	[controller release];

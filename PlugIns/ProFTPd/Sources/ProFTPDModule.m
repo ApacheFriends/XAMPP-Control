@@ -56,10 +56,6 @@
 	NSString *output;
 	NSError *error;
 	
-	error = [self otherFTPServerCheck];
-	if (error)
-		return error;
-	
 	error = [proftpd authorize];
 	if (error)
 		return error;
@@ -88,6 +84,17 @@
 																 forKey:NSLocalizedDescriptionKey]];
 	
 	return error;
+}
+
+- (NSError*) runStartTests
+{
+	NSError* error;
+	
+	error = [self otherFTPServerCheck];
+	if (error)
+		return error;
+	
+	return Nil;
 }
 
 - (NSError*) realStop

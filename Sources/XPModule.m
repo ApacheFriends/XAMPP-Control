@@ -37,6 +37,7 @@ static NSLock *fixRightsLock = Nil;
 @interface XPModule(PRIVAT)
 
 - (NSError*) realStart;
+- (NSError*) runStartTests;
 - (NSError*) realStop;
 - (NSError*) realReload;
 
@@ -52,6 +53,8 @@ static NSLock *fixRightsLock = Nil;
 		processWatcher = [XPProcessWatcher new];
 		pidFile = Nil;
 		status = XPUnknownStatus;
+		
+		[self setShouldRunStartTests:YES];
 		
 		[processWatcher setDelegate:self];
 		
@@ -89,6 +92,21 @@ static NSLock *fixRightsLock = Nil;
 	[self didChangeValueForKey:@"name"];
 }
 
+- (BOOL) shouldRunStartTests
+{
+	return _shouldRunStartTests;
+}
+
+- (void) setShouldRunStartTests:(BOOL)should
+{
+	if (should == _shouldRunStartTests)
+		return;
+	
+	[self willChangeValueForKey:@"shouldRunStartTests"];
+	_shouldRunStartTests = should;
+	[self didChangeValueForKey:@"shouldRunStartTests"];
+}
+
 - (NSError*) start
 {
 	NSAutoreleasePool* pool;
@@ -103,7 +121,11 @@ static NSLock *fixRightsLock = Nil;
 	
 	[mainThreadInstance setStatus:XPStarting];
 	
-	error = [[self realStart] retain];
+	if ([self shouldRunStartTests])
+		error = [[self runStartTests] retain];
+	
+	if (!error)
+		error = [[self realStart] retain];
 	
 	if (error)
 		[mainThreadInstance setStatus:XPNotRunning];
@@ -120,6 +142,11 @@ static NSLock *fixRightsLock = Nil;
 							 reason:@"NotImplemented" 
 						   userInfo:nil] raise];
 	return nil;
+}
+
+- (NSError*) runStartTests
+{
+	return Nil;
 }
 
 - (NSError*) stop
