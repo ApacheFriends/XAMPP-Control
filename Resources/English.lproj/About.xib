@@ -65,7 +65,7 @@
 									<string>NeXT TIFF v4.0 pasteboard type</string>
 								</object>
 							</object>
-							<string key="NSFrame">{{32, 91}, {128, 128}}</string>
+							<string key="NSFrame">{{32, 88}, {128, 128}}</string>
 							<reference key="NSSuperview" ref="414921963"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="522573482">
@@ -90,6 +90,7 @@
 								<object class="NSMutableArray" key="set.sortedObjects">
 									<bool key="EncodedWithXMLCoder">YES</bool>
 									<string>Apple HTML pasteboard type</string>
+									<string>Apple PDF pasteboard type</string>
 									<string>Apple PICT pasteboard type</string>
 									<string>Apple URL pasteboard type</string>
 									<string>Apple Web Archive pasteboard type</string>
@@ -134,7 +135,7 @@
 						<object class="NSTextField" id="134279181">
 							<reference key="NSNextResponder" ref="414921963"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 64}, {159, 19}}</string>
+							<string key="NSFrame">{{17, 61}, {159, 19}}</string>
 							<reference key="NSSuperview" ref="414921963"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="1036153110">
@@ -170,7 +171,7 @@
 						<object class="NSTextField" id="450355043">
 							<reference key="NSNextResponder" ref="414921963"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 42}, {159, 14}}</string>
+							<string key="NSFrame">{{17, 39}, {159, 14}}</string>
 							<reference key="NSSuperview" ref="414921963"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="787172264">
@@ -191,7 +192,7 @@
 						<object class="NSTextField" id="101872264">
 							<reference key="NSNextResponder" ref="414921963"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 23}, {159, 11}}</string>
+							<string key="NSFrame">{{17, 20}, {159, 11}}</string>
 							<reference key="NSSuperview" ref="414921963"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="379168118">
@@ -329,12 +330,12 @@
 						<reference key="object" ref="414921963"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="134279181"/>
-							<reference ref="450355043"/>
 							<reference ref="306771294"/>
 							<reference ref="161576781"/>
-							<reference ref="350475006"/>
 							<reference ref="101872264"/>
+							<reference ref="450355043"/>
+							<reference ref="134279181"/>
+							<reference ref="350475006"/>
 						</object>
 						<reference key="parent" ref="713339862"/>
 					</object>
@@ -499,7 +500,7 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">SharedXAMPPSupport/Sources/NSObject (MainThread).h</string>
+						<string key="minorKey">Sources/NSObject (MainThread).h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
