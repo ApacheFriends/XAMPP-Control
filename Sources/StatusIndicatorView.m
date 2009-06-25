@@ -41,34 +41,10 @@
 
 		[self addSubview:progressIndicator];
 		
-		[self setStatus:NoStatus];
-		
-		NSString *greenImagePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"IndicatorGreen" ofType:@"tiff"];
-		greenImage = [[NSImage alloc] initWithContentsOfFile:greenImagePath];
-		
-		NSString *yellowImagePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"IndicatorYellow" ofType:@"tiff"];
-		yellowImage = [[NSImage alloc] initWithContentsOfFile:yellowImagePath];
-		
-		NSString *redImagePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"IndicatorRed" ofType:@"tiff"];
-		redImage = [[NSImage alloc] initWithContentsOfFile:redImagePath];
-		
-		NSString *unknownImagePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"IndicatorUnknown" ofType:@"tiff"];
-		unknownImage = [[NSImage alloc] initWithContentsOfFile:unknownImagePath];
+		[self setStatus:UnknownStatus];
     }
     return self;
 }
-
-- (void) dealloc
-{
-	[progressIndicator release];
-	[unknownImage release];
-	[redImage release];
-	[yellowImage release];
-	[greenImage release];
-	
-	[super dealloc];
-}
-
 
 - (void)drawRect:(NSRect)rect {
 	NSImage *image;
@@ -78,16 +54,16 @@
 	
 	switch (status) {
 		case GreenStatus:
-			image = greenImage;
+			image = [NSImage imageNamed:@"IndicatorGreen"];
 			break;
 		case YellowStatus:
-			image = yellowImage;
+			image = [NSImage imageNamed:@"IndicatorYellow"];
 			break;
 		case RedStatus:
-			image = redImage;
+			image = [NSImage imageNamed:@"IndicatorRed"];
 			break;
 		default:
-			image = unknownImage;
+			image = [NSImage imageNamed:@"IndicatorUnknown"];
 			break;
 	}
 	

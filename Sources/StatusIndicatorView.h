@@ -39,11 +39,6 @@ typedef enum _StatusIndicator StatusIndicator;
 @interface StatusIndicatorView : NSView {
 	StatusIndicator status;
 	NSProgressIndicator *progressIndicator;
-	
-	NSImage *greenImage;
-	NSImage *yellowImage;
-	NSImage *redImage;
-	NSImage *unknownImage;
 }
 
 - (StatusIndicator) status;
