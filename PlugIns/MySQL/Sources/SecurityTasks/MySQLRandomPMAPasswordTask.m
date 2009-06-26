@@ -58,8 +58,6 @@
 	NSError* error;
 	BOOL shouldStop = NO;
 	BOOL success = YES;
-	
-	
 		
 	bundle = [NSBundle bundleForClass:[self class]];
 	
@@ -199,7 +197,7 @@
 	
 	fileContents = [lines componentsJoinedByString:@"\n"];
 	
-	[configFile seekToFileOffset:0];
+	[configFile truncateFileAtOffset:0];
 	[configFile writeData:[fileContents dataUsingEncoding:NSUTF8StringEncoding]];
 	
 	return YES;
