@@ -90,6 +90,10 @@
 		92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92952C2F0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
+		92AD22170FF4F42E0060A41A /* open-helper-tool in Other Executables */ = {isa = PBXBuildFile; fileRef = 92AD22050FF4F4180060A41A /* open-helper-tool */; };
+		92AD22190FF4F4440060A41A /* open-helper-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */; };
+		92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */; };
+		92AD22240FF4F6020060A41A /* NSFileHandle+OpenAsRoot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */; };
 		92BB3D230FEFC42F005623FB /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D220FEFC42F005623FB /* GettingStarted.html */; };
 		92BB3D360FEFC569005623FB /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D350FEFC569005623FB /* BetaFeedback.xib */; };
 		92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9940FA218A800B8D0D7 /* ModuleView.xib */; };
@@ -183,6 +187,13 @@
 			remoteGlobalIDString = 92E28EAD0FD4034100DBA78F;
 			remoteInfo = BetaSupport;
 		};
+		92AD22090FF4F4240060A41A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92AD22040FF4F4180060A41A /* open-helper-tool */;
+			remoteInfo = "open-helper-tool";
+		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -241,6 +252,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				92AD22170FF4F42E0060A41A /* open-helper-tool in Other Executables */,
 				92EACDBA0F3F11940037FCC2 /* xproottask-helper-tool in Other Executables */,
 			);
 			name = "Other Executables";
@@ -285,6 +297,7 @@
 				92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */,
 				92DBE2480FE524C6009D4503 /* Debug.m in CopyFiles */,
 				92C87B810FEBCF47007C6F87 /* SecurityTaskProtocol.h in CopyFiles */,
+				92AD22240FF4F6020060A41A /* NSFileHandle+OpenAsRoot.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +419,10 @@
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = ../build/Debug/PlugIn.framework; sourceTree = SOURCE_ROOT; };
+		92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "open-helper-tool.c"; sourceTree = "<group>"; };
+		92AD22050FF4F4180060A41A /* open-helper-tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "open-helper-tool"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+OpenAsRoot.h"; sourceTree = "<group>"; };
+		92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+OpenAsRoot.m"; sourceTree = "<group>"; };
 		92BB3D200FEFC42D005623FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D240FEFC438005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D370FEFC570005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/BetaFeedback.xib; sourceTree = "<group>"; };
@@ -497,6 +514,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92AD22030FF4F4180060A41A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E28EAC0FD4034100DBA78F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,7 +579,7 @@
 				92E28FF90FD4523B00DBA78F /* Additions */,
 				9257D7D80FA1F3E5002BF955 /* Assistant */,
 				920078C80FA3AE39002665E0 /* SecurityCheck */,
-				92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */,
+				92EACD720F3F0E630037FCC2 /* Helper Tools */,
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				92E290000FD4528200DBA78F /* PlugIn System */,
 				922D70C30F387EB600FDF9E2 /* XPModule.h */,
@@ -625,6 +649,7 @@
 				92F13CA60FA08576007ED72B /* ProFTPd.plugin */,
 				92E362130FBECB610018B96E /* PHP.plugin */,
 				92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */,
+				92AD22050FF4F4180060A41A /* open-helper-tool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -808,6 +833,8 @@
 				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
 				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
 				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
+				92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */,
+				92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -857,12 +884,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		92EACD720F3F0E630037FCC2 /* XPRootTask Helper Tool */ = {
+		92EACD720F3F0E630037FCC2 /* Helper Tools */ = {
 			isa = PBXGroup;
 			children = (
 				92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */,
+				92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */,
 			);
-			name = "XPRootTask Helper Tool";
+			name = "Helper Tools";
 			sourceTree = "<group>";
 		};
 		92ED0E580FB3485E00ED5BB9 /* PlugIns */ = {
@@ -991,6 +1019,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				92AD220A0FF4F4240060A41A /* PBXTargetDependency */,
 				92EACDB90F3F11890037FCC2 /* PBXTargetDependency */,
 			);
 			name = "XAMPP Control";
@@ -998,6 +1027,22 @@
 			productName = "XAMPP Control";
 			productReference = 8D1107320486CEB800E47090 /* XAMPP Control.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92AD22040FF4F4180060A41A /* open-helper-tool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AD22180FF4F43D0060A41A /* Build configuration list for PBXNativeTarget "open-helper-tool" */;
+			buildPhases = (
+				92AD22020FF4F4180060A41A /* Sources */,
+				92AD22030FF4F4180060A41A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "open-helper-tool";
+			productName = "open-helper-tool";
+			productReference = 92AD22050FF4F4180060A41A /* open-helper-tool */;
+			productType = "com.apple.product-type.tool";
 		};
 		92E28EAD0FD4034100DBA78F /* BetaSupport */ = {
 			isa = PBXNativeTarget;
@@ -1130,6 +1175,7 @@
 				92F13CA50FA08576007ED72B /* ProFTPd */,
 				92E28EAD0FD4034100DBA78F /* BetaSupport */,
 				92EACD980F3F0E930037FCC2 /* xproottask-helper-tool */,
+				92AD22040FF4F4180060A41A /* open-helper-tool */,
 			);
 		};
 /* End PBXProject section */
@@ -1247,6 +1293,15 @@
 				92E28F250FD4084800DBA78F /* XPViewController.m in Sources */,
 				92E290090FD452BB00DBA78F /* XPPlugInHooks.m in Sources */,
 				92DBE2490FE524C6009D4503 /* Debug.m in Sources */,
+				92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AD22020FF4F4180060A41A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AD22190FF4F4440060A41A /* open-helper-tool.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1319,6 +1374,11 @@
 			isa = PBXTargetDependency;
 			target = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
 			targetProxy = 928EF3420FD46A64002FC497 /* PBXContainerItemProxy */;
+		};
+		92AD220A0FF4F4240060A41A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92AD22040FF4F4180060A41A /* open-helper-tool */;
+			targetProxy = 92AD22090FF4F4240060A41A /* PBXContainerItemProxy */;
 		};
 		92E28EC80FD4055700DBA78F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1516,6 +1576,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		92AD22070FF4F4190060A41A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "open-helper-tool";
+			};
+			name = Debug;
+		};
+		92AD22080FF4F4190060A41A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "open-helper-tool";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		92E28EB00FD4034100DBA78F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2015,6 +2111,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		92AD22180FF4F43D0060A41A /* Build configuration list for PBXNativeTarget "open-helper-tool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AD22070FF4F4190060A41A /* Debug */,
+				92AD22080FF4F4190060A41A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92E28EB20FD4034200DBA78F /* Build configuration list for PBXNativeTarget "BetaSupport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

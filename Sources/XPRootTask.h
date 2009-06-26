@@ -24,7 +24,7 @@
  */
 
 #import <Cocoa/Cocoa.h>
-
+#include <Security/Authorization.h>
 
 @interface XPRootTask : NSObject {
 	NSArray			*arguments;
@@ -37,6 +37,8 @@
 
 + (NSError*) authorize;
 - (NSError*) authorize;
+
++ (AuthorizationRef) authorizationRef;
 
 - (NSArray*) arguments;
 - (void) setArguments:(NSArray*) arguments;
