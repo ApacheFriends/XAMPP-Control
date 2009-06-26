@@ -83,6 +83,12 @@
 		return NO;
 	}
 	
+	if (![self updatePMAConfig]) {
+		if (shouldStop)
+			[module stop];
+		return NO;
+	}
+	
 	if (![self changePasswordInMySQL]) {
 		if (shouldStop)
 			[module stop];
@@ -153,7 +159,50 @@
 
 - (BOOL) updatePMAConfig
 {
+	NSFileHandle* configFile;
+	NSError* error;
+	NSString* fileContents;
+	NSMutableArray* lines;
 	
+	error = [XPRootTask authorize];
+	if (error) {
+		[XPAlert presentError:error];
+		return NO;
+	}
+	
+	configFile = [NSFileHandle fileHandleWithRootPrivilegesForUpdatingAtPath:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/phpmyadmin/config.inc.php"]];
+	
+	if(!configFile){
+		NSLog(@"conf file nil");
+		return NO;
+	}
+	NSData* data = [configFile readDataToEndOfFile];
+	fileContents = [[NSString alloc] initWithData:data
+										 encoding:NSUTF8StringEncoding];
+	[configFile seekToEndOfFile];
+	NSLog(@"seek %i", [configFile offsetInFile]);
+	lines = [[fileContents componentsSeparatedByString:@"\n"] mutableCopy];
+	[fileContents release];
+	
+	unsigned int  i, count = [lines count];
+	for (i = 0; i < count; i++) {
+		NSString* line = [lines objectAtIndex:i];
+		
+		if ([line hasPrefix:@"$cfg['Servers'][$i]['controlpass']"]
+			|| [line hasPrefix:@"//$cfg['Servers'][$i]['controlpass']"]) {
+			line = [NSString stringWithFormat:@"# commented out by xampp security\n# %@\n$cfg['Servers'][$i]['controlpass'] = '%@';",
+					line, [self password]];
+			[lines replaceObjectAtIndex:i
+							 withObject:line];
+		}
+	}
+	
+	fileContents = [lines componentsJoinedByString:@"\n"];
+	
+	[configFile seekToFileOffset:0];
+	[configFile writeData:[fileContents dataUsingEncoding:NSUTF8StringEncoding]];
+	
+	return YES;
 }
 
 @end

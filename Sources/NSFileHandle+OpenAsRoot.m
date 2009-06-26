@@ -135,7 +135,8 @@ static int ReadDescriptor(int fd, int *fdRead)
 	OSStatus status;
 	const char *helperPath;
 	const char *args[] = {
-		[path fileSystemRepresentation]
+		[path fileSystemRepresentation],
+		NULL
 	};
 	NSFileHandle* handle =  Nil;
 	
@@ -144,11 +145,16 @@ static int ReadDescriptor(int fd, int *fdRead)
 	authorizationRef = [XPRootTask authorizationRef];
 	helperPath = [[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"open-helper-tool"] fileSystemRepresentation];
 	status = AuthorizationExecuteWithPrivileges(authorizationRef, helperPath, kAuthorizationFlagDefaults, (char**) args, &pipe);
+	
 	if (status == errAuthorizationSuccess) {
 		// Ok our helper process is running, it sends us the file descriptor
 		int fd = -1;
 		
-		ReadDescriptor(fileno(pipe), &fd);
+		int result[1] = { -2 };
+		
+		read(fileno(pipe), &result, sizeof(result));
+		
+		int status = ReadDescriptor(fileno(pipe), &fd);
 		
 		if (fd >= 0)
 			handle = [[[NSFileHandle alloc] initWithFileDescriptor:fd closeOnDealloc:YES] autorelease];

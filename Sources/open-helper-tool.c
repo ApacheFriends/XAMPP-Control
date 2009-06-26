@@ -125,17 +125,26 @@ static int WriteDescriptor(int fd, int fdToWrite)
 int main(int argc, char **argv) {
 	int fd;
 	
-	if (argc != 2)
+	if (argc != 2) {
+		int result[1] = { 500+argc };
+		write(STDOUT_FILENO, result, sizeof(result));
 		return 1;
+	}
 	
-	fd = open(argv[1], O_CREAT | O_TRUNC | O_RDWR);
+	fd = open(argv[1], O_CREAT | O_RDWR);
 	
-	if (fd < 0)
+	if (fd < 0) {
+		int result[1] = { 2 };
+		write(STDOUT_FILENO, result, sizeof(result));
 		return 2;
+	}
+	
+	int result[1] = { 0 };
+	write(STDOUT_FILENO, result, sizeof(result));
 	
 	WriteDescriptor(STDOUT_FILENO, fd);
 	
-	close(fd);
+	//close(fd);
 	
 	return 0;
 }

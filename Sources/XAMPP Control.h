@@ -54,6 +54,7 @@
 #import <XAMPP Control/NSObject (MainThread).h>
 #import <XAMPP Control/NSObject+unproxy.h>
 #import <XAMPP Control/NSWorkspace (Process).h>
+#import <XAMPP Control/NSFileHandle+OpenAsRoot.h>
 
 /* I18N */
 #import <XAMPP Control/XPLocalization.h>
