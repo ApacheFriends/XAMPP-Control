@@ -23,24 +23,19 @@
  
  */
 
-#import "MySQLRandomPMAPasswordTask.h"
+#import "MySQLRootPasswordTask.h"
 #import "MySQLPlugIn.h"
 #import "MySQLModule.h"
-
 #include <mysql/mysql.h>
 
-#define PASSWORD_LENGTH (20)
+@interface MySQLRootPasswordTask(PRIVAT)
 
-@interface MySQLRandomPMAPasswordTask(PRIVAT)
-
-- (BOOL) createRandomPassword;
 - (BOOL) changePasswordInMySQL;
 - (BOOL) updatePMAConfig;
 
 @end
 
-
-@implementation MySQLRandomPMAPasswordTask
+@implementation MySQLRootPasswordTask
 
 - (void) dealloc
 {
@@ -63,8 +58,8 @@
 
 - (NSString*) localizedTitle
 {
-	return NSLocalizedString(@"SetRandomMySQLPMAPassword", 
-							 @"Taskdrscription for the set a random mysql's pma password task.");
+	return NSLocalizedString(@"SetMySQLRootPassword", 
+							 @"Task description for the set mysql's root password task.");
 }
 
 - (BOOL) run
@@ -75,7 +70,7 @@
 	NSError* error;
 	BOOL shouldStop = NO;
 	BOOL success = YES;
-		
+	
 	bundle = [NSBundle bundleForClass:[self class]];
 	
 	plugIn = [[[[PlugInManager sharedPlugInManager] plugInInformations]
@@ -92,12 +87,6 @@
 		}
 	}
 	
-	if (![self createRandomPassword]) {
-		if (shouldStop)
-			[module stop];
-		return NO;
-	}
-	
 	if (![self changePasswordInMySQL]) {
 		if (shouldStop)
 			[module stop];
@@ -108,7 +97,7 @@
 		if (shouldStop)
 			[module stop];
 		return NO;
-	}
+	}	
 	
 	if (shouldStop) {
 		// TODO: Missing error check
@@ -120,25 +109,7 @@
 
 @end
 
-@implementation MySQLRandomPMAPasswordTask(PRIVAT)
-
-- (BOOL) createRandomPassword
-{
-	NSMutableString* password;
-	char possibleChars[] = "!#$%&()*+,-./0123456789:;<=>?0@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_abcdefghijklmnopqrstuvwxyz{|}~";
-	
-	password = [NSMutableString string];
-	
-	srand ( time(NULL) );
-	
-	for (int i = 0; i < PASSWORD_LENGTH; i++) {
-		[password appendFormat:@"%c", possibleChars[rand()%(sizeof(possibleChars)/sizeof(char))]];
-	}
-	
-	[self setPassword:password];
-	
-	return YES;
-}
+@implementation MySQLRootPasswordTask(PRIVAT)
 
 - (BOOL) changePasswordInMySQL
 {
@@ -156,7 +127,7 @@
 		return NO;
 	}
 	
-	sql = [[NSString stringWithFormat:@"UPDATE user set Password=password('%@') where User = 'pma';", [self password]] cString];
+	sql = [[NSString stringWithFormat:@"UPDATE user set Password=password('%@') where User = 'root';", [self password]] cString];
 		
 	if (mysql_real_query(&mysql, sql, strlen(sql))) {
 		NSLog(@"mysql: %s", mysql_error(&mysql));
@@ -200,10 +171,9 @@
 	for (i = 0; i < count; i++) {
 		NSString* line = [lines objectAtIndex:i];
 		
-		if ([line hasPrefix:@"$cfg['Servers'][$i]['controlpass']"]
-			|| [line hasPrefix:@"//$cfg['Servers'][$i]['controlpass']"]) {
-			line = [NSString stringWithFormat:@"# commented out by xampp security\n# %@\n$cfg['Servers'][$i]['controlpass'] = '%@';",
-					line, [self password]];
+		if ([line hasPrefix:@"$cfg['Servers'][$i]['auth_type']"]) {
+			line = [NSString stringWithFormat:@"# commented out by xampp security\n# %@\n$cfg['Servers'][$i]['auth_type'] = 'cookie';",
+					line];
 			[lines replaceObjectAtIndex:i
 							 withObject:line];
 		}

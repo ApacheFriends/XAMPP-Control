@@ -94,6 +94,7 @@
 		92AD22190FF4F4440060A41A /* open-helper-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */; };
 		92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */; };
 		92AD22240FF4F6020060A41A /* NSFileHandle+OpenAsRoot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */; };
+		92AD227E0FF54A210060A41A /* MySQLRootPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */; };
 		92BB3D230FEFC42F005623FB /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D220FEFC42F005623FB /* GettingStarted.html */; };
 		92BB3D360FEFC569005623FB /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D350FEFC569005623FB /* BetaFeedback.xib */; };
 		92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9940FA218A800B8D0D7 /* ModuleView.xib */; };
@@ -423,6 +424,8 @@
 		92AD22050FF4F4180060A41A /* open-helper-tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "open-helper-tool"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+OpenAsRoot.h"; sourceTree = "<group>"; };
 		92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+OpenAsRoot.m"; sourceTree = "<group>"; };
+		92AD227C0FF54A210060A41A /* MySQLRootPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLRootPasswordTask.h; sourceTree = "<group>"; };
+		92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLRootPasswordTask.m; sourceTree = "<group>"; };
 		92BB3D200FEFC42D005623FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D240FEFC438005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D370FEFC570005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/BetaFeedback.xib; sourceTree = "<group>"; };
@@ -786,6 +789,8 @@
 				92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */,
 				925EF18E0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.h */,
 				925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */,
+				92AD227C0FF54A210060A41A /* MySQLRootPasswordTask.h */,
+				92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */,
 			);
 			path = SecurityTasks;
 			sourceTree = "<group>";
@@ -1353,6 +1358,7 @@
 				926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */,
 				92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */,
 				925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */,
+				92AD227E0FF54A210060A41A /* MySQLRootPasswordTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
