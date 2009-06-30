@@ -55,6 +55,7 @@
 //
 - (BOOL) shouldRunStartTests;
 - (void) setShouldRunStartTests:(BOOL)should;
+- (NSError*) runStartTests;
 
 - (XPStatus) status;
 - (void) setStatus:(XPStatus) aStatus;

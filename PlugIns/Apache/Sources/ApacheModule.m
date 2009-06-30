@@ -110,6 +110,10 @@
 {
 	NSError* error;
 	
+	error = [super runStartTests];
+	if (error)
+		return error;
+	
 	error = [self systemApacheCheck];
 	if (error)
 		return error;

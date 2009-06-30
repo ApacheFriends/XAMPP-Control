@@ -30,6 +30,10 @@
 
 + (void) presentError:(NSError*)anError
 {
+// TODO: !!!!
+	[NSApp presentError:anError];
+	return;
+	
 	XPAlert* controller = [[self alloc] initWithError:anError];
 	
 	[controller runModal];

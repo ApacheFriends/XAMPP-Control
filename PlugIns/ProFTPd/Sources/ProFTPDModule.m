@@ -90,6 +90,10 @@
 {
 	NSError* error;
 	
+	error = [super runStartTests];
+	if (error)
+		return error;
+	
 	error = [self otherFTPServerCheck];
 	if (error)
 		return error;

@@ -23,18 +23,15 @@
  
  */
 
-extern NSString *XAMPPControlErrorDomain;
-extern NSString* XPErrorLogFileKey;
-extern NSString* XPErrorModuleNameKey;
+#import <Cocoa/Cocoa.h>
 
-typedef enum _XPError {
-	XPNoError,
-	XPDidNotStart,
-	XPDidNotStop,
-	XPDidNotReload,
-	XPWebSharingIsOn,
-	XPSyntaxError,
-	XPOtherServerRunning,
-	XPHostnameResolveFail,
-	XPUnknownError
-} XPError;
+@class XPModule;
+
+@interface XPHostnameResolveRecoveryAttempter : NSObject {
+	XPModule* module;
+}
+
+- (id) initWithModule:(XPModule*)module;
+- (BOOL) addHostnameToHosts;
+
+@end

@@ -30,7 +30,10 @@
 #import "XPRootTask.h"
 #import "XPConfiguration.h"
 #import "XPProcessWatcher.h"
+#import "XPError.h"
+#import "XPHostnameResolveRecoveryAttempter.h"
 #include <unistd.h>
+#include <netdb.h>
 
 static NSLock *fixRightsLock = Nil;
 
@@ -40,6 +43,8 @@ static NSLock *fixRightsLock = Nil;
 - (NSError*) runStartTests;
 - (NSError*) realStop;
 - (NSError*) realReload;
+
+- (NSError*) hostnameCheck;
 
 @end
 
@@ -146,7 +151,11 @@ static NSLock *fixRightsLock = Nil;
 
 - (NSError*) runStartTests
 {
-	return Nil;
+	NSError* error = Nil;
+	
+	error = [self hostnameCheck];
+	
+	return error;
 }
 
 - (NSError*) stop
@@ -282,6 +291,38 @@ static NSLock *fixRightsLock = Nil;
 	}
 	
 	[fixRightsLock unlock];
+}
+
+- (NSError*) hostnameCheck
+{
+	NSError* error;
+	NSMutableDictionary* errorDict;
+	char hostname[256];
+	struct hostent *ent;
+	
+	gethostname(hostname, 256);
+	ent = gethostbyname(hostname);
+	
+	if (ent != NULL) // Everything is fine :)
+		return Nil;
+	
+	
+	errorDict = [NSMutableDictionary dictionary];
+	
+	[errorDict setValue:@"The hostname can not resolved!" 
+				 forKey:NSLocalizedDescriptionKey];
+	[errorDict setValue:@"XAMPP can not resolve the IP for the hostname of this computer. By clicking 'OK', XAMPP will add the hostname to the hosts-File." 
+				 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	[errorDict setValue:[NSArray arrayWithObjects:@"OK",@"Cancel",Nil]
+				 forKey:NSLocalizedRecoveryOptionsErrorKey];
+	[errorDict setValue:[[[XPHostnameResolveRecoveryAttempter alloc] initWithModule:self] autorelease]
+				 forKey:NSRecoveryAttempterErrorKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPHostnameResolveFail 
+							userInfo:errorDict];
+		
+	return error;
 }
 
 @end

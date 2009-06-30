@@ -70,7 +70,6 @@
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Credits.html */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
-		922E1F8D0FFA210B00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
 		922E1F8E0FFA210B00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
 		922E1F8F0FFA210B00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
 		922E1F930FFA210D00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
@@ -82,6 +81,9 @@
 		922E1F9A0FFA211D00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
 		922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
 		922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
+		922E1FC60FFA251000F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1FD70FFA25A400F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1FF70FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 922E1FF60FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
 		925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
@@ -159,7 +161,6 @@
 		92E28F1F0FD4084200DBA78F /* XPMainThreadProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */; };
 		92E28F200FD4084300DBA78F /* XPModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D70C40F387EB600FDF9E2 /* XPModule.m */; };
 		92E28F210FD4084400DBA78F /* XPModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */; };
-		92E28F220FD4084500DBA78F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
 		92E28F230FD4084600DBA78F /* XPProcessWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */; };
 		92E28F240FD4084700DBA78F /* XPRootTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EACD380F3EFCA00037FCC2 /* XPRootTask.m */; };
 		92E28F250FD4084800DBA78F /* XPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13D5E0FA0C313007ED72B /* XPViewController.m */; };
@@ -393,6 +394,8 @@
 		922D72760F39D3CC00FDF9E2 /* XPModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPModuleViewController.m; sourceTree = "<group>"; };
 		922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBezierPathAdditions.h; sourceTree = "<group>"; };
 		922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathAdditions.m; sourceTree = "<group>"; };
+		922E1FF50FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHostnameResolveRecoveryAttempter.h; sourceTree = "<group>"; };
+		922E1FF60FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHostnameResolveRecoveryAttempter.m; sourceTree = "<group>"; };
 		922E85B80FAA2E460002FAF1 /* SecurityCheckProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckProtocol.h; sourceTree = "<group>"; };
 		92303D2B0FD00A6B0078E7C0 /* AlertLogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertLogView.xib; sourceTree = "<group>"; };
 		92303D330FD011040078E7C0 /* AlertCautionIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AlertCautionIcon.icns; sourceTree = "<group>"; };
@@ -626,6 +629,8 @@
 				92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */,
 				92DBE2450FE524C6009D4503 /* Debug.h */,
 				92DBE2460FE524C6009D4503 /* Debug.m */,
+				922E1FF50FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.h */,
+				922E1FF60FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1302,13 +1307,14 @@
 				92E28F1F0FD4084200DBA78F /* XPMainThreadProxy.m in Sources */,
 				92E28F200FD4084300DBA78F /* XPModule.m in Sources */,
 				92E28F210FD4084400DBA78F /* XPModuleViewController.m in Sources */,
-				92E28F220FD4084500DBA78F /* XPPlugInCategories.m in Sources */,
 				92E28F230FD4084600DBA78F /* XPProcessWatcher.m in Sources */,
 				92E28F240FD4084700DBA78F /* XPRootTask.m in Sources */,
 				92E28F250FD4084800DBA78F /* XPViewController.m in Sources */,
 				92E290090FD452BB00DBA78F /* XPPlugInHooks.m in Sources */,
 				92DBE2490FE524C6009D4503 /* Debug.m in Sources */,
 				92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */,
+				922E1FC60FFA251000F68C8F /* XPPlugInCategories.m in Sources */,
+				922E1FF70FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1358,9 +1364,9 @@
 				92F13C420FA07DFA007ED72B /* ApachePlugin.m in Sources */,
 				92F13C5C0FA08230007ED72B /* ApacheModule.m in Sources */,
 				926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */,
-				922E1F8D0FFA210B00F68C8F /* XPPlugInCategories.m in Sources */,
 				922E1F8E0FFA210B00F68C8F /* XPPlugInHooks.m in Sources */,
 				922E1F8F0FFA210B00F68C8F /* XPError.m in Sources */,
+				922E1FD70FFA25A400F68C8F /* XPPlugInCategories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2094,6 +2100,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
