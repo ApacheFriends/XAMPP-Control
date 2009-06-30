@@ -70,6 +70,18 @@
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Credits.html */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
+		922E1F8D0FFA210B00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1F8E0FFA210B00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
+		922E1F8F0FFA210B00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
+		922E1F930FFA210D00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1F940FFA210D00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
+		922E1F950FFA210D00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
+		922E1F960FFA210E00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1F970FFA210E00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
+		922E1F980FFA210E00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
+		922E1F9A0FFA211D00F68C8F /* XPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 92ED0D710FB337EF00ED5BB9 /* XPError.m */; };
+		922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F13BFD0FA07B10007ED72B /* XPPlugInCategories.m */; };
+		922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E290080FD452BB00DBA78F /* XPPlugInHooks.m */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
 		925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
@@ -101,7 +113,6 @@
 		92BDB9970FA218A800B8D0D7 /* GettingStarted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9960FA218A800B8D0D7 /* GettingStarted.xib */; };
 		92BDB9990FA218A800B8D0D7 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9980FA218A800B8D0D7 /* About.xib */; };
 		92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */; };
-		92C87B4B0FEBBF85007C6F87 /* SecurityTaskProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */; };
 		92C87B810FEBCF47007C6F87 /* SecurityTaskProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */; };
 		92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */; };
 		92C87BA00FEBD33D007C6F87 /* TaskSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C87B9F0FEBD33D007C6F87 /* TaskSuccess.png */; };
@@ -192,7 +203,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92AD22040FF4F4180060A41A /* open-helper-tool */;
+			remoteGlobalIDString = 92AD22040FF4F4180060A41A;
 			remoteInfo = "open-helper-tool";
 		};
 		92E28EC70FD4055700DBA78F /* PBXContainerItemProxy */ = {
@@ -312,7 +323,6 @@
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
 				92E28F2C0FD408B500DBA78F /* Apache.plugin in CopyFiles */,
-				92C87B4B0FEBBF85007C6F87 /* SecurityTaskProtocol.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,6 +1326,9 @@
 			files = (
 				92E28EBE0FD4045100DBA78F /* BetaFeedbackController.m in Sources */,
 				92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */,
+				922E1F960FFA210E00F68C8F /* XPPlugInCategories.m in Sources */,
+				922E1F970FFA210E00F68C8F /* XPPlugInHooks.m in Sources */,
+				922E1F980FFA210E00F68C8F /* XPError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1345,6 +1358,9 @@
 				92F13C420FA07DFA007ED72B /* ApachePlugin.m in Sources */,
 				92F13C5C0FA08230007ED72B /* ApacheModule.m in Sources */,
 				926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */,
+				922E1F8D0FFA210B00F68C8F /* XPPlugInCategories.m in Sources */,
+				922E1F8E0FFA210B00F68C8F /* XPPlugInHooks.m in Sources */,
+				922E1F8F0FFA210B00F68C8F /* XPError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1359,6 +1375,9 @@
 				92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */,
 				925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */,
 				92AD227E0FF54A210060A41A /* MySQLRootPasswordTask.m in Sources */,
+				922E1F9A0FFA211D00F68C8F /* XPError.m in Sources */,
+				922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */,
+				922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1370,6 +1389,9 @@
 				92F13CF50FA087DB007ED72B /* ProFTPDModule.m in Sources */,
 				9200799E0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m in Sources */,
 				926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */,
+				922E1F930FFA210D00F68C8F /* XPPlugInCategories.m in Sources */,
+				922E1F940FFA210D00F68C8F /* XPPlugInHooks.m in Sources */,
+				922E1F950FFA210D00F68C8F /* XPError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
