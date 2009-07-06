@@ -1948,7 +1948,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
-					/Applications/XAMPP/xamppfiles/include,
+					/Applications/XAMPPold/xamppfiles/include,
 				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -1986,7 +1986,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
-					/Applications/XAMPP/xamppfiles/include,
+					/Applications/XAMPPold/xamppfiles/include,
 				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
