@@ -62,6 +62,7 @@
 		920079140FA461E1002665E0 /* SecurityCheckWorkPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920079130FA461E1002665E0 /* SecurityCheckWorkPage.xib */; };
 		9200797B0FA48B89002665E0 /* MySQLSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */; };
 		9200799E0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */; };
+		9200B4C710075FAC00D4524A /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200B4C610075FAC00D4524A /* NSString+Additions.m */; };
 		9204BA7E0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */; };
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
@@ -373,6 +374,8 @@
 		9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLSecurityCheck.m; sourceTree = "<group>"; };
 		9200799C0FA4B8FB002665E0 /* ProFTPDSecurityCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFTPDSecurityCheck.h; sourceTree = "<group>"; };
 		9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProFTPDSecurityCheck.m; sourceTree = "<group>"; };
+		9200B4C510075FAC00D4524A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		9200B4C610075FAC00D4524A /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		9204BA7D0FCB1DEC00B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MySQLSecurityCheck.xib; sourceTree = "<group>"; };
 		9204BA830FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ManagePHPs.xib; sourceTree = "<group>"; };
 		9204BA850FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchControl.xib; sourceTree = "<group>"; };
@@ -855,6 +858,8 @@
 				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 				92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */,
 				92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */,
+				9200B4C510075FAC00D4524A /* NSString+Additions.h */,
+				9200B4C610075FAC00D4524A /* NSString+Additions.m */,
 			);
 			name = Additions;
 			sourceTree = "<group>";
@@ -1315,6 +1320,7 @@
 				92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */,
 				922E1FC60FFA251000F68C8F /* XPPlugInCategories.m in Sources */,
 				922E1FF70FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m in Sources */,
+				9200B4C710075FAC00D4524A /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1948,7 +1954,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
-					/Applications/XAMPPold/xamppfiles/include,
+					/Applications/XAMPP/xamppfiles/include,
 				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
@@ -1986,7 +1992,7 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"",
-					/Applications/XAMPPold/xamppfiles/include,
+					/Applications/XAMPP/xamppfiles/include,
 				);
 				INFOPLIST_FILE = PlugIns/MySQL/Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
