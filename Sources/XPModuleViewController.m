@@ -74,20 +74,28 @@
 				[actionButton setTitle:NSLocalizedString(@"Start", @"Start a Module")];
 				[actionButton setEnabled:YES];
 				[statusIndicator setStatus:RedStatus];
+				[statusIndicator setToolTip:@"Not Running"];
 				break;
 			case XPRunning:
 				[actionButton setTitle:NSLocalizedString(@"Stop", @"Stop a Module")];
 				[actionButton setEnabled:YES];
 				[statusIndicator setStatus:GreenStatus];
+				[statusIndicator setToolTip:@"Running"];
 				break;
 			case XPStarting:
+				[actionButton setEnabled:NO];
+				[statusIndicator setStatus:WorkingStatus];
+				[statusIndicator setToolTip:@"Starting..."];
+				break;
 			case XPStopping:
 				[actionButton setEnabled:NO];
 				[statusIndicator setStatus:WorkingStatus];
+				[statusIndicator setToolTip:@"Stopping..."];
 				break;
 			default:
 				[actionButton setEnabled:NO];
 				[statusIndicator setStatus:UnknownStatus];
+				[statusIndicator setToolTip:@"Unknown"];
 				break;
 		}
 	}
