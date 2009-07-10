@@ -26,7 +26,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface NSWorkspace (Process)
+@interface NSWorkspace (Additions)
 
 - (BOOL) processIsRunning:(pid_t)aPID;
 - (BOOL) portIsUsed:(uint)port;

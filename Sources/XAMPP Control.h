@@ -52,7 +52,7 @@
 
 /* Additions */
 #import <XAMPP Control/NSObject+Additions.h>
-#import <XAMPP Control/NSWorkspace (Process).h>
+#import <XAMPP Control/NSWorkspace+Additions.h>
 #import <XAMPP Control/NSFileHandle+OpenAsRoot.h>
 
 /* I18N */

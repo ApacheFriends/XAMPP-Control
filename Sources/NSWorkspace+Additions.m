@@ -23,12 +23,12 @@
  
  */
 
-#import "NSWorkspace (Process).h"
+#import "NSWorkspace+Additions.h"
 
 #include <sys/sysctl.h>
 #include <sys/types.h>
 
-@implementation NSWorkspace (Process)
+@implementation NSWorkspace (Additions)
 
 - (BOOL) processIsRunning:(pid_t)aPID
 {
