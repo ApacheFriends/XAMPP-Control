@@ -732,6 +732,10 @@
 		928EF2F50FD45E62002FC497 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				92EACD370F3EFCA00037FCC2 /* XPRootTask.h */,
+				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
+				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
+				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 				92FEC9140FD1C9300071E676 /* XPProcessWatcher.h */,
 				92FEC9150FD1C9300071E676 /* XPProcessWatcher.m */,
 				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
@@ -788,10 +792,6 @@
 			children = (
 				922D70E90F38876900FDF9E2 /* NSWorkspace+Additions.h */,
 				922D70EA0F38876900FDF9E2 /* NSWorkspace+Additions.m */,
-				92EACD370F3EFCA00037FCC2 /* XPRootTask.h */,
-				92EACD380F3EFCA00037FCC2 /* XPRootTask.m */,
-				92419BCA0FD2ACDE00CEA9F5 /* XPMainThreadProxy.h */,
-				92419BCB0FD2ACDE00CEA9F5 /* XPMainThreadProxy.m */,
 				92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */,
 				92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */,
 				9200B4C510075FAC00D4524A /* NSString+Additions.h */,
