@@ -23,17 +23,12 @@
  
  */
 
-#import "NSObject+Unproxy.h"
+#import <Cocoa/Cocoa.h>
 
 
-@implementation NSObject (Unproxy)
+@interface NSObject (Additions)
 
-- (id)unproxy { 
-    if([self isKindOfClass:NSClassFromString(@"_NSControllerObjectProxy")]) {
-        return [self valueForKey:@"unproxy"];
-	} else {
-        return self; 
-    }
-}
+- (id) mainThreadProxy;
+- (id) unproxy;
 
 @end
