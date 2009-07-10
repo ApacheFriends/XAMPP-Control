@@ -9,7 +9,7 @@
 #import "NSObject+Additions.h"
 #import "XPMainThreadProxy.h"
 
-@implementation NSObject_Additions
+@implementation NSObject (Additions)
 
 - (id) mainThreadProxy
 {
