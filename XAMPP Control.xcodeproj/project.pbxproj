@@ -582,8 +582,6 @@
 				92F13DA90FA0D57F007ED72B /* XAMPP Control.h */,
 				92303D350FD013470078E7C0 /* XPAlert.h */,
 				92303D360FD013470078E7C0 /* XPAlert.m */,
-				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
-				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
 				92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */,
 				92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */,
 				9256DFFF0F9F75450000BE90 /* App_Delegate.h */,
@@ -788,6 +786,8 @@
 		92E28FF90FD4523B00DBA78F /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				922D72800F39D81B00FDF9E2 /* NSBezierPathAdditions.h */,
+				922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */,
 				922D70E90F38876900FDF9E2 /* NSWorkspace+Additions.h */,
 				922D70EA0F38876900FDF9E2 /* NSWorkspace+Additions.m */,
 				92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */,
@@ -797,7 +797,7 @@
 				926D117810076E1E00750D67 /* NSObject+Additions.h */,
 				926D117910076E1E00750D67 /* NSObject+Additions.m */,
 			);
-			name = Additions;
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		92E290000FD4528200DBA78F /* PlugIn System */ = {
