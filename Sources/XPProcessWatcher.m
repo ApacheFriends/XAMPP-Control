@@ -25,7 +25,7 @@
 
 #import "XPProcessWatcher.h"
 #import "KQueue.h"
-#import "NSWorkspace (Process).h"
+#import "NSWorkspace+Additions.h"
 
 #include <unistd.h>
 

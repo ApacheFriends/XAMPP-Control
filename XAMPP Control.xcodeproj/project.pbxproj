@@ -353,7 +353,7 @@
 		9212969D100A2A0F002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		921296A3100A2A7C002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/About.xib; sourceTree = "<group>"; };
 		921296A6100A2AC2002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/Credits.html; sourceTree = "<group>"; };
-		921296AE100A2C13002839F5 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		921296AE100A2C13002839F5 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		921296B2100A2C1C002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92178A600F5D787800425525 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		92178A630F5D7AB800425525 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };

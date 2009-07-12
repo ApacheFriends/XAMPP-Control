@@ -1,4 +1,16 @@
-﻿/* Reload the Module %@ */
+﻿/* Cancel */
+"Cancel" = "Abbrechen";
+
+/* The hostname can not resolved! */
+"HostnameError001" = "Der Computername konnte nicht aufgelöst werden!";
+
+/* XAMPP can not resolve the IP for the hostname of this computer. By clicking 'OK', XAMPP will add the hostname to the hosts-File. */
+"HostnameError001Description" = "XAMPP konnte nicht die IP-Addresse für den Computernamen ermitteln. Bei einem Klick auf 'OK', wird XAMPP den Computernamen in die hosts-Datei einfügen.";
+
+/* OK */
+"OK" = "OK";
+
+/* Reload the Module %@ */
 "Reload %@" = "%@ aktualisieren";
 
 /* Start a Module */

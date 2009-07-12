@@ -24,7 +24,7 @@
  */
 
 #import "KQueue.h"
-#import "NSObject (MainThread).h"
+#import "NSObject+Additions.h"
 #include <unistd.h>
 
 static id sharedKQueue;
