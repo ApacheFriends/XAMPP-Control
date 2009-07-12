@@ -53,9 +53,6 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		920078E90FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920078E80FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib */; };
-		920078FC0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920078FB0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib */; };
-		920079140FA461E1002665E0 /* SecurityCheckWorkPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920079130FA461E1002665E0 /* SecurityCheckWorkPage.xib */; };
 		9200B4C710075FAC00D4524A /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200B4C610075FAC00D4524A /* NSString+Additions.m */; };
 		9204BA7E0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */; };
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
@@ -338,9 +335,6 @@
 		32CA4F630368D1EE00C91783 /* XAMPP Control_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XAMPP Control_Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* XAMPP Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XAMPP Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		920078E60FA3B4C7002665E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckWelcomePage.xib; sourceTree = "<group>"; };
-		920078F90FA45B9B002665E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckSummaryPage.xib; sourceTree = "<group>"; };
-		920079080FA45E5A002665E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckWorkPage.xib; sourceTree = "<group>"; };
 		9200790F0FA461CD002665E0 /* AssistantStepIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantStepIndicatorView.h; sourceTree = "<group>"; };
 		920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantStepIndicatorView.m; sourceTree = "<group>"; };
 		920079180FA463F5002665E0 /* AssistantStepActive.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepActive.tiff; sourceTree = "<group>"; };
@@ -695,9 +689,6 @@
 				92BDB9980FA218A800B8D0D7 /* About.xib */,
 				92178A7A0F5D809F00425525 /* Credits.html */,
 				92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */,
-				920078E80FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib */,
-				920078FB0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib */,
-				920079130FA461E1002665E0 /* SecurityCheckWorkPage.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1157,9 +1148,6 @@
 				92BDB9990FA218A800B8D0D7 /* About.xib in Resources */,
 				92178A7B0F5D809F00425525 /* Credits.html in Resources */,
 				92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */,
-				920078E90FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib in Resources */,
-				920078FC0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib in Resources */,
-				920079140FA461E1002665E0 /* SecurityCheckWorkPage.xib in Resources */,
 				92E28F3B0FD4156B00DBA78F /* AlertCautionIcon.icns in Resources */,
 				92E28F3C0FD4156D00DBA78F /* AlertLogView.xib in Resources */,
 				92E28F3D0FD4157F00DBA78F /* AssistantStepActive.tiff in Resources */,
@@ -1403,30 +1391,6 @@
 				92129696100A2016002839F5 /* German */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		920078E80FA3B4D1002665E0 /* SecurityCheckWelcomePage.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				920078E60FA3B4C7002665E0 /* English */,
-			);
-			name = SecurityCheckWelcomePage.xib;
-			sourceTree = "<group>";
-		};
-		920078FB0FA45BA5002665E0 /* SecurityCheckSummaryPage.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				920078F90FA45B9B002665E0 /* English */,
-			);
-			name = SecurityCheckSummaryPage.xib;
-			sourceTree = "<group>";
-		};
-		920079130FA461E1002665E0 /* SecurityCheckWorkPage.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				920079080FA45E5A002665E0 /* English */,
-			);
-			name = SecurityCheckWorkPage.xib;
 			sourceTree = "<group>";
 		};
 		9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */ = {
