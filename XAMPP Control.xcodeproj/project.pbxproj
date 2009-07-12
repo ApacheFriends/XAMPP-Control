@@ -851,7 +851,7 @@
 				92EACDA00F3F0FCB0037FCC2 /* xproottask-helper-tool.c */,
 				92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */,
 			);
-			name = "Helper Tools";
+			path = "Helper Tools";
 			sourceTree = "<group>";
 		};
 		92ED0E580FB3485E00ED5BB9 /* PlugIns */ = {
