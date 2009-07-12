@@ -568,6 +568,7 @@
 				92EACD720F3F0E630037FCC2 /* Helper Tools */,
 				9276D9FE0F3B2F4E00866FEB /* AboutBox */,
 				92E290000FD4528200DBA78F /* PlugIn System */,
+				92CDA619100A38A000F79452 /* Views */,
 				922D70C30F387EB600FDF9E2 /* XPModule.h */,
 				922D70C40F387EB600FDF9E2 /* XPModule.m */,
 				922D70C60F38802900FDF9E2 /* XPStatus.h */,
@@ -592,8 +593,6 @@
 				92F13D460FA09A5A007ED72B /* ControlsWindowController.m */,
 				9257D7940FA1DA73002BF955 /* XPBox.h */,
 				9257D7950FA1DA73002BF955 /* XPBox.m */,
-				92E361740FBEB8390018B96E /* StatusIndicatorView.h */,
-				92E361750FBEB8390018B96E /* StatusIndicatorView.m */,
 				92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */,
 				92DBE2450FE524C6009D4503 /* Debug.h */,
 				92DBE2460FE524C6009D4503 /* Debug.m */,
@@ -751,6 +750,15 @@
 				92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */,
 			);
 			path = SecurityTasks;
+			sourceTree = "<group>";
+		};
+		92CDA619100A38A000F79452 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92E361740FBEB8390018B96E /* StatusIndicatorView.h */,
+				92E361750FBEB8390018B96E /* StatusIndicatorView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		92E28EA50FD402D700DBA78F /* BetaSupport */ = {
