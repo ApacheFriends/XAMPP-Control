@@ -116,6 +116,7 @@
 		92C87BAD0FEBD8F8007C6F87 /* enableSkipNetworking.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92C87BAC0FEBD8F8007C6F87 /* enableSkipNetworking.sh */; };
 		92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CB83BD0FE1167500AA0CB6 /* Localizable.strings */; };
 		92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */; };
+		92CDA5FC100A32FE00F79452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CDA5FB100A32FE00F79452 /* Localizable.strings */; };
 		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */; };
 		92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
@@ -424,6 +425,8 @@
 		92C87BAC0FEBD8F8007C6F87 /* enableSkipNetworking.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = enableSkipNetworking.sh; sourceTree = "<group>"; };
 		92CB83BB0FE1162A00AA0CB6 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPLocalization.h; sourceTree = "<group>"; };
+		92CDA5F9100A32FA00F79452 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		92CDA5FD100A330400F79452 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92D175B90FD59FFD00C8F4C7 /* BetaSupportPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaSupportPlugIn.h; sourceTree = "<group>"; };
 		92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaSupportPlugIn.m; sourceTree = "<group>"; };
 		92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
@@ -910,6 +913,7 @@
 		92ED0E5C0FB348A800ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92CDA5FB100A32FE00F79452 /* Localizable.strings */,
 				92F13C250FA07D7B007ED72B /* Info.plist */,
 			);
 			path = Resources;
@@ -1190,6 +1194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CDA5FC100A32FE00F79452 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1521,6 +1526,15 @@
 			children = (
 				92CB83BB0FE1162A00AA0CB6 /* English */,
 				926A5CE80FED01100073DDF8 /* German */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		92CDA5FB100A32FE00F79452 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92CDA5F9100A32FA00F79452 /* English */,
+				92CDA5FD100A330400F79452 /* German */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

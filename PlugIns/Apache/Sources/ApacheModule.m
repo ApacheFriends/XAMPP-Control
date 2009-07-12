@@ -94,9 +94,9 @@
 	
 	[errorDict setValue:[XPConfiguration fullXAMPPPathFor:@"/xamppfiles/logs/error_log"]
 				 forKey:XPErrorLogFileKey];
-	[errorDict setValue:@"Apache did not start!" 
+	[errorDict setValue:XPLocalizedString(@"ApacheNotStarted", @"Apache did not start!")
 				 forKey:NSLocalizedDescriptionKey];
-	[errorDict setValue:@"Please take a look into the log file of Apache for informations why Apache didn't start." 
+	[errorDict setValue:XPLocalizedString(@"ApacheNotStartedDescription", @"Please take a look into the log file of Apache for informations why Apache didn't start.")
 				 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain
@@ -227,9 +227,9 @@
 	
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:@"Web Sharing is on!" 
+	[errorDict setValue:XPLocalizedString(@"WebSharingError", @"Web Sharing is on!") 
 				 forKey:NSLocalizedDescriptionKey];
-	[errorDict setValue:@"XAMPP's Apache can not start while Web Sharing is on! Please go to System Preferences > Sharing and turn it off." 
+	[errorDict setValue:XPLocalizedString(@"WebSharingErrorDescription", @"XAMPP's Apache can not start while Web Sharing is on! Please go to System Preferences > Sharing and turn it off.") 
 				 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain
@@ -257,17 +257,17 @@
 	
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:@"Another webserver is already running!" 
+	[errorDict setValue:XPLocalizedString(@"AnotherWebserverError", @"Another webserver is already running!")
 				 forKey:NSLocalizedDescriptionKey];
 	
 	if (port80AlreadyUsed && port443AlreadyUsed)
-		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 80 (and 433). Please turn it off and try again." 
+		[errorDict setValue:XPLocalizedString(@"AnotherWebserverErrorDescription001", @"XAMPP's Apache can not start while another webserver is using port 80 (and 433). Please turn it off and try again.") 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	else if (port443AlreadyUsed)
-		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 433. Please turn it off and try again." 
+		[errorDict setValue:XPLocalizedString(@"AnotherWebserverErrorDescription002", @"XAMPP's Apache can not start while another webserver is using port 433. Please turn it off and try again.") 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	else
-		[errorDict setValue:@"XAMPP's Apache can not start while another webserver is using port 80. Please turn it off and try again." 
+		[errorDict setValue:XPLocalizedString(@"AnotherWebserverErrorDescription003", @"XAMPP's Apache can not start while another webserver is using port 80. Please turn it off and try again.") 
 					 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain
@@ -302,7 +302,7 @@
 	
 	errDict = [NSMutableDictionary dictionary];
 	
-	[errDict setValue:@"Apache syntax error!" 
+	[errDict setValue:XPLocalizedString(@"GeneralSyntaxError", @"Syntax error!") 
 			   forKey:NSLocalizedDescriptionKey];
 	[errDict setValue:output
 			   forKey:NSLocalizedRecoverySuggestionErrorKey];

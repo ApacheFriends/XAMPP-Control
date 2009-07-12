@@ -1,0 +1,27 @@
+﻿/* Another webserver is already running! */
+"AnotherWebserverError" = "Ein anderer Webserver läuft bereits!";
+
+/* XAMPP's Apache can not start while another webserver is using port 80 (and 433). Please turn it off and try again. */
+"AnotherWebserverErrorDescription001" = "XAMPP's Apache konnte nicht gestartet werden weil ein ander Webserver den Port 80 (und 443) benutzt. Bitte schalte diesen aus.";
+
+/* XAMPP's Apache can not start while another webserver is using port 433. Please turn it off and try again. */
+"AnotherWebserverErrorDescription002" = "XAMPP's Apache konnte nicht gestartet werden weil ein ander Webserver den Port 443 benutzt. Bitte schalte diesen aus.";
+
+/* XAMPP's Apache can not start while another webserver is using port 80. Please turn it off and try again. */
+"AnotherWebserverErrorDescription003" = "XAMPP's Apache konnte nicht gestartet werden weil ein ander Webserver den Port 80 benutzt. Bitte schalte diesen aus.";
+
+/* Apache did not start! */
+"ApacheNotStarted" = "Apache konnte nicht gestartet werden!";
+
+/* Please take a look into the log file of Apache for informations why Apache didn't start. */
+"ApacheNotStartedDescription" = "Bitte wirf einen Blick in die Log Datei von Apache um weitere Information über diesen Fehler zu erhalten.";
+
+/* Syntax error! */
+"GeneralSyntaxError" = "Syntax Fehler!";
+
+/* Web Sharing is on! */
+"WebSharingError" = "Web-Sharing ist angeschaltet!";
+
+/* XAMPP's Apache can not start while Web Sharing is on! Please go to System Preferences > Sharing and turn it off. */
+"WebSharingErrorDescription" = "XAMPP's Apache kann nicht gestartet werden, während Web-Sharing angeschaltet ist! Bitte schalte es in den Systemeinstellungen unter Sharing aus.";
+
