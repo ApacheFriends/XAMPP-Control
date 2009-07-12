@@ -54,10 +54,8 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9200B4C710075FAC00D4524A /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200B4C610075FAC00D4524A /* NSString+Additions.m */; };
-		9204BA7E0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */; };
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
-		9204BA8A0FCB216E00B849F0 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA880FCB216E00B849F0 /* ProFTPDSecurityCheck.xib */; };
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
 		921296B1100A2C17002839F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 921296B0100A2C17002839F5 /* Localizable.strings */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
@@ -113,10 +111,10 @@
 		92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */; };
 		92C87BA00FEBD33D007C6F87 /* TaskSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C87B9F0FEBD33D007C6F87 /* TaskSuccess.png */; };
 		92C87BA50FEBD442007C6F87 /* TaskFailed.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C87BA40FEBD442007C6F87 /* TaskFailed.png */; };
-		92C87BAD0FEBD8F8007C6F87 /* enableSkipNetworking.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92C87BAC0FEBD8F8007C6F87 /* enableSkipNetworking.sh */; };
 		92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CB83BD0FE1167500AA0CB6 /* Localizable.strings */; };
 		92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */; };
 		92CDA5FC100A32FE00F79452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CDA5FB100A32FE00F79452 /* Localizable.strings */; };
+		92CDA607100A34FA00F79452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CDA606100A34FA00F79452 /* Localizable.strings */; };
 		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */; };
 		92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
@@ -266,7 +264,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				92C87BAD0FEBD8F8007C6F87 /* enableSkipNetworking.sh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,10 +341,8 @@
 		9200791A0FA463F5002665E0 /* AssistantStepDisabled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = AssistantStepDisabled.tiff; sourceTree = "<group>"; };
 		9200B4C510075FAC00D4524A /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		9200B4C610075FAC00D4524A /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
-		9204BA7D0FCB1DEC00B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MySQLSecurityCheck.xib; sourceTree = "<group>"; };
 		9204BA830FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ManagePHPs.xib; sourceTree = "<group>"; };
 		9204BA850FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchControl.xib; sourceTree = "<group>"; };
-		9204BA890FCB216E00B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProFTPDSecurityCheck.xib; sourceTree = "<group>"; };
 		9204BAAF0FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Assistant.xib; sourceTree = "<group>"; };
 		9204BAB10FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleErrorWindow.xib; sourceTree = "<group>"; };
 		92129696100A2016002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -422,11 +417,12 @@
 		92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLSkipNetworkingTask.m; sourceTree = "<group>"; };
 		92C87B9F0FEBD33D007C6F87 /* TaskSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskSuccess.png; sourceTree = "<group>"; };
 		92C87BA40FEBD442007C6F87 /* TaskFailed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskFailed.png; sourceTree = "<group>"; };
-		92C87BAC0FEBD8F8007C6F87 /* enableSkipNetworking.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = enableSkipNetworking.sh; sourceTree = "<group>"; };
 		92CB83BB0FE1162A00AA0CB6 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPLocalization.h; sourceTree = "<group>"; };
 		92CDA5F9100A32FA00F79452 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92CDA5FD100A330400F79452 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		92CDA604100A34F400F79452 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		92CDA60A100A352E00F79452 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92D175B90FD59FFD00C8F4C7 /* BetaSupportPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetaSupportPlugIn.h; sourceTree = "<group>"; };
 		92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetaSupportPlugIn.m; sourceTree = "<group>"; };
 		92D6F7AA0F501DCC0011BBAE /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
@@ -922,9 +918,7 @@
 		92ED0E650FB348CF00ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */,
 				92F13C7F0FA084F7007ED72B /* Info.plist */,
-				92C87BAC0FEBD8F8007C6F87 /* enableSkipNetworking.sh */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -932,7 +926,7 @@
 		92ED0E700FB348F000ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9204BA880FCB216E00B849F0 /* ProFTPDSecurityCheck.xib */,
+				92CDA606100A34FA00F79452 /* Localizable.strings */,
 				92F13CA70FA08576007ED72B /* Info.plist */,
 			);
 			path = Resources;
@@ -1202,7 +1196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9204BA7E0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,7 +1203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9204BA8A0FCB216E00B849F0 /* ProFTPDSecurityCheck.xib in Resources */,
+				92CDA607100A34FA00F79452 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,14 +1396,6 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		9204BA7C0FCB1DEC00B849F0 /* MySQLSecurityCheck.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9204BA7D0FCB1DEC00B849F0 /* English */,
-			);
-			name = MySQLSecurityCheck.xib;
-			sourceTree = "<group>";
-		};
 		9204BA820FCB20F100B849F0 /* ManagePHPs.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1425,14 +1410,6 @@
 				9204BA850FCB20F100B849F0 /* English */,
 			);
 			name = PHPSwitchControl.xib;
-			sourceTree = "<group>";
-		};
-		9204BA880FCB216E00B849F0 /* ProFTPDSecurityCheck.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9204BA890FCB216E00B849F0 /* English */,
-			);
-			name = ProFTPDSecurityCheck.xib;
 			sourceTree = "<group>";
 		};
 		9204BAAE0FCB2AB700B849F0 /* Assistant.xib */ = {
@@ -1535,6 +1512,15 @@
 			children = (
 				92CDA5F9100A32FA00F79452 /* English */,
 				92CDA5FD100A330400F79452 /* German */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		92CDA606100A34FA00F79452 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92CDA604100A34F400F79452 /* English */,
+				92CDA60A100A352E00F79452 /* German */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
