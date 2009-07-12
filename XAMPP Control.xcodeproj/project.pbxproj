@@ -737,7 +737,7 @@
 				924D9F3C0F447AAE00DC9E43 /* KQueue.h */,
 				924D9F3D0F447AAE00DC9E43 /* KQueue.m */,
 			);
-			name = "Helper Classes";
+			path = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		92C87B800FEBCF24007C6F87 /* SecurityTasks */ = {
