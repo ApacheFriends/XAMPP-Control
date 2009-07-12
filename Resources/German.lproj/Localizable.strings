@@ -1,0 +1,15 @@
+﻿/* Reload the Module %@ */
+"Reload %@" = "%@ aktualisieren";
+
+/* Start a Module */
+"Start" = "Starten";
+
+/* Start the Module %@ */
+"Start %@" = "%@ starten";
+
+/* Stop a Module */
+"Stop" = "Stoppen";
+
+/* Stop the Module %@ */
+"Stop %@" = "%@ stoppen";
+

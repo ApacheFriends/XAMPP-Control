@@ -59,6 +59,7 @@
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
 		9204BA8A0FCB216E00B849F0 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA880FCB216E00B849F0 /* ProFTPDSecurityCheck.xib */; };
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
+		921296B1100A2C17002839F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 921296B0100A2C17002839F5 /* Localizable.strings */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Credits.html */; };
 		922D72820F39D81B00FDF9E2 /* NSBezierPathAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D72810F39D81B00FDF9E2 /* NSBezierPathAdditions.m */; };
@@ -352,6 +353,8 @@
 		9212969D100A2A0F002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		921296A3100A2A7C002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/About.xib; sourceTree = "<group>"; };
 		921296A6100A2AC2002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/Credits.html; sourceTree = "<group>"; };
+		921296AE100A2C13002839F5 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		921296B2100A2C1C002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92178A600F5D787800425525 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		92178A630F5D7AB800425525 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		92178A640F5D7AB800425525 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
@@ -666,6 +669,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				921296B0100A2C17002839F5 /* Localizable.strings */,
 				92BB3D220FEFC42F005623FB /* GettingStarted.html */,
 				92C87BA40FEBD442007C6F87 /* TaskFailed.png */,
 				92C87B9F0FEBD33D007C6F87 /* TaskSuccess.png */,
@@ -1160,6 +1164,7 @@
 				925EF1CD0FF3E4BE00A622E3 /* IndicatorRed.png in Resources */,
 				925EF1CE0FF3E4BE00A622E3 /* IndicatorYellow.png in Resources */,
 				925EF1CF0FF3E4BE00A622E3 /* IndicatorUnknown.png in Resources */,
+				921296B1100A2C17002839F5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1439,6 +1444,15 @@
 				9204BAB10FCB2AB700B849F0 /* English */,
 			);
 			name = ModuleErrorWindow.xib;
+			sourceTree = "<group>";
+		};
+		921296B0100A2C17002839F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				921296AE100A2C13002839F5 /* English */,
+				921296B2100A2C1C002839F5 /* German */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		92178A7A0F5D809F00425525 /* Credits.html */ = {
