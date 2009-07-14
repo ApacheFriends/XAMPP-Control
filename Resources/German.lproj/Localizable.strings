@@ -13,11 +13,17 @@
 /* Reload the Module %@ */
 "Reload %@" = "%@ aktualisieren";
 
+/* Module is Running ToolTip */
+"Running" = "Läuft";
+
 /* Start a Module */
 "Start" = "Starten";
 
 /* Start the Module %@ */
 "Start %@" = "%@ starten";
+
+/* Module is Starting ToolTip */
+"Starting" = "Startet…";
 
 /* Stop a Module */
 "Stop" = "Stoppen";
@@ -25,3 +31,8 @@
 /* Stop the Module %@ */
 "Stop %@" = "%@ stoppen";
 
+/* Module is Stopping ToolTip */
+"Stopping" = "Stoppt…";
+
+/* Module is in a Unknown Stat ToolTip */
+"Unknown" = "Unbekant";
