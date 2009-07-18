@@ -41,7 +41,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{196, 271}, {532, 239}}</string>
 				<int key="NSWTFlags">603980800</int>
-				<string key="NSWindowTitle">About XAMPP</string>
+				<string type="base64-UTF8" key="NSWindowTitle">w5xiZXIgWEFNUFA</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>

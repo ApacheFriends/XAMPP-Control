@@ -25,8 +25,8 @@
 
 #import "ProFTPDPlugin.h"
 #import "ProFTPDModule.h"
-#import "ProFTPDSecurityCheck.h"
 #import "ProFTPDModuleViewController.h"
+#import "ProFTPDSecurityCheck.h"
 
 @implementation ProFTPDPlugin
 
@@ -51,7 +51,7 @@
 	
 	if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
 		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
-	
+
 	[module setShouldRunStartTests:[[bundleInformations objectForKey:@"RunStartTests"] boolValue]];
 	
 	[module release];

@@ -185,9 +185,9 @@
 	
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:@"Another ftpserver is already running!" 
+	[errorDict setValue:XPLocalizedString(@"AnotherFTPserverError", @"Another ftpserver is already running!")
 				 forKey:NSLocalizedDescriptionKey];
-	[errorDict setValue:@"XAMPP's FTP can not start while another ftpserver is using port 21. Please turn it off and try again." 
+	[errorDict setValue:XPLocalizedString(@"AnotherFTPserverErrorDescription", @"XAMPP's FTP can not start while another ftpserver is using port 21. Please turn it off and try again.")
 				 forKey:NSLocalizedRecoverySuggestionErrorKey];
 	
 	error = [NSError errorWithDomain:XAMPPControlErrorDomain

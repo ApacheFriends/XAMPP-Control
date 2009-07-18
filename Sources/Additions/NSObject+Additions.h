@@ -26,9 +26,9 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface NSWorkspace (Process)
+@interface NSObject (Additions)
 
-- (BOOL) processIsRunning:(pid_t)aPID;
-- (BOOL) portIsUsed:(uint)port;
+- (id) mainThreadProxy;
+- (id) unproxy;
 
 @end

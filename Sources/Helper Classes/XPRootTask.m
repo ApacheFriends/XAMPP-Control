@@ -24,7 +24,7 @@
  */
 
 #import "XPRootTask.h"
-#import "NSWorkspace (Process).h"
+#import "NSWorkspace+Additions.h"
 #include <Security/Authorization.h>
 #include <Security/AuthorizationTags.h>
 #include <unistd.h>

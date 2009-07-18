@@ -51,9 +51,8 @@
 #import <XAMPP Control/XPProcessWatcher.h>
 
 /* Additions */
-#import <XAMPP Control/NSObject (MainThread).h>
-#import <XAMPP Control/NSObject+unproxy.h>
-#import <XAMPP Control/NSWorkspace (Process).h>
+#import <XAMPP Control/NSObject+Additions.h>
+#import <XAMPP Control/NSWorkspace+Additions.h>
 #import <XAMPP Control/NSFileHandle+OpenAsRoot.h>
 
 /* I18N */
