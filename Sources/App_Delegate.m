@@ -54,9 +54,7 @@
 	if (![manager loadAllPluginsError:&error]) {
 		[NSApp presentError:error];
 	}
-	
-	DLog(@"%@", [[manager registry] stringFromRegistryContent]);
-		
+			
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
 	
