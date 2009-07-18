@@ -7,6 +7,9 @@
 /* XAMPP can not resolve the IP for the hostname of this computer. By clicking 'OK', XAMPP will add the hostname to the hosts-File. */
 "HostnameError001Description" = "XAMPP konnte nicht die IP-Addresse für den Computernamen ermitteln. Bei einem Klick auf 'OK', wird XAMPP den Computernamen in die hosts-Datei einfügen.";
 
+/* Button Title for the Install Guide */
+"InstallGuideButton" = "Installations Anleitung";
+
 /* OK */
 "OK" = "OK";
 
@@ -36,3 +39,9 @@
 
 /* Module is in a Unknown Stat ToolTip */
 "Unknown" = "Unbekant";
+
+/* Alert Message for the Wrong Install Location error */
+"WorngInstallLocation" = "XAMPP befindet sich am falschen Ort!";
+
+/* Alert Message Description for the Wrong Install Location error */
+"WorngInstallLocationDescription" = "XAMPP muss unter /Programme (/Applications) zu finden sein. Bitte folge genau den Installations Anweisungen.";

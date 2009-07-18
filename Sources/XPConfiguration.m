@@ -126,6 +126,11 @@ static id sharedConfiguration = Nil;
 	return [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"BugtrackerURL"]];
 }
 
+- (NSURL*) installGuideURL
+{
+	return [NSURL URLWithString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"InstallGuideURL"]];
+}
+
 - (BOOL) hasFixRights
 {
 	return [[NSFileManager defaultManager] fileExistsAtPath:[self fullXAMPPPathFor:@"/etc/xampp/rights_fixed"]];

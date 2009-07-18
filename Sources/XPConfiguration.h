@@ -53,6 +53,7 @@
 
 - (NSURL*) supportForumURL;
 - (NSURL*) bugtrackerURL;
+- (NSURL*) installGuideURL;
 
 - (BOOL) hasFixRights;
 

@@ -33,6 +33,15 @@
 
 @implementation App_Delegate
 
++ (void)initialize{
+	
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *appDefaults = [NSDictionary
+								 dictionaryWithObject:@"NO" forKey:@"SkipLocationCheck"];
+	
+    [defaults registerDefaults:appDefaults];
+}
+
 #pragma mark -
 #pragma mark Getter and Setter
 
@@ -41,6 +50,8 @@
 
 - (void) awakeFromNib
 {
+	[self installLocationCheck];
+
 	NSError *error;
 	PlugInManager *manager = [PlugInManager sharedPlugInManager];
 	
@@ -72,6 +83,31 @@
 	[controlsWindowController showWindow:theApplication];
 	
 	return YES;
+}
+
+- (void) installLocationCheck
+{
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SkipLocationCheck"])
+		return;
+	
+	NSString* currentPath = [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent];
+	NSString* xamppPath = [[XPConfiguration XAMPPPath] stringByResolvingSymlinksInPath];
+	
+	if (![currentPath isEqualToString:xamppPath]) {
+		NSAlert* alert = [NSAlert alertWithMessageText:NSLocalizedString(@"WorngInstallLocation", @"Alert Message for the Wrong Install Location error")
+										 defaultButton:NSLocalizedString(@"OK", @"OK") 
+									   alternateButton:NSLocalizedString(@"InstallGuideButton", @"Button Title for the Install Guide")
+										   otherButton:Nil 
+							 informativeTextWithFormat:NSLocalizedString(@"WorngInstallLocationDescription", @"Alert Message Description for the Wrong Install Location error")];
+		[alert setAlertStyle:NSCriticalAlertStyle];
+		int choice = [alert runModal];
+		
+		if (choice == NSAlertAlternateReturn) {
+			[[NSWorkspace sharedWorkspace] openURL:[[XPConfiguration sharedConfiguration] installGuideURL]];
+		}
+		
+		[NSApp terminate:self];
+	}
 }
 
 #pragma mark -
