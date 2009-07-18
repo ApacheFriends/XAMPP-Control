@@ -28,7 +28,6 @@
 #import "SecurityCheckWelcomePage.h"
 #import "SecurityCheckSummaryPage.h"
 #import "SecurityCheckWorkPage.h"
-#import "SecurityCheckProtocol.h"
 
 #import <PlugIn/PlugIn.h>
 #import <XAMPP Control/XAMPP Control.h>
@@ -49,36 +48,48 @@
 	[self setTitle:@"Security Check"];
 }
 
-- (NSMutableArray *) mutableSecurityChecksArray {
+- (void) prepareSecurityChecks {
 	PlugInRegistry* plugInRegistry = [[PlugInManager sharedPlugInManager] registry];
-	NSArray* securityChecksAll = [plugInRegistry objectsForCategorie:XPSecurityChecksPlugInCategorie];
-	NSMutableArray* securityChecks = [NSMutableArray array];
+	NSArray* all = [plugInRegistry objectsForCategorie:XPSecurityChecksPlugInCategorie];
+	NSMutableArray* securityChecksFiltered = [NSMutableArray array];
 	
 	/* Go thorugh our array of securitychecks and check if it confroms to the securitycheckprotocol.
-	   If not, we remove it from the array and decrement i to not exceed the array bounds.
+	 If not, we remove it from the array and decrement i to not exceed the array bounds.
 	 
-	   TODO: Maybe this can be done with an predicate? */
+	 TODO: Maybe this can be done with an predicate? */
 	
-	for (int i = 0; i < [securityChecksAll count]; i++) {
-		id obj = [securityChecksAll objectAtIndex:i];
+	for (int i = 0; i < [all count]; i++) {
+		id obj = [all objectAtIndex:i];
 		if ([obj conformsToProtocol:@protocol(SecurityCheckProtocol)]) {
-			[securityChecks addObject:obj];
+			[securityChecksFiltered addObject:obj];
+			[obj checkSecurity];
 		}
 		else {
 			DLog(@"%@ does not conforms to the SecurityCheckProtocol!", obj);
 		}
 	}
 	
-	return securityChecks;
+	[securityChecks release];
+	securityChecks = [securityChecksFiltered retain];
+}
+
+- (void) prepareSecurityCheckPages {
+	NSPredicate *predicate;
+	
+	predicate = [NSPredicate predicateWithFormat:@"isSecure == NO"];
+	
+	[securityCheckPages release];
+	securityCheckPages = [[securityChecks filteredArrayUsingPredicate:predicate] retain];
 }
 
 - (BOOL) setupPages
 {
 	NSMutableArray* array;
-	NSMutableArray *securityChecks;
 	
-	securityChecks = [self mutableSecurityChecksArray];
 	array = [NSMutableArray array];
+	
+	[self prepareSecurityChecks];
+	[self prepareSecurityCheckPages];
 	
 	/* There are no security checks to display, this assistant is useless
 	   display a message to the user and returns bool here to avoid the display
@@ -93,7 +104,7 @@
 	
 	[array addObject:[[SecurityCheckWelcomePage new] autorelease]];
 	
-	[array addObjectsFromArray:securityChecks];
+	[array addObjectsFromArray:securityCheckPages];
 	
 	[array addObject:[[[SecurityCheckSummaryPage alloc] initWithSecurityChecks:securityChecks] autorelease]];
 	[array addObject:[[[SecurityCheckWorkPage alloc] initWithSecurityChecks:securityChecks] autorelease]];

@@ -58,4 +58,24 @@
 	return YES;
 }
 
+- (void) calcualteTasks
+{
+	
+}
+
+- (NSArray*) tasks
+{
+	return [NSArray array];
+}
+
+- (void) checkSecurity
+{
+	
+}
+
+- (BOOL) isSecure
+{
+	return NO;
+}
+
 @end

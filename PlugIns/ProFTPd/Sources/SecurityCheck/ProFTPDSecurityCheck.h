@@ -26,8 +26,9 @@
 #import <Cocoa/Cocoa.h>
 
 #import <XAMPP Control/AssistantPage.h>
+#import <XAMPP Control/SecurityCheckProtocol.h>
 
-@interface ProFTPDSecurityCheck : AssistantPage {
+@interface ProFTPDSecurityCheck : AssistantPage<SecurityCheckProtocol> {
 	IBOutlet NSSecureTextField*	password;
 	IBOutlet NSSecureTextField*	passwordConfirm;
 	

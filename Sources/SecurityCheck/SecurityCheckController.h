@@ -28,7 +28,8 @@
 #import <XAMPP Control/AssistantController.h>
 
 @interface SecurityCheckController : AssistantController {
-
+	NSArray* securityChecks;
+	NSArray* securityCheckPages;
 }
 
 @end

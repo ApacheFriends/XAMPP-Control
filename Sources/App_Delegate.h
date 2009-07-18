@@ -43,4 +43,6 @@
 - (IBAction) visitBugtracker:(id)sender;
 - (IBAction) sendFeedback:(id)sender;
 
+- (IBAction) showSecurityCheck:(id)sender;
+
 @end

@@ -29,4 +29,7 @@
 
 - (NSArray*) tasks;
 
+- (void) checkSecurity;
+- (BOOL) isSecure;
+
 @end

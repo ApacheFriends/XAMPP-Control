@@ -91,9 +91,6 @@
 		[task release];
 	}
 	
-	if (setRootPassword)
-		[tasks addObject:NSLocalizedString(@"SetMySQLRootPassword", @"Task description for the set mysql's root password task.")];
-	
 	if (setPMAPassword)
 		[tasks addObject:[[MySQLRandomPMAPasswordTask new] autorelease]];
 	
@@ -103,6 +100,16 @@
 - (NSArray*) tasks
 {
 	return _tasks;
+}
+
+- (void) checkSecurity 
+{
+	
+}
+
+- (BOOL) isSecure
+{
+	return NO;
 }
 
 @end

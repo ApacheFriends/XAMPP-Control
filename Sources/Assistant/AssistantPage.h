@@ -41,6 +41,7 @@ typedef enum {
 	AssistantController*assistantController;
 	NSString*			title;
 	NSString*			stepTitle;
+	BOOL				isValid;
 }
 
 - (AssistantPageType) type;
@@ -62,6 +63,7 @@ typedef enum {
 
 // Is the pagecontent valid so that the page can disappear and show the next page
 // The error presentation is the task of the assistant page
-- (BOOL) valid;
+- (BOOL) isValid;
+- (void) setIsValid:(BOOL)isValid;
 
 @end
