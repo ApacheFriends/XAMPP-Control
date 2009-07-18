@@ -751,7 +751,7 @@
 				92CBCBC30FC032B900C136BE /* SecurityTasksView.m */,
 				92C87B4A0FEBBF85007C6F87 /* SecurityTaskProtocol.h */,
 			);
-			name = SecurityCheck;
+			path = SecurityCheck;
 			sourceTree = "<group>";
 		};
 		920078C90FA3AEA4002665E0 /* Pages */ = {
@@ -764,7 +764,7 @@
 				920079000FA45D8C002665E0 /* SecurityCheckWorkPage.h */,
 				920079010FA45D8C002665E0 /* SecurityCheckWorkPage.m */,
 			);
-			name = Pages;
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		9257D7D80FA1F3E5002BF955 /* Assistant */ = {
@@ -778,6 +778,25 @@
 				920079100FA461CD002665E0 /* AssistantStepIndicatorView.m */,
 			);
 			path = Assistant;
+			sourceTree = "<group>";
+		};
+		92711EAA1011CF0400E4EB8A /* SecurityCheck */ = {
+			isa = PBXGroup;
+			children = (
+				92C87B800FEBCF24007C6F87 /* Tasks */,
+				920079790FA48B89002665E0 /* MySQLSecurityCheck.h */,
+				9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */,
+			);
+			path = SecurityCheck;
+			sourceTree = "<group>";
+		};
+		92711EAC1011CFA900E4EB8A /* SecurityCheck */ = {
+			isa = PBXGroup;
+			children = (
+				9200799C0FA4B8FB002665E0 /* ProFTPDSecurityCheck.h */,
+				9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */,
+			);
+			path = SecurityCheck;
 			sourceTree = "<group>";
 		};
 		9276D9FE0F3B2F4E00866FEB /* AboutBox */ = {
@@ -800,7 +819,7 @@
 			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
-		92C87B800FEBCF24007C6F87 /* SecurityTasks */ = {
+		92C87B800FEBCF24007C6F87 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
 				92C87B840FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.h */,
@@ -810,7 +829,7 @@
 				92AD227C0FF54A210060A41A /* MySQLRootPasswordTask.h */,
 				92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */,
 			);
-			path = SecurityTasks;
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 		92E28EA50FD402D700DBA78F /* BetaSupport */ = {
@@ -946,13 +965,11 @@
 		92ED0E5A0FB3488300ED5BB9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92C87B800FEBCF24007C6F87 /* SecurityTasks */,
+				92711EAA1011CF0400E4EB8A /* SecurityCheck */,
 				92F13C750FA08486007ED72B /* MySQLPlugIn.h */,
 				92F13C760FA08486007ED72B /* MySQLPlugIn.m */,
 				92F13CE50FA08715007ED72B /* MySQLModule.h */,
 				92F13CE60FA08715007ED72B /* MySQLModule.m */,
-				920079790FA48B89002665E0 /* MySQLSecurityCheck.h */,
-				9200797A0FA48B89002665E0 /* MySQLSecurityCheck.m */,
 				926DAAE40FC8523200998643 /* MySQLModuleViewController.h */,
 				926DAAE50FC8523200998643 /* MySQLModuleViewController.m */,
 			);
@@ -962,12 +979,11 @@
 		92ED0E5B0FB3489400ED5BB9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92711EAC1011CFA900E4EB8A /* SecurityCheck */,
 				92F13CD90FA085D6007ED72B /* ProFTPDPlugin.h */,
 				92F13CDA0FA085D6007ED72B /* ProFTPDPlugin.m */,
 				92F13CF30FA087DB007ED72B /* ProFTPDModule.h */,
 				92F13CF40FA087DB007ED72B /* ProFTPDModule.m */,
-				9200799C0FA4B8FB002665E0 /* ProFTPDSecurityCheck.h */,
-				9200799D0FA4B8FB002665E0 /* ProFTPDSecurityCheck.m */,
 				926DAAE70FC8527C00998643 /* ProFTPDModuleViewController.h */,
 				926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */,
 			);
