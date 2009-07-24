@@ -57,6 +57,7 @@
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
+		920E3B7E101A6F3600B6C043 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 920E3B7D101A6F3600B6C043 /* Localizable.strings */; };
 		921296B1100A2C17002839F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 921296B0100A2C17002839F5 /* Localizable.strings */; };
 		92178A650F5D7AB800425525 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92178A640F5D7AB800425525 /* AboutController.m */; };
 		92178A7B0F5D809F00425525 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 92178A7A0F5D809F00425525 /* Credits.html */; };
@@ -345,6 +346,8 @@
 		9204BA850FCB20F100B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PHPSwitchControl.xib; sourceTree = "<group>"; };
 		9204BAAF0FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Assistant.xib; sourceTree = "<group>"; };
 		9204BAB10FCB2AB700B849F0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ModuleErrorWindow.xib; sourceTree = "<group>"; };
+		920E3B79101A6F2400B6C043 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		920E3B80101A6F5000B6C043 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		92129696100A2016002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9212969D100A2A0F002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		921296A3100A2A7C002839F5 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/About.xib; sourceTree = "<group>"; };
@@ -926,6 +929,7 @@
 		92ED0E650FB348CF00ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				920E3B7D101A6F3600B6C043 /* Localizable.strings */,
 				92F13C7F0FA084F7007ED72B /* Info.plist */,
 			);
 			path = Resources;
@@ -1204,6 +1208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920E3B7E101A6F3600B6C043 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,6 +1439,15 @@
 				9204BAB10FCB2AB700B849F0 /* English */,
 			);
 			name = ModuleErrorWindow.xib;
+			sourceTree = "<group>";
+		};
+		920E3B7D101A6F3600B6C043 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				920E3B79101A6F2400B6C043 /* English */,
+				920E3B80101A6F5000B6C043 /* German */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		921296B0100A2C17002839F5 /* Localizable.strings */ = {

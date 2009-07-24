@@ -30,6 +30,12 @@
 #import <XAMPP Control/XPConfiguration.h>
 #import <unistd.h>
 
+@interface MySQLModule (PRIVAT)
+
+- (NSError*) otherMySQLCheck;
+
+@end
+
 @implementation MySQLModule
 
 - (id) init
@@ -84,6 +90,21 @@
 							userInfo:errorDict];
 	
 	return error;
+}
+
+- (NSError*) runStartTests
+{
+	NSError* error;
+	
+	error = [super runStartTests];
+	if (error)
+		return error;
+	
+	error = [self otherMySQLCheck];
+	if (error)
+		return error;
+	
+	return Nil;
 }
 
 - (NSError*) realStop
@@ -151,6 +172,32 @@
 - (NSString*) comparisonString
 {
 	return @"MySQL";
+}
+
+@end
+
+@implementation MySQLModule (PRIVAT)
+
+- (NSError*) otherMySQLCheck
+{
+	NSError* error;
+	NSMutableDictionary* errorDict;
+	
+	if (![[NSWorkspace sharedWorkspace] processIsRunningWithName:@"mysqld"])
+		return Nil;
+	
+	errorDict = [NSMutableDictionary dictionary];
+	
+	[errorDict setValue:XPLocalizedString(@"AnotherMySQLserverError", @"Another mysql server is already running!")
+				 forKey:NSLocalizedDescriptionKey];
+	[errorDict setValue:XPLocalizedString(@"AnotherMySQLserverErrorDescription", @"XAMPP's MySQL can not start while another mysql server is running. Please turn it off and try again.")
+				 forKey:NSLocalizedRecoverySuggestionErrorKey];
+	
+	error = [NSError errorWithDomain:XAMPPControlErrorDomain
+								code:XPOtherServerRunning 
+							userInfo:errorDict];
+	
+	return error;
 }
 
 @end
