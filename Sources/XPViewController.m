@@ -43,8 +43,6 @@
 
 - (void) setView:(NSView*)aView
 {
-	NSParameterAssert(aView != Nil);
-	
 	if ([aView isEqual:view])
 		return;
 	

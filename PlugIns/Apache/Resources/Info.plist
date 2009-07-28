@@ -17,7 +17,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
-	<string>ApachePlugIn</string>
+	<string>ApachePlugin</string>
 	<key>RegisterControlsController</key>
 	<string>YES</string>
 	<key>RunStartTests</key>

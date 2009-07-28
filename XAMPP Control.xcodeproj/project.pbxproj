@@ -78,7 +78,6 @@
 		922E1FF70FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m in Sources */ = {isa = PBXBuildFile; fileRef = 922E1FF60FFA2B3E00F68C8F /* XPHostnameResolveRecoveryAttempter.m */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
-		925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
 		925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */; };
 		925EF1CC0FF3E4BE00A622E3 /* IndicatorGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 925EF1C80FF3E4BE00A622E3 /* IndicatorGreen.png */; };
 		925EF1CD0FF3E4BE00A622E3 /* IndicatorRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 925EF1C90FF3E4BE00A622E3 /* IndicatorRed.png */; };
@@ -102,14 +101,12 @@
 		92AD22190FF4F4440060A41A /* open-helper-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */; };
 		92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */; };
 		92AD22240FF4F6020060A41A /* NSFileHandle+OpenAsRoot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */; };
-		92AD227E0FF54A210060A41A /* MySQLRootPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */; };
 		92BB3D230FEFC42F005623FB /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D220FEFC42F005623FB /* GettingStarted.html */; };
 		92BB3D360FEFC569005623FB /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D350FEFC569005623FB /* BetaFeedback.xib */; };
 		92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9940FA218A800B8D0D7 /* ModuleView.xib */; };
 		92BDB9970FA218A800B8D0D7 /* GettingStarted.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9960FA218A800B8D0D7 /* GettingStarted.xib */; };
 		92BDB9990FA218A800B8D0D7 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9980FA218A800B8D0D7 /* About.xib */; };
 		92BDB99D0FA218B000B8D0D7 /* ControlsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */; };
-		92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */; };
 		92C87BA00FEBD33D007C6F87 /* TaskSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C87B9F0FEBD33D007C6F87 /* TaskSuccess.png */; };
 		92C87BA50FEBD442007C6F87 /* TaskFailed.png in Resources */ = {isa = PBXBuildFile; fileRef = 92C87BA40FEBD442007C6F87 /* TaskFailed.png */; };
 		92CB83BE0FE1167500AA0CB6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CB83BD0FE1167500AA0CB6 /* Localizable.strings */; };
@@ -1319,9 +1316,6 @@
 				92F13C880FA0851A007ED72B /* MySQLPlugIn.m in Sources */,
 				92F13CE70FA08715007ED72B /* MySQLModule.m in Sources */,
 				926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */,
-				92C87B860FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m in Sources */,
-				925EF1900FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m in Sources */,
-				92AD227E0FF54A210060A41A /* MySQLRootPasswordTask.m in Sources */,
 				922E1F9A0FFA211D00F68C8F /* XPError.m in Sources */,
 				922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */,
 				922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */,

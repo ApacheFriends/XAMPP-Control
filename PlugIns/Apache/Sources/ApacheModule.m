@@ -316,7 +316,7 @@
 {
 	NSMutableArray* defines = [NSMutableArray array];
 	
-	[defines addObject: @"-DPHP5"];
+	[defines addObject: @"-DPHP"];
 	
 	if ([self isSSLEnabled]) {
 		[defines addObject:@"-DSSL"];

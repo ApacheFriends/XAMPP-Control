@@ -16,6 +16,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>NSPrincipalClass</key>
+	<string>ProFTPDPlugin</string>
 	<key>RegisterControlsController</key>
 	<string>YES</string>
 	<key>RegisterSecurityCheck</key>
