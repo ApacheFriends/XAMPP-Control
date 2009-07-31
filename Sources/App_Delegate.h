@@ -39,6 +39,8 @@
 
 - (NSArray*) plugInDirectories;
 
+- (IBAction) showControlsWindow:(id)sender;
+
 - (IBAction) visitApacheForum:(id)sender;
 - (IBAction) visitBugtracker:(id)sender;
 - (IBAction) sendFeedback:(id)sender;

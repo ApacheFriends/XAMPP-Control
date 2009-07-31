@@ -80,7 +80,7 @@
 
 - (BOOL)applicationOpenUntitledFile:(NSApplication *)theApplication
 {
-	[controlsWindowController showWindow:theApplication];
+	[self showControlsWindow:theApplication];
 	
 	return YES;
 }
@@ -108,6 +108,11 @@
 		
 		[NSApp terminate:self];
 	}
+}
+
+- (IBAction) showControlsWindow:(id)sender
+{
+	[controlsWindowController showWindow:sender];
 }
 
 #pragma mark -
