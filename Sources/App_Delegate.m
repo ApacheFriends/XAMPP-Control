@@ -71,6 +71,7 @@
 	
 	// Always show the Controls Window on startup
 	[controlsWindowController showWindow:self];
+	[[controlsWindowController window] makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender

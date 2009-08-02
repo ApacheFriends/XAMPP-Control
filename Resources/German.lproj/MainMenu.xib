@@ -715,9 +715,6 @@
 				</object>
 				<string key="NSName">_NSMainMenu</string>
 			</object>
-			<object class="NSCustomObject" id="147568169">
-				<string key="NSClassName">App_Delegate</string>
-			</object>
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
 			</object>
@@ -726,6 +723,9 @@
 			</object>
 			<object class="NSCustomObject" id="981055008">
 				<string key="NSClassName">AboutController</string>
+			</object>
+			<object class="NSCustomObject" id="147568169">
+				<string key="NSClassName">App_Delegate</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">

@@ -137,7 +137,7 @@ enum {
 			[self setupWatchForPID];
 		}
 		else {
-			DLog(@"PID File %@ created but process is not running");
+			DLog(@"PID File %@ created but process is not running", pidFile);
 		}
 
 	}

@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		9202FD851025F26900C38B0C /* Release */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9202FD951025F26900C38B0C /* Build configuration list for PBXAggregateTarget "Release" */;
+			buildPhases = (
+				9202FD901025F26900C38B0C /* CopyFiles */,
+			);
+			dependencies = (
+				9202FD861025F26900C38B0C /* PBXTargetDependency */,
+				9202FD881025F26900C38B0C /* PBXTargetDependency */,
+				9202FD8A1025F26900C38B0C /* PBXTargetDependency */,
+				9202FD8C1025F26900C38B0C /* PBXTargetDependency */,
+			);
+			name = Release;
+			productName = BetaRelease;
+		};
 		92E28EBF0FD4052500DBA78F /* BetaRelease */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 92E28ED80FD405D600DBA78F /* Build configuration list for PBXAggregateTarget "BetaRelease" */;
@@ -54,6 +69,9 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9200B4C710075FAC00D4524A /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9200B4C610075FAC00D4524A /* NSString+Additions.m */; };
+		9202FD921025F26900C38B0C /* ProFTPd.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92F13CA60FA08576007ED72B /* ProFTPd.plugin */; };
+		9202FD931025F26900C38B0C /* MySQL.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92F13C7E0FA084F7007ED72B /* MySQL.plugin */; };
+		9202FD941025F26900C38B0C /* Apache.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92F13C240FA07D7B007ED72B /* Apache.plugin */; };
 		9204BA860FCB20F100B849F0 /* ManagePHPs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA820FCB20F100B849F0 /* ManagePHPs.xib */; };
 		9204BA870FCB20F100B849F0 /* PHPSwitchControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BA840FCB20F100B849F0 /* PHPSwitchControl.xib */; };
 		920650540FCC99B500B1A42C /* Assistant.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9204BAAE0FCB2AB700B849F0 /* Assistant.xib */; };
@@ -178,6 +196,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9202FD871025F26900C38B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
+		9202FD891025F26900C38B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13C230FA07D7B007ED72B;
+			remoteInfo = Apache;
+		};
+		9202FD8B1025F26900C38B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13C7D0FA084F7007ED72B;
+			remoteInfo = MySQL;
+		};
+		9202FD8D1025F26900C38B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
+			remoteInfo = ProFTPd;
+		};
 		928EF3420FD46A64002FC497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -244,6 +290,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9202FD901025F26900C38B0C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "XAMPP Control.app/Contents/PlugIns";
+			dstSubfolderSpec = 16;
+			files = (
+				9202FD921025F26900C38B0C /* ProFTPd.plugin in CopyFiles */,
+				9202FD931025F26900C38B0C /* MySQL.plugin in CopyFiles */,
+				9202FD941025F26900C38B0C /* Apache.plugin in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		925D4F420FAF7CDA00FAF523 /* Other Executables */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1131,6 +1189,7 @@
 			projectRoot = "";
 			targets = (
 				92E28EBF0FD4052500DBA78F /* BetaRelease */,
+				9202FD851025F26900C38B0C /* Release */,
 				92E28EC40FD4054F00DBA78F /* Common */,
 				8D1107260486CEB800E47090 /* XAMPP Control */,
 				92E28ECB0FD4058D00DBA78F /* XAMPP Control Public Headers */,
@@ -1338,6 +1397,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9202FD861025F26900C38B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9202FD871025F26900C38B0C /* PBXContainerItemProxy */;
+		};
+		9202FD881025F26900C38B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13C230FA07D7B007ED72B /* Apache */;
+			targetProxy = 9202FD891025F26900C38B0C /* PBXContainerItemProxy */;
+		};
+		9202FD8A1025F26900C38B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13C7D0FA084F7007ED72B /* MySQL */;
+			targetProxy = 9202FD8B1025F26900C38B0C /* PBXContainerItemProxy */;
+		};
+		9202FD8C1025F26900C38B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
+			targetProxy = 9202FD8D1025F26900C38B0C /* PBXContainerItemProxy */;
+		};
 		928EF3430FD46A64002FC497 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92E28EAD0FD4034100DBA78F /* BetaSupport */;
@@ -1544,6 +1623,27 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9202FD961025F26900C38B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = BetaRelease;
+			};
+			name = Debug;
+		};
+		9202FD971025F26900C38B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = BetaRelease;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		92AD22070FF4F4190060A41A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2080,6 +2180,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9202FD951025F26900C38B0C /* Build configuration list for PBXAggregateTarget "Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9202FD961025F26900C38B0C /* Debug */,
+				9202FD971025F26900C38B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92AD22180FF4F43D0060A41A /* Build configuration list for PBXNativeTarget "open-helper-tool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
