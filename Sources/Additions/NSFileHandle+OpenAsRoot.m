@@ -156,7 +156,7 @@ static int ReadDescriptor(int fd, int *fdRead)
 		
 		int status = ReadDescriptor(fileno(pipe), &fd);
 		
-		if (fd >= 0)
+		if (status == 0 && fd >= 0)
 			handle = [[[NSFileHandle alloc] initWithFileDescriptor:fd closeOnDealloc:YES] autorelease];
 		
 		fclose(pipe);
