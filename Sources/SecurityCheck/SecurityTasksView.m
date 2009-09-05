@@ -215,8 +215,10 @@
 	
 	informationsDict = [[[self taskInformations] objectAtIndex:task] mutableCopy];
 	
-	if ([[informationsDict valueForKey:@"status"] intValue] == status)
+	if ([[informationsDict valueForKey:@"status"] intValue] == status) {
+		[informationsDict release];
 		return;
+	}
 	
 	progressIndicator = [informationsDict valueForKey:@"progressIndicator"];
 	if (![progressIndicator isEqualTo:[NSNull null]]) {

@@ -113,6 +113,7 @@
 	[string addAttributes:[NSDictionary dictionaryWithObject:[NSColor colorWithCalibratedRed:1.f green:50.f/255.f blue:0.f alpha:1.f] forKey:@"NSColor"]
 					range:NSMakeRange(0, [string length])];
 	[button setAttributedTitle:string];
+	[string release];
 	
 	[self setWindowBetaButton:button];
 	[button release];
