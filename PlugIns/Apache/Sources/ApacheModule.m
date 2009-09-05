@@ -27,7 +27,7 @@
 
 #import <XAMPP Control/XPError.h>
 #import <XAMPP Control/XPRootTask.h>
-#import <XAMPP Control/NSWorkspace (Process).h>
+#import <XAMPP Control/NSWorkspace+Additions.h>
 #import <XAMPP Control/XPConfiguration.h>
 #import <unistd.h>
 

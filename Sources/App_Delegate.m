@@ -123,8 +123,6 @@
 	[controlsWindowController showWindow:sender];
 }
 
-=======
->>>>>>> other
 #pragma mark -
 #pragma mark Feedback
 

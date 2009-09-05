@@ -27,7 +27,7 @@
 #import "AssistantPage.h"
 #import "AssistantStepIndicatorView.h"
 
-#import <XAMPP Control/NSObject+Unproxy.h>
+#import <XAMPP Control/NSObject+Additions.h>
 
 NSString *AssistantControllerContext = @"AssistantContollerContext";
 

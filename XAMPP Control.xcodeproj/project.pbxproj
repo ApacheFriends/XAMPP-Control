@@ -119,19 +119,21 @@
 		92711ED21011D32E00E4EB8A /* SecurityCheckSummaryPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ECD1011D32E00E4EB8A /* SecurityCheckSummaryPage.m */; };
 		92711ED31011D32E00E4EB8A /* SecurityCheckWelcomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ECF1011D32E00E4EB8A /* SecurityCheckWelcomePage.m */; };
 		92711ED41011D32E00E4EB8A /* SecurityCheckWorkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ED11011D32E00E4EB8A /* SecurityCheckWorkPage.m */; };
+		92721FE110525FBB0028D569 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
 		928A31EA0FD82A36008048A6 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
-		92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
-		92952C2D0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
-		92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
-		92952C2F0FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
-		92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92AD22170FF4F42E0060A41A /* open-helper-tool in Other Executables */ = {isa = PBXBuildFile; fileRef = 92AD22050FF4F4180060A41A /* open-helper-tool */; };
 		92AD22190FF4F4440060A41A /* open-helper-tool.c in Sources */ = {isa = PBXBuildFile; fileRef = 92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */; };
 		92AD22230FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */; };
 		92AD22240FF4F6020060A41A /* NSFileHandle+OpenAsRoot.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */; };
+		92B6AC2010525EC900EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92B6AC2110525ED100EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92B6AC2210525ED800EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92B6AC2310525EDD00EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92B6AC2410525EE500EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92B6AC2510525EEE00EC9E18 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
 		92BB3D230FEFC42F005623FB /* GettingStarted.html in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D220FEFC42F005623FB /* GettingStarted.html */; };
 		92BB3D360FEFC569005623FB /* BetaFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BB3D350FEFC569005623FB /* BetaFeedback.xib */; };
 		92BDB9950FA218A800B8D0D7 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BDB9940FA218A800B8D0D7 /* ModuleView.xib */; };
@@ -144,9 +146,7 @@
 		92CB83CD0FE119F700AA0CB6 /* XPLocalization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92CB83CC0FE119F700AA0CB6 /* XPLocalization.h */; };
 		92CDA5FC100A32FE00F79452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CDA5FB100A32FE00F79452 /* Localizable.strings */; };
 		92CDA607100A34FA00F79452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92CDA606100A34FA00F79452 /* Localizable.strings */; };
-		92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D175BB0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D175BA0FD59FFD00C8F4C7 /* BetaSupportPlugIn.m */; };
-		92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92952C2B0FCB422B00F3D16C /* PlugIn.framework */; };
 		92D6F7AC0F501DCC0011BBAE /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D6F7AB0F501DCC0011BBAE /* GettingStartedController.m */; };
 		92DBE2430FE523A3009D4503 /* PHP.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DBE2420FE523A3009D4503 /* PHP.m */; };
 		92DBE2470FE524C6009D4503 /* Debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DBE2450FE524C6009D4503 /* Debug.h */; };
@@ -388,7 +388,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				92CE00DC0FCBFD7C008AB1E4 /* PlugIn.framework in Frameworks */,
+				92B6AC2010525EC900EC9E18 /* PlugIn.framework in Frameworks */,
 			);
 			name = Frameworks;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,13 +497,13 @@
 		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
-		92952C2B0FCB422B00F3D16C /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = /Users/kleinweby/Entwicklung/build/Debug/PlugIn.framework; sourceTree = "<absolute>"; };
 		92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "open-helper-tool.c"; sourceTree = "<group>"; };
 		92AD22050FF4F4180060A41A /* open-helper-tool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "open-helper-tool"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AD22210FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+OpenAsRoot.h"; sourceTree = "<group>"; };
 		92AD22220FF4F5E40060A41A /* NSFileHandle+OpenAsRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+OpenAsRoot.m"; sourceTree = "<group>"; };
 		92AD227C0FF54A210060A41A /* MySQLRootPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLRootPasswordTask.h; sourceTree = "<group>"; };
 		92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLRootPasswordTask.m; sourceTree = "<group>"; };
+		92B6AC1510525EBF00EC9E18 /* PlugIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugIn.framework; path = Frameworks/PlugIn.framework; sourceTree = "<group>"; };
 		92BB3D200FEFC42D005623FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D240FEFC438005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = German.lproj/GettingStarted.html; sourceTree = "<group>"; };
 		92BB3D370FEFC570005623FB /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/BetaFeedback.xib; sourceTree = "<group>"; };
@@ -588,10 +588,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92721FE110525FBB0028D569 /* PlugIn.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				92EACDE60F3F14030037FCC2 /* Security.framework in Frameworks */,
 				929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */,
-				92952C300FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +606,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D175C20FD5A12700C8F4C7 /* PlugIn.framework in Frameworks */,
+				92B6AC2510525EEE00EC9E18 /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +614,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92952C2D0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
+				92B6AC2310525EDD00EC9E18 /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +629,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92952C2F0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
+				92B6AC2110525ED100EC9E18 /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +637,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92952C2E0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
+				92B6AC2210525ED800EC9E18 /* PlugIn.framework in Frameworks */,
 				925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,7 +646,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92952C2C0FCB422B00F3D16C /* PlugIn.framework in Frameworks */,
+				92B6AC2410525EE500EC9E18 /* PlugIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,8 +700,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92B6AC1510525EBF00EC9E18 /* PlugIn.framework */,
 				925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */,
-				92952C2B0FCB422B00F3D16C /* PlugIn.framework */,
 				929097570F501EBC00BBE38B /* WebKit.framework */,
 				92EACDE50F3F14030037FCC2 /* Security.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -1810,6 +1810,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -1843,6 +1844,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -1937,6 +1939,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -1970,6 +1973,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2031,6 +2035,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2064,6 +2069,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2095,6 +2101,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2135,6 +2142,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2173,6 +2181,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2206,6 +2215,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2237,6 +2247,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -2261,6 +2272,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../build/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2279,6 +2291,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
