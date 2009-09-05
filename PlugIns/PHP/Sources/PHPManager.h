@@ -37,4 +37,6 @@
 - (NSArray*) availablePHPs;
 - (PHP*) activePHP;
 
+- (PHP*) phpWithVersion:(NSString*)versionString;
+
 @end

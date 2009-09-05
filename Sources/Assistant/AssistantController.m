@@ -46,6 +46,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	if (self != nil) {
 		[self loadWindow];
 		[[self window] setDelegate:self];
+		isShown = NO;
 	}
 	return self;
 }
@@ -75,7 +76,9 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 - (IBAction) showWindow:(id)sender
 {
 	[super showWindow:sender];
-	[self showPage:[pages objectAtIndex:0]];
+	if (!isShown)
+		[self showPage:[pages objectAtIndex:0]];
+	isShown = YES;
 }
 
 - (NSArray*)pages
@@ -201,6 +204,11 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 - (BOOL)windowShouldClose:(id)sender
 {
 	return [currentPage type] != AssistantWorkingkPage;
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+	isShown = NO;
 }
 
 @end

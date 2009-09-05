@@ -39,6 +39,7 @@
 - (void) awakeFromNib
 {
 	[self updatePHPVersionsMenu];
+	[statusIndicator setStatus:NoStatus];
 }
 
 - (void) updatePHPVersionsMenu

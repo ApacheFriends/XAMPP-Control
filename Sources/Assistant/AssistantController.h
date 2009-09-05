@@ -39,6 +39,7 @@
 	NSArray*			pages;
 	NSString*			title;
 	AssistantPage*		currentPage;
+	BOOL				isShown;
 }
 
 - (NSArray*)pages;

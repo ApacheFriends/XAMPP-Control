@@ -33,7 +33,9 @@ static id sharedManager = Nil;
 @interface PHPManager (PRIVAT)
 
 - (void) setAvailablePHPs:(NSArray*)array;
+- (void) setActivePHP:(PHP*)php;
 - (void) searchForPHPs;
+- (void) determineActivePHP;
 
 @end
 
@@ -78,6 +80,7 @@ static id sharedManager = Nil;
 	self = [super init];
 	if (self != nil) {
 		[self searchForPHPs];
+		[self determineActivePHP];
 	}
 	return self;
 }
@@ -101,13 +104,41 @@ static id sharedManager = Nil;
 	if ([array isEqualToArray:_availablePHPs])
 		return;
 	
+	[self willChangeValueForKey:@"availablePHPs"];
 	[_availablePHPs release];
 	_availablePHPs = [array retain];
+	[self didChangeValueForKey:@"availablePHPs"];
 }
 
 - (PHP*) activePHP
 {
 	return _activePHP;
+}
+
+- (void) setActivePHP:(PHP *)php
+{
+	if ([php isEqualTo:_activePHP])
+		return;
+	
+	[self willChangeValueForKey:@"activePHP"];
+	_activePHP = php;
+	[self didChangeValueForKey:@"activePHP"];
+}
+
+- (PHP*) phpWithVersion:(NSString*)versionString
+{
+	NSArray* canidates;
+	
+	canidates = [[self availablePHPs] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"version like[cd] %@", versionString]];
+	
+	if ([canidates count] == 0)
+		return Nil;
+	else if ([canidates count] == 1)
+		return [canidates objectAtIndex:0];
+	else {
+		NSLog(@"More than one PHP with the same Versions Number: %@", canidates);
+		return [canidates objectAtIndex:0];
+	}
 }
 
 - (void) searchForPHPs
@@ -133,6 +164,18 @@ static id sharedManager = Nil;
 	}
 	
 	[self setAvailablePHPs:tmp];
+}
+
+- (void) determineActivePHP
+{
+	NSString* activePHPVersion;
+	
+	activePHPVersion = [[NSFileManager defaultManager] 
+						pathContentOfSymbolicLinkAtPath:[XPConfiguration fullXAMPPPathFor:@"xamppfiles/bin/php"]];
+	// Remove the first 4 characters "php-"
+	activePHPVersion = [activePHPVersion substringFromIndex:4];
+	
+	[self setActivePHP:[self phpWithVersion:activePHPVersion]];
 }
 
 @end

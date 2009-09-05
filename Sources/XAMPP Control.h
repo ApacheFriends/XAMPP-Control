@@ -49,6 +49,7 @@
 #import <XAMPP Control/XPConfiguration.h>
 #import <XAMPP Control/XPViewController.h>
 #import <XAMPP Control/XPProcessWatcher.h>
+#import <XAMPP Control/StatusIndicatorView.h>
 
 /* Additions */
 #import <XAMPP Control/NSObject+Additions.h>

@@ -33,6 +33,7 @@
 				92E28EDE0FD407BD00DBA78F /* PBXTargetDependency */,
 				92E28F450FD4165100DBA78F /* PBXTargetDependency */,
 				92E28F5A0FD416FF00DBA78F /* PBXTargetDependency */,
+				9283AB501052BDB900CE1A49 /* PBXTargetDependency */,
 				928EF3430FD46A64002FC497 /* PBXTargetDependency */,
 			);
 			name = BetaRelease;
@@ -129,6 +130,8 @@
 		9283AACB105293FA00CE1A49 /* success_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9283AACA105293FA00CE1A49 /* success_big.png */; };
 		9283AACE1052942E00CE1A49 /* SecurityCheckConclusionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9283AACD1052942E00CE1A49 /* SecurityCheckConclusionPage.m */; };
 		9283AB0B105295A600CE1A49 /* SecurityCheckConclusionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9283AB0A105295A600CE1A49 /* SecurityCheckConclusionPage.xib */; };
+		9283AB5A1052BDC300CE1A49 /* PHP.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E362130FBECB610018B96E /* PHP.plugin */; };
+		9283AB861052BECA00CE1A49 /* StatusIndicatorView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E361740FBEB8390018B96E /* StatusIndicatorView.h */; };
 		928A31EA0FD82A36008048A6 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
@@ -245,6 +248,13 @@
 			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
 			remoteInfo = ProFTPd;
 		};
+		9283AB4F1052BDB900CE1A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E362120FBECB610018B96E /* PHP */;
+			remoteInfo = PHP;
+		};
 		928EF3420FD46A64002FC497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -351,6 +361,7 @@
 			dstPath = "Headers/XAMPP Control";
 			dstSubfolderSpec = 16;
 			files = (
+				9283AB861052BECA00CE1A49 /* StatusIndicatorView.h in CopyFiles */,
 				92E28F020FD4080B00DBA78F /* AssistantController.h in CopyFiles */,
 				92E28F030FD4080C00DBA78F /* AssistantPage.h in CopyFiles */,
 				92E28F080FD4081700DBA78F /* NSWorkspace+Additions.h in CopyFiles */,
@@ -383,6 +394,7 @@
 			dstPath = "XAMPP Control.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
+				9283AB5A1052BDC300CE1A49 /* PHP.plugin in CopyFiles */,
 				928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */,
 				92E28F5D0FD4170600DBA78F /* ProFTPd.plugin in CopyFiles */,
 				92E28F4A0FD4165800DBA78F /* MySQL.plugin in CopyFiles */,
@@ -1542,6 +1554,11 @@
 			isa = PBXTargetDependency;
 			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
 			targetProxy = 9202FD8D1025F26900C38B0C /* PBXContainerItemProxy */;
+		};
+		9283AB501052BDB900CE1A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E362120FBECB610018B96E /* PHP */;
+			targetProxy = 9283AB4F1052BDB900CE1A49 /* PBXContainerItemProxy */;
 		};
 		928EF3430FD46A64002FC497 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

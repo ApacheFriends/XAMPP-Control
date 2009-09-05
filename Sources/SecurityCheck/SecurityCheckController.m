@@ -118,7 +118,7 @@
 
 - (IBAction) showWindow:(id)sender
 {
-	if (![self setupPages])
+	if (!isShown && ![self setupPages])
 		return;
 	
 	[super showWindow:sender];
