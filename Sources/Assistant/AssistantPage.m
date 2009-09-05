@@ -28,6 +28,16 @@
 
 @implementation AssistantPage
 
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		[self setIsValid:YES];
+	}
+	return self;
+}
+
+
 - (void) dealloc
 {
 	[self setTitle:Nil];
@@ -106,9 +116,19 @@
 {
 }
 
-- (BOOL) valid
+- (BOOL) isValid
 {
-	return YES;
+	return isValid;
+}
+
+- (void) setIsValid:(BOOL)valid
+{
+	if (valid == isValid)
+		return;
+	
+	[self willChangeValueForKey:@"isValid"];
+	isValid = valid;
+	[self didChangeValueForKey:@"isValid"];
 }
 
 @end

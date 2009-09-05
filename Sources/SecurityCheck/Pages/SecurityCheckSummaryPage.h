@@ -25,27 +25,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
+#import <XAMPP Control/AssistantPage.h>
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
-	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
+@class SecurityTasksView;
+
+@interface SecurityCheckSummaryPage : AssistantPage {
+	IBOutlet SecurityTasksView* tasksView;
+	NSArray* securityChecks;
 }
 
-- (NSArray*) plugInDirectories;
+- (id) initWithSecurityChecks:(NSArray*)anArray;
 
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
+- (void) setSecurityChecks:(NSArray*)anArray;
+- (NSArray*)securityChecks;
 
 @end

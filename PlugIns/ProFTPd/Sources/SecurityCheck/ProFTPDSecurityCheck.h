@@ -25,27 +25,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
+#import <XAMPP Control/AssistantPage.h>
+#import <XAMPP Control/SecurityCheckProtocol.h>
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
+@interface ProFTPDSecurityCheck : AssistantPage<SecurityCheckProtocol> {
+	IBOutlet NSSecureTextField*	password;
+	IBOutlet NSSecureTextField*	passwordConfirm;
 	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
+	BOOL changeNobodyPassword;
 }
-
-- (NSArray*) plugInDirectories;
-
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
 
 @end

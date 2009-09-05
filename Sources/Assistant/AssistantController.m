@@ -131,7 +131,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	if (![pagesController canSelectNext])
 		return [self close];
 	
-	if (![currentPage valid]) {
+	if (![currentPage isValid]) {
 		NSBeep();
 		return;
 	}

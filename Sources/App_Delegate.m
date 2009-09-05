@@ -30,6 +30,7 @@
 
 #import "ModulesMenuController.h"
 #import "ControlsWindowController.h"
+#import "SecurityCheckController.h"
 
 @implementation App_Delegate
 
@@ -68,6 +69,7 @@
 			
 	modulesMenuController = [[ModulesMenuController alloc] initWithMenu:modulesMenu];
 	controlsWindowController = [[ControlsWindowController alloc] initWithWindowNibName:@"ControlsWindow"];
+	securityCheckController = [[SecurityCheckController alloc] init];
 	
 	// Always show the Controls Window on startup
 	[controlsWindowController showWindow:self];
@@ -111,11 +113,18 @@
 	}
 }
 
+- (IBAction) showSecurityCheck:(id)sender
+{
+	[securityCheckController showWindow:sender];
+}
+
 - (IBAction) showControlsWindow:(id)sender
 {
 	[controlsWindowController showWindow:sender];
 }
 
+=======
+>>>>>>> other
 #pragma mark -
 #pragma mark Feedback
 

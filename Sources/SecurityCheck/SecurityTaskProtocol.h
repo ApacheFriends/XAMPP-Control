@@ -25,27 +25,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
+@protocol SecurityTaskProtocol
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
-	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
-}
-
-- (NSArray*) plugInDirectories;
-
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
+- (NSString*) localizedTitle;
+- (BOOL) run;
 
 @end

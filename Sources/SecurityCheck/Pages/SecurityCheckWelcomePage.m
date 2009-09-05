@@ -23,29 +23,26 @@
  
  */
 
-#import <Cocoa/Cocoa.h>
+#import "SecurityCheckWelcomePage.h"
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
-	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
+@implementation SecurityCheckWelcomePage
+
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		
+		if (![NSBundle loadNibNamed:@"SecurityCheckWelcomePage" owner:self]) {
+			[self release];
+			return Nil;
+		}
+		
+		[self setTitle:NSLocalizedString(@"Welcome to the Security Check", @"The title of the Security Check welcome page")];
+		[self setStepTitle:NSLocalizedString(@"Welcome", @"The step title of the Security Check welcome page which will displayed on the left side")];
+		[self setType:AssistantNormalPage];
+	}
+	return self;
 }
-
-- (NSArray*) plugInDirectories;
-
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
 
 @end

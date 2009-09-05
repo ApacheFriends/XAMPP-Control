@@ -25,27 +25,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
+#import <XAMPP Control/AssistantController.h>
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
-	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
+@interface SecurityCheckController : AssistantController {
+	NSArray* securityChecks;
+	NSArray* securityCheckPages;
 }
-
-- (NSArray*) plugInDirectories;
-
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
 
 @end

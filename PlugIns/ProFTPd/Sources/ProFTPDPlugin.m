@@ -26,6 +26,7 @@
 #import "ProFTPDPlugin.h"
 #import "ProFTPDModule.h"
 #import "ProFTPDModuleViewController.h"
+#import "ProFTPDSecurityCheck.h"
 
 @implementation ProFTPDPlugin
 
@@ -35,18 +36,26 @@
 	NSDictionary* bundleInformations;
 	ProFTPDModule *module;
 	XPModuleViewController *controller;
+	ProFTPDSecurityCheck* securityCheck;
 	
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [ProFTPDModule new];
 	controller = [[ProFTPDModuleViewController alloc] initWithModule:module];
+	securityCheck = [ProFTPDSecurityCheck new];
 	
 	[dict setValue:[NSArray arrayWithObject:module] forKey:XPModulesPlugInCategorie];
+	
 	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
 		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
+	
+	if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
+		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
+
 	[module setShouldRunStartTests:[[bundleInformations objectForKey:@"RunStartTests"] boolValue]];
 	
 	[module release];
+	[securityCheck release];
 	[controller release];
 	
 	[self setRegistryInfo:dict];

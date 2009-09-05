@@ -25,27 +25,26 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class ModulesMenuController;
-@class ControlsWindowController;
-@class SecurityCheckController;
+enum _SecurityTaskStatus {
+	SecurityTaskNoStatus = 1,
+	SecurityTaskWorkingStatus,
+	SecurityTaskSuccessStatus,
+	SecurityTaskFailStatus,
+	SecurityTaskUnknownStatus
+};
 
-@interface App_Delegate : NSObject {
-	IBOutlet NSMenu* modulesMenu;
+typedef enum _SecurityTaskStatus SecurityTaskStatus;
+
+@interface SecurityTasksView : NSView {
+	NSArray* taskTitels;
 	
-	ModulesMenuController* modulesMenuController;
-	ControlsWindowController* controlsWindowController;
-	SecurityCheckController* securityCheckController;
+	NSArray* taskInformations;
 }
 
-- (NSArray*) plugInDirectories;
+- (void) setTaskTitels:(NSArray*)anArray;
+- (NSArray*) taskTitels;
 
-- (IBAction) showControlsWindow:(id)sender;
-
-- (IBAction) visitApacheForum:(id)sender;
-- (IBAction) visitBugtracker:(id)sender;
-- (IBAction) sendFeedback:(id)sender;
-
-- (void) installLocationCheck;
-- (IBAction) showSecurityCheck:(id)sender;
+- (SecurityTaskStatus) statusForTask:(uint)task;
+- (void) setStatus:(SecurityTaskStatus)status forTask:(uint)task;
 
 @end
