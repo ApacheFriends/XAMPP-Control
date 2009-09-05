@@ -63,7 +63,7 @@
 
 - (NSString*) localizedTitle
 {
-	return NSLocalizedString(@"SetRandomMySQLPMAPassword", 
+	return XPLocalizedString(@"SetRandomMySQLPMAPassword", 
 							 @"Taskdrscription for the set a random mysql's pma password task.");
 }
 

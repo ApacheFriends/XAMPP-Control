@@ -58,7 +58,7 @@
 
 - (NSString*) localizedTitle
 {
-	return NSLocalizedString(@"SetMySQLRootPassword", 
+	return XPLocalizedString(@"SetMySQLRootPassword", 
 							 @"Task description for the set mysql's root password task.");
 }
 

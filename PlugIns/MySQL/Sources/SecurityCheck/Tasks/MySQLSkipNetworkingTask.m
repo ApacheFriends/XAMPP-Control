@@ -33,7 +33,7 @@
 
 - (NSString*) localizedTitle
 {
-	return NSLocalizedString(@"DisableMySQLNetworking", 
+	return XPLocalizedString(@"DisableMySQLNetworking", 
 							 @"Task description for the disable MySQL networking task");
 }
 
