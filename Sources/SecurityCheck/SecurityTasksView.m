@@ -87,7 +87,7 @@
 	NSMutableArray* informations;
 	int i;
 	float yPos = 0;
-	float centerOffset = 0.f;
+//	float centerOffset = 0.f;
 	informations = [NSMutableArray arrayWithCapacity:[[self taskTitels] count]];
 		
 	for (i = 0; i < [[self taskTitels] count]; i++) {

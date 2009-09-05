@@ -23,6 +23,8 @@
  
  */
 
+#include <unistd.h>
+
 #import "XPHostnameResolveRecoveryAttempter.h"
 #import "XPModule.h"
 #import "XPAlert.h"
