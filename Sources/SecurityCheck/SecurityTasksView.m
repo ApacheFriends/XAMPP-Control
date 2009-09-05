@@ -42,6 +42,16 @@
 
 @implementation SecurityTasksView
 
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		[self setCenterVertically:NO];
+	}
+	return self;
+}
+
+
 - (void) dealloc
 {
 	[self setTaskTitels:Nil];
@@ -82,12 +92,26 @@
 	return taskInformations;
 }
 
+- (void) setCenterVertically:(BOOL)center
+{
+	if (centerVertically == center)
+		return;
+	
+	centerVertically = center;
+	[self recalculateInformations];
+}
+
+- (BOOL) centerVertically
+{
+	return centerVertically;
+}
+
 - (void) recalculateInformations
 {
 	NSMutableArray* informations;
 	int i;
 	float yPos = 0;
-//	float centerOffset = 0.f;
+	float centerOffset = 0.f;
 	informations = [NSMutableArray arrayWithCapacity:[[self taskTitels] count]];
 		
 	for (i = 0; i < [[self taskTitels] count]; i++) {
@@ -120,19 +144,16 @@
 			[[dict objectForKey:@"progressIndicator"] setFrame:indicatorRect];
 		
 		[informations addObject:dict];
-		DLog(@"row %f; height %f", yPos, rowHeight);
 
 		yPos += rowHeight + 5.f;
-		DLog(@"row %f", yPos);
 	}
 	
-	/* Ok now everything is calculated center the list verticaly :)
+	/* Ok now everything is calculated, center the list verticaly :)
+	 We remove 5 pixel from the offset to look better ;) */
 	
-	centerOffset = (NSHeight([self bounds]) - (yPos - 5.f)) / 2.f;
-	
-	DLog(@"height: %f content height: %f and centerOffset: %f", NSHeight([self bounds]), yPos -5.f , centerOffset);
-	
-	if (centerOffset > 0.f) {
+	centerOffset = (NSHeight([self bounds]) - (yPos - 5.f)) / 2.f - 5.f;
+		
+	if (centerOffset > 0.f && [self centerVertically]) {
 		NSMutableDictionary* dict;
 		NSEnumerator* enumerator;
 
@@ -151,11 +172,9 @@
 			[dict setObject:NSStringFromRect(indicatorRect) forKey:@"indicatorRect"];
 			[dict setObject:NSStringFromRect(textRect) forKey:@"textRect"];
 		}
-	}/**/
+	}
 	
 	[self setTaskInformations:informations];
-	
-	DLog(@"informations %@", informations);
 }
 
 - (double) textWidth

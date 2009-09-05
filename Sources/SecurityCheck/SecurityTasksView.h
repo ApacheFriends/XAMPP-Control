@@ -39,10 +39,15 @@ typedef enum _SecurityTaskStatus SecurityTaskStatus;
 	NSArray* taskTitels;
 	
 	NSArray* taskInformations;
+	
+	BOOL centerVertically;
 }
 
 - (void) setTaskTitels:(NSArray*)anArray;
 - (NSArray*) taskTitels;
+
+- (void) setCenterVertically:(BOOL)center;
+- (BOOL) centerVertically;
 
 - (SecurityTaskStatus) statusForTask:(uint)task;
 - (void) setStatus:(SecurityTaskStatus)status forTask:(uint)task;
