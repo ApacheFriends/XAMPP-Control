@@ -27,6 +27,7 @@
 #import "SecurityCheckProtocol.h"
 #import "SecurityTaskProtocol.h"
 #import "SecurityTasksView.h"
+#import "NSObject+Additions.h"
 
 @implementation SecurityCheckWorkPage
 
@@ -43,7 +44,7 @@
 		[self setSecurityChecks:anArray];
 		[self setTitle:NSLocalizedString(@"Securing XAMPP...", @"The title of the Security Check work page")];
 		[self setStepTitle:NSLocalizedString(@"Securing...", @"The step title of the Security Check work page which will displayed on the left side")];
-		[self setType:AssistantWoringkPage];
+		[self setType:AssistantWorkingkPage];
 	}
 	return self;
 }
@@ -144,7 +145,12 @@
 		}
 	}
 	
-	[pool drain];
+	/* Wait one second and then go to the next page */
+	
+	[[[self assistantController] mainThreadProxy] performSelector:@selector(continue:) 
+													   withObject:self 
+													   afterDelay:1.0];
+	
 	[pool release];
 }
 

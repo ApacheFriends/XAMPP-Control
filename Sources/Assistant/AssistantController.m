@@ -44,13 +44,15 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 {
 	self = [super init];
 	if (self != nil) {
-		if (![NSBundle loadNibNamed:@"Assistant" owner:self]) {
-			DLog(@"failed!!");
-			[self release];
-			return Nil;
-		}
+		[self loadWindow];
+		[[self window] setDelegate:self];
 	}
 	return self;
+}
+
+- (NSString *)windowNibName
+{
+	return @"Assistant";
 }
 
 - (void) dealloc
@@ -175,7 +177,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	pageIndex = [pages indexOfObject:currentPage];
 	
 	if (pageIndex == 0
-		|| [currentPage type] == AssistantWoringkPage
+		|| [currentPage type] == AssistantWorkingkPage
 		|| [currentPage type] == AssistantConclusionPage)
 		[backButton setEnabled:NO];
 	else
@@ -188,12 +190,17 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 	else
 		[forwardButton setTitle:NSLocalizedString(@"Continue", @"Continue the assistant")];
 		
-	if ([currentPage type] == AssistantWoringkPage)
+	if ([currentPage type] == AssistantWorkingkPage)
 		[forwardButton setEnabled:NO];
 	else
 		[forwardButton setEnabled:YES];
 	
 	[stepIndicatorView selectStep:pageIndex];
+}
+	
+- (BOOL)windowShouldClose:(id)sender
+{
+	return [currentPage type] != AssistantWorkingkPage;
 }
 
 @end
