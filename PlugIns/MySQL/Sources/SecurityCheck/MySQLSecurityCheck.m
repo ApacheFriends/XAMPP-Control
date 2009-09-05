@@ -62,6 +62,10 @@
 	[super dealloc];
 }
 
+- (id) copyWithZone:(NSZone *)zone
+{
+	return [[[self class] allocWithZone:zone] init];
+}
 
 - (BOOL) valid
 {

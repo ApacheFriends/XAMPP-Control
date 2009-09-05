@@ -27,7 +27,7 @@
 #import <XAMPP Control/AssistantPage.h>
 #import <XAMPP Control/SecurityCheckProtocol.h>
 
-@interface MySQLSecurityCheck : AssistantPage<SecurityCheckProtocol> {
+@interface MySQLSecurityCheck : AssistantPage<SecurityCheckProtocol,NSCopying> {
 	IBOutlet NSSecureTextField*	password;
 	IBOutlet NSSecureTextField*	passwordConfirm;
 	

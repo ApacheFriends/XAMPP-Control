@@ -53,19 +53,19 @@
 	NSArray* all = [plugInRegistry objectsForCategorie:XPSecurityChecksPlugInCategorie];
 	NSMutableArray* securityChecksFiltered = [NSMutableArray array];
 	
-	/* Go thorugh our array of securitychecks and check if it confroms to the securitycheckprotocol.
-	 If not, we remove it from the array and decrement i to not exceed the array bounds.
-	 
-	 TODO: Maybe this can be done with an predicate? */
-	
 	for (int i = 0; i < [all count]; i++) {
 		id obj = [all objectAtIndex:i];
-		if ([obj conformsToProtocol:@protocol(SecurityCheckProtocol)]) {
+		if ([obj conformsToProtocol:@protocol(SecurityCheckProtocol)] &&
+			[obj conformsToProtocol:@protocol(NSCopying)]) {
+			/* Make a copy here so we have a fresh securitycheck every-
+			 time we open this assistant */
+			obj = [obj copy];
 			[securityChecksFiltered addObject:obj];
 			[obj checkSecurity];
+			[obj release];
 		}
 		else {
-			DLog(@"%@ does not conforms to the SecurityCheckProtocol!", obj);
+			DLog(@"%@ does not conforms to the SecurityCheckProtocol or NSCopying Protocol.!", obj);
 		}
 	}
 	
