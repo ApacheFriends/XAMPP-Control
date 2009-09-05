@@ -184,11 +184,11 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 		[backButton setEnabled:YES];
 	
 	if ([currentPage isEqualTo:[pages lastObject]])
-		[forwardButton setTitle:NSLocalizedString(@"Done", @"Done the Assistant (last page)")];
+		[forwardButton setTitle:XPLocalizedString(@"Done", @"Done the Assistant (last page)")];
 	else if ([currentPage type]  == AssistantSummaryPage)
-		[forwardButton setTitle:NSLocalizedString(@"Do it!", @"The summary has show now let the assistant execute the steps")];
+		[forwardButton setTitle:XPLocalizedString(@"Do it!", @"The summary has show now let the assistant execute the steps")];
 	else
-		[forwardButton setTitle:NSLocalizedString(@"Continue", @"Continue the assistant")];
+		[forwardButton setTitle:XPLocalizedString(@"Continue", @"Continue the assistant")];
 		
 	if ([currentPage type] == AssistantWorkingkPage)
 		[forwardButton setEnabled:NO];

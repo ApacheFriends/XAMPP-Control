@@ -309,11 +309,11 @@ static NSLock *fixRightsLock = Nil;
 	
 	errorDict = [NSMutableDictionary dictionary];
 	
-	[errorDict setValue:NSLocalizedString(@"HostnameError001", @"The hostname can not resolved!" )
+	[errorDict setValue:XPLocalizedString(@"HostnameError001", @"The hostname can not resolved!" )
 				 forKey:NSLocalizedDescriptionKey];
-	[errorDict setValue:NSLocalizedString(@"HostnameError001Description", @"XAMPP can not resolve the IP for the hostname of this computer. By clicking 'OK', XAMPP will add the hostname to the hosts-File.") 
+	[errorDict setValue:XPLocalizedString(@"HostnameError001Description", @"XAMPP can not resolve the IP for the hostname of this computer. By clicking 'OK', XAMPP will add the hostname to the hosts-File.") 
 				 forKey:NSLocalizedRecoverySuggestionErrorKey];
-	[errorDict setValue:[NSArray arrayWithObjects:NSLocalizedString(@"OK", @"OK"), NSLocalizedString(@"Cancel",@"Cancel"),Nil]
+	[errorDict setValue:[NSArray arrayWithObjects:XPLocalizedString(@"OK", @"OK"), XPLocalizedString(@"Cancel",@"Cancel"),Nil]
 				 forKey:NSLocalizedRecoveryOptionsErrorKey];
 	[errorDict setValue:[[[XPHostnameResolveRecoveryAttempter alloc] initWithModule:self] autorelease]
 				 forKey:NSRecoveryAttempterErrorKey];

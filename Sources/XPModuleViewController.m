@@ -71,31 +71,31 @@
 		
 		switch ([module status]) {
 			case XPNotRunning:
-				[actionButton setTitle:NSLocalizedString(@"Start", @"Start a Module")];
+				[actionButton setTitle:XPLocalizedString(@"Start", @"Start a Module")];
 				[actionButton setEnabled:YES];
 				[statusIndicator setStatus:RedStatus];
 				[statusIndicator setToolTip:@"Not Running"];
 				break;
 			case XPRunning:
-				[actionButton setTitle:NSLocalizedString(@"Stop", @"Stop a Module")];
+				[actionButton setTitle:XPLocalizedString(@"Stop", @"Stop a Module")];
 				[actionButton setEnabled:YES];
 				[statusIndicator setStatus:GreenStatus];
-				[statusIndicator setToolTip:NSLocalizedString(@"Running", @"Module is Running ToolTip")];
+				[statusIndicator setToolTip:XPLocalizedString(@"Running", @"Module is Running ToolTip")];
 				break;
 			case XPStarting:
 				[actionButton setEnabled:NO];
 				[statusIndicator setStatus:WorkingStatus];
-				[statusIndicator setToolTip:NSLocalizedString(@"Starting", @"Module is Starting ToolTip")];
+				[statusIndicator setToolTip:XPLocalizedString(@"Starting", @"Module is Starting ToolTip")];
 				break;
 			case XPStopping:
 				[actionButton setEnabled:NO];
 				[statusIndicator setStatus:WorkingStatus];
-				[statusIndicator setToolTip:NSLocalizedString(@"Stopping", @"Module is Stopping ToolTip")];
+				[statusIndicator setToolTip:XPLocalizedString(@"Stopping", @"Module is Stopping ToolTip")];
 				break;
 			default:
 				[actionButton setEnabled:NO];
 				[statusIndicator setStatus:UnknownStatus];
-				[statusIndicator setToolTip:NSLocalizedString(@"Unknown", @"Module is in a Unknown Stat ToolTip")];
+				[statusIndicator setToolTip:XPLocalizedString(@"Unknown", @"Module is in a Unknown Stat ToolTip")];
 				break;
 		}
 	}

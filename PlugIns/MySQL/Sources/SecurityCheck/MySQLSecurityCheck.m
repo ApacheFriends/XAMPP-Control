@@ -48,8 +48,8 @@
 			return Nil;
 		}
 		
-		[self setTitle:NSLocalizedString(@"Secure MySQL", @"The title of the Security Check MySQL page")];
-		[self setStepTitle:NSLocalizedString(@"MySQL", @"The step title of the Security Check MySQL page which will displayed on the left side")];
+		[self setTitle:XPLocalizedString(@"Secure MySQL", @"The title of the Security Check MySQL page")];
+		[self setStepTitle:XPLocalizedString(@"MySQL", @"The step title of the Security Check MySQL page which will displayed on the left side")];
 		[self setType:AssistantNormalPage];
 	}
 	return self;

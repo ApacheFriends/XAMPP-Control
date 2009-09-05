@@ -41,8 +41,8 @@
 		}
 		
 		[self setSecurityChecks:anArray];
-		[self setTitle:NSLocalizedString(@"Summary", @"The title of the Security Check summary page")];
-		[self setStepTitle:NSLocalizedString(@"Summary", @"The step title of the Security Check summary page which will displayed on the left side")];
+		[self setTitle:XPLocalizedString(@"Summary", @"The title of the Security Check summary page")];
+		[self setStepTitle:XPLocalizedString(@"Summary", @"The step title of the Security Check summary page which will displayed on the left side")];
 		[self setType:AssistantSummaryPage];
 	}
 	return self;

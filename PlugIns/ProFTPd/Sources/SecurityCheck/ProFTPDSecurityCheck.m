@@ -38,8 +38,8 @@
 			return Nil;
 		}
 		
-		[self setTitle:NSLocalizedString(@"Secure ProFTPD", @"The title of the Security Check ProFTPD page")];
-		[self setStepTitle:NSLocalizedString(@"ProFTPD", @"The step title of the Security Check ProFTPD page which will displayed on the left side")];
+		[self setTitle:XPLocalizedString(@"Secure ProFTPD", @"The title of the Security Check ProFTPD page")];
+		[self setStepTitle:XPLocalizedString(@"ProFTPD", @"The step title of the Security Check ProFTPD page which will displayed on the left side")];
 		[self setType:AssistantNormalPage];
 	}
 	return self;

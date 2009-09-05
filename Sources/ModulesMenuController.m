@@ -99,13 +99,13 @@ NSString *ModulesMenuControllerContext = @"ModulesMenuControllerContext";
 		NSMenuItem* stopItem;
 		NSMenuItem* reloadItem;
 		
-		startItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Start %@", @"Start the Module %@"), [module name]]
+		startItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:XPLocalizedString(@"Start %@", @"Start the Module %@"), [module name]]
 											   action:@selector(start:) 
 										keyEquivalent:@""];
-		stopItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Stop %@", @"Stop the Module %@"), [module name]]
+		stopItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:XPLocalizedString(@"Stop %@", @"Stop the Module %@"), [module name]]
 											  action:@selector(stop:) 
 									   keyEquivalent:@""];
-		reloadItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Reload %@", @"Reload the Module %@"), [module name]]
+		reloadItem = [[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:XPLocalizedString(@"Reload %@", @"Reload the Module %@"), [module name]]
 												action:@selector(reload:) 
 										 keyEquivalent:@""];
 		

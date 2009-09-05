@@ -42,8 +42,8 @@
 		}
 		
 		[self setSecurityChecks:anArray];
-		[self setTitle:NSLocalizedString(@"Securing XAMPP...", @"The title of the Security Check work page")];
-		[self setStepTitle:NSLocalizedString(@"Securing...", @"The step title of the Security Check work page which will displayed on the left side")];
+		[self setTitle:XPLocalizedString(@"Securing XAMPP...", @"The title of the Security Check work page")];
+		[self setStepTitle:XPLocalizedString(@"Securing...", @"The step title of the Security Check work page which will displayed on the left side")];
 		[self setType:AssistantWorkingkPage];
 		[tasksView setCenterVertically:YES];
 	}

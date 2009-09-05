@@ -38,8 +38,8 @@
 			return Nil;
 		}
 		
-		[self setTitle:NSLocalizedString(@"Welcome to the Security Check", @"The title of the Security Check welcome page")];
-		[self setStepTitle:NSLocalizedString(@"Welcome", @"The step title of the Security Check welcome page which will displayed on the left side")];
+		[self setTitle:XPLocalizedString(@"Welcome to the Security Check", @"The title of the Security Check welcome page")];
+		[self setStepTitle:XPLocalizedString(@"Welcome", @"The step title of the Security Check welcome page which will displayed on the left side")];
 		[self setType:AssistantNormalPage];
 	}
 	return self;

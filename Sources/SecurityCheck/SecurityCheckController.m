@@ -95,9 +95,9 @@
 	   display a message to the user and returns bool here to avoid the display
 	   of the assistant window. */
 	if ([securityChecks count] == 0) {
-		NSRunAlertPanel(NSLocalizedString(@"NoSecurityCheksTitle", @"Titel for the modal alert panel which is shown when no valid securitychecks are registered."), 
-						NSLocalizedString(@"NoSecurityChecksDescription", @"Description for the modal altert panel which is shown when no valid securitychecks are registered."), 
-						NSLocalizedString(@"OK", @"Titel for the OK-Button of an modal alert panel"), 
+		NSRunAlertPanel(XPLocalizedString(@"NoSecurityCheksTitle", @"Titel for the modal alert panel which is shown when no valid securitychecks are registered."), 
+						XPLocalizedString(@"NoSecurityChecksDescription", @"Description for the modal altert panel which is shown when no valid securitychecks are registered."), 
+						XPLocalizedString(@"OK", @"Titel for the OK-Button of an modal alert panel"), 
 						Nil, Nil);
 		return NO;
 	}

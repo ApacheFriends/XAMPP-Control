@@ -97,11 +97,11 @@
 	NSString* xamppPath = [[XPConfiguration XAMPPPath] stringByResolvingSymlinksInPath];
 	
 	if (![currentPath isEqualToString:xamppPath]) {
-		NSAlert* alert = [NSAlert alertWithMessageText:NSLocalizedString(@"WorngInstallLocation", @"Alert Message for the Wrong Install Location error")
-										 defaultButton:NSLocalizedString(@"OK", @"OK") 
-									   alternateButton:NSLocalizedString(@"InstallGuideButton", @"Button Title for the Install Guide")
+		NSAlert* alert = [NSAlert alertWithMessageText:XPLocalizedString(@"WorngInstallLocation", @"Alert Message for the Wrong Install Location error")
+										 defaultButton:XPLocalizedString(@"OK", @"OK") 
+									   alternateButton:XPLocalizedString(@"InstallGuideButton", @"Button Title for the Install Guide")
 										   otherButton:Nil 
-							 informativeTextWithFormat:NSLocalizedString(@"WorngInstallLocationDescription", @"Alert Message Description for the Wrong Install Location error")];
+							 informativeTextWithFormat:XPLocalizedString(@"WorngInstallLocationDescription", @"Alert Message Description for the Wrong Install Location error")];
 		[alert setAlertStyle:NSCriticalAlertStyle];
 		int choice = [alert runModal];
 		
