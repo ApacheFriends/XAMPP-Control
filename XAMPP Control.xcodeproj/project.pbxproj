@@ -120,6 +120,11 @@
 		92711ED31011D32E00E4EB8A /* SecurityCheckWelcomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ECF1011D32E00E4EB8A /* SecurityCheckWelcomePage.m */; };
 		92711ED41011D32E00E4EB8A /* SecurityCheckWorkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ED11011D32E00E4EB8A /* SecurityCheckWorkPage.m */; };
 		92721FE110525FBB0028D569 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
+		92722036105263860028D569 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
+		927220371052638B0028D569 /* MySQLSkipNetworkingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */; };
+		92722039105263980028D569 /* MySQLRootPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */; };
+		9272206B105266AD0028D569 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92722069105266AD0028D569 /* MySQLSecurityCheck.xib */; };
+		9272206E105266BC0028D569 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9272206C105266BC0028D569 /* ProFTPDSecurityCheck.xib */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
 		928A31EA0FD82A36008048A6 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */; };
@@ -494,6 +499,8 @@
 		92711ECF1011D32E00E4EB8A /* SecurityCheckWelcomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityCheckWelcomePage.m; sourceTree = "<group>"; };
 		92711ED01011D32E00E4EB8A /* SecurityCheckWorkPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckWorkPage.h; sourceTree = "<group>"; };
 		92711ED11011D32E00E4EB8A /* SecurityCheckWorkPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityCheckWorkPage.m; sourceTree = "<group>"; };
+		9272206A105266AD0028D569 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MySQLSecurityCheck.xib; sourceTree = "<group>"; };
+		9272206D105266BC0028D569 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProFTPDSecurityCheck.xib; sourceTree = "<group>"; };
 		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
@@ -1071,6 +1078,7 @@
 		92ED0E650FB348CF00ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				92722069105266AD0028D569 /* MySQLSecurityCheck.xib */,
 				920E3B7D101A6F3600B6C043 /* Localizable.strings */,
 				924DFED51011E63400AEF961 /* enableSkipNetworking.sh */,
 				92F13C7F0FA084F7007ED72B /* Info.plist */,
@@ -1081,6 +1089,7 @@
 		92ED0E700FB348F000ED5BB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9272206C105266BC0028D569 /* ProFTPDSecurityCheck.xib */,
 				92CDA606100A34FA00F79452 /* Localizable.strings */,
 				92F13CA70FA08576007ED72B /* Info.plist */,
 			);
@@ -1356,6 +1365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				920E3B7E101A6F3600B6C043 /* Localizable.strings in Resources */,
+				9272206B105266AD0028D569 /* MySQLSecurityCheck.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1364,6 +1374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CDA607100A34FA00F79452 /* Localizable.strings in Resources */,
+				9272206E105266BC0028D569 /* ProFTPDSecurityCheck.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1475,6 +1486,9 @@
 				922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */,
 				922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */,
 				92711EBC1011D2B400E4EB8A /* MySQLSecurityCheck.m in Sources */,
+				92722036105263860028D569 /* MySQLRandomPMAPasswordTask.m in Sources */,
+				927220371052638B0028D569 /* MySQLSkipNetworkingTask.m in Sources */,
+				92722039105263980028D569 /* MySQLRootPasswordTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1661,6 +1675,22 @@
 				924DFECF1011E50100AEF961 /* English */,
 			);
 			name = SecurityCheckWorkPage.xib;
+			sourceTree = "<group>";
+		};
+		92722069105266AD0028D569 /* MySQLSecurityCheck.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9272206A105266AD0028D569 /* English */,
+			);
+			name = MySQLSecurityCheck.xib;
+			sourceTree = "<group>";
+		};
+		9272206C105266BC0028D569 /* ProFTPDSecurityCheck.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9272206D105266BC0028D569 /* English */,
+			);
+			name = ProFTPDSecurityCheck.xib;
 			sourceTree = "<group>";
 		};
 		92BB3D220FEFC42F005623FB /* GettingStarted.html */ = {
