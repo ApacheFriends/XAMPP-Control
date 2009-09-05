@@ -28,6 +28,7 @@
 #import "SecurityCheckWelcomePage.h"
 #import "SecurityCheckSummaryPage.h"
 #import "SecurityCheckWorkPage.h"
+#import "SecurityCheckConclusionPage.h"
 
 #import <PlugIn/PlugIn.h>
 #import <XAMPP Control/XAMPP Control.h>
@@ -108,6 +109,7 @@
 	
 	[array addObject:[[[SecurityCheckSummaryPage alloc] initWithSecurityChecks:securityChecks] autorelease]];
 	[array addObject:[[[SecurityCheckWorkPage alloc] initWithSecurityChecks:securityChecks] autorelease]];
+	[array addObject:[[SecurityCheckConclusionPage new] autorelease]];
 	
 	[self setPages:array];
 	

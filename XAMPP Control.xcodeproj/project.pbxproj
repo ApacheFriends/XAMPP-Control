@@ -126,6 +126,9 @@
 		9272206B105266AD0028D569 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92722069105266AD0028D569 /* MySQLSecurityCheck.xib */; };
 		9272206E105266BC0028D569 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9272206C105266BC0028D569 /* ProFTPDSecurityCheck.xib */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
+		9283AACB105293FA00CE1A49 /* success_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 9283AACA105293FA00CE1A49 /* success_big.png */; };
+		9283AACE1052942E00CE1A49 /* SecurityCheckConclusionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9283AACD1052942E00CE1A49 /* SecurityCheckConclusionPage.m */; };
+		9283AB0B105295A600CE1A49 /* SecurityCheckConclusionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9283AB0A105295A600CE1A49 /* SecurityCheckConclusionPage.xib */; };
 		928A31EA0FD82A36008048A6 /* AssistantStepInactive.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 920079190FA463F5002665E0 /* AssistantStepInactive.tiff */; };
 		928EF34C0FD46A89002FC497 /* BetaSupport.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92E28EAE0FD4034100DBA78F /* BetaSupport.plugin */; };
 		929097580F501EBC00BBE38B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929097570F501EBC00BBE38B /* WebKit.framework */; };
@@ -502,6 +505,10 @@
 		9272206A105266AD0028D569 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MySQLSecurityCheck.xib; sourceTree = "<group>"; };
 		9272206D105266BC0028D569 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ProFTPDSecurityCheck.xib; sourceTree = "<group>"; };
 		9276D9EE0F3B2ED900866FEB /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		9283AACA105293FA00CE1A49 /* success_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success_big.png; sourceTree = "<group>"; };
+		9283AACC1052942E00CE1A49 /* SecurityCheckConclusionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCheckConclusionPage.h; sourceTree = "<group>"; };
+		9283AACD1052942E00CE1A49 /* SecurityCheckConclusionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityCheckConclusionPage.m; sourceTree = "<group>"; };
+		9283AACF1052948400CE1A49 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SecurityCheckConclusionPage.xib; sourceTree = "<group>"; };
 		929097570F501EBC00BBE38B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		929098110F50210300BBE38B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/GettingStarted.xib; sourceTree = "<group>"; };
 		92AD21EF0FF4F2CB0060A41A /* open-helper-tool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "open-helper-tool.c"; sourceTree = "<group>"; };
@@ -767,6 +774,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9283AACA105293FA00CE1A49 /* success_big.png */,
 				924DFECC1011E50100AEF961 /* SecurityCheckWelcomePage.xib */,
 				924DFECE1011E50100AEF961 /* SecurityCheckWorkPage.xib */,
 				924DFEC91011E4CD00AEF961 /* SecurityCheckSummaryPage.xib */,
@@ -794,6 +802,7 @@
 				92BDB9980FA218A800B8D0D7 /* About.xib */,
 				92178A7A0F5D809F00425525 /* Credits.html */,
 				92BDB99C0FA218B000B8D0D7 /* ControlsWindow.xib */,
+				9283AB0A105295A600CE1A49 /* SecurityCheckConclusionPage.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -862,6 +871,8 @@
 				92711ECF1011D32E00E4EB8A /* SecurityCheckWelcomePage.m */,
 				92711ED01011D32E00E4EB8A /* SecurityCheckWorkPage.h */,
 				92711ED11011D32E00E4EB8A /* SecurityCheckWorkPage.m */,
+				9283AACC1052942E00CE1A49 /* SecurityCheckConclusionPage.h */,
+				9283AACD1052942E00CE1A49 /* SecurityCheckConclusionPage.m */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -1331,6 +1342,8 @@
 				924DFECB1011E4CD00AEF961 /* SecurityCheckSummaryPage.xib in Resources */,
 				924DFED01011E50100AEF961 /* SecurityCheckWelcomePage.xib in Resources */,
 				924DFED11011E50100AEF961 /* SecurityCheckWorkPage.xib in Resources */,
+				9283AACB105293FA00CE1A49 /* success_big.png in Resources */,
+				9283AB0B105295A600CE1A49 /* SecurityCheckConclusionPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1420,6 +1433,7 @@
 				92711ED21011D32E00E4EB8A /* SecurityCheckSummaryPage.m in Sources */,
 				92711ED31011D32E00E4EB8A /* SecurityCheckWelcomePage.m in Sources */,
 				92711ED41011D32E00E4EB8A /* SecurityCheckWorkPage.m in Sources */,
+				9283AACE1052942E00CE1A49 /* SecurityCheckConclusionPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1691,6 +1705,14 @@
 				9272206D105266BC0028D569 /* English */,
 			);
 			name = ProFTPDSecurityCheck.xib;
+			sourceTree = "<group>";
+		};
+		9283AB0A105295A600CE1A49 /* SecurityCheckConclusionPage.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9283AACF1052948400CE1A49 /* English */,
+			);
+			name = SecurityCheckConclusionPage.xib;
 			sourceTree = "<group>";
 		};
 		92BB3D220FEFC42F005623FB /* GettingStarted.html */ = {
