@@ -96,7 +96,7 @@
 	NSString* currentPath = [[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent];
 	NSString* xamppPath = [[XPConfiguration XAMPPPath] stringByResolvingSymlinksInPath];
 	
-	if (![currentPath isEqualToString:xamppPath]) {
+	if ([currentPath caseInsensitiveCompare:xamppPat] != NSOrderedSame) {
 		NSAlert* alert = [NSAlert alertWithMessageText:XPLocalizedString(@"WorngInstallLocation", @"Alert Message for the Wrong Install Location error")
 										 defaultButton:XPLocalizedString(@"OK", @"OK") 
 									   alternateButton:XPLocalizedString(@"InstallGuideButton", @"Button Title for the Install Guide")

@@ -187,7 +187,7 @@ NSString *AssistantControllerContext = @"AssistantContollerContext";
 		[backButton setEnabled:YES];
 	
 	if ([currentPage isEqualTo:[pages lastObject]])
-		[forwardButton setTitle:XPLocalizedString(@"Done", @"Done the Assistant (last page)")];
+		[forwardButton setTitle:XPLocalizedString(@"Close", @"Close the Assistant (last page)")];
 	else if ([currentPage type]  == AssistantSummaryPage)
 		[forwardButton setTitle:XPLocalizedString(@"Do it!", @"The summary has show now let the assistant execute the steps")];
 	else
