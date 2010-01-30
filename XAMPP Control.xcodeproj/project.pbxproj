@@ -110,7 +110,6 @@
 		926DAAE30FC851DD00998643 /* ApacheModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE20FC851DD00998643 /* ApacheModuleViewController.m */; };
 		926DAAE60FC8523200998643 /* MySQLModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE50FC8523200998643 /* MySQLModuleViewController.m */; };
 		926DAAE90FC8527C00998643 /* ProFTPDModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926DAAE80FC8527C00998643 /* ProFTPDModuleViewController.m */; };
-		92711EBC1011D2B400E4EB8A /* MySQLSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711EBB1011D2B400E4EB8A /* MySQLSecurityCheck.m */; };
 		92711EBF1011D2C800E4EB8A /* ProFTPDSecurityCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711EBE1011D2C800E4EB8A /* ProFTPDSecurityCheck.m */; };
 		92711EC71011D2FD00E4EB8A /* SecurityCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711EC21011D2FD00E4EB8A /* SecurityCheckController.m */; };
 		92711EC81011D2FD00E4EB8A /* SecurityTasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711EC61011D2FD00E4EB8A /* SecurityTasksView.m */; };
@@ -120,9 +119,6 @@
 		92711ED31011D32E00E4EB8A /* SecurityCheckWelcomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ECF1011D32E00E4EB8A /* SecurityCheckWelcomePage.m */; };
 		92711ED41011D32E00E4EB8A /* SecurityCheckWorkPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92711ED11011D32E00E4EB8A /* SecurityCheckWorkPage.m */; };
 		92721FE110525FBB0028D569 /* PlugIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B6AC1510525EBF00EC9E18 /* PlugIn.framework */; };
-		92722036105263860028D569 /* MySQLRandomPMAPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 925EF18F0FF3C57E00A622E3 /* MySQLRandomPMAPasswordTask.m */; };
-		927220371052638B0028D569 /* MySQLSkipNetworkingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C87B850FEBCF8C007C6F87 /* MySQLSkipNetworkingTask.m */; };
-		92722039105263980028D569 /* MySQLRootPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AD227D0FF54A210060A41A /* MySQLRootPasswordTask.m */; };
 		9272206B105266AD0028D569 /* MySQLSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92722069105266AD0028D569 /* MySQLSecurityCheck.xib */; };
 		9272206E105266BC0028D569 /* ProFTPDSecurityCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9272206C105266BC0028D569 /* ProFTPDSecurityCheck.xib */; };
 		9276D9EF0F3B2ED900866FEB /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9276D9EE0F3B2ED900866FEB /* Icon.icns */; };
@@ -1501,10 +1497,6 @@
 				922E1F9A0FFA211D00F68C8F /* XPError.m in Sources */,
 				922E1F9C0FFA212A00F68C8F /* XPPlugInCategories.m in Sources */,
 				922E1F9D0FFA212A00F68C8F /* XPPlugInHooks.m in Sources */,
-				92711EBC1011D2B400E4EB8A /* MySQLSecurityCheck.m in Sources */,
-				92722036105263860028D569 /* MySQLRandomPMAPasswordTask.m in Sources */,
-				927220371052638B0028D569 /* MySQLSkipNetworkingTask.m in Sources */,
-				92722039105263980028D569 /* MySQLRootPasswordTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2359,6 +2351,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

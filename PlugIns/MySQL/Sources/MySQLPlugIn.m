@@ -25,7 +25,7 @@
 
 #import "MySQLPlugIn.h"
 #import "MySQLModule.h"
-#import "MySQLSecurityCheck.h"
+//#import "MySQLSecurityCheck.h"
 #import "MySQLModuleViewController.h"
 
 @implementation MySQLPlugIn
@@ -44,13 +44,13 @@
 	NSDictionary* bundleInformations;
 	MySQLModule *module;
 	XPModuleViewController *controller;
-	MySQLSecurityCheck* securityCheck;
+//	MySQLSecurityCheck* securityCheck;
 	
 	bundleInformations = [[NSBundle bundleForClass:[self class]] infoDictionary];
 	dict = [NSMutableDictionary dictionary];
 	module = [MySQLModule new];	
 	controller = [[MySQLModuleViewController alloc] initWithModule:module];
-	securityCheck = [MySQLSecurityCheck new];
+	//securityCheck = [MySQLSecurityCheck new];
 	
 	[self setModule:module];
 	
@@ -59,13 +59,13 @@
 	if ([[bundleInformations objectForKey:@"RegisterControlsController"] boolValue])
 		[dict setValue:[NSArray arrayWithObject:controller] forKey:XPControlsPlugInCategorie];
 	
-	if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
-		[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
+	//if ([[bundleInformations objectForKey:@"RegisterSecurityCheck"] boolValue])
+	//	[dict setValue:[NSArray arrayWithObject:securityCheck] forKey:XPSecurityChecksPlugInCategorie];
 	
 	[module setShouldRunStartTests:[[bundleInformations objectForKey:@"RunStartTests"] boolValue]];
 	
 	[module release];
-	[securityCheck release];
+//	[securityCheck release];
 	[controller release];
 	
 	[self setRegistryInfo:dict];
