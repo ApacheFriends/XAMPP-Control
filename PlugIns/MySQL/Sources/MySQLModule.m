@@ -183,7 +183,7 @@
 	NSError* error;
 	NSMutableDictionary* errorDict;
 	
-	if (![[NSWorkspace sharedWorkspace] processIsRunningWithName:@"mysqld"])
+	if (![[NSWorkspace sharedWorkspace] isPortInUse:3306])
 		return Nil;
 	
 	errorDict = [NSMutableDictionary dictionary];

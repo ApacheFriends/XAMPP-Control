@@ -96,7 +96,7 @@
 	return NO;
 }
 
-- (BOOL) portIsUsed:(uint)port
+- (BOOL) isPortInUse:(uint)port
 {
 	NSTask* bash = [[NSTask new] autorelease];
 	NSString* argument;

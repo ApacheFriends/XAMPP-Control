@@ -246,10 +246,10 @@
 	BOOL port80AlreadyUsed = NO;
 	BOOL port443AlreadyUsed = NO;
 	
-	port80AlreadyUsed = [[NSWorkspace sharedWorkspace] portIsUsed:80];
+	port80AlreadyUsed = [[NSWorkspace sharedWorkspace] isPortInUse:80];
 	
 	if ([self isSSLEnabled])
-		port443AlreadyUsed = [[NSWorkspace sharedWorkspace] portIsUsed:443];
+		port443AlreadyUsed = [[NSWorkspace sharedWorkspace] isPortInUse:443];
 	
 	if (!port80AlreadyUsed
 		&& !port443AlreadyUsed)

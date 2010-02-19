@@ -30,6 +30,6 @@
 
 - (BOOL) processIsRunning:(pid_t)aPID;
 - (BOOL) processIsRunningWithName:(NSString*)name;
-- (BOOL) portIsUsed:(uint)port;
+- (BOOL) isPortInUse:(uint)port;
 
 @end

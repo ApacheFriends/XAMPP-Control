@@ -167,7 +167,7 @@ NSString *ModulesMenuControllerContext = @"ModulesMenuControllerContext";
 	NSError *error;
 	
 	error = [module start];
-	
+
 	if (error)
 		[XPAlert presentError:error];
 	

@@ -148,7 +148,7 @@
 	NSError *error;
 	
 	error = [module start];
-	
+	NSLog(@"%@", error);
 	if (error)
 		[XPAlert presentError:error];
 	

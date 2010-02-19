@@ -180,7 +180,7 @@
 	NSError* error;
 	NSMutableDictionary* errorDict;
 	
-	if (![[NSWorkspace sharedWorkspace] portIsUsed:21])
+	if (![[NSWorkspace sharedWorkspace] isPortInUse:21])
 		return Nil;
 	
 	errorDict = [NSMutableDictionary dictionary];

@@ -100,7 +100,6 @@
 		924DFED71011E64400AEF961 /* enableSkipNetworking.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 924DFED51011E63400AEF961 /* enableSkipNetworking.sh */; };
 		9256E0010F9F75450000BE90 /* App_Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256E0000F9F75450000BE90 /* App_Delegate.m */; };
 		9257D7960FA1DA73002BF955 /* XPBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9257D7950FA1DA73002BF955 /* XPBox.m */; };
-		925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 925EF1A30FF3D30800A622E3 /* libmysqlclient.dylib */; };
 		925EF1CC0FF3E4BE00A622E3 /* IndicatorGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 925EF1C80FF3E4BE00A622E3 /* IndicatorGreen.png */; };
 		925EF1CD0FF3E4BE00A622E3 /* IndicatorRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 925EF1C90FF3E4BE00A622E3 /* IndicatorRed.png */; };
 		925EF1CE0FF3E4BE00A622E3 /* IndicatorYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 925EF1CA0FF3E4BE00A622E3 /* IndicatorYellow.png */; };
@@ -650,7 +649,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B6AC2210525ED800EC9E18 /* PlugIn.framework in Frameworks */,
-				925EF1A40FF3D30800A622E3 /* libmysqlclient.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
