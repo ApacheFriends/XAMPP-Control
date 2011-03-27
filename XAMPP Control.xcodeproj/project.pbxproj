@@ -241,6 +241,41 @@
 			remoteGlobalIDString = 92F13CA50FA08576007ED72B;
 			remoteInfo = ProFTPd;
 		};
+		9256AC32133F6A940091314B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
+		9256AC34133F6A970091314B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
+		9256AC36133F6A990091314B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
+		9256AC38133F6A9B0091314B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
+		9256AC3A133F6A9D0091314B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E28EC40FD4054F00DBA78F;
+			remoteInfo = Common;
+		};
 		928EF3420FD46A64002FC497 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -1182,6 +1217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9256AC3B133F6A9D0091314B /* PBXTargetDependency */,
 			);
 			name = BetaSupport;
 			productName = BetaSupport;
@@ -1199,6 +1235,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9256AC37133F6A990091314B /* PBXTargetDependency */,
 			);
 			name = PHP;
 			productName = PHP;
@@ -1232,6 +1269,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9256AC33133F6A940091314B /* PBXTargetDependency */,
 			);
 			name = Apache;
 			productName = Apache;
@@ -1250,6 +1288,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9256AC35133F6A970091314B /* PBXTargetDependency */,
 			);
 			name = MySQL;
 			productName = MySQL;
@@ -1267,6 +1306,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9256AC39133F6A9B0091314B /* PBXTargetDependency */,
 			);
 			name = ProFTPd;
 			productName = ProFTPd;
@@ -1280,6 +1320,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XAMPP Control" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -1534,6 +1575,31 @@
 			isa = PBXTargetDependency;
 			target = 92F13CA50FA08576007ED72B /* ProFTPd */;
 			targetProxy = 9202FD8D1025F26900C38B0C /* PBXContainerItemProxy */;
+		};
+		9256AC33133F6A940091314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9256AC32133F6A940091314B /* PBXContainerItemProxy */;
+		};
+		9256AC35133F6A970091314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9256AC34133F6A970091314B /* PBXContainerItemProxy */;
+		};
+		9256AC37133F6A990091314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9256AC36133F6A990091314B /* PBXContainerItemProxy */;
+		};
+		9256AC39133F6A9B0091314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9256AC38133F6A9B0091314B /* PBXContainerItemProxy */;
+		};
+		9256AC3B133F6A9D0091314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E28EC40FD4054F00DBA78F /* Common */;
+			targetProxy = 9256AC3A133F6A9D0091314B /* PBXContainerItemProxy */;
 		};
 		928EF3430FD46A64002FC497 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2302,6 +2368,7 @@
 				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = "XAMPP Control";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2324,6 +2391,7 @@
 				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Headers/\"";
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = "XAMPP Control";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2332,28 +2400,30 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
