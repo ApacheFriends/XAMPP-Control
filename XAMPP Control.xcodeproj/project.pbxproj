@@ -1389,6 +1389,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "XAMPP Control" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -1992,7 +1995,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = BetaRelease;
 				ZERO_LINK = NO;
 			};
@@ -2004,14 +2006,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = /usr/local/bin;
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = "open-helper-tool";
 			};
 			name = Debug;
@@ -2022,13 +2022,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INSTALL_PATH = /usr/local/bin;
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = "open-helper-tool";
 				ZERO_LINK = NO;
 			};
@@ -2045,7 +2043,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2061,7 +2058,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = BetaSupport;
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -2078,7 +2074,6 @@
 					"\"$(SRCROOT)/../build/Debug\"",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -2093,7 +2088,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = BetaSupport;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
@@ -2115,7 +2109,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = BetaRelease;
 				ZERO_LINK = NO;
 			};
@@ -2136,7 +2129,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = Common;
 				ZERO_LINK = NO;
 			};
@@ -2157,7 +2149,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "XAMPP Control Headers";
 				ZERO_LINK = NO;
 			};
@@ -2174,7 +2165,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2190,7 +2180,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = PHP;
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -2207,7 +2196,6 @@
 					"\"$(SRCROOT)/../build/Debug\"",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -2222,7 +2210,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = PHP;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
@@ -2235,11 +2222,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = "xproottask-helper-tool";
 			};
 			name = Debug;
@@ -2250,10 +2235,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = "xproottask-helper-tool";
 				ZERO_LINK = NO;
 			};
@@ -2263,14 +2246,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../build/Debug\"",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2283,10 +2261,7 @@
 					Foundation,
 					"-framework",
 					AppKit,
-					"-bundle_loader",
-					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = Apache;
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -2296,14 +2271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../build/Debug\"",
-					"\"$(SRCROOT)/Frameworks\"",
-				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -2315,10 +2285,7 @@
 					Foundation,
 					"-framework",
 					AppKit,
-					"-bundle_loader",
-					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = Apache;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
@@ -2336,7 +2303,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2359,7 +2325,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = MySQL;
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -2376,7 +2341,6 @@
 					"\"$(SRCROOT)/../build/Debug\"",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -2398,7 +2362,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = MySQL;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
@@ -2416,7 +2379,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2432,7 +2394,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = ProFTPd;
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -2449,7 +2410,6 @@
 					"\"$(SRCROOT)/../build/Debug\"",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -2464,7 +2424,6 @@
 					"-bundle_loader",
 					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XAMPP Control.app/Contents/MacOS/XAMPP Control\"",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = ProFTPd;
 				WRAPPER_EXTENSION = plugin;
 				ZERO_LINK = NO;
@@ -2482,7 +2441,6 @@
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2514,6 +2472,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "XAMPP Control";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2522,15 +2481,12 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -2538,13 +2494,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
